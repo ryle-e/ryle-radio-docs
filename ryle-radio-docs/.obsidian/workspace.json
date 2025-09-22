@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Welcome.md",
+                "file": "Ryle Radio docs.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Welcome"
+              "title": "Outline of Ryle Radio docs"
             }
           },
           {
@@ -172,7 +172,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -191,8 +191,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "ac5fb94a83f6d7c5",
+  "active": "4f779f073f1a8d64",
   "lastOpenFiles": [
+    "Pasted image 20250922183059.png",
+    "Pasted image 20250922183057.png",
+    "Pasted image 20250922182711.png",
     "Untitled.base",
     "Ryle Radio docs.md",
     "Guides",
