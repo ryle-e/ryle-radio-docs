@@ -7,5 +7,14 @@ It allows for you to set up several `RadioTracks` at specific frequencies, tune 
 ![[Pasted image 20250922183059.png]]
 ## Features
 - Tracks linked to specific frequencies (known internally as `tune`)
-- Gain interaction with frequencies
-- 
+- Gain interacts with played frequencies (user-defined falloff)
+- Spatial broadcasters (areas where certain tracks can be heard)
+- Spatial insulators (areas where certain tracks can't be heard)
+- Linked to Unity's audio system (sources, mixers, reverb, etc)
+- Built-in observer events (detect when a track is audible, etc)
+- Premade procedural audio (noise, waveforms)
+- Stations- multiple tracks in one, switching between them over time or on request
+
+## Limitations
+- **All audio is reduced to mono**- does reflect real life radios, but could be annoying for more complex audio layouts. Theoretically you could use a different radio for each side as a workaround, but this would take a lot of effort to set up
+- **Some parts can't be modified at runtime**- specifically
