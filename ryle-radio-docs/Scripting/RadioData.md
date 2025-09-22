@@ -1,0 +1,6 @@
+This is the data object on which the whole radio is based, containing the tracks that are played at runtime.
+
+## Usage
+To create a `RadioData`, select `Assets/Ryle Radio/RadioData` in files.
+
+### Tracks

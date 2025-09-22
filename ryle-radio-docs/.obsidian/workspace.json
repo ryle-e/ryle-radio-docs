@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Documentation/Components/Base/RadioComponent.md",
+                "file": "Scripting/RadioData.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RadioComponent"
+              "title": "RadioData"
             }
           }
         ]
@@ -94,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Documentation/Components/Base/RadioComponent.md",
+                "file": "Scripting/RadioData.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for RadioComponent"
+              "title": "Backlinks for RadioData"
             }
           },
           {
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Documentation/Components/Base/RadioComponent.md",
+                "file": "Scripting/RadioData.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of RadioComponent"
+              "title": "Outline of RadioData"
             }
           },
           {
@@ -193,20 +193,21 @@
   },
   "active": "ac5fb94a83f6d7c5",
   "lastOpenFiles": [
+    "Scripting/Components/Base/RadioComponent.md",
+    "Scripting/RadioData.md",
     "index.md",
-    "Documentation/Components/Base/RadioComponent.md",
-    "Documentation/Components/Base",
-    "Documentation/Tracks/Track Types/Interfaces",
-    "Documentation/Tracks/Track Types",
-    "Documentation/Tracks",
-    "Documentation/Components",
-    "Documentation/Editor",
+    "Scripting/Components/Base",
+    "Scripting/Tracks/Track Types/Interfaces",
+    "Scripting/Tracks/Track Types",
+    "Scripting/Tracks",
+    "Scripting/Components",
+    "Scripting/Editor",
     "Pasted image 20250922183059.png",
     "Pasted image 20250922183057.png",
     "Pasted image 20250922182711.png",
     "Untitled.base",
     "Guides",
-    "Documentation",
+    "Scripting",
     "General"
   ]
 }
