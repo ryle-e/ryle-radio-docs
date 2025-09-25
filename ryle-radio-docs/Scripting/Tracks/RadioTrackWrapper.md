@@ -6,7 +6,8 @@ When you first create a track, it will look like this:
 ![[Pasted image 20250925190155.png]]
 This is a basic blank slate for you to input information into. See below for information about each variable.
 
-## Inspector Variables
+---
+## Inspector Values
 ### ID
 The ID of a track is a unique value used when referring to it in other radio-related components, or when accessing it in your own custom code. Set it to something distinct enough that you'll know what the track is when you see it listed somewhere, e.g "low static", "scary music"
 
