@@ -1,10 +1,11 @@
+These are the [[#Track|containers]] for [[RadioTrack]]s, specifically for use in the Unity GUI. We keep it separate from RadioTracks so that we can use generic values independently of which track is chosen ([[#gain]], [[#attenuation]], etc). As well as this, using a wrapper allows the user to choose which track they want using a dropdown in the inspector.
+
 ***Note:** When referring to "tracks" in this documentation, this is usually what we're referring to- all information about the [[RadioTrack]] can be accessed here too AND in the inspector, hence we generally refer to this class as the whole track with the RadioTrack as the "track class" or something similar.*
 
-These are the containers for [[RadioTrack]]s, specifically for use in the Unity GUI. We keep it separate from RadioTracks so that we can use generic values independently of which track is chosen ([[#gain]], [[#attenuation]], etc). As well as this, using a wrapper allows the user to choose which track they want using a dropdown in the inspector.
-
+## Usage
 When you first create a track, it will look like this:
 ![[Pasted image 20250925190155.png]]
-This is a basic blank slate for you to input information into. See below for information about each variable.
+This is a basic blank slate for you to input information into. You'll first want to select a track type using [[#Track Type|the dropdown]] near the bottom.
 
 ---
 ## Inspector Values
@@ -16,3 +17,16 @@ In simple terms, think of the frequency of a radio station in real life- let's s
 
 In this package, the frequency of the radio is called Tune, (mainly to keep it separate enough from real-world frequency that we can use a min/max range vastly different from real life- [[RadioData#LOW_TUNE|and changeable]])
 
+### Gain Curve
+
+### Gain
+
+### Attenuation
+
+### Force Global
+
+### Play on Init
+
+### Track Type
+
+### Track
