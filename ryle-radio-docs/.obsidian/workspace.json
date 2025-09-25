@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "what.md",
+                "file": "Scripting/RadioData.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "what"
+              "title": "RadioData"
             }
           }
         ],
@@ -207,10 +207,10 @@
   },
   "active": "1dbd534fe7eaa599",
   "lastOpenFiles": [
-    "index.md",
-    "what.md",
-    "Scripting/RadioData.md",
     "Scripting/Components/Base/RadioComponent.md",
+    "what.md",
+    "index.md",
+    "Scripting/RadioData.md",
     "Scripting/Components/Base",
     "Scripting/Tracks/Track Types/Interfaces",
     "Scripting/Tracks/Track Types",
