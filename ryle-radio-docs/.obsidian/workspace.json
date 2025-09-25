@@ -27,12 +27,25 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripting/RadioData.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RadioData"
+              "title": "index"
+            }
+          },
+          {
+            "id": "feee2ba50d3757e1",
+            "type": "leaf",
+            "state": {
+              "type": "bases",
+              "state": {
+                "file": "Untitled.base",
+                "viewName": "Table"
+              },
+              "icon": "lucide-table",
+              "title": "Untitled"
             }
           }
         ],
@@ -207,32 +220,31 @@
   },
   "active": "1dbd534fe7eaa599",
   "lastOpenFiles": [
-    "Pasted image 20250925195246.png",
+    "RadioL.md",
+    "Untitled.base",
+    "Scripting/Components/Base/RadioComponent.md",
+    "what.md",
+    "Images/Scripting/Tracks/Pasted image 20250925190155.png",
+    "Scripting/Tracks/RadioTrackWrapper.md",
+    "Images/Scripting/Tracks/Pasted image 20250922183059.png",
+    "Images/Scripting/Tracks/Pasted image 20250925200935.png",
+    "Images/Scripting/Tracks/Pasted image 20250925200829.png",
+    "Images/Scripting/Tracks/Pasted image 20250925195909.png",
+    "Images/Scripting/Tracks/Pasted image 20250925195246.png",
     "Pasted image 20250925195229.png",
     "Pasted image 20250925195216.png",
-    "Pasted image 20250925195105.png",
-    "Pasted image 20250925195022.png",
-    "Pasted image 20250925194815.png",
-    "Scripting/Tracks/RadioTrackWrapper.md",
+    "Images/Scripting/Tracks/Pasted image 20250925195105.png",
+    "Images/Scripting/Tracks/Pasted image 20250925195022.png",
+    "Images/Scripting/Tracks",
+    "Images/Scripting",
+    "Images",
     "Scripting/RadioData.md",
-    "Scripting/Components/Base/RadioComponent.md",
-    "Untitled.base",
-    "RadioL.md",
-    "Pasted image 20250925190155.png",
-    "Pasted image 20250925190137.png",
-    "Pasted image 20250925185018.png",
-    "what.md",
     "index.md",
     "Scripting/Components/Base",
     "Scripting/Tracks/Track Types/Interfaces",
     "Scripting/Tracks/Track Types",
     "Scripting/Tracks",
     "Scripting/Components",
-    "Scripting/Editor",
-    "Pasted image 20250922183059.png",
-    "Pasted image 20250922183057.png",
-    "Guides",
-    "Scripting",
-    "General"
+    "Scripting/Editor"
   ]
 }
