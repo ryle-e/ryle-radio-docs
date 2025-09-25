@@ -20,7 +20,19 @@ When a component that references this radio has gizmos, e.g [[RadioBroadcaster]]
 
 ---
 ## Methods
-### Try to Get Track : <small><code>public bool TryGetTrack(string, out RadioTrackWrapper, bool)</code></small>
-This 
+### Try to Get Track
+![[Pasted image 20250925195246.png]]
+- Returns bool - whether or not a track has been found
+- **idOrName** - the ID or name of the track you're trying to get
+- out **trackW** - the track that you have found (if this method returns true- if it returns false, this will be null)
+- **useID** - whether you have provided an ID or a name to the method- true if ID, false if name
+ 
+This is the main way you will access tracks in code. If you ever need to change or access any values in a specific track, you simply need to enter its ID or name into this method and store the **trackW** output.
+
+![[Pasted image 20250925195022.png]]
+or
+![[Pasted image 20250925195105.png]]
+
+### (static) Name to ID
 
 ## Variables
