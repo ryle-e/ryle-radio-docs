@@ -11,10 +11,14 @@
             "id": "5f7e5ab9ac1084fc",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "Scripting/RadioData.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "RadioData"
             }
           }
         ]
@@ -139,6 +143,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -148,15 +153,29 @@
       "bases:Create new base": false
     }
   },
-  "active": "5f7e5ab9ac1084fc",
+  "active": "dd6fc869c102def4",
   "lastOpenFiles": [
     "Scripting/Tracks/RadioTrackWrapper.md",
+    "Images/Scripting/Tracks/Pasted image 20250925200935.png",
+    "Images/Scripting/Tracks/Pasted image 20250925200829.png",
+    "Images/Scripting/Tracks/Pasted image 20250925195909.png",
+    "Images/Scripting/Tracks/Pasted image 20250925195246.png",
+    "Images/Scripting/Tracks/Pasted image 20250925195105.png",
+    "Images/Scripting/Tracks/Pasted image 20250925195022.png",
+    "Images/Scripting/Tracks/Pasted image 20250925190155.png",
+    "Images/Scripting/Tracks/Pasted image 20250922183059.png",
+    "Images/Scripting/Tracks",
+    "Images/Scripting/Pasted image 20250922182711.png",
+    "Images/Scripting",
+    "Images",
+    "Scripting/Components/Base/RadioComponent.md",
+    "RadioL.md",
+    "Pasted image 20250925190155.png",
     "Scripting/Other/MultiselectAttribute.md",
     "what.md",
     "Scripting/RadioData.md",
     "Scripting/Other",
     "index.md",
-    "Scripting/Components/Base/RadioComponent.md",
     "Scripting/Tracks/Track Types",
     "Scripting/Tracks"
   ]
