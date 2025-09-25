@@ -13,5 +13,5 @@ The ID of a track is a unique value used when referring to it in other radio-rel
 ### Range
 In simple terms, think of the frequency of a radio station in real life- let's say 100.1FM, for example. When you're tuning a radio to this frequency, you can still hear the station when your radio's frequency is in the immediate area of 100.1FM, but quieter (or more distorted). The range value here allows you to manually choose the size of this area- the range in which you can hear this track.
 
-In this package, the frequency of the radio is called Tune, (mainly to keep it separate enough from real-world frequency that we can customize the min/max values if we so choose)
+In this package, the frequency of the radio is called Tune, (mainly to keep it separate enough from real-world frequency that we can use a min/max range vastly different from real life- [[RadioData#LOW_TUNE|and changeable]])
 
