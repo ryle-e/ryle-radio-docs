@@ -1,3 +1,5 @@
+**Inherits from** : ScriptableObject
+
 This is the data object on which the whole radio is based, containing the tracks that are played at runtime.
 
 *__Note:__ I generally refer to this object as just "the radio" throughout these docs.*
