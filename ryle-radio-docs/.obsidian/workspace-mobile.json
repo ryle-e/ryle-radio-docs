@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripting/Tracks/RadioTrackWrapper.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RadioTrackWrapper"
+              "title": "index"
             }
           }
         ]
@@ -98,7 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Scripting/Tracks/RadioTrackWrapper.md",
+            "file": "index.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -155,10 +155,10 @@
   },
   "active": "5f7e5ab9ac1084fc",
   "lastOpenFiles": [
+    "Scripting/Tracks/RadioTrackWrapper.md",
     "Scripting/RadioData.md",
     "Scripting/Components/Base/RadioComponent.md",
     "Scripting/Components/RadioListener.md",
-    "Scripting/Tracks/RadioTrackWrapper.md",
     "Images/Scripting/Tracks/Pasted image 20250925200935.png",
     "Images/Scripting/Tracks/Pasted image 20250925200829.png",
     "Images/Scripting/Tracks/Pasted image 20250925195909.png",
