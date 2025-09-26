@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripting/RadioData.md",
+                "file": "Scripting/Components/Base/RadioComponent.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RadioData"
+              "title": "RadioComponent"
             }
           }
         ]
@@ -98,7 +98,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Scripting/RadioData.md",
+            "file": "Scripting/Components/Base/RadioComponent.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -155,8 +155,8 @@
   },
   "active": "5f7e5ab9ac1084fc",
   "lastOpenFiles": [
-    "RadioListener.md",
     "Scripting/RadioData.md",
+    "Scripting/Components/RadioListener.md",
     "Scripting/Tracks/RadioTrackWrapper.md",
     "Images/Scripting/Tracks/Pasted image 20250925200935.png",
     "Images/Scripting/Tracks/Pasted image 20250925200829.png",
