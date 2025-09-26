@@ -7,7 +7,7 @@ This is the data object on which the whole radio is based, containing the tracks
 ## Usage
 To create a `RadioData`, select `Assets/Ryle Radio/RadioData` in files. Add an item to the list of [[RadioTrackWrapper|tracks]], and start setting up your radio! If you like, you can also modify gizmo colours of components that reference this radio.
 
-To use this radio in a game scene, you need to have a [[RadioOutput]] to play it out loud. This listener links to a Unity AudioSource (although this [[RadioOutput#Possible future expansion|could be extended]]), and plays according to a [[RadioOutput#Tune|Tune]] value (see [[RadioTrackWrapper#Range|the range value on a track]]). You can have as many Listeners as you like, playing in any different areas (see [[RadioOutput#Multiple Listeners|Multiple Listeners]]).
+To use this radio in a game scene, you need to have a [[RadioOutput]] that links to a Unity AudioSource and plays according to a [[RadioOutput#Tune|Tune]] value (see [[RadioTrackWrapper#Range|the range value on a track]]). You can have as many Listeners as you like, playing in any different areas (see [[RadioOutput#Multiple Outputs|Multiple Outputs]]).
 
 ---
 ## Inspector Values
