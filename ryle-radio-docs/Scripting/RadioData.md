@@ -7,7 +7,7 @@ This is the data object on which the whole radio is based, containing the tracks
 ## Usage
 To create a `RadioData`, select `Assets/Ryle Radio/RadioData` in files. Add an item to the list of [[RadioTrackWrapper|tracks]], and start setting up your radio! If you like, you can also modify gizmo colours of components that reference this radio.
 
-To use this radio in a game scene, you need to have a [[RadioListener]] to play it out loud. This listener links to a Unity AudioSource (although this [[RadioListener#Possible future expansion|could be extended]]), and plays according to a [[RadioListener#Tune|Tune]] value (see [[RadioTrackWrapper#Range|the range value on a track]]). You can have as many Listeners as you like, playing in any different areas (see [[RadioListener#Multiple Listeners|Multiple Listeners]]).
+To use this radio in a game scene, you need to have a [[RadioOutput]] to play it out loud. This listener links to a Unity AudioSource (although this [[RadioOutput#Possible future expansion|could be extended]]), and plays according to a [[RadioOutput#Tune|Tune]] value (see [[RadioTrackWrapper#Range|the range value on a track]]). You can have as many Listeners as you like, playing in any different areas (see [[RadioOutput#Multiple Listeners|Multiple Listeners]]).
 
 ---
 ## Inspector Values
@@ -47,7 +47,7 @@ If you ever need to directly convert a [[RadioTrackWrapper#name|track's name]] t
 ### Init
 Initializes the radio object.
 
-You will likely never need to call this yourself as it's called for you in [[RadioListener]], unless you're creating some alternate method of playing tracks.
+You will likely never need to call this yourself as it's called for you in [[RadioOutput]], unless you're creating some alternate method of playing tracks.
 
 ---
 ## Data
