@@ -45,7 +45,7 @@ If you ever need to directly convert a [[RadioTrackWrapper#name|track's name]] t
 ### Init
 Initializes the radio object.
 
-You will likely never need to call this as it's always initialized in [[RadioListener]], unless you're creating some alternate method of playing tracks.
+You will likely never need to call this yourself as it's called for you in [[RadioListener]], unless you're creating some alternate method of playing tracks.
 
 ---
 ## Data
