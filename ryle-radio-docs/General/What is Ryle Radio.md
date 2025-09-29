@@ -2,6 +2,8 @@ In short terms, Ryle Radio is a package to emulate the functionality of real wor
 
 In practice, this means that you can have an end user move a value across a range and hear different things depending on where that value is, much like tuning frequencies on a receiver. Developers using Ryle Radio can define what is heard and where in the range it is audible.
 
-Audio types in Ryle Radio are called Tracks. Tracks can be Unity AudioClips, procedural audio (e.g: noise, waveforms), and even custom structures named Stations, which contain multiple other audio types and switch between them automatically. Together these Tracks can form a complex system of audio that can be tuned through at runtime, creating an interactive and easily usable system for players to engage with audio.
+Audio types in Ryle Radio are called **Tracks**. Tracks can be Unity AudioClips, procedural audio (e.g: noise, waveforms), and even custom structures named Stations, which contain multiple other audio types and switch between them automatically. Together these Tracks can form a complex system of audio that can be tuned through at runtime, creating an interactive and easily usable system for players to engage with audio.
 
-The package also contains Broadcasters, points that cause tracks to play louder (or at all) depending on the proximity of an 
+The package contains **Broadcasters**, points that cause tracks to play louder (or at all) depending on the proximity of an output- effectively an object that broadcasts the track. It also contains **Insulators**, which are the reverse- areas where tracks are quieter.
+
+It also contains **Observers**, which are built-in scripts allowing you to tie functionality into the radio's playing, such as invoking events when a particular track is audible to a particular output, or playing 
