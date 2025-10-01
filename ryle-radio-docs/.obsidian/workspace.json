@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Scripting/Tracks/RadioTrackWrapper.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "RadioTrackWrapper"
             }
           },
           {
@@ -221,13 +221,13 @@
   },
   "active": "feee2ba50d3757e1",
   "lastOpenFiles": [
+    "Scripting/Components/RadioOutput.md",
+    "Scripting/Components/Base/RadioComponent.md",
+    "index.md",
     "Untitled.base",
     "General/Contact.md",
     "General/What is Ryle Radio.md",
-    "index.md",
     "Scripting/RadioData.md",
-    "Scripting/Components/RadioOutput.md",
-    "Scripting/Components/Base/RadioComponent.md",
     "Scripting/Tracks/RadioTrackWrapper.md",
     "RadioL.md",
     "what.md",
