@@ -3,4 +3,4 @@ TL;DR, FMOD is optionally used with Ryle Radio to stream audio files at runtime.
 ---
 
 ## What is used?
-The package []()
+The package [FMOD for Unity](https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-2-02-161631) is used in Ryle Radio to allow for runtime audio streaming. Inside [[ClipRadioTrack]], we access data from the provided AudioClip using the built-in method `GetData(...)`.
