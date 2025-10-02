@@ -17,4 +17,6 @@ We load the selected AudioClip into FMOD, then over time stream chunks into a bu
 ## When should I use it?
 If you're using large audio files, e.g: songs, ambience, it could be worthwhile using FMOD streaming in order to reduce load times. You usually should be able to get by without it by using [`AudioClip.loadInBackground`](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/AudioClip-loadInBackground.html), but huge audio clips may struggle.
 
+However, do note that using this feature requires that the entire [FMOD for Unity](https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-2-02-161631) package be installed.
+
 In short: if you're having slow loading and 
