@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Scripting/Tracks/RadioTrackWrapper.md",
+                "file": "Guides/Basic Radio Sample.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "RadioTrackWrapper"
+              "title": "Basic Radio Sample"
             }
           },
           {
@@ -219,8 +219,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "feee2ba50d3757e1",
+  "active": "e97738c339c6e3e1",
   "lastOpenFiles": [
+    "Pasted image 20251002182945.png",
+    "Pasted image 20251002182446.png",
+    "Pasted image 20251002182350.png",
+    "Scripting/Tracks/RadioTrackWrapper.md",
     "Scripting/Components/RadioOutput.md",
     "Scripting/Components/Base/RadioComponent.md",
     "index.md",
@@ -228,7 +232,6 @@
     "General/Contact.md",
     "General/What is Ryle Radio.md",
     "Scripting/RadioData.md",
-    "Scripting/Tracks/RadioTrackWrapper.md",
     "RadioL.md",
     "what.md",
     "Images/Scripting/Tracks/Pasted image 20250925190155.png",
@@ -239,8 +242,6 @@
     "Images/Scripting/Tracks/Pasted image 20250925195246.png",
     "Pasted image 20250925195229.png",
     "Pasted image 20250925195216.png",
-    "Images/Scripting/Tracks/Pasted image 20250925195105.png",
-    "Images/Scripting/Tracks/Pasted image 20250925195022.png",
     "Images/Scripting/Tracks",
     "Images/Scripting",
     "Images",
