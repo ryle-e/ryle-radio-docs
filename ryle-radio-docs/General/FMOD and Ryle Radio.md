@@ -15,4 +15,4 @@ This leaves as with an issue, then- how do we stream audio for big files? The an
 We load the selected AudioClip into FMOD, then over time stream chunks into a buffer that we play through Unity. The only difference you'll notice is that your game starts up faster :)
 
 ## When should I use it?
-If you're using large audio files, e.g: songs, ambience, it could be worthwhile using this integration in order to reduce load times. You may be able to get by without it by using 
+If you're using large audio files, e.g: songs, ambience, it could be worthwhile using this integration in order to reduce load times. You may be able to get by without it by using [`AudioClip.loadInBackground`]
