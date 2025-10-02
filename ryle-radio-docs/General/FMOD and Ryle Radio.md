@@ -12,4 +12,4 @@ This leaves as with an issue, then- how do we stream audio for big files? The an
 ## What does it do?
  [FMOD for Unity](https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-2-02-161631) is an incredibly popular third-party audio system that allows for complex audio in a Unity project, though the base FMOD works with countless engines and systems. It also provides low-level audio loading and streaming that we can utilise in Ryle Radio.
 
-We load the selected AudioClip into FMOD, 
+We load the selected AudioClip into FMOD, then over time stream chunks into a buffer that we play through Unity. The only difference you'll notice is that 
