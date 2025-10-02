@@ -3,4 +3,4 @@ TL;DR, FMOD is optionally used with Ryle Radio to stream audio files at runtime.
 ---
 
 ## What is used?
-The package [](FMOD for Unity)
+The package [https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-2-02-161632](FMOD for Unity)
