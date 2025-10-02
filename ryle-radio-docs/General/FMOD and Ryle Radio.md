@@ -17,6 +17,11 @@ We load the selected AudioClip into FMOD, then over time stream chunks into a bu
 ## When should I use it?
 If you're using large audio files, e.g: songs, ambience, it could be worthwhile using FMOD streaming in order to reduce load times. You usually should be able to get by without it by using [`AudioClip.loadInBackground`](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/AudioClip-loadInBackground.html), but huge audio clips may struggle.
 
-However, do note that using this feature requires that the entire [FMOD for Unity](https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-2-02-161631) package be installed. This is a fairly substantial package that includes a lot of other functionality, so if you don't need to 
+However, do note that using this feature requires that the entire [FMOD for Unity](https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-2-02-161631) package be installed. This is a fairly substantial package that includes a lot of other functionality, so if you're averse to installing a large package you may be better off avoiding this part of Ryle Radio.
 
-In short: if you're having slow loading and 
+In short: if you're having slow loading and are happy installing an extra package, try out FMOD streaming.
+
+## How do I use it?
+First of all, install [FMOD for Unity](https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-2-02-161631) to your project through the Asset Store (or some other method, though that's untested).
+
+You should then be able to select "FMOD Audio Streaming" in the list of track options
