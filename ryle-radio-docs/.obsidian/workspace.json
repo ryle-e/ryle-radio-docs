@@ -48,9 +48,21 @@
               "icon": "lucide-file",
               "title": "RadioData"
             }
+          },
+          {
+            "id": "c07989c8a82e9dca",
+            "type": "leaf",
+            "state": {
+              "type": "release-notes",
+              "state": {
+                "currentVersion": "1.9.14"
+              },
+              "icon": "lucide-book-up",
+              "title": "Release Notes 1.9.14"
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -219,7 +231,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e97738c339c6e3e1",
+  "active": "c07989c8a82e9dca",
   "lastOpenFiles": [
     "Pasted image 20251002182945.png",
     "Pasted image 20251002182446.png",
