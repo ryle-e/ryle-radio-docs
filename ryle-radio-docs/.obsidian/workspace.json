@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/FMOD and Ryle Radio.md",
+                "file": "General/Important Setup Note.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "FMOD and Ryle Radio"
+              "title": "Important Setup Note"
             }
           }
         ],
@@ -221,9 +221,10 @@
   },
   "active": "0f482be9896964cd",
   "lastOpenFiles": [
-    "General/Important Setup Note.md",
     "General/(Predicted) Common Issues and Questions.md",
+    "Guides/Basic Radio Sample.md",
     "General/FMOD and Ryle Radio.md",
+    "General/Important Setup Note.md",
     "Scripting/RadioData.md",
     "Pasted image 20251002182945.png",
     "Pasted image 20251002182446.png",
