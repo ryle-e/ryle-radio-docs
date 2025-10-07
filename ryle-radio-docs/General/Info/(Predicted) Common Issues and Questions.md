@@ -59,4 +59,6 @@ Throwing together some possible reasons why this could be happening:
 - If none of these help/fix, [[Contact|contact me]] and I'll happily try to work it out!
 
 ### My track has distortion in a build for a specific platform!
-This is usually another sample rate issue. Check out [[Sample Rates- an important note|my note about it here]], and if it does not assist with the issue, [[Contact|contact me :)]]
+This is usually another [[Sample Rates- an important note|sample rate issue]]. Specifically, this could be because different platforms may use different sample rates in their audio. The workaround for this issue is a little exhaustive, but necessary: force the AudioClips to a specific sample rate depending on the platform.
+
+To do this, assign the new build target in Build Settings, then [[Sample Rates- an important note#Forcing sample rates on clips|force the sample rates as usual]]. This should, ideally, work for the selected platform- if it does not, please [[Contact|contact me]] and I'll see if I can help out :)
