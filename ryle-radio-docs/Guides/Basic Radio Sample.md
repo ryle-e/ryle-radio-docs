@@ -7,13 +7,13 @@ First, install the sample through Unity's Package Manager. Navigate to `RyleRadi
 ## Description
 ### Scene
 The scene is very simple, just containing some scene objects, some UI, and an object named Radio, which itself only has a RadioOutput (and its required AudioSource). 
-The RadioOutput is the component that plays audio from the radio we set up. We can
+The RadioOutput is the component that plays audio from the radio we set up. We need one in any scene where we want to play sound from our radio.
 ![[Pasted image 20251002182945.png]]
-Double click on the link to MainData at the bottom- this will take you to the most important part of the radio :)
+Double click on the link to MainData at the bottom- this will take you to the most important part of the radio- the RadioData object :)
 
 ![[Pasted image 20251007134404.png]]
-This is our example of a RadioData object. A RadioData is where the content played by any Output for this radio is defined- basically where you tell the radio what it is and how it works. When I refer to a "radio" as an object in the rest of this guide, I'm usually referring to this RadioData object.
-
+This is our example of a RadioData. A RadioData is where the content played by any Output for this radio is defined- basically where you tell the radio what it is and how it works. When I refer to a "radio" as an object in the rest of this guide, I'm usually referring to this RadioData object.
+To create a new RadioData in your own project, right click in files, then `Ryle Radio > Radio Data`.
 A RadioData contains two parts- the advanced settings and the list of Tracks- the latter of which we should talk about in a couple of its own sections, as it's pretty much the only reason we have a RadioData object to begin with.
 ### An average Track
 The tracks in a RadioData are the different sets of audio it will play during runtime, depending on what tune you've provided to it. Tracks come in different types, but each contain some common values. Let's have a closer look at what a track contains :)
