@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Guides/Basic Radio Sample.md",
+                "file": "General/Info/(Predicted) Common Issues and Questions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Basic Radio Sample"
+              "title": "(Predicted) Common Issues and Questions"
             }
           },
           {
@@ -206,21 +206,23 @@
   },
   "active": "feee2ba50d3757e1",
   "lastOpenFiles": [
-    "Pasted image 20251007134404.png",
-    "General/Plans, Todo.md",
     "Guides/Basic Radio Sample.md",
+    "Images/Guides/Pasted image 20251002182350.png",
+    "Images/Guides",
+    "General/Plans, Todo.md",
+    "General/Patch Notes.md",
+    "Scripting/Tracks/RadioTrackWrapper.md",
+    "General/Info/Important Setup Note.md",
+    "Images/Guides/Pasted image 20251007134919.png",
+    "Images/Guides/Pasted image 20251007134404.png",
     "Scripting/Components/Base/RadioComponent.md",
     "Scripting/Components/RadioOutput.md",
-    "General/Patch Notes.md",
     "General/Info",
-    "General/Info/Important Setup Note.md",
     "General/Info/(Predicted) Common Issues and Questions.md",
     "General/Info/FMOD and Ryle Radio.md",
     "Scripting/RadioData.md",
-    "Pasted image 20251002182945.png",
-    "Pasted image 20251002182446.png",
-    "Pasted image 20251002182350.png",
-    "Scripting/Tracks/RadioTrackWrapper.md",
+    "Images/Guides/Pasted image 20251002182945.png",
+    "Images/Guides/Pasted image 20251002182446.png",
     "index.md",
     "Untitled.base",
     "General/Info/Contact.md",
@@ -232,15 +234,12 @@
     "Images/Scripting/Tracks/Pasted image 20250925200935.png",
     "Images/Scripting/Tracks/Pasted image 20250925200829.png",
     "Images/Scripting/Tracks/Pasted image 20250925195909.png",
-    "Images/Scripting/Tracks/Pasted image 20250925195246.png",
-    "Pasted image 20250925195229.png",
     "Images/Scripting/Tracks",
     "Images/Scripting",
     "Images",
     "Scripting/Components/Base",
     "Scripting/Tracks/Track Types/Interfaces",
     "Scripting/Tracks/Track Types",
-    "Scripting/Tracks",
-    "Scripting/Components"
+    "Scripting/Tracks"
   ]
 }

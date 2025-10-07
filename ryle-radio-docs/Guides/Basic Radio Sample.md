@@ -11,6 +11,12 @@ The scene is very simple, just containing some scene objects, some UI, and an ob
 Double click on the link to MainData at the bottom- this will take you to the most important part of the radio :)
 
 ![[Pasted image 20251007134404.png]]
-This is our an example of a RadioData object. This is where the content played by any output for this radio is defined- basically where you tell the radio what it is and how it works. The first thing to learn about
+This is our an example of a RadioData object. This is where the content played by any output for this radio is defined- basically where you tell the radio what it is and how it works.
 
+A RadioData contains two parts- the advanced settings (which we will touch on later) and the list of Tracks- the latter of which we should talk about in its own section, as it's pretty much the only reason we have a RadioData object to begin with.
 ### The tracks
+The tracks in a RadioData are the different sets of audio it will play during runtime, depending on what tune you've provided to it. Tracks come in different types, but each contain some common values. Let's have a closer look at one :)
+![[Pasted image 20251007134919.png]]
+#### ID
+The ID of a Track is an identifier used whenever you're choosing a specific track for something. For example, if you want to set up an object to broadcast a track in a specific area, you need to somehow choose which track to broadcast, right? The ID is how you tell the difference between tracks.
+There's no set naming convention for tracks- I've used a really simple one here to show that this track plays music, old music, and is the first one that does so. You can set it up however you want, but I would recommend using something unique between tracks 
