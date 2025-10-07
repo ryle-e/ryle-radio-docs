@@ -84,3 +84,13 @@ This is a background track that plays some white noise that resembles radio stat
 
 ### Back to the scene
 Finally, in the scene we have a very basic controller that tunes the radio in Play mode using the Q and E keys. The script for this is in the sample files, and simply modifies the RadioOutput's tune value. You can also do this in the inspector, and during Play mode.
+
+As you can see, then, the vast majority of logic and customisation for this radio takes place in the RadioData object rather than the scene. All that the scene components do is play an Output linked to this radio (for now... check out the [[Spatial Components Sample|next tutorial]] for more).
+
+---
+## Guide over :)
+That finishes the guide to this sample scene! It's been a while since I wrote a single document this long lol
+
+I really hope this has helped you understand what's going on in this sample- if you have any more questions about concepts or objects in this guide, [[Contact|contact me]] and I'll hopefully be able to help.
+
+Next up is the [[Spatial Components Sample]] :)

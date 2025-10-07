@@ -11,14 +11,12 @@
             "id": "0423b4e26318df5a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Guides/Basic Radio Sample.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/Guides/Basic Radio Sample/Pasted image 20251007223213.png"
               },
-              "icon": "lucide-file",
-              "title": "Basic Radio Sample"
+              "icon": "lucide-image",
+              "title": "Pasted image 20251007223213"
             }
           }
         ]
@@ -142,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Guides/Basic Radio Sample.md",
+                "file": "Images/Guides/Basic Radio Sample/Pasted image 20251007223213.png",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Basic Radio Sample"
+              "title": "Outline of Pasted image 20251007223213"
             }
           },
           {
@@ -192,10 +190,6 @@
   },
   "active": "0423b4e26318df5a",
   "lastOpenFiles": [
-    "Pasted image 20251007223213.png",
-    "Scripting/Components/Base/RadioComponent.md",
-    "Scripting/Tracks/RadioTrackWrapper.md",
-    "Untitled.md",
     "Images/Guides/Basic Radio Sample/Pasted image 20251007215617.png",
     "Images/Guides/Basic Radio Sample/Pasted image 20251007214617.png",
     "Images/Guides/Basic Radio Sample/Pasted image 20251007190243.png",
@@ -204,10 +198,15 @@
     "Images/Guides/Basic Radio Sample/Pasted image 20251007134404.png",
     "Images/Guides/Basic Radio Sample/Pasted image 20251002182945.png",
     "Images/Guides/Basic Radio Sample/Pasted image 20251002182350.png",
+    "Images/Guides/Basic Radio Sample/Pasted image 20251007223213.png",
+    "Guides/Spatial Components Sample.md",
+    "Guides/Basic Radio Sample.md",
+    "Scripting/Components/Base/RadioComponent.md",
+    "Scripting/Tracks/RadioTrackWrapper.md",
+    "Untitled.md",
     "Images/Guides/Basic Radio Sample",
     "Pasted image 20251007184225.png",
     "General/Info/Sample Rates- an important note.md",
-    "Guides/Basic Radio Sample.md",
     "Main.md",
     "General/About the Docs.md",
     "General/Info/What is Ryle Radio.md",
@@ -216,7 +215,6 @@
     "General/Info/(Predicted) Common Issues and Questions.md",
     "General/Info/Contact.md",
     "General/Info/FMOD and Ryle Radio.md",
-    "Images/Guides/Pasted image 20251002182446.png",
     "General/Info/Contribute.md",
     "Scripting/Components/RadioOutput.md",
     "www.reddit.com/u/ryle-e_dev.md",
