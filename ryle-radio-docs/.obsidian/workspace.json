@@ -142,13 +142,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Guides/Spatial Components Sample.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Spatial Components Sample"
+              "title": "Outline"
             }
           },
           {
@@ -172,7 +171,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -190,14 +189,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0423b4e26318df5a",
+  "active": "9f1feac3f365ae91",
   "lastOpenFiles": [
+    "Guides/Spatial Components Sample.md",
     "General/Info/What is Ryle Radio.md",
     "General/Info/Sample Rates- an important note.md",
     "General/Info/the Multiselect Attribute.md",
     "General/Info/FMOD and Ryle Radio.md",
     "General/Info/(Predicted) Common Issues and Questions.md",
-    "Guides/Spatial Components Sample.md",
     "Pasted image 20251007234023.png",
     "Pasted image 20251007233604.png",
     "Guides/Basic Radio Sample.md",
