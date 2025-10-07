@@ -76,4 +76,7 @@ This is an example of a **Station**- a track that contains other tracks. In this
 
 #### static
 This is a background track that plays some white noise that resembles radio static. It's set up specifically to be a background track as follows.
-- Its **Range** covers the entire 1
+- Its **Range** covers the entire line, meaning this track can be heard with any tune value.
+- Its **Gain curve** is flat, meaning that it use the same gain everywhere it can be heard- in this case, it's the same gain everywhere.
+- Its **Attenuation** is very high. Because this track is at the bottom of the list, it has low priority. This plus the high attenuation means that if any other track is playing at the same time, this one will get quieter. This creates the effect of static "filling in the gaps" between other tracks- just like a real radio!
+- Its **Track type** is set to procedural. This option allows generation of audio at runtime- in this case, we're generating a type of noise called Brown Noise. Other options include white noise, pink noise, sine waveforms, and so on.
