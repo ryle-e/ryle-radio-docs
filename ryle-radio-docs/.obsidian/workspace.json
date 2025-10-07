@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Info/Important Setup Note.md",
+                "file": "General/Info/Sample Rates- an important note.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Important Setup Note"
+              "title": "Sample Rates- an important note"
             }
           },
           {
@@ -206,8 +206,10 @@
   },
   "active": "feee2ba50d3757e1",
   "lastOpenFiles": [
-    "General/Plans, Todo.md",
     "General/Info/(Predicted) Common Issues and Questions.md",
+    "General/Info/Sample Rates- an important note.md",
+    "General/Info/What is Ryle Radio.md",
+    "General/Plans, Todo.md",
     "Pasted image 20251007151227.png",
     "Pasted image 20251007151140.png",
     "Pasted image 20251007151057.png",
@@ -218,7 +220,6 @@
     "Images/Guides",
     "General/Patch Notes.md",
     "Scripting/Tracks/RadioTrackWrapper.md",
-    "General/Info/Important Setup Note.md",
     "Images/Guides/Pasted image 20251007134919.png",
     "Images/Guides/Pasted image 20251007134404.png",
     "Scripting/Components/Base/RadioComponent.md",
@@ -230,7 +231,6 @@
     "Images/Guides/Pasted image 20251002182446.png",
     "index.md",
     "General/Info/Contact.md",
-    "General/Info/What is Ryle Radio.md",
     "RadioL.md",
     "what.md",
     "Images/Scripting/Tracks/Pasted image 20250925190155.png",

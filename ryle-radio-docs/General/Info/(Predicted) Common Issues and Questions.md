@@ -36,7 +36,7 @@ The possibilities are endless :)
 ---
 ## Issues
 ### My Audio Clip sounds distorted when played through a radio?
-This is a known problem related to conversion between sample rates.  [[Important Setup Note#How do we fix it?|Here's some solutions I've put together for this specific issue]], and [[Plans, Todo#Known issues|the issue itself is logged here]].
+This is a known problem related to conversion between sample rates.  [[Sample Rates- an important note#How do we fix it?|Here's some solutions I've put together for this specific issue]], and [[Plans, Todo#Known issues|the issue itself is logged here]].
 
 ### My project takes ages to start up after adding the radio!
 This is most likely due to the audio being decompressed on game startup. When a Radio is initialized, it needs to load all of the AudioClips it contains into memory (a limitation of [AudioClip.GetData(..)]([Unity - Scripting API: AudioClip.GetData](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/AudioClip.GetData.html)))- this can end up creating a significant amount of load time for the project as it's decompressing many clips at once!
@@ -52,3 +52,6 @@ Throwing together some possible reasons why this could be happening:
 - Is **Force global** selected on your track (or if you're using Broadcasters for this track, deselected)?
 - Is **Play on Init** selected on your track? If not, are you playing it yourself (either through a [[RadioInteractor]] or your own code)?
 - If it's an AudioClip, is the clip itself loud enough?
+
+### My track has distortion in a build for a specific platform!
+This is probably another sample rate issue. Check out [[Sample Rates- an important note|my note about it here]],
