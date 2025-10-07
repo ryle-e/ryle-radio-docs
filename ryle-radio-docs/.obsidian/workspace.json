@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Info/(Predicted) Common Issues and Questions.md",
+                "file": "General/Info/Important Setup Note.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "(Predicted) Common Issues and Questions"
+              "title": "Important Setup Note"
             }
           },
           {
@@ -206,16 +206,16 @@
   },
   "active": "feee2ba50d3757e1",
   "lastOpenFiles": [
+    "General/Plans, Todo.md",
+    "General/Info/(Predicted) Common Issues and Questions.md",
     "Pasted image 20251007151227.png",
     "Pasted image 20251007151140.png",
     "Pasted image 20251007151057.png",
     "Pasted image 20251007150555.png",
     "Untitled.base",
-    "General/Info/(Predicted) Common Issues and Questions.md",
     "Guides/Basic Radio Sample.md",
     "Images/Guides/Pasted image 20251002182350.png",
     "Images/Guides",
-    "General/Plans, Todo.md",
     "General/Patch Notes.md",
     "Scripting/Tracks/RadioTrackWrapper.md",
     "General/Info/Important Setup Note.md",
@@ -234,7 +234,6 @@
     "RadioL.md",
     "what.md",
     "Images/Scripting/Tracks/Pasted image 20250925190155.png",
-    "Images/Scripting/Tracks/Pasted image 20250922183059.png",
     "Images/Scripting/Tracks",
     "Images/Scripting",
     "Images",
