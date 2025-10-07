@@ -64,4 +64,9 @@ These are singular songs that play on the radio- they're the primary track that 
 - **Play on Init** is also always true- we want this radio to play from the game's start.
 - Their **Track types** are all **Audio Clip**. This means that every track uses a specific AudioClip that contains a different song. We can easily change which song each track plays just like a normal Unity AudioSource- try it yourself!
 #### station_sfx
-This is an example of a **Station**- a track that contains other tracks. In this case, we have a station that plays some 
+This is an example of a **Station**- a track that contains other tracks. In this case, we have a station that plays a few different SFX clips and switches between them every time one finishes. We'll have a closer look at how to use Stations!
+- The **Random Sequence** setting on a station defines whether it plays each child track in order, or if it uses a random order. In this case, we want the SFX to play in a random order, switching between each, so we tick this setting.
+- The **Threshold Before Repeats** setting is a little more complex. It controls how many other tracks need to be played before one track can be played again. I believe the code comments explain it best :) ![[Pasted image 20251007214617.png]]
+- Then finally, we have our **Station Tracks**. These are almost identical to the Tracks we create in RadioData themselves, with some slight differences.
+	- They don't have ranges, gain curves, attenuations or playing controls- these are all defined by the station itself, and are therefore unnecessary here- all station tracks use the same values.
+	- 
