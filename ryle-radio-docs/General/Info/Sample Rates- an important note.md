@@ -14,14 +14,19 @@ For example, let's take the "I'll Never Smile Again" audio in the [[Basic Radio 
 
 ## How do we fix it?
 If it's not something you can or are willing to ignore, we're given a couple options for fixing this problem. My recommendation is to use the first method: **Forcing sample rates on clips**.
+
 ### Forcing sample rates on clips
 This is a tiny bit complex, but is the least drastic solution to the problem. You can either go about this the integrated way, or the manual way.
 
 I'll also put a note here to say: different build platforms use different base sample rates. This is just a consequence of how the platforms work- make sure you check each individual version and potentially repeat a below method with other build targets selected in case you're having any issues.
+
+Alternatively, run the Integrated way first, then move through clips afterwards with the Manual way.
 #### Integrated way
 The Integrated way is built-in to RadioData objects. Opening the Advanced Settings tab will show the following:
 ![[Pasted image 20251007184437.png]]
-Make sure **Force sample rate on Clips** is ticked. If you want to provide your own sample rate, enter it in the box, otherwise leave it at 0. When **Forced sample rate** is set to 0, it will automatically use the default sample rate for the current build type. Press the button to assign the sample rate on all AudioClips referenced in the RadioData!
+Make sure **Force sample rate on Clips** is ticked. If you want to provide your own sample rate, enter it in the box, otherwise leave it at 0. 
+When **Forced sample rate** is set to 0, it will automatically use the default sample rate for the current build type. 
+Press the button to assign the sample rate on all AudioClips referenced in the RadioData!
 
 Please note two things about this method:
 1. This affects ALL the AudioClips referenced, even those in Stations- there is no way to exclude clips from this except for removing them from the radio temporarily. Please make sure that you're okay with this change being applied to every applicable clip.
@@ -30,5 +35,13 @@ Please note two things about this method:
 #### Manual way
 The manual way requires you to trawl individually through applicable audio clips and override the sample rate yourself. This is substantially slower, but a lot safer than universally overriding sample rates.
 
-To do this, select an AudioClip in the inspector. Select a target platform, select the Override toggle. Select `Override Sample Rate` on Sample Rate Setting, then select a sample rate below.
+To do this, select an AudioClip in the inspector. Select the target platform, select the Override toggle. Select `Override Sample Rate` on Sample Rate Setting, then select a sample rate below. 
 ![[Pasted image 20251007190243.png]]
+Do note that this has to be done for each applicable clip for each applicable platform.
+
+### Changing base sample rate
+Rather than forcing sample rates on clips, our other available method is to change the project's native sample rate. This is less recommended due to this affecting the ENTIRE project, and possibly screwing up audio elsewhere as a result. You have been warned,,,,
+
+To do this, go to `Project Settings > Audio > System Sample Rate`, and change the value to match the base sample rate of the distorted AudioClip. This may take a moment to load- once completed, the audio should no longer be distorted.
+
+To reinforce the point, some other, previously fine audio could possibly be distorted now due to the system changing its universal sample rate. Check profusely when doing this method!
