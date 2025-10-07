@@ -11,14 +11,13 @@
             "id": "feee2ba50d3757e1",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "bases",
               "state": {
-                "file": "General/Info/Sample Rates- an important note.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/Index.base",
+                "viewName": "Table"
               },
-              "icon": "lucide-file",
-              "title": "Sample Rates- an important note"
+              "icon": "lucide-table",
+              "title": "Index"
             }
           },
           {
@@ -206,14 +205,17 @@
   },
   "active": "feee2ba50d3757e1",
   "lastOpenFiles": [
-    "General/Info/(Predicted) Common Issues and Questions.md",
+    "Scripting/Components/RadioOutput.md",
+    "Images/Index.base",
+    "Images/Info/Pasted image 20251007151227.png",
+    "Images/Info/Pasted image 20251007150555.png",
+    "Images/Info",
     "General/Info/Sample Rates- an important note.md",
+    "General/Info/(Predicted) Common Issues and Questions.md",
     "General/Info/What is Ryle Radio.md",
     "General/Plans, Todo.md",
-    "Pasted image 20251007151227.png",
-    "Pasted image 20251007151140.png",
-    "Pasted image 20251007151057.png",
-    "Pasted image 20251007150555.png",
+    "Images/Info/Pasted image 20251007151140.png",
+    "Images/Info/Pasted image 20251007151057.png",
     "Untitled.base",
     "Guides/Basic Radio Sample.md",
     "Images/Guides/Pasted image 20251002182350.png",
@@ -223,7 +225,6 @@
     "Images/Guides/Pasted image 20251007134919.png",
     "Images/Guides/Pasted image 20251007134404.png",
     "Scripting/Components/Base/RadioComponent.md",
-    "Scripting/Components/RadioOutput.md",
     "General/Info",
     "General/Info/FMOD and Ryle Radio.md",
     "Scripting/RadioData.md",
@@ -238,8 +239,6 @@
     "Images/Scripting",
     "Images",
     "Scripting/Components/Base",
-    "Scripting/Tracks/Track Types/Interfaces",
-    "Scripting/Tracks/Track Types",
-    "Scripting/Tracks"
+    "Scripting/Tracks/Track Types/Interfaces"
   ]
 }
