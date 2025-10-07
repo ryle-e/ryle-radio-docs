@@ -1,8 +1,8 @@
-This sample is a basic demo intended to illustrate how a radio could be laid out, using all three default track types.
+This sample is a basic demo intended to illustrate how a radio could be laid out, using all three default track types. Reading this entire guide isn't necessary if you'd rather check out the scene then cross-reference things you don't understand rather than taking in the whole thing- however this guide does introduce some key points about [[#An average Track|all]] or [[#Specific tracks|specific]] tracks.
 
 ---
 ## Accessing the sample
-First, install the sample through Unity's Package Manager. Navigate to `RyleRadio/Samples/BasicRadio`, and open `MainScene`. It should look like this: ![[Pasted image 20251002182350.png]]
+First, install the sample through Unity's Package Manager. Navigate to `RyleRadio/Samples/BasicRadio`, and open `MainScene`. It should look like this: ![[Pasted image 20251007223213.png]]
 
 ## Description
 ### Scene
@@ -83,3 +83,4 @@ This is a background track that plays some white noise that resembles radio stat
 - Its **Track type** is set to procedural. This option allows generation of audio at runtime- in this case, we're generating a type of noise called brown noise. Other options include white noise, pink noise, sine waveforms, and so on. *Note: the Brown Walk Power variable affects the sound of the brown noise- different types of procedural audio will have different variables, so play around with all of them :)*
 
 ### Back to the scene
+Finally, in the scene we have a very basic controller that tunes the radio in Play mode using the Q and E keys. The script for this is in the sample files, and simply modifies the RadioOutput's tune value. You can also do this in the inspector, and during Play mode.
