@@ -6,7 +6,7 @@ In practice, this means that you can have an end user move a value across a rang
 
 ---
 ## Features
-Audio types in Ryle Radio are called **Tracks**. Tracks can be Unity AudioClips, procedural audio (e.g: noise, waveforms), and even custom structures named Stations, which contain multiple other audio types and switch between them automatically. Together these Tracks can form a complex system of audio that can be tuned through at runtime, creating an interactive and easily usable system for players to engage with audio.
+Audio types in Ryle Radio are called **[[Basic Radio Sample#Specific tracks|Tracks]]**. Tracks can be Unity AudioClips, procedural audio (e.g: noise, waveforms), and even custom structures named [[Basic Radio Sample#station_sfx|Stations]], which contain multiple other audio types and switch between them automatically. Together these Tracks can form a complex system of audio that can be tuned through at runtime, creating an interactive and easily usable system for players to engage with audio.
 
 The package contains **Broadcasters**, points that cause tracks to play louder (or at all) depending on the proximity of an output- effectively an object that broadcasts the track. It also contains **Insulators**, which are the reverse- areas where tracks are quieter.
 

@@ -54,6 +54,7 @@ The track type defines the content of a particular track. When clicked on, you w
 - A track set to **Station aka Multi-select** contains more tracks, and switches between them over time.
 On this sample radio, there's at least one track of each type. Let's go over them!
 #### music_old1 / music_old2 / music_new1 / music_new2
+![[Pasted image 20251007134919.png]]
 These are singular songs that play on the radio- they're the primary track that should be playing over everything else- the important audio, if you will.
 - Their **IDs** provide some identification as to what each type of audio each track plays, and how "old" the tracks sound (sorry guys).
 - Their **Ranges** are all different, and non-overlapping- this means that when tuning along the radio, they can all be heard at different times.
@@ -64,9 +65,15 @@ These are singular songs that play on the radio- they're the primary track that 
 - **Play on Init** is also always true- we want this radio to play from the game's start.
 - Their **Track types** are all **Audio Clip**. This means that every track uses a specific AudioClip that contains a different song. We can easily change which song each track plays just like a normal Unity AudioSource- try it yourself!
 #### station_sfx
+![[Pasted image 20251007215617.png]]
 This is an example of a **Station**- a track that contains other tracks. In this case, we have a station that plays a few different SFX clips and switches between them every time one finishes. We'll have a closer look at how to use Stations!
 - The **Random Sequence** setting on a station defines whether it plays each child track in order, or if it uses a random order. In this case, we want the SFX to play in a random order, switching between each, so we tick this setting.
-- The **Threshold Before Repeats** setting is a little more complex. It controls how many other tracks need to be played before one track can be played again. I believe the code comments explain it best :) ![[Pasted image 20251007214617.png]]
+- The **Threshold Before Repeats** setting is a little more complex. It controls how many other tracks need to be played before one track can be played again. I believe the code comments explain it best :) ![[Pasted image 20251007214617.png]] In this situation, we don't want to play the same SFX more than once in a row. We therefore use a threshold above 0.5 to show that we want 1 <sup>((3 - 1 == 2) * 0.5) == 1</sup> other station track to play before the same one can play again.
 - Then finally, we have our **Station Tracks**. These are almost identical to the Tracks we create in RadioData themselves, with some slight differences.
 	- They don't have ranges, gain curves, attenuations or playing controls- these are all defined by the station itself, and are therefore unnecessary here- all station tracks use the same values.
-	- 
+	- They have the variable **Start and End Rests**- this is the amount of time before or after the track plays where there is silence. This is useful if you have various tracks in this station with no silence at the beginning or end, and want to separate the track switches a little. In this case, we want each SFX clip to play immediately after one another, so we set the rests to 0.
+	- Finally, there's no option to make a Station in a Station. This is an artificial limitation I have put in place to help keep the package simple, but if you would like it changed, [[Contact|contact me]]!
+
+#### static
+This is a background track that plays some white noise that resembles radio static. It's set up specifically to be a background track as follows.
+- Its **Range** covers the entire 1
