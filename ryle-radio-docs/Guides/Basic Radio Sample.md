@@ -52,7 +52,16 @@ The track type defines the content of a particular track. When clicked on, you w
 - A track set to **Audio Clip** will allow you to specify an audio file that it will play. This is the most common choice.
 - A track set to **Procedural** will allow you to generate new audio at runtime, such as static noise or a single tone. Useful for adding depth and complexity to a radio.
 - A track set to **Station aka Multi-select** contains more tracks, and switches between them over time.
-On this sample radio, there's at least one track of each type. Let's go over each track specifically
-
-#### music_old1
-This is 
+On this sample radio, there's at least one track of each type. Let's go over them!
+#### music_old1 / music_old2 / music_new1 / music_new2
+These are singular songs that play on the radio- they're the primary track that should be playing over everything else- the important audio, if you will.
+- Their **IDs** provide some identification as to what each type of audio each track plays, and how "old" the tracks sound (sorry guys).
+- Their **Ranges** are all different, and non-overlapping- this means that when tuning along the radio, they can all be heard at different times.
+- Their **Gain curves** are all the same- smoothly fading the volume of each track in and out depending on the Output's tune.
+- Their **Gain** values all depend on the specific track- some clips are quieter than others, so we give them a higher gain.
+- Their **Attenuations** are all 0- they are the highest-priority audio, and every other track should be getting quieter when it plays- not the other way around. Therefore, we keep attenuation at 0.
+- **Force global** is always true for this sample.
+- **Play on Init** is also always true- we want this radio to play from the game's start.
+- Their **Track types** are all **Audio Clip**. This means that every track uses a specific AudioClip that contains a different song. We can easily change which song each track plays just like a normal Unity AudioSource- try it yourself!
+#### station_sfx
+This is an example of a **Station**- a track that contains other tracks. In this case, we have a station that plays some 
