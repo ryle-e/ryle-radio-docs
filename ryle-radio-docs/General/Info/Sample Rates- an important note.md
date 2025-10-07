@@ -14,6 +14,9 @@ For example, let's take the "I'll Never Smile Again" audio in the [[Basic Radio 
 
 ## How do we fix it?
 If it's not something you can or are willing to ignore, we're given a couple options for fixing this problem. My recommendation is to use the first method: **Forcing sample rates on clips**.
-
 ### Forcing sample rates on clips
-This is a tiny bit complex, but is the least drastic solution to the problem. Instead of 
+This is a tiny bit complex, but is the least drastic solution to the problem. You can either go about this the integrated way, or the manual way.
+#### Integrated way
+The Integrated way is built-in to RadioData objects. Opening the Advanced Settings tab will show the following:
+![[Pasted image 20251007184437.png]]
+Make sure **Force sample rate on Clips** is ticked. If you want to provide your own sample rate, enter it in the box, otherwise leave it at 0. When **Forced sample rate** is set to 0, it will automatically use the default sample rate for the current build type. Press the button
