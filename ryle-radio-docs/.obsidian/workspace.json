@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Guides/Basic Radio Sample.md",
+                "file": "General/Info/Contact.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Basic Radio Sample"
+              "title": "Contact"
             }
           }
         ]
@@ -142,13 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Guides/Basic Radio Sample.md",
+                "file": "General/Info/Contact.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Basic Radio Sample"
+              "title": "Outline of Contact"
             }
           },
           {
@@ -193,6 +193,7 @@
   "active": "0423b4e26318df5a",
   "lastOpenFiles": [
     "General/Info/(Predicted) Common Issues and Questions.md",
+    "Guides/Basic Radio Sample.md",
     "General/Patch Notes.md",
     "General/Info/What is Ryle Radio.md",
     "General/Info/Sample Rates- an important note.md",
@@ -218,7 +219,6 @@
     "Images/Info/Pasted image 20251007150555.png",
     "Images/Info",
     "Untitled.base",
-    "Guides/Basic Radio Sample.md",
     "Images/Guides",
     "Scripting/Tracks/RadioTrackWrapper.md",
     "Scripting/Components/Base/RadioComponent.md",

@@ -25,7 +25,7 @@ It's very possible, if not likely, that this documentation won't be enough for t
 Check out the [[Observers and Interactors Sample]]! The components you likely need are explained and used in there :)
 
 ### What does the **Gain curve** do?
-The gain curve can be a little confusing if you haven't worked with non-linear blending or curves like this before. It effectively tells outputs that are tuning through this radio how loud to make it within the tune range.
+The gain curve can be a little confusing if you haven't worked with non-linear blending or curves like this before. It effectively tells outputs that are tuning through this radio how loud to make a particular track within the tune range.
 
 ![[Pasted image 20251007150555.png]]
 For example, this is a track in the [[Basic Radio Sample]]. The gain curve is how loud this track will be when tuned to the \[33.2 - 246.0] range.
@@ -33,7 +33,7 @@ Let's say we have a RadioOutput using this radio with its tune set to about 140.
 
 This curve can be useful for tracks that are limited to a very small range, by making them easier to hear at the edges of the range:![[Pasted image 20251007151057.png]]
 Or perhaps we want it to be fully audible as soon as the range is reached:![[Pasted image 20251007151140.png]]
-Or maybe the tune range reaches all the way to the end (1000.0), and we want it to be loudest at 1000.0:
+Or maybe the tune range reaches all the way to the end of the range, and we want it to be loudest at the end:
 ![[Pasted image 20251007151227.png]]
 The possibilities are endless :)
 
@@ -56,7 +56,7 @@ Throwing together some possible reasons why this could be happening:
 - Is **Force global** selected on your track (or if you're using Broadcasters for this track, deselected)?
 - Is **Play on Init** selected on your track? If not, are you playing it yourself (either through a [[RadioInteractor]] or your own code)?
 - If it's an AudioClip, is the clip itself loud enough?
-- If none of these help/fix, [[Contact|contact me]] and I'll happily try to work it out!
+If none of these help/fix, [[Contact|contact me]] and I'll happily try to work it out!
 
 ### My track has distortion in a build for a specific platform!
 This is usually another [[Sample Rates- an important note|sample rate issue]]. Specifically, this could be because different platforms may use different sample rates in their audio. The workaround for this issue is a little exhaustive, but necessary: force the AudioClips to a specific sample rate depending on the platform.
