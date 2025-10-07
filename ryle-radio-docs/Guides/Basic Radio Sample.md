@@ -28,7 +28,18 @@ Let's say we have a song that we want to play when the user is at a tune of 500.
 This is, however, heavily influenced by the Gain curve.
 #### Gain curve
 The gain curve controls how high the gain on the track is when it's within the defined Range. If the curve is flat, a song will have the same volume at any tune within its range- but a bell curve would taper off the more distant the tune. Check out [[(Predicted) Common Issues and Questions#What does the **Gain curve** do?|What does the Gain curve do?]] for a better explanation!
-
 #### Gain
 The gain slider controls how loud the track is. The higher the gain, the louder the track. Simple!
-To be more technical, the gain is the first thing applied to the track when calculating its output volume. If you want to change the 
+To be more technical, the gain is the first thing applied to the track when calculating its output volume. If you want to change the volume of a track without modifying the track itself, this is your first target.
+#### Attenuation
+To explain attenuation, we need to introduce **Track priority**. Track priority is extremely simple- it's the order of the tracks in the RadioData. The track at the top of the list is highest priority, the track at the bottom is lowest. Giving it a separate name probably talks it up too much lol
+
+Attenuation makes a track lower in volume when a higher priority track is playing. This is especially useful for background tracks or static, making them quieter when a song or other track starts playing over the top. The higher the attenuation value, the quieter the track gets.
+
+If anyone needs more complex attenuation layering, [[Contact|let me know]]! I've been debating adding attenuation layers(???), but I'm not sure if they're worth the effort if they'd never be used lol. For the moment, direct order priority works well :)
+#### Force global
+For the moment, keep this ticked. This setting is explained further in [[Spatial Components Sample]].
+#### Play on Init
+Whether or not the track will start playing as soon as the game starts. More often than not, you'll be leaving this ticked.
+#### Track Type
+Now this is the real meat of the track
