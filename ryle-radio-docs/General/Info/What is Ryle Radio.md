@@ -12,8 +12,6 @@ The package contains **Broadcasters**, points that cause tracks to play louder (
 
 It also contains **Observers**, which are built-in scripts allowing you to tie functionality into the radio, such as invoking events when a particular track is audible, or when an output leaves a certain tune range. These work with **Interactors**, which provide a no-code solution to playing, pausing, etc., tracks.
 
-![[Pasted image 20250922182711.png]]
-
 ---
 
 This package is built to be modular and expandable too, allowing easy creation of custom track types and components that slots nicely into the inspector.
