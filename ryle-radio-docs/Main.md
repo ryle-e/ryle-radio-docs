@@ -21,21 +21,18 @@ It allows you to set up several [[Basic Radio Sample#Specific tracks|Tracks]] at
 - Premade samples and full documentation
 - Open-source!
 
-I am a little worried that the way I wrote this feature list doesn't make total sense lol, so check out the [[#Contact, Contribute]] section to contact me with any questions :)
+I am a little worried that the way I wrote this feature list doesn't make total sense lol, so check out the [[Contact]] section to contact me with any questions :)
 
 ## Limitations
 - **All audio is reduced to mono**- does reflect real life radios, but could be annoying for more complex audio layouts. Theoretically you could use a different radio for each side as a workaround, but this would take a lot of effort to set up
 - **Some parts can't be modified at runtime**- specifically observers and adding new tracks to stations (the latter of which you technically can do but may require some tinkering, and can easily be worked-around)
 
-## Contact, Contribute
-If you have any issues, feedback, ideas, contributions, questions, or just about anything, flick me an email at rjdwalrus@gmail.com!
-
-This is the first open-source package I have developed, and so I'm not too well-versed in the contributions process outside of simple collaboration. If you want to add anything to the package or make any changes, feel free to make a pull request! I'll update the Asset Store version semi-frequently when changes are made.
-
 ## Links
 - GitHub repo
 - Asset Store page
-- Documentation
+
+## Navigating the docs
+Start by checking out the [[Basic Radio Sample]] and other samples, followed by [[(Predicted) Common Issues and Questions]]. Any other questions or issues, [[Contact|contact me]]!
 
 ## Thanks!
 This is my first open-source package and my second ever published Unity package, so I hope it works for you and does what you need it to !!   :)))
