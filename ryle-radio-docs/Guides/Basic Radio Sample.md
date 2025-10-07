@@ -28,3 +28,7 @@ Let's say we have a song that we want to play when the user is at a tune of 500.
 This is, however, heavily influenced by the Gain curve.
 #### Gain curve
 The gain curve controls how high the gain on the track is when it's within the defined Range. If the curve is flat, a song will have the same volume at any tune within its range- but a bell curve would taper off the more distant the tune. Check out [[(Predicted) Common Issues and Questions#What does the **Gain curve** do?|What does the Gain curve do?]] for a better explanation!
+
+#### Gain
+The gain slider controls how loud the track is. The higher the gain, the louder the track. Simple!
+To be more technical, the gain is the first thing applied to the track when calculating its output volume. If you want to change the 
