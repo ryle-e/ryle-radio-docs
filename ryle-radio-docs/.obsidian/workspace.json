@@ -8,20 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "ac5fb94a83f6d7c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "index.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "index"
-            }
-          },
-          {
             "id": "feee2ba50d3757e1",
             "type": "leaf",
             "state": {
@@ -41,16 +27,15 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Important Setup Note.md",
+                "file": "General/Plans, Todo.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Important Setup Note"
+              "title": "Plans, Todo"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -219,23 +204,27 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0f482be9896964cd",
+  "active": "feee2ba50d3757e1",
   "lastOpenFiles": [
-    "General/(Predicted) Common Issues and Questions.md",
+    "Pasted image 20251007134404.png",
+    "General/Plans, Todo.md",
     "Guides/Basic Radio Sample.md",
-    "General/FMOD and Ryle Radio.md",
-    "General/Important Setup Note.md",
+    "Scripting/Components/Base/RadioComponent.md",
+    "Scripting/Components/RadioOutput.md",
+    "General/Patch Notes.md",
+    "General/Info",
+    "General/Info/Important Setup Note.md",
+    "General/Info/(Predicted) Common Issues and Questions.md",
+    "General/Info/FMOD and Ryle Radio.md",
     "Scripting/RadioData.md",
     "Pasted image 20251002182945.png",
     "Pasted image 20251002182446.png",
     "Pasted image 20251002182350.png",
     "Scripting/Tracks/RadioTrackWrapper.md",
-    "Scripting/Components/RadioOutput.md",
-    "Scripting/Components/Base/RadioComponent.md",
     "index.md",
     "Untitled.base",
-    "General/Contact.md",
-    "General/What is Ryle Radio.md",
+    "General/Info/Contact.md",
+    "General/Info/What is Ryle Radio.md",
     "RadioL.md",
     "what.md",
     "Images/Scripting/Tracks/Pasted image 20250925190155.png",
@@ -252,7 +241,6 @@
     "Scripting/Tracks/Track Types/Interfaces",
     "Scripting/Tracks/Track Types",
     "Scripting/Tracks",
-    "Scripting/Components",
-    "Scripting/Editor"
+    "Scripting/Components"
   ]
 }
