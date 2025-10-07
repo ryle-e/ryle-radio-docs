@@ -6,7 +6,7 @@ First, install the sample through Unity's Package Manager. Navigate to `RyleRadi
 
 ## Description
 ### Scene
-The scene is our focus in this sample, unlike the previous. Selecting the Radio object shows a RadioOutput again, this time with a far simpler RadioData linked to it, that simply plays the same track as constant- but this time with one difference: **Force Global** is unticked. 
+The scene is our focus in this sample, unlike in [[Basic Radio Sample|the previous]]. Selecting the Radio object shows a RadioOutput again, this time with a far simpler RadioData linked to it, that simply plays the same track as constant- but this time with one difference: **Force Global** is unticked. 
 ![[Pasted image 20251007233604.png]] 
 Having this option unticked forces us to use spatial RadioBroadcasters for our audio, instead of it being audible everywhere. Let's have a closer look at some objects in the scene for more information.
 
