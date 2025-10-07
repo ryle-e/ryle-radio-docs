@@ -13,7 +13,7 @@ Double click on the link to MainData at the bottom- this will take you to the mo
 ![[Pasted image 20251007134404.png]]
 This is our an example of a RadioData object. This is where the content played by any output for this radio is defined- basically where you tell the radio what it is and how it works.
 
-A RadioData contains two parts- the advanced settings (which we will touch on later) and the list of Tracks- the latter of which we should talk about in its own section, as it's pretty much the only reason we have a RadioData object to begin with.
+A RadioData contains two parts- the advanced settings (which we will touch on later) and the list of Tracks- the latter of which we should talk about in a couple of its own sections, as it's pretty much the only reason we have a RadioData object to begin with.
 ### An average Track
 The tracks in a RadioData are the different sets of audio it will play during runtime, depending on what tune you've provided to it. Tracks come in different types, but each contain some common values. Let's have a closer look at what a track contains :)
 ![[Pasted image 20251007134919.png]]
@@ -64,6 +64,7 @@ These are singular songs that play on the radio- they're the primary track that 
 - **Force global** is always true for this sample.
 - **Play on Init** is also always true- we want this radio to play from the game's start.
 - Their **Track types** are all **Audio Clip**. This means that every track uses a specific AudioClip that contains a different song. We can easily change which song each track plays just like a normal Unity AudioSource- try it yourself!
+	- *Note the [[Sample Rates- an important note|sample rates]] of the clips*
 #### station_sfx
 ![[Pasted image 20251007215617.png]]
 This is an example of a **Station**- a track that contains other tracks. In this case, we have a station that plays a few different SFX clips and switches between them every time one finishes. We'll have a closer look at how to use Stations!
@@ -79,4 +80,6 @@ This is a background track that plays some white noise that resembles radio stat
 - Its **Range** covers the entire line, meaning this track can be heard with any tune value.
 - Its **Gain curve** is flat, meaning that it use the same gain everywhere it can be heard- in this case, it's the same gain everywhere.
 - Its **Attenuation** is very high. Because this track is at the bottom of the list, it has low priority. This plus the high attenuation means that if any other track is playing at the same time, this one will get quieter. This creates the effect of static "filling in the gaps" between other tracks- just like a real radio!
-- Its **Track type** is set to procedural. This option allows generation of audio at runtime- in this case, we're generating a type of noise called Brown Noise. Other options include white noise, pink noise, sine waveforms, and so on.
+- Its **Track type** is set to procedural. This option allows generation of audio at runtime- in this case, we're generating a type of noise called brown noise. Other options include white noise, pink noise, sine waveforms, and so on. *Note: the Brown Walk Power variable affects the sound of the brown noise- different types of procedural audio will have different variables, so play around with all of them :)*
+
+### Back to the scene
