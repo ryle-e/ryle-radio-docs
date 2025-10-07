@@ -3,7 +3,12 @@ These are some questions I feel could end up being common, and would prefer to h
 	1. [[#How do I use Ryle Radio?]]
 	2. [[#How do I work with it in code?]]
 	3. [[#How do I work with it without coding?]]
+	4. [[#What does the **Gain curve** do?|What does the Gain curve do?]]
 2. [[#Issues]]
+	1. [[#My Audio Clip sounds distorted when played through a radio?]]
+	2. [[#My project takes ages to start up after adding the radio!]]
+	3. [[#I can't hear my track/my track is quiet!]]
+	4. [[#My track has distortion in a build for a specific platform!]]
 ---
 ## Questions
 ### How do I use Ryle Radio?
@@ -30,7 +35,6 @@ This curve can be useful for tracks that are limited to a very small range, by m
 Or perhaps we want it to be fully audible as soon as the range is reached:![[Pasted image 20251007151140.png]]
 Or maybe the tune range reaches all the way to the end (1000.0), and we want it to be loudest at 1000.0:
 ![[Pasted image 20251007151227.png]]
-
 The possibilities are endless :)
 
 ---
@@ -47,11 +51,12 @@ We can fix this in two primary ways: enabling the **Load in background** toggle 
 Throwing together some possible reasons why this could be happening:
 - Is the **Tune** value on your RadioOutput inside your track's **Tune range**?
 - Is the **Gain** value on your track high enough?
-- Is the **Gain curve** correct? See [[#What does the **Gain curve** do?]]
+- Is the **Gain curve** correct? See [[#What does the **Gain curve** do?|what does the Gain curve do?]]
 - If there are tracks above the quiet one and their tune ranges overlap, is the **Attenuation** on your quiet track too high?
 - Is **Force global** selected on your track (or if you're using Broadcasters for this track, deselected)?
 - Is **Play on Init** selected on your track? If not, are you playing it yourself (either through a [[RadioInteractor]] or your own code)?
 - If it's an AudioClip, is the clip itself loud enough?
+- If none of these help/fix, [[Contact|contact me]] and I'll happily try to work it out!
 
 ### My track has distortion in a build for a specific platform!
-This is probably another sample rate issue. Check out [[Sample Rates- an important note|my note about it here]],
+This is usually another sample rate issue. Check out [[Sample Rates- an important note|my note about it here]], and if it does not assist with the issue, [[Contact|contact me :)]]

@@ -11,13 +11,14 @@
             "id": "feee2ba50d3757e1",
             "type": "leaf",
             "state": {
-              "type": "bases",
+              "type": "markdown",
               "state": {
-                "file": "Images/Index.base",
-                "viewName": "Table"
+                "file": "Scripting/Components/RadioOutput.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-table",
-              "title": "Index"
+              "icon": "lucide-file",
+              "title": "RadioOutput"
             }
           },
           {
@@ -26,15 +27,16 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Plans, Todo.md",
+                "file": "General/Info/Contact.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Plans, Todo"
+              "title": "Contact"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -155,13 +157,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Scripting/RadioData.md",
+                "file": "General/Info/Contact.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of RadioData"
+              "title": "Outline of Contact"
             }
           },
           {
@@ -203,17 +205,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "feee2ba50d3757e1",
+  "active": "0f482be9896964cd",
   "lastOpenFiles": [
+    "General/Info/What is Ryle Radio.md",
+    "General/Info/Sample Rates- an important note.md",
+    "General/Info/(Predicted) Common Issues and Questions.md",
+    "General/Plans, Todo.md",
     "Scripting/Components/RadioOutput.md",
     "Images/Index.base",
     "Images/Info/Pasted image 20251007151227.png",
     "Images/Info/Pasted image 20251007150555.png",
     "Images/Info",
-    "General/Info/Sample Rates- an important note.md",
-    "General/Info/(Predicted) Common Issues and Questions.md",
-    "General/Info/What is Ryle Radio.md",
-    "General/Plans, Todo.md",
     "Images/Info/Pasted image 20251007151140.png",
     "Images/Info/Pasted image 20251007151057.png",
     "Untitled.base",
