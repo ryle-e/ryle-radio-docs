@@ -23,8 +23,14 @@ The broadcast radius is the range in which this broadcaster applies. There are t
 The first radius is the "inner radius" of the broadcaster- if an output is within this radius, it will hear the track at maximum broadcast power. The output could be anywhere, but so long as it's within this many units of the broadcaster, it will hear the track.
 The second radius is the "outer radius".  If an output is outside of this radius, it will be unable to hear the track- this is therefore the maximum range of the broadcaster. 
 If an output is between the inner and outer radii, though, it will be progressively quieter depending on how far between them it is. That is, if you move an output from the inner radius to the outer, it will get progressively quieter until it's eventually inaudible.
+You can see the two radii in the scene view when the broadcaster is selected!![[Pasted image 20251008144020.png]]
 #### Distance Falloff
 The distance falloff is a curve showing exactly how the track will get quieter when moving between the broadcast radii. It's the shape of the volume between the inner and outer radius. For example, if it's a smooth graph like this, it'll get quieter smoothly when moving between the radii. ![[Pasted image 20251008143627.png]]
 For a linear graph like this, it'll get quieter linearly between the radii. ![[Pasted image 20251008143659.png]]
 Something like this, though, would mean that an output between the radii would keep the track loud right up until it gets close to the outer radius- at which point it would start getting quieter. ![[Pasted image 20251008143753.png]]
+It's a lot easier to understand how the falloff works when playing with it in realtime. Try moving it around with the scene in playmode, and see how the track changes when the radio is between the broadcast radii with different falloffs.
 
+### This particular Broadcaster
+We can see that the broadcaster we have in this scene is set up to broadcast just one track- the music. It uses a generic falloff and a set broadcast radius. The blue circles in the scene are indicators to illustrate the radii of the broadcaster.
+Try entering playmode and moving the radio around in the blue area. You'll notice that while it's inside the inner circle, the music track is loud and audible. Once you move it between the inner and outer circles, it starts getting quieter depending on how close to the edge of the outer circle you are. Finally, once you move the radio out of the outer circle, the track is no longer audible.
+That explains Broadcasters! Try implementing them with your own tracks by modifying the [[#Affected Tracks]] value on the r
