@@ -23,7 +23,7 @@ The broadcast radius is the range in which this broadcaster applies. There are t
 The first radius is the "inner radius" of the broadcaster- if an output is within this radius, it will hear the track at maximum broadcast power. The output could be anywhere, but so long as it's within this many units of the broadcaster, it will hear the track.
 The second radius is the "outer radius".  If an output is outside of this radius, it will be unable to hear the track- this is therefore the maximum range of the broadcaster. 
 If an output is between the inner and outer radii, though, it will be progressively quieter depending on how far between them it is. That is, if you move an output from the inner radius to the outer, it will get progressively quieter until it's eventually inaudible.
-You can see the two radii in the scene view when the broadcaster is selected! You can also drag them in the scene view like you would a normal collider.![[Pasted image 20251008144020.png]]
+You can see the two radii in the scene view when the broadcaster is selected! You can also drag them in the scene view like you would a normal collider. ![[Pasted image 20251008144020.png]]
 #### Distance Falloff
 The distance falloff is a curve showing exactly how the track will get quieter when moving between the broadcast radii. It's the shape of the volume between the inner and outer radius. For example, if it's a smooth graph like this, it'll get quieter smoothly when moving between the radii. ![[Pasted image 20251008143627.png]]
 For a linear graph like this, it'll get quieter linearly between the radii. ![[Pasted image 20251008143659.png]]
