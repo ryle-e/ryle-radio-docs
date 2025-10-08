@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Plans, Todo.md",
+                "file": "General/Patch Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Plans, Todo"
+              "title": "Patch Notes"
             }
           }
         ],
@@ -167,6 +167,7 @@
   "active": "64a26eb0daaf4f93",
   "lastOpenFiles": [
     "General/About the Docs.md",
+    "General/Plans, Todo.md",
     "Images/Index.base",
     "Usage/Samples/Basic Radio Sample.md",
     "Main.md",
