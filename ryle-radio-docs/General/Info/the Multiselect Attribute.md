@@ -14,4 +14,4 @@ It gets a fair bit of usage in Ryle Radio for components like Broadcasters, whic
 ## How do I use it?
 1. Create an int variable in your code.
 2. Add `[Multiselect("_")]` to the line above this int variable, and replace the _ with the name of the list you want the dropdown to show.
-3. When you need to access the options chosen in the dropdown, run `MultiselectAttribute.To<_>(`
+3. When you need to access the options chosen in the dropdown, run `MultiselectAttribute.To<_>(name_of_int_variable, name_of_list_used_by_dropdown)`- the output of this method is your subset list.
