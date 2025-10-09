@@ -7,4 +7,11 @@ The Multiselect attribute is a variable attribute introduced in Ryle Radio that 
 In short- you can choose a number of options from a list (or array), then convert that number to a subset of the list.
 
 ## When should I use it?
-Normally you would only need to use the `NaughtyAttributes.Dropdown`
+Usually you only need the `NaughtyAttributes.Dropdown` attribute so that you can select an option from a list. If you need to select multiple options in the same place, though, you can use the Multiselect attribute. It effectively allows you to convert a dropdown like this:
+To a dropdown like this:
+It gets a fair bit of usage in Ryle Radio for components like Broadcasters, which can broadcast multiple tracks at once.
+
+## How do I use it?
+1. Create an int variable in your code.
+2. Add `[Multiselect("_")]` to the line above this int variable, and replace the _ with the name of the list you want the dropdown to show.
+3. When you need to access the options chosen in the dropdown, run `MultiselectAttribute.To<_>(`
