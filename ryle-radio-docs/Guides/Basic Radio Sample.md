@@ -77,11 +77,12 @@ This is an example of a **Station**- a track that contains other tracks. In this
 	- Finally, there's no option to make a Station in a Station. This is an artificial limitation I have put in place to help keep the package simple, but if you would like it changed, [[Contact|contact me]]!
 
 #### static
+![[Pasted image 20251016190730.png]]
 This is a background track that plays some white noise that resembles radio static. It's set up specifically to be a background track as follows.
 - Its **Range** covers the entire line, meaning this track can be heard with any tune value.
 - Its **Gain curve** is flat, meaning that it use the same gain everywhere it can be heard- in this case, it's the same gain everywhere.
 - Its **Attenuation** is very high. Because this track is at the bottom of the list, it has low priority. This plus the high attenuation means that if any other track is playing at the same time, this one will get quieter. This creates the effect of static "filling in the gaps" between other tracks- just like a real radio!
-- Its **Track type** is set to procedural. This option allows generation of audio at runtime- in this case, we're generating a type of noise called brown noise. Other options include white noise, pink noise, sine waveforms, and so on. *Note: the Brown Walk Power variable affects the sound of the brown noise- different types of procedural audio will have different variables, so play around with all of them :)*
+- Its **Track type** is set to procedural. This option allows generation of audio at runtime- in this case, we're generating a type of noise called brown noise. Other options include white noise, pink noise, sine waveforms, and so on. *Note: the Brown Walk Power variable affects the sound of the brown noise- different types of procedural audio will have different variables, so you can play around with all of them :)*
 
 ### Back to the scene
 Finally, in the scene we have a very basic controller that tunes the radio in Play mode using the Q and E keys. The script for this is in the sample files, and simply modifies the RadioOutput's tune value. You can also do this in the inspector, and during Play mode.

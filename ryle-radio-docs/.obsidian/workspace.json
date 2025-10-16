@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Guides/Spatial Components Sample.md",
+                "file": "Guides/Basic Radio Sample.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Spatial Components Sample"
+              "title": "Basic Radio Sample"
             }
           }
         ]
@@ -191,8 +191,10 @@
   },
   "active": "0423b4e26318df5a",
   "lastOpenFiles": [
-    "Pasted image 20251008144020.png",
+    "Pasted image 20251016190730.png",
     "Guides/Spatial Components Sample.md",
+    "Guides/Basic Radio Sample.md",
+    "Pasted image 20251008144020.png",
     "Pasted image 20251008143753.png",
     "Pasted image 20251008143659.png",
     "Pasted image 20251008143627.png",
@@ -203,7 +205,6 @@
     "General/Info/(Predicted) Common Issues and Questions.md",
     "Pasted image 20251007234023.png",
     "Pasted image 20251007233604.png",
-    "Guides/Basic Radio Sample.md",
     "Pasted image 20251007233425.png",
     "Main.md",
     "General/About the Docs.md",
