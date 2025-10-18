@@ -90,7 +90,13 @@ What is the rest of the scene, then? In this particular sample, we have set up a
 The rest of the scene is basically fodder except for the radio components.
 You can also check the RadioData object for this scene, which is very simple compared to the last sample's. You can add to it and play around with broadcasters and insulators that do and don't affect it!
 
-The whole scene is effectively a segue to show you how the broadcasters and insulators work, and it would definitely be worth
+The whole scene is effectively a segue to show you how the broadcasters and insulators work, and it would definitely be worth adding some new components and moving things around if you need to get a feel for it, as limiting motion to left/right is a little restrictive lol
+
+Now we know how to use radio components to change how the audio plays depending on positions! This should help add a lot of definition and complexity to your radios already.
+But what if I want the radio to.. y'know.. do stuff? Like play songs when I tell it to, or turn a light on when a certain track is playing?
 
 ---
+### Guide over :)
+That's the end of the guide for this scene! Hopefully this helped your understanding of the spatial components, what they're for, and how to use them.
 
+Just like in the last sample, if you're having any issues with components or the scene, first check [[(Predicted) Common Issues and Questions]]- if that doesn't help,[[Contact|contact me]] and I'll hopefully be able to lend a hand.
