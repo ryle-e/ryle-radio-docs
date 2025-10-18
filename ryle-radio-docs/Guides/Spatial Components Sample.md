@@ -53,4 +53,5 @@ This the area of the box in which insulation is at its strongest. If an Output i
 *Scene gizmo is the lighter box in the above image*
 This is the area of the box in which insulation fades away. If an Output is inside of this box but outside of the inner box, the insulation power will be somewhere in the range you set below.
 #### Insulation
-This is the important variable here- the range of insulation values that apply to this component! The higher value is the max
+This is the important variable here- the range of insulation values that apply to this component! The higher value is the maximum insulation this component can provide- this will be applied when an output is inside the inner square of the component.
+The lower value is the minimum insulation it can provide before it jumps to 0. 
