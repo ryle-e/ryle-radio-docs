@@ -83,4 +83,14 @@ In short- pretty much the same as the broadcaster equivalent.
 ### This particular Insulator
 The insulator in this scene is set up to block the music track within its area. Moving the radio in and out of it at runtime will make the music quieter then louder depending on how far into the insulator it is!
 Just like the broadcaster in this scene, we use coloured shapes to illustrate the area- in this case, the orange squares reflect the inner and outer boxes of this insulator. You can adjust the box sizes too to hear the effects.
-Play around with the
+Play around with the [[#Insulation]] value to hear the difference depending on where the output is. Insulators, like broadcasters, are pretty straightforward once you know what they do- and conveniently, you probably won't need to use insulators as much :)
+
+### The whole scene
+What is the rest of the scene, then? In this particular sample, we have set up an broadcaster and an insulator around an output to hear how they affect the output. Using the Q and E keys at runtime will move the radio to the sides, allowing easy comparison of the sounds. The code for the motion is on the Extra Objects >> Controls object, and is just some simple transform modification.
+The rest of the scene is basically fodder except for the radio components.
+You can also check the RadioData object for this scene, which is very simple compared to the last sample's. You can add to it and play around with broadcasters and insulators that do and don't affect it!
+
+The whole scene is effectively a segue to show you how the broadcasters and insulators work, and it would definitely be worth
+
+---
+
