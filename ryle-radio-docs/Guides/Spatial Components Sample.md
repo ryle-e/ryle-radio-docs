@@ -38,7 +38,7 @@ This variable only appears when the lower value of the Broadcast Powers variable
 When this is ticked, it effectively makes this broadcaster global with the lower power specified in [[#Broadcast Powers]].
 Let's look back at the Broadcast Powers variable for this. If it's set to the range 0 - 1, we cannot enable this variable- so we don't have to worry about it. 
 If it's set to 0.2 - 1, though, this toggle becomes visible- and when it's ticked, means that this broadcaster works everywhere- at a power of 0.2. That is, an output anywhere in the scene will be able to hear the tracks broadcasted by this component, but quietly. When the output moves into the range of this broadcaster, though, it will get louder!
-This allows you to have tracks that are both global and broadcasted- one you can hear quietly everywhere, but louder only 
+This allows you to have tracks that are both global and broadcasted- one you can hear quietly everywhere, but louder in a certain area(s)!
 
 ### This particular Broadcaster
 We can see that the broadcaster we have in this scene is set up to broadcast just one track- the music. It uses a generic falloff and a set broadcast radius. The blue circles in the scene are indicators to illustrate the radii of the broadcaster.
