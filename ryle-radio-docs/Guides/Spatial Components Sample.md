@@ -25,7 +25,9 @@ The second radius is the "outer radius".  If an output is outside of this radius
 If an output is between the inner and outer radii, though, it will be progressively quieter depending on how far between them it is. That is, if you move an output from the inner radius to the outer, it will get progressively quieter until it's eventually inaudible.
 You can see the two radii in the scene view when the broadcaster is selected! You can also drag them in the scene view like you would a normal collider. ![[Pasted image 20251018162723.png]]
 #### Broadcast Powers
-This variable allows you to 
+This variable allows you to define the maximum and minimum broadcast powers used by the component. Unlike I've implied so far, the broadcast doesn't necessarily get quieter until inaudible when moving between the inner and outer ranges- it moves from the highest to lowest points in this range! This means that you can have a broadcaster that doesn't broadcast at the highest power when you're inside the inner range, simply change the highest value on this variable.
+For example, the default range of 0 - 1 means that the broadcast is as loud as possible when inside the inner range, inaudible when outside the outer range, and somewhere between 0 and 1 when between the ranges.
+If it's set to a range of 0.2 - 0.8, however, it behaves a little differently. If an output is inside the inner range, it will only be broadcasting at a power of 0.8 rather than as loud as possible.
 #### Distance Falloff
 The distance falloff is a curve showing exactly how the track will get quieter when moving between the broadcast radii. It's the shape of the volume between the inner and outer radius. For example, if it's a smooth graph like this, it'll get quieter smoothly when moving between the radii. ![[Pasted image 20251008143627.png]]
 For a linear graph like this, it'll get quieter linearly between the radii. ![[Pasted image 20251008143659.png]]
