@@ -23,7 +23,7 @@ The broadcast radius is the range in which this broadcaster applies. There are t
 The first radius is the "inner radius" of the broadcaster- if an output is within this radius, it will hear the track at maximum broadcast power. The output could be anywhere, but so long as it's within this many units of the broadcaster, it will hear the track.
 The second radius is the "outer radius".  If an output is outside of this radius, it will be unable to hear the track- this is therefore the maximum range of the broadcaster. 
 If an output is between the inner and outer radii, though, it will be progressively quieter depending on how far between them it is. That is, if you move an output from the inner radius to the outer, it will get progressively quieter until it's eventually inaudible.
-You can see the two radii in the scene view when the broadcaster is selected! You can also drag them in the scene view like you would a normal collider. ![[Pasted image 20251008144020.png]]
+You can see the two radii in the scene view when the broadcaster is selected! You can also drag them in the scene view like you would a normal collider. ![[Pasted image 20251018162723.png]]
 #### Distance Falloff
 The distance falloff is a curve showing exactly how the track will get quieter when moving between the broadcast radii. It's the shape of the volume between the inner and outer radius. For example, if it's a smooth graph like this, it'll get quieter smoothly when moving between the radii. ![[Pasted image 20251008143627.png]]
 For a linear graph like this, it'll get quieter linearly between the radii. ![[Pasted image 20251008143659.png]]
@@ -46,12 +46,12 @@ Same as in a broadcaster- the RadioData object this component is linked to. The 
 #### Affected Tracks
 Also the same as a broadcaster. You can choose which tracks are blocked by this insulator here!
 #### Inner Box Size
-![[Pasted image 20251018160222.png]] 
+![[Pasted image 20251018162747.png]] 
 *Scene gizmo is the darker box in this image*
 This the area of the box in which insulation is at its strongest. If an Output is inside of this inner box, the insulation will be at the highest value you assign shortly below.
 #### Outer Box Size
 *Scene gizmo is the lighter box in the above image*
 This is the area of the box in which insulation fades away. If an Output is inside of this box but outside of the inner box, the insulation power will be somewhere in the range you set below.
 #### Insulation
-This is the important variable here- the range of insulation values that apply to this component! The higher value is the maximum insulation this component can provide- this will be applied when an output is inside the inner square of the component.
-The lower value is the minimum insulation it can provide before it jumps to 0. 
+This is the important variable here- the range of insulation values that apply to this component! The higher value is the maximum insulation this component can provide- this will be applied when an output is inside the inner square of the component- that is, the lighter circle.
+The lower value is the minimum insulation it can provide before it jumps to 0. That is, if an output is precisely on the outer edge of this insulator, the selected tracks will be quieted with the lower value.
