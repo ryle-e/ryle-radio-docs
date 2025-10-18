@@ -27,12 +27,12 @@ The Range of a track is the domain of tunes where the track is playing. That is,
 In this case, our track can only be heard when the user is at a tune between 33.2 and 246. Any Output with a tune value in this range will be able to hear it.
 
 This is, however, heavily influenced by the Gain curve.
-#### Gain curve
-The gain curve controls how high the gain on the track is when it's within the defined Range. If the curve is flat, a song will have the same volume at any tune within its range- but a bell curve would taper off the more distant the tune. Check out [[(Predicted) Common Issues and Questions#What does the **Gain curve** do?|What does the Gain curve do?]] for a better explanation!
-In this example, the gain curve is a hill shape- it means that the volume of the track will smoothly rise and fall depending on where in the range an Output's tune value is. This sounds consistent and balanced when changing tune over time.
+#### Range curve
+The range curve controls how high the volume on the track is when it's within the defined Range. If the curve is flat, a song will have the same volume at any tune within its range- but a bell curve would taper off the more distant the tune. Check out [[(Predicted) Common Issues and Questions#What does the **Gain curve** do?|What does the Gain curve do?]] for a better explanation!
+In this example, the range curve is a hill shape- it means that the volume of the track will smoothly rise and fall depending on where in the range an Output's tune value is. This sounds consistent and balanced when changing tune over time.
 #### Gain
 The gain slider controls how loud the track is. The higher the gain, the louder the track. Simple!
-To be more technical, the gain is the first thing applied to the track when calculating its output volume. If you want to change the volume of a track without modifying the track itself, this is your first target.
+To be more technical, the gain is the first thing applied to the track when calculating its output volume. If you want to change the loudness of a track without modifying the track itself, this is your first target.
 The gain on this particular track is fairly high- this is because the track, by default, is pretty quiet.
 #### Attenuation
 To explain attenuation, we need to introduce **Track priority**. Track priority is extremely simple- it's the order of the tracks in the RadioData. The track at the top of the list is highest priority, the track at the bottom is lowest. Giving it a separate name probably talks it up too much lol
@@ -60,7 +60,7 @@ On this sample radio, there's at least one track of each type. Let's go over the
 These are singular songs that play on the radio- they're the primary track that should be playing over everything else- the important audio, if you will.
 - Their **IDs** provide some identification as to what each type of audio each track plays, and how "old" the tracks sound (sorry guys).
 - Their **Ranges** are all different, and non-overlapping- this means that when tuning along the radio, they can all be heard at different times.
-- Their **Gain curves** are all the same- smoothly fading the volume of each track in and out depending on the Output's tune.
+- Their **Range curves** are all the same- smoothly fading the volume of each track in and out depending on the Output's tune.
 - Their **Gain** values all depend on the specific track- some clips are quieter than others, so we give them a higher gain.
 - Their **Attenuations** are all 0- they are the highest-priority audio, and every other track should be getting quieter when it plays- not the other way around. Therefore, we keep attenuation at 0.
 - **Force global** is always true for this sample.
@@ -81,7 +81,7 @@ This is an example of a **Station**- a track that contains other tracks. In this
 ![[Pasted image 20251016190730.png]]
 This is a background track that plays some white noise that resembles radio static. It's set up specifically to be a background track as follows.
 - Its **Range** covers the entire line, meaning this track can be heard with any tune value.
-- Its **Gain curve** is flat, meaning that it use the same gain everywhere it can be heard- in this case, it's the same gain everywhere.
+- Its **Range curve** is flat, meaning that it use the same gain everywhere it can be heard- in this case, it's the same gain everywhere.
 - Its **Attenuation** is very high. Because this track is at the bottom of the list, it has low priority. This plus the high attenuation means that if any other track is playing at the same time, this one will get quieter. This creates the effect of static "filling in the gaps" between other tracks- just like a real radio!
 - Its **Track type** is set to procedural. This option allows generation of audio at runtime- in this case, we're generating a type of noise called brown noise. Other options include white noise, pink noise, sine waveforms, and so on. *Note: the Brown Walk Power variable affects the sound of the brown noise- different types of procedural audio will have different variables, so you can play around with all of them :)*
 
