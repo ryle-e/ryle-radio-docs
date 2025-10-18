@@ -27,12 +27,18 @@ You can see the two radii in the scene view when the broadcaster is selected! Yo
 #### Broadcast Powers
 This variable allows you to define the maximum and minimum broadcast powers used by the component. Unlike I've implied so far, the broadcast doesn't necessarily get quieter until inaudible when moving between the inner and outer ranges- it moves from the highest to lowest points in this range! This means that you can have a broadcaster that doesn't broadcast at the highest power when you're inside the inner range, simply change the highest value on this variable.
 For example, the default range of 0 - 1 means that the broadcast is as loud as possible when inside the inner range, inaudible when outside the outer range, and somewhere between 0 and 1 when between the ranges.
-If it's set to a range of 0.2 - 0.8, however, it behaves a little differently. If an output is inside the inner range, it will only be broadcasting at a power of 0.8 rather than as loud as possible.
+If it's set to a range of 0.2 - 0.8, however, it behaves a little differently. If an output is inside the inner range, it will only be broadcasting at a power of 0.8 rather than as loud as possible. When it's between the inner and outer range, it will be between 0.2 and 0.8. When it's outside the outer range, it will still be 0 (unless you change [[#Apply to All Outputs Outside|a variable below]])
 #### Distance Falloff
 The distance falloff is a curve showing exactly how the track will get quieter when moving between the broadcast radii. It's the shape of the volume between the inner and outer radius. For example, if it's a smooth graph like this, it'll get quieter smoothly when moving between the radii. ![[Pasted image 20251008143627.png]]
 For a linear graph like this, it'll get quieter linearly between the radii. ![[Pasted image 20251008143659.png]]
 Something like this, though, would mean that an output between the radii would keep the track loud right up until it gets close to the outer radius- at which point it would start getting quieter. ![[Pasted image 20251008143753.png]]
 It's a lot easier to understand how the falloff works when playing with it in realtime. Try moving it around with the scene in playmode, and see how the track changes when the radio is between the broadcast radii with different falloffs.
+#### Apply to All Outputs Outside
+This variable only appears when the lower value of the Broadcast Powers variable is > 0.
+When this is ticked, it effectively makes this broadcaster global with the lower power specified in [[#Broadcast Powers]].
+Let's look back at the Broadcast Powers variable for this. If it's set to the range 0 - 1, we cannot enable this variable- so we don't have to worry about it. 
+If it's set to 0.2 - 1, though, this toggle becomes visible- and when it's ticked, means that this broadcaster works everywhere- at a power of 0.2. That is, an output anywhere in the scene will be able to hear the tracks broadcasted by this component, but quietly. When the output moves into the range of this broadcaster, though, it will get louder!
+This allows you to have tracks that are both global and broadcasted- one you can hear quietly everywhere, but louder only 
 
 ### This particular Broadcaster
 We can see that the broadcaster we have in this scene is set up to broadcast just one track- the music. It uses a generic falloff and a set broadcast radius. The blue circles in the scene are indicators to illustrate the radii of the broadcaster.
@@ -72,6 +78,7 @@ You usually won't be using this option as much as broadcast falloff, but it's ni
 This option only shows when the lower value of the insulation range is above 0.
 When it's ticked, it means that everywhere in the scene *outside* of the outer square will still be affected by the lower level of insulation- basically making it global. For example, ticking the box here with values like this means that everywhere in the scene the insulation will be at 0.2- except inside the insulator's boxes, where it will be somewhere between 0.2 and 1.
 ![[Pasted image 20251018164651.png]]
+In short- pretty much the same as the broadcaster equivalent.
 
 ### This particular Insulator
 The insulator in this scene is set up to block the music track within its area. Moving the radio in and out of it at runtime will make the music quieter.
