@@ -14,21 +14,21 @@ These are some questions I feel could end up being common, and would prefer to h
 ### How do I use Ryle Radio?
 Glad you asked! :)
 
-I would recommend looking through the [[Basic Radio Sample]] to begin with, as that contains some good starter information about what a successful radio looks like. Once you've got that down pat, check out the [[Spatial Components Sample]] to learn about Broadcasters and Insulators, and finally [[Observers and Interactors Sample]] to learn about implementing more complex functionality without any code.
+I would recommend looking through the [[1. Basic Radio Sample]] to begin with, as that contains some good starter information about what a successful radio looks like. Once you've got that down pat, check out the [[2. Spatial Components Sample]] to learn about Broadcasters and Insulators, and finally [[Observers and Interactors Sample]] to learn about implementing more complex functionality without any code.
 
 ### How do I work with it in code?
-First of all, make sure it wouldn't just be easier to use [[Observers and Interactors Sample|Observers and Interactors as described in the sample]]. If you're just playing or stopping tracks, watching for changes, or mirroring radio values, you can likely do it with those components. Because there aren't any samples that hook into Ryle Radio through custom code, your best bet is first checking out the code documentation and scripts themselves- particularly with the [[RadioObserver|Observers]] and [[RadioInteractor|Interactors]] to get a general feel of how to link in with radios.
+First of all, make sure it wouldn't just be easier to use [[3. Interaction Components Sample|Observers and Interactors as described in the sample]]. If you're just playing or stopping tracks, watching for changes, or mirroring radio values, you can likely do it with those components. Because there aren't any samples that hook into Ryle Radio through custom code, your best bet is first checking out the code documentation and scripts themselves- particularly with the [[RadioObserver|Observers]] and [[RadioInteractor|Interactors]] to get a general feel of how to link in with radios.
 
 It's very possible, if not likely, that this documentation won't be enough for the specific thing you're trying to do :( If this happens to be the case, [[Contact|contact me]]! I'm very happy to lend a hand with specific issues or plans, and very open to introducing new features if necessary. 
 
 ### How do I work with it without coding?
-Check out the [[Observers and Interactors Sample]]! The components you likely need are explained and used in there :)
+Check out [[3. Interaction Components Sample]]! The components you likely need are explained and used in there :)
 
 ### What does the **Gain curve** do?
 The gain curve can be a little confusing if you haven't worked with non-linear blending or curves like this before. It effectively tells outputs that are tuning through this radio how loud to make a particular track within the tune range.
 
 ![[Pasted image 20251007150555.png]]
-For example, this is a track in the [[Basic Radio Sample]]. The gain curve is how loud this track will be when tuned to the \[33.2 - 246.0] range.
+For example, this is a track in [[1. Basic Radio Sample]]. The gain curve is how loud this track will be when tuned to the \[33.2 - 246.0] range.
 Let's say we have a RadioOutput using this radio with its tune set to about 140. That value places us right in the center of the track's range, which places us right in the center of the gain curve. Because the curve is high at that point, the track will be loud. If we use a tune value of about 60, though, we're lower down on the gain curve- the track will be quieter.
 
 This curve can be useful for tracks that are limited to a very small range, by making them easier to hear at the edges of the range:![[Pasted image 20251007151057.png]]

@@ -10,7 +10,7 @@
 
 ---
 ## Added features
-- Track attenuation- making some tracks quieter when another is playing (see [[Basic Radio Sample#Attenuation|Attenuation]])
+- Track attenuation- making some tracks quieter when another is playing (see [[1. Basic Radio Sample#Attenuation|Attenuation]])
 - Stations- tracks of tracks?
 - Spatial broadcasters
 - Dead zones (insulators)
