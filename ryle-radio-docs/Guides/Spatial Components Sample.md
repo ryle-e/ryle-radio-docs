@@ -81,5 +81,6 @@ When it's ticked, it means that everywhere in the scene *outside* of the outer s
 In short- pretty much the same as the broadcaster equivalent.
 
 ### This particular Insulator
-The insulator in this scene is set up to block the music track within its area. Moving the radio in and out of it at runtime will make the music quieter.
-Just like the broadcaster in this scene, we use coloured shapes to illustrate the area- in this case, the orange squares reflect the inner and outer boxes of this insulator. You can adjust the box sizes too
+The insulator in this scene is set up to block the music track within its area. Moving the radio in and out of it at runtime will make the music quieter then louder depending on how far into the insulator it is!
+Just like the broadcaster in this scene, we use coloured shapes to illustrate the area- in this case, the orange squares reflect the inner and outer boxes of this insulator. You can adjust the box sizes too to hear the effects.
+Play around with the
