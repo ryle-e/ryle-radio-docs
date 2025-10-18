@@ -94,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Guides/3. Interaction Components Sample.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +104,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for 3. Interaction Components Sample"
             }
           },
           {
@@ -112,11 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Guides/3. Interaction Components Sample.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from 3. Interaction Components Sample"
             }
           },
           {
@@ -140,12 +142,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "Guides/3. Interaction Components Sample.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline"
+              "title": "Outline of 3. Interaction Components Sample"
             }
           },
           {
@@ -187,11 +190,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "933c9e40c5adffc0",
+  "active": "0423b4e26318df5a",
   "lastOpenFiles": [
+    "Guides/1. Basic Radio Sample.md",
     "Guides/3. Interaction Components Sample.md",
     "Guides/2. Spatial Components Sample.md",
-    "Guides/1. Basic Radio Sample.md",
     "Pasted image 20251018224534.png",
     "Pasted image 20251018223258.png",
     "General/Info/FMOD and Ryle Radio.md",
