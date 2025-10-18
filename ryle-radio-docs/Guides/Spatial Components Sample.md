@@ -1,3 +1,4 @@
+**Sample 2**
 This sample uses a simpler radio than [[Basic Radio Sample]], but introduces the spatial components- RadioBroadcasters and RadioInsulators.
 
 ---
