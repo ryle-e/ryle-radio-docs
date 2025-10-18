@@ -44,4 +44,13 @@ This is just like how they work in Ryle Radio. An insulator has the opposite eff
 #### Data
 Same as in a broadcaster- the RadioData object this component is linked to. The insulator can only block tracks in this Data, so if you need tracks from another Data blocked, create another insulator.
 #### Affected Tracks
-Also the same as a broadcaster
+Also the same as a broadcaster. You can choose which tracks are blocked by this insulator here!
+#### Inner Box Size
+![[Pasted image 20251018160222.png]] 
+*Scene gizmo is the darker box in this image*
+This the area of the box in which insulation is at its strongest. If an Output is inside of this inner box, the insulation will be at the highest value you assign shortly below.
+#### Outer Box Size
+*Scene gizmo is the lighter box in the above image*
+This is the area of the box in which insulation fades away. If an Output is inside of this box but outside of the inner box, the insulation power will be somewhere in the range you set below.
+#### Insulation
+This is the important variable here- the range of insulation values that apply to this component! The higher value is the max
