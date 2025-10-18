@@ -52,6 +52,23 @@ This the area of the box in which insulation is at its strongest. If an Output i
 #### Outer Box Size
 *Scene gizmo is the lighter box in the above image*
 This is the area of the box in which insulation fades away. If an Output is inside of this box but outside of the inner box, the insulation power will be somewhere in the range you set below.
+Make sure this is always bigger than the inner box, though! The math used here falls apart when the sizes are backwards. If you want it to get less insulated the further inside the box you go, use the Insulation Curve variable below.
 #### Insulation
 This is the important variable here- the range of insulation values that apply to this component! The higher value is the maximum insulation this component can provide- this will be applied when an output is inside the inner square of the component- that is, the lighter circle.
-The lower value is the minimum insulation it can provide before it jumps to 0. That is, if an output is precisely on the outer edge of this insulator, the selected tracks will be quieted with the lower value.
+The lower value is the minimum insulation it can provide before it jumps to 0. That is, if an output is precisely on the outer edge of this insulator, the selected tracks will be quieted with the lower insulation value. This doesn't usually happen in practice, and the lower value is more about what the insulation will be when an Output is between the inner and outer boxes. If it's halfway between the two boxes, for example, insulation will be halfway along the range you provide.
+#### Insulation Curve
+This is very similar to the broadcast falloff curve, but rather refers to the insulation between the inner and outer boxes. For example, this means the insulation will get progressively stronger the further between the boxes you go:
+![[Pasted image 20251018164026.png]]
+And this means the insulation will get stronger quickly but smoothly when you enter the outer radius:
+![[Pasted image 20251018164146.png]]
+This, however, means that insulation will be quieter *insid*e the inner box than outside. A lot like a cubic broadcaster (but could be very confusing to maintain if you use it for that purpose)
+![[Pasted image 20251018164451.png]]
+You usually won't be using this option as much as broadcast falloff, but it's nice to have in case it turns out useful for some application.
+#### Apply to All Outputs Outside
+This option only shows when the lower value of the insulation range is above 0.
+When it's ticked, it means that everywhere in the scene *outside* of the outer square will still be affected by the lower level of insulation- basically making it global. For example, ticking the box here with values like this means that everywhere in the scene the insulation will be at 0.2- except inside the insulator's boxes, where it will be somewhere between 0.2 and 1.
+![[Pasted image 20251018164651.png]]
+
+### This particular Insulator
+The insulator in this scene is set up to block the music track within its area. Moving the radio in and out of it at runtime will make the music quieter.
+Just like the broadcaster in this scene, we use coloured shapes to illustrate the area- in this case, the orange squares reflect the inner and outer boxes of this insulator. You can adjust the box sizes too
