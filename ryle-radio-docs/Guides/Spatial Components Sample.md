@@ -38,5 +38,10 @@ That explains Broadcasters! Try implementing them with your own tracks by modify
 Wait, what's that? What the hell is that orange square? Yes! This is our other type of spatial component in Ryle Radio, and is effectively the opposite of a broadcaster. It's called a **RadioInsulator**!
 
 ### Insulators
-**RadioInsulators** (known usually hereon as insulators) create a cubic area in which a track is *quieter*, rather than louder. Imagine you have a radio station broadcasting a song to a town, but one guy in the town puts his radio into a lead box. Why he has a lead box to begin with is up for debate, but the radio inside the box isn't going to hear the song because the lead insulates it from radio waves. 
+![[Pasted image 20251018154331.png]]
+**RadioInsulators** (known usually hereon as insulators) create a cubic area in which a track is *quieter*, rather than louder. Imagine you have a radio station broadcasting a song to a town, but one guy in the town puts his radio into a thick copper box. Why he has a copper box to begin with is up for debate, but the radio inside the box isn't going to hear the song because the lead insulates it from radio waves. 
 This is just like how they work in Ryle Radio. An insulator has the opposite effect to a broadcaster by preventing the track from being audible while an output is inside the assigned area. As such, now that we know how broadcasters work, it'll be a lot easier for us to understand insulators.
+#### Data
+Same as in a broadcaster- the RadioData object this component is linked to. The insulator can only block tracks in this Data, so if you need tracks from another Data blocked, create another insulator.
+#### Affected Tracks
+Also the same as a broadcaster
