@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Info/the Multiselect Attribute.md",
+                "file": "General/Patch Notes.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "the Multiselect Attribute"
+              "title": "Patch Notes"
             }
           }
         ],
@@ -166,8 +166,10 @@
   },
   "active": "64a26eb0daaf4f93",
   "lastOpenFiles": [
-    "General/Patch Notes.md",
     "General/About the Docs.md",
+    "General/Info/Contribute.md",
+    "General/Info/the Multiselect Attribute.md",
+    "General/Patch Notes.md",
     "General/Plans, Todo.md",
     "Images/Index.base",
     "Usage/Samples/Basic Radio Sample.md",
