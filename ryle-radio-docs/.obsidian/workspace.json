@@ -11,14 +11,12 @@
             "id": "0423b4e26318df5a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Guides/3. Interaction Components Sample.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/Guides/Interaction Components Sample/Pasted image 20251021012926.png"
               },
-              "icon": "lucide-file",
-              "title": "3. Interaction Components Sample"
+              "icon": "lucide-image",
+              "title": "Pasted image 20251021012926"
             }
           }
         ]
@@ -94,6 +92,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Images/Guides/Interaction Components Sample/Pasted image 20251021012926.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks"
+              "title": "Backlinks for Pasted image 20251021012926"
             }
           },
           {
@@ -112,11 +111,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Images/Guides/Interaction Components Sample/Pasted image 20251021012926.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links"
+              "title": "Outgoing links from Pasted image 20251021012926"
             }
           },
           {
@@ -168,8 +168,7 @@
               "title": "Source Control"
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "horizontal",
@@ -187,25 +186,25 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0423b4e26318df5a",
+  "active": "e97738c339c6e3e1",
   "lastOpenFiles": [
-    "Pasted image 20251021012633.png",
-    "Pasted image 20251021012611.png",
+    "Images/Guides/Interaction Components Sample",
     "Untitled.md",
-    "Guides/3. Interaction Components Sample.md",
-    "Pasted image 20251021004415.png",
-    "Pasted image 20251021003527.png",
-    "Pasted image 20251021003254.png",
-    "Pasted image 20251021002219.png",
-    "Pasted image 20251021001937.png",
-    "Pasted image 20251021000742.png",
-    "Guides/2. Spatial Components Sample.md",
+    "Images/Guides/Interaction Components Sample/Pasted image 20251021012926.png",
+    "Images/Guides/Interaction Components Sample/Pasted image 20251021012633.png",
+    "Pasted image 20251021012611.png",
+    "Images/Guides/Interaction Components Sample/Pasted image 20251021004415.png",
+    "Images/Guides/Interaction Components Sample/Pasted image 20251021003527.png",
+    "Images/Guides/Interaction Components Sample/Pasted image 20251021003254.png",
+    "Images/Guides/Interaction Components Sample/Pasted image 20251021002219.png",
+    "Images/Guides/Interaction Components Sample/Pasted image 20251021001937.png",
+    "Images/Guides/Interaction Components Sample/Pasted image 20251021000742.png",
+    "Pasted image 20251020232602.png",
     "Guides/1. Basic Radio Sample.md",
+    "Guides/3. Interaction Components Sample.md",
+    "Guides/2. Spatial Components Sample.md",
     "General/Info/(Predicted) Common Issues and Questions.md",
     "General/Info/Contact.md",
-    "Pasted image 20251020232602.png",
-    "Pasted image 20251019001706.png",
-    "Pasted image 20251019001529.png",
     "General/Info/FMOD and Ryle Radio.md",
     "General/Info/Contribute.md",
     "!Pasted image 20251008143627.png.md",
