@@ -4,3 +4,6 @@ First release of Ryle Radio! Includes the following:
     - IDs
         - Uniqueness enforcement
         - Procedural display names
+        - Able to access Track in code with its ID
+    - Range
+        - Slider display in inspector
