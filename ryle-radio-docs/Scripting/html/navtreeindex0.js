@@ -166,12 +166,18 @@ var NAVTREEINDEX0 =
 "d9/d5d/_radio_data_8cs_source.html":[2,0,0,0,0,0,1,3],
 "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html":[0,0,0,2,7],
 "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html":[1,0,0,2,7],
+"d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a0c00f4dc7e31b6de324b8e406aac62f2":[0,0,0,2,7,5],
+"d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a0c00f4dc7e31b6de324b8e406aac62f2":[1,0,0,2,7,5],
 "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a2d64ffc17fd27c339dac115733da1ed1":[0,0,0,2,7,1],
 "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a2d64ffc17fd27c339dac115733da1ed1":[1,0,0,2,7,1],
 "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a79ad6625c291fcf2857ee880f6d70610":[0,0,0,2,7,2],
 "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a79ad6625c291fcf2857ee880f6d70610":[1,0,0,2,7,2],
 "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a827fb0f9f2d67ad7d48cb0a9dfbe5c18":[0,0,0,2,7,0],
 "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a827fb0f9f2d67ad7d48cb0a9dfbe5c18":[1,0,0,2,7,0],
+"d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a9c325018c6641f7f483127889959ccd4":[0,0,0,2,7,4],
+"d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a9c325018c6641f7f483127889959ccd4":[1,0,0,2,7,4],
+"d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#aec7a9e25b5afaaddef97b1517ba0d361":[0,0,0,2,7,3],
+"d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#aec7a9e25b5afaaddef97b1517ba0d361":[1,0,0,2,7,3],
 "d9/dd5/_radio_output_track_accessor_8cs_source.html":[2,0,0,0,0,0,1,0,0,2],
 "da/d11/_radio_observer_8cs_source.html":[2,0,0,0,0,0,1,0,5],
 "da/d43/namespace_ryle_radio_1_1_components.html":[0,0,0,0],
@@ -243,6 +249,5 @@ var NAVTREEINDEX0 =
 "functions_vars.html":[1,3,2],
 "hierarchy.html":[1,2],
 "index.html":[],
-"namespaces.html":[0,0],
-"pages.html":[]
+"namespaces.html":[0,0]
 };
