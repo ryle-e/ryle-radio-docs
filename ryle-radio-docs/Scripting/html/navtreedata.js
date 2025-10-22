@@ -49,7 +49,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html#a2b82a60520332f26e6d537ddee315e2f"
+"d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a0c00f4dc7e31b6de324b8e406aac62f2"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

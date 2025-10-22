@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['editorchildclip_0',['EditorChildClip',['../de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html#a4bd6de08c4d2f2f2758cee00cb3c5c0b',1,'RyleRadio::Tracks::StationRadioTrackWrapper']]]
+  ['defaultrangecurve_0',['DefaultRangeCurve',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a74adba53bd688378c4a5fc3140ff4d67',1,'RyleRadio::Tracks::RadioTrackWrapper']]]
 ];

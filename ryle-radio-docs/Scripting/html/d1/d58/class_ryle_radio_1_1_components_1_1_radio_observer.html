@@ -172,7 +172,7 @@ Private Attributes</h2></td></tr>
 <tr class="memdesc:a0886bd8a2912dd7f6be8ba2f42ac6b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The events that this Observer responds uses, containing values/triggers to watch for and events to call.  <br /></td></tr>
 <tr class="memitem:afbedeb396a11124c15f3f8dc67f0c9b4" id="r_afbedeb396a11124c15f3f8dc67f0c9b4"><td class="memItemLeft" align="right" valign="top">List&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbedeb396a11124c15f3f8dc67f0c9b4">toDoOnUpdate</a> = new()</td></tr>
 <tr class="memdesc:afbedeb396a11124c15f3f8dc67f0c9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A buffer for events to run on Update. We cannot call UnityEvents in the audio thread, so we need a buffer here so we can run them in <a class="el" href="#af96f1100853e1768cb363ec4aafe116d">Update</a> instead.  <br /></td></tr>
-<tr class="memitem:aff4fedc113a7a5670bbefe68bb33e62d" id="r_aff4fedc113a7a5670bbefe68bb33e62d"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4fedc113a7a5670bbefe68bb33e62d">stayedEvents</a></td></tr>
+<tr class="memitem:aff4fedc113a7a5670bbefe68bb33e62d" id="r_aff4fedc113a7a5670bbefe68bb33e62d"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4fedc113a7a5670bbefe68bb33e62d">stayedEvents</a> = new()</td></tr>
 <tr class="memdesc:aff4fedc113a7a5670bbefe68bb33e62d"><td class="mdescLeft">&#160;</td><td class="mdescRight">A tracker for which ObserverEvents have been called for this specific frame- prevents us from calling an OnStay event hundreds of times in a frame due to the audio thread being WAY faster.  <br /></td></tr>
 <tr class="memitem:a289de6dde811ce51a1207e5db4d95f96" id="r_a289de6dde811ce51a1207e5db4d95f96"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a289de6dde811ce51a1207e5db4d95f96">affectedTrackNames</a></td></tr>
 <tr class="memdesc:a289de6dde811ce51a1207e5db4d95f96"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a4230b55ced5082f104e1dadd7f225737">affectedTracks</a> as a list of names rather than a flag int. Created and cached in <a class="el" href="#a79a7484b93704449f8b9691f13a25bc5">AffectedTracks</a>  <br /></td></tr>
@@ -572,7 +572,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">List&lt;<a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a>&gt; RyleRadio.Components.RadioObserver.stayedEvents</td>
+          <td class="memname">List&lt;<a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a>&gt; RyleRadio.Components.RadioObserver.stayedEvents = new()</td>
         </tr>
       </table>
   </td>

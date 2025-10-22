@@ -14,7 +14,7 @@ var searchData=
   ['radiooutputtrackaccessor_11',['RadioOutputTrackAccessor',['../d2/d11/class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor.html',1,'RyleRadio::Components::Base']]],
   ['radiotrack_12',['RadioTrack',['../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html',1,'RyleRadio::Tracks']]],
   ['radiotrackplayer_13',['RadioTrackPlayer',['../da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html',1,'RyleRadio::Tracks']]],
-  ['radiotrackwrapper_14',['RadioTrackWrapper',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html',1,'RyleRadio::Tracks']]],
+  ['radiotrackwrapper_14',['RadioTrackWrapper',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html',1,'RyleRadio.Tracks.RadioTrackWrapper'],['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a7da4a3eec70ac1c8d81288eea4669d58',1,'RyleRadio.Tracks.RadioTrackWrapper.RadioTrackWrapper()']]],
   ['radioutils_15',['RadioUtils',['../d4/d2c/class_ryle_radio_1_1_radio_utils.html',1,'RyleRadio']]],
   ['randomsequence_16',['randomSequence',['../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a9c325018c6641f7f483127889959ccd4',1,'RyleRadio::Tracks::StationRadioTrack']]],
   ['range_17',['range',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a778c05ac1056316fc9224e13c80c340c',1,'RyleRadio::Tracks::RadioTrackWrapper']]],

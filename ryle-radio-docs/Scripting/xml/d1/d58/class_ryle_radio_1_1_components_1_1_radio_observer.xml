@@ -236,6 +236,7 @@
         <argsstring></argsstring>
         <name>stayedEvents</name>
         <qualifiedname>RyleRadio.Components.RadioObserver.stayedEvents</qualifiedname>
+        <initializer>= new()</initializer>
         <briefdescription>
 <para>A tracker for which ObserverEvents have been called for this specific frame- prevents us from calling an OnStay event hundreds of times in a frame due to the audio thread being WAY faster. </para>
         </briefdescription>

@@ -79,7 +79,7 @@ List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_
 \begin{DoxyCompactList}\small\item\em The events that this Observer responds uses, containing values/triggers to watch for and events to call. \end{DoxyCompactList}\item 
 List$<$ Action $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_afbedeb396a11124c15f3f8dc67f0c9b4}{to\+Do\+On\+Update}} = new()
 \begin{DoxyCompactList}\small\item\em A buffer for events to run on Update. We cannot call Unity\+Events in the audio thread, so we need a buffer here so we can run them in \doxylink{class_ryle_radio_1_1_components_1_1_radio_observer_af96f1100853e1768cb363ec4aafe116d}{Update} instead. \end{DoxyCompactList}\item 
-List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_aff4fedc113a7a5670bbefe68bb33e62d}{stayed\+Events}}
+List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_aff4fedc113a7a5670bbefe68bb33e62d}{stayed\+Events}} = new()
 \begin{DoxyCompactList}\small\item\em A tracker for which Observer\+Events have been called for this specific frame-\/ prevents us from calling an On\+Stay event hundreds of times in a frame due to the audio thread being WAY faster. \end{DoxyCompactList}\item 
 string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a289de6dde811ce51a1207e5db4d95f96}{affected\+Track\+Names}}
 \begin{DoxyCompactList}\small\item\em \doxylink{class_ryle_radio_1_1_components_1_1_radio_observer_a4230b55ced5082f104e1dadd7f225737}{affected\+Tracks} as a list of names rather than a flag int. Created and cached in \doxylink{class_ryle_radio_1_1_components_1_1_radio_observer_a79a7484b93704449f8b9691f13a25bc5}{Affected\+Tracks} \end{DoxyCompactList}\end{DoxyCompactItemize}
@@ -383,7 +383,7 @@ Referenced by \mbox{\hyperlink{_radio_observer_8cs_source_l00119}{Awake()}}, and
 \index{stayedEvents@{stayedEvents}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
 \doxysubsubsection{\texorpdfstring{stayedEvents}{stayedEvents}}
 {\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_aff4fedc113a7a5670bbefe68bb33e62d} 
-List$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}}$>$ Ryle\+Radio.\+Components.\+Radio\+Observer.\+stayed\+Events\hspace{0.3cm}{\ttfamily [private]}}
+List$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}}$>$ Ryle\+Radio.\+Components.\+Radio\+Observer.\+stayed\+Events = new()\hspace{0.3cm}{\ttfamily [private]}}
 
 
 
