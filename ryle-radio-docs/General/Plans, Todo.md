@@ -7,6 +7,7 @@
 ## Future features
 - A type of RadioTrack that adds simple effects and filters- e.g: distortion, lowpass, something that resembles interference
 - More procedural audio types
+- Weighted track selection in stations
 
 ---
 ## Added features
