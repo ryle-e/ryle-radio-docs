@@ -101,7 +101,7 @@ Inheritance diagram for RyleRadio.Tracks.ProceduralRadioTrack:</div>
   <img src="../../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.png" usemap="#RyleRadio_2ETracks_2EProceduralRadioTrack_map" alt=""/>
   <map id="RyleRadio_2ETracks_2EProceduralRadioTrack_map" name="RyleRadio_2ETracks_2EProceduralRadioTrack_map">
 <area href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html" title="A track to play as part of a radio. These are the fundamental objects that define the content of the ..." alt="RyleRadio.Tracks.RadioTrack" shape="rect" coords="0,56,242,80"/>
-<area href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html" alt="RyleRadio.Tracks.IStationTrack" shape="rect" coords="252,56,494,80"/>
+<area href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html" title="A RadioTrack that can be played as part of a station." alt="RyleRadio.Tracks.IStationTrack" shape="rect" coords="252,56,494,80"/>
 <area href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html" title="Internal interface for a RadioTrack." alt="RyleRadio.Tracks.IRadioTrack" shape="rect" coords="0,0,242,24"/>
 <area href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html" title="Internal interface for a RadioTrack." alt="RyleRadio.Tracks.IRadioTrack" shape="rect" coords="252,0,494,24"/>
   </map>
@@ -122,7 +122,9 @@ Public Types</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a49f57378ad34e028e3ae6f9bf652c154" id="r_a49f57378ad34e028e3ae6f9bf652c154"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49f57378ad34e028e3ae6f9bf652c154">Init</a> ()</td></tr>
+<tr class="memdesc:a49f57378ad34e028e3ae6f9bf652c154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this track.  <br /></td></tr>
 <tr class="memitem:a383442f843004ce3898509ecc8e4bab5" id="r_a383442f843004ce3898509ecc8e4bab5"><td class="memItemLeft" align="right" valign="top">override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a383442f843004ce3898509ecc8e4bab5">GetSample</a> (int _sampleIndex)</td></tr>
+<tr class="memdesc:a383442f843004ce3898509ecc8e4bab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a sample at the provided index. This is the core method of a track- whatever you return here defines the audio that the track will play when selected.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RyleRadio.Tracks.RadioTrack</a></td></tr>
 <tr class="memitem:a4f37e66ec62c41202c91b1fd6422a4bb inherit pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track" id="r_a4f37e66ec62c41202c91b1fd6422a4bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html#a4f37e66ec62c41202c91b1fd6422a4bb">Init</a> ()</td></tr>
 <tr class="memdesc:a4f37e66ec62c41202c91b1fd6422a4bb inherit pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this track.  <br /></td></tr>
@@ -145,6 +147,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:ae8a1338da49edef807a0baf69aaa8f51" id="r_ae8a1338da49edef807a0baf69aaa8f51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8a1338da49edef807a0baf69aaa8f51">IsInStation</a><code> [get, set]</code></td></tr>
+<tr class="memdesc:ae8a1338da49edef807a0baf69aaa8f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this track is part of a station.  <br /></td></tr>
 <tr class="inherit_header properties_class_ryle_radio_1_1_tracks_1_1_radio_track"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_ryle_radio_1_1_tracks_1_1_radio_track')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Properties inherited from <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RyleRadio.Tracks.RadioTrack</a></td></tr>
 <tr class="memitem:a3bc4c9f7923a9314dffdd21f41723941 inherit properties_class_ryle_radio_1_1_tracks_1_1_radio_track" id="r_a3bc4c9f7923a9314dffdd21f41723941"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html#a3bc4c9f7923a9314dffdd21f41723941">SampleRate</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a3bc4c9f7923a9314dffdd21f41723941 inherit properties_class_ryle_radio_1_1_tracks_1_1_radio_track"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sample rate of this track.  <br /></td></tr>
@@ -206,7 +209,16 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">RyleRadio.Tracks.IRadioTrack</a>.</p>
+<p>Get a sample at the provided index. This is the core method of a track- whatever you return here defines the audio that the track will play when selected. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_sampleIndex</td><td>The index of the sample to get</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>The sample- a value between -1 and 1 representing the y-value of the sound wave</dd></dl>
+
+<p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html#a53788b5811f9cb2463da7185ba9ccf33">RyleRadio.Tracks.IRadioTrack</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00067">67</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
@@ -227,7 +239,9 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">RyleRadio.Tracks.IRadioTrack</a>.</p>
+<p>Initializes this track. </p>
+
+<p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html#a5be3ac4abb6bf515b54341c39d2aa417">RyleRadio.Tracks.IRadioTrack</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00056">56</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
@@ -655,7 +669,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">RyleRadio.Tracks.IStationTrack</a>.</p>
+<p>Whether or not this track is part of a station. </p>
+
+<p>Implements <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html#a494288d59288c18ba985d7b9a7e9fc50">RyleRadio.Tracks.IStationTrack</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00053">53</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 

@@ -22,9 +22,9 @@ enum {\bfseries Procedural\+Type} \{ \newline
 \begin{DoxyCompactItemize}
 \item 
 override void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a49f57378ad34e028e3ae6f9bf652c154}{Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes this track. \end{DoxyCompactList}\item 
 override float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a383442f843004ce3898509ecc8e4bab5}{Get\+Sample}} (int \+\_\+sample\+Index)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Get a sample at the provided index. This is the core method of a track-\/ whatever you return here defines the audio that the track will play when selected. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Ryle\+Radio.\+Tracks.\+Radio\+Track}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -54,7 +54,7 @@ const string \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_t
 \begin{DoxyCompactItemize}
 \item 
 bool \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_ae8a1338da49edef807a0baf69aaa8f51}{Is\+In\+Station}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Whether or not this track is part of a station. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Ryle\+Radio.\+Tracks.\+Radio\+Track}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -129,7 +129,19 @@ override float Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+Get\+Sample (\b
 
 
 
-Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
+Get a sample at the provided index. This is the core method of a track-\/ whatever you return here defines the audio that the track will play when selected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sample\+Index} & The index of the sample to get\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The sample-\/ a value between -\/1 and 1 representing the y-\/value of the sound wave
+\end{DoxyReturn}
+
+
+Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track_a53788b5811f9cb2463da7185ba9ccf33}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
 
 
 
@@ -143,7 +155,11 @@ override void Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+Init (\begin{Dox
 
 
 
-Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
+Initializes this track. 
+
+
+
+Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track_a5be3ac4abb6bf515b54341c39d2aa417}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
 
 
 
@@ -347,7 +363,11 @@ bool Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+Is\+In\+Station\hspace{0.
 
 
 
-Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{Ryle\+Radio.\+Tracks.\+IStation\+Track}}.
+Whether or not this track is part of a station. 
+
+
+
+Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track_a494288d59288c18ba985d7b9a7e9fc50}{Ryle\+Radio.\+Tracks.\+IStation\+Track}}.
 
 
 

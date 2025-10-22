@@ -13,12 +13,13 @@
         <qualifiedname>RyleRadio.Tracks.IRadioTrack.SampleRate</qualifiedname>
         <reimplementedby refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track_1a3bc4c9f7923a9314dffdd21f41723941">SampleRate</reimplementedby>
         <briefdescription>
+<para>The samples per second of this track right now. Can be changed at runtime, e.g: <ref refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track" kindref="compound">StationRadioTrack</ref>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="22" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" bodystart="22" bodyend="22"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="25" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" bodystart="25" bodyend="25"/>
       </memberdef>
       <memberdef kind="property" id="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track_1a685caea859dcd3eb1380c93c50cbf473" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -28,12 +29,13 @@
         <qualifiedname>RyleRadio.Tracks.IRadioTrack.SampleCount</qualifiedname>
         <reimplementedby refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track_1ab9bc3ce18b760fcfd3ae4867ded40698">SampleCount</reimplementedby>
         <briefdescription>
+<para>The total number of samples in this track right now. Can be changed at runtime, e.g: <ref refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track" kindref="compound">StationRadioTrack</ref>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="25" column="29" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" bodystart="25" bodyend="25"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="31" column="29" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" bodystart="31" bodyend="31"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -48,12 +50,13 @@
         <reimplementedby refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track_1a4f37e66ec62c41202c91b1fd6422a4bb">Init</reimplementedby>
         <reimplementedby refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a79ad6625c291fcf2857ee880f6d70610">Init</reimplementedby>
         <briefdescription>
+<para>Initializes this track. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="27" column="30"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="36" column="30"/>
       </memberdef>
       <memberdef kind="function" id="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track_1a53788b5811f9cb2463da7185ba9ccf33" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>float</type>
@@ -70,12 +73,25 @@
           <declname>_sampleIndex</declname>
         </param>
         <briefdescription>
+<para>Get a sample at the provided index. This is the core method of a track- whatever you return here defines the audio that the track will play when selected. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_sampleIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the sample to get</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sample- a value between -1 and 1 representing the y-value of the sound wave</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="32" column="31"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="43" column="31"/>
       </memberdef>
       <memberdef kind="function" id="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track_1af5bd543728f14be5953a391ff7670c18" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
         <type>void</type>
@@ -90,19 +106,32 @@
           <declname>_callback</declname>
         </param>
         <briefdescription>
+<para>Update a <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref> when this current track ends. Used in <ref refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track" kindref="compound">StationRadioTrack</ref>. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The function to run when the track ends</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="see"><para>RadioTrackPlayer.OnEnd, StationRadioTrack.AddToPlayerEndCallback(ref Action&lt;RadioTrackPlayer&gt;)</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="35" column="29" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" bodystart="35" bodyend="35"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="50" column="29" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" bodystart="50" bodyend="50"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
 <para>Internal interface for a <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref>. </para>
     </briefdescription>
     <detaileddescription>
-<para><emphasis>truth be told i can&apos;t fully remember why i have this and <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref> as separate entities- i do know that i went through a lot of effort to make this layout work, though, and so for the moment i&apos;m keeping it in- however if it turns out to be ultimately useless and can be deprecated without issue i&apos;m happy to say goodbye to it</emphasis> </para>
+<para><emphasis>truth be told i can&apos;t fully remember why i have this and <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref> as separate entities- i do know that i went through a lot of effort to make this layout work, though, and so for the moment i&apos;m keeping it in- however if it turns out to be ultimately useless and can be deprecated without issue i&apos;m happy to say goodbye to it</emphasis> /remarks&gt; </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">
@@ -144,7 +173,7 @@
         </childnode>
       </node>
     </inheritancegraph>
-    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="19" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" bodystart="20" bodyend="36"/>
+    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" line="20" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs" bodystart="21" bodyend="51"/>
     <listofallmembers>
       <member refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track_1af5bd543728f14be5953a391ff7670c18" prot="public" virt="virtual"><scope>RyleRadio::Tracks::IRadioTrack</scope><name>AddToPlayerEndCallback</name></member>
       <member refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track_1a53788b5811f9cb2463da7185ba9ccf33" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::IRadioTrack</scope><name>GetSample</name></member>

@@ -339,6 +339,7 @@
         <qualifiedname>RyleRadio.Tracks.ProceduralRadioTrack.IsInStation</qualifiedname>
         <reimplements refid="dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track_1a494288d59288c18ba985d7b9a7e9fc50">IsInStation</reimplements>
         <briefdescription>
+<para>Whether or not this track is part of a station. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -356,6 +357,7 @@
         <qualifiedname>RyleRadio.Tracks.ProceduralRadioTrack.Init</qualifiedname>
         <reimplements refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track_1a5be3ac4abb6bf515b54341c39d2aa417">Init</reimplements>
         <briefdescription>
+<para>Initializes this track. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -375,8 +377,21 @@
           <declname>_sampleIndex</declname>
         </param>
         <briefdescription>
+<para>Get a sample at the provided index. This is the core method of a track- whatever you return here defines the audio that the track will play when selected. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_sampleIndex</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The index of the sample to get</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The sample- a value between -1 and 1 representing the y-value of the sound wave</para>
+</simplesect>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

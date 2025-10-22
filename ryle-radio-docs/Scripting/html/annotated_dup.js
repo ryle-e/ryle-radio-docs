@@ -20,10 +20,10 @@ var annotated_dup =
         [ "StationRadioTrackEditor", "df/d29/class_ryle_radio_1_1_editor_1_1_station_radio_track_editor.html", null ]
       ] ],
       [ "Tracks", "d0/d28/namespace_ryle_radio_1_1_tracks.html", [
-        [ "ClipRadioTrack", "de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html", null ],
-        [ "IRadioTrack", "d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html", null ],
-        [ "IStationTrack", "dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html", null ],
-        [ "ProceduralRadioTrack", "d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html", null ],
+        [ "ClipRadioTrack", "de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html", "de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track" ],
+        [ "IRadioTrack", "d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html", "d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track" ],
+        [ "IStationTrack", "dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html", "dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track" ],
+        [ "ProceduralRadioTrack", "d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html", "d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track" ],
         [ "RadioTrack", "df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html", "df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" ],
         [ "RadioTrackPlayer", "da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html", null ],
         [ "RadioTrackWrapper", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html", null ],

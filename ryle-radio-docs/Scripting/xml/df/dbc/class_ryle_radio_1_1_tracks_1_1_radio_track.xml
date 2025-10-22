@@ -18,11 +18,14 @@
 <para>The sample rate of this track. </para>
         </briefdescription>
         <detaileddescription>
-<para>IRadioTrack.SampleRate </para>
+<para><ref refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track_1a236344d2bf8d79e95c2d0d40da926cb2" kindref="member">IRadioTrack.SampleRate</ref> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrack.cs" line="27" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrack.cs" bodystart="27" bodyend="27"/>
+        <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a383442f843004ce3898509ecc8e4bab5" compoundref="de/d9e/_procedural_radio_track_8cs" startline="67" endline="126">RyleRadio.Tracks.ProceduralRadioTrack.GetSample</referencedby>
+        <referencedby refid="de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track_1a35adc9929e2b6bfad7c63a08c7a75851" compoundref="df/d94/_clip_radio_track_8cs" startline="24" endline="30">RyleRadio.Tracks.ClipRadioTrack.Init</referencedby>
+        <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a49f57378ad34e028e3ae6f9bf652c154" compoundref="de/d9e/_procedural_radio_track_8cs" startline="56" endline="64">RyleRadio.Tracks.ProceduralRadioTrack.Init</referencedby>
       </memberdef>
       <memberdef kind="property" id="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track_1ab9bc3ce18b760fcfd3ae4867ded40698" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -35,11 +38,13 @@
 <para>The number of samples in this track. </para>
         </briefdescription>
         <detaileddescription>
-<para>IRadioTrack.SampleCount </para>
+<para><ref refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track_1a685caea859dcd3eb1380c93c50cbf473" kindref="member">IRadioTrack.SampleCount</ref> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrack.cs" line="33" column="28" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrack.cs" bodystart="33" bodyend="33"/>
+        <referencedby refid="de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track_1a35adc9929e2b6bfad7c63a08c7a75851" compoundref="df/d94/_clip_radio_track_8cs" startline="24" endline="30">RyleRadio.Tracks.ClipRadioTrack.Init</referencedby>
+        <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a49f57378ad34e028e3ae6f9bf652c154" compoundref="de/d9e/_procedural_radio_track_8cs" startline="56" endline="64">RyleRadio.Tracks.ProceduralRadioTrack.Init</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -54,7 +59,7 @@
 <para>Initializes this track. </para>
         </briefdescription>
         <detaileddescription>
-<para>IRadioTrack.Init </para>
+<para><ref refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track_1a5be3ac4abb6bf515b54341c39d2aa417" kindref="member">IRadioTrack.Init</ref> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
@@ -86,7 +91,7 @@
 </parameterlist>
 <simplesect kind="return"><para>The height of the sample</para>
 </simplesect>
-IRadioTrack.GetSample(int) </para>
+<ref refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track_1a53788b5811f9cb2463da7185ba9ccf33" kindref="member">IRadioTrack.GetSample(int)</ref> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
