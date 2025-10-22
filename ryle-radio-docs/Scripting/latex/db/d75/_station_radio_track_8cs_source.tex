@@ -57,7 +57,7 @@
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper}{StationRadioTrackWrapper}}\ CurrentTrackW\ =>\ stationTrackWs[currentTrackIndex];}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00054}00054\ }
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00055}00055\ }
-\DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Init()}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a4f37e66ec62c41202c91b1fd6422a4bb}{Init}}()}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ random\ =\ \textcolor{keyword}{new}\ System.Random();}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00059}00059\ }
@@ -77,7 +77,7 @@
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00073}00073\ }
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ when\ a\ RadioTrackPlayer\ for\ this\ track\ ends,\ we\ update\ it\ to\ match\ whatever\ the\ next\ track\ played\ on\ this\ station\ is}}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ works\ because\ the\ Player\ only\ gets\ destroyed\ if\ its\ a\ one-\/shot-\/\ in\ which\ case\ only\ one\ randomly\ chosen\ track\ from\ here\ will\ be\ selected\ anyway}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ AddToPlayerEndCallback(ref\ Action<RadioTrackPlayer>\ \_callback)}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00076}\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a827fb0f9f2d67ad7d48cb0a9dfbe5c18}{00076}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a827fb0f9f2d67ad7d48cb0a9dfbe5c18}{AddToPlayerEndCallback}}(ref\ Action<RadioTrackPlayer>\ \_callback)}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \_callback\ +=\ p\ =>\ NextTrack();\ \textcolor{comment}{//\ choose\ the\ next\ track\ when\ the\ Player\ completes\ the\ last\ one}}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \_callback\ +=\ p\ =>\ p.UpdateSampleIncrement();\ \textcolor{comment}{//\ update\ the\ Player's\ SampleCount/Length\ when\ the\ next\ track\ is\ chosen}}
@@ -146,8 +146,8 @@
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00143}00143\ }
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ assign\ the\ sample\ data\ based\ on\ the\ newly\ chosen\ track}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ SampleRate\ =\ CurrentTrackW.SampleRate;}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ SampleCount\ =\ CurrentTrackW.SampleCount;}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3bc4c9f7923a9314dffdd21f41723941}{SampleRate}}\ =\ CurrentTrackW.SampleRate;}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_ab9bc3ce18b760fcfd3ae4867ded40698}{SampleCount}}\ =\ CurrentTrackW.SampleCount;}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00148}00148\ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_8cs_source_l00149}00149\ }

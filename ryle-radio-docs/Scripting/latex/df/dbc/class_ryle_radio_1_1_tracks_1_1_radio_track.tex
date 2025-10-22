@@ -1,5 +1,10 @@
 \doxysection{Ryle\+Radio.\+Tracks.\+Radio\+Track Class Reference}
 \hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track}{}\label{class_ryle_radio_1_1_tracks_1_1_radio_track}\index{RyleRadio.Tracks.RadioTrack@{RyleRadio.Tracks.RadioTrack}}
+
+
+A track to play as part of a radio. These are the fundamental objects that define the content of the radio, such as clips, procedural audio, stations, and any custom content you create.  
+
+
 Inheritance diagram for Ryle\+Radio.\+Tracks.\+Radio\+Track\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,24 +15,30 @@ Inheritance diagram for Ryle\+Radio.\+Tracks.\+Radio\+Track\+:\begin{figure}[H]
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a4f37e66ec62c41202c91b1fd6422a4bb}{Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes this track. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3d618faf79658a5e16fbf4ef3d9992dd}{Get\+Sample}} (int \+\_\+sample\+Index)
-\item 
+\begin{DoxyCompactList}\small\item\em Gets a sample from the track. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a702fda25cec925c0c3e7f8bf5eacfd47}{Add\+To\+Player\+End\+Callback}} (ref Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} $>$ \+\_\+callback)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Activates an event to run whenever this track ends. This is mainly used for stations to switch track when the previous one ends. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3bc4c9f7923a9314dffdd21f41723941}{Sample\+Rate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em The sample rate of this track. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_ab9bc3ce18b760fcfd3ae4867ded40698}{Sample\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The number of samples in this track. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+A track to play as part of a radio. These are the fundamental objects that define the content of the radio, such as clips, procedural audio, stations, and any custom content you create. 
 
+\doxylink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{IRadio\+Track} 
 
-Definition at line \mbox{\hyperlink{_radio_track_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_radio_track_8cs_source}{Radio\+Track.\+cs}}.
+{\bfseries{NOTE FOR CUSTOM TRACK CREATORS!!}}
+
+!!! IMPORTANT NOTE -\/ if you\textquotesingle{}re creating a custom \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track}, you need to both inherit from this class AND have a const string named DISPLAY\+\_\+\+NAME because the version of c\# unity uses does not support static virtual data, we have no way of enforcing that you do this-\/ but you will get errors otherwise it\textquotesingle{}s necessary for wrappers when they\textquotesingle{}re listing each available track type in a dropdown-\/ Naughty\+Attributes\textquotesingle{} reflection system is used to pull -\/the display id so that it\textquotesingle{}s selectable in the inspector. the only downside is a lack of enforcement \+:((( 
+
+Definition at line \mbox{\hyperlink{_radio_track_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_radio_track_8cs_source}{Radio\+Track.\+cs}}.
 
 
 
@@ -42,11 +53,24 @@ virtual void Ryle\+Radio.\+Tracks.\+Radio\+Track.\+Add\+To\+Player\+End\+Callbac
 
 
 
+Activates an event to run whenever this track ends. This is mainly used for stations to switch track when the previous one ends. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+callback} & A function to run when this track ends\\
+\hline
+\end{DoxyParams}
+
+
 Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_radio_track_8cs_source}{Radio\+Track.\+cs}}.
+Reimplemented in \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a827fb0f9f2d67ad7d48cb0a9dfbe5c18}{Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track}}.
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_radio_track_8cs_source}{Radio\+Track.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_a3d618faf79658a5e16fbf4ef3d9992dd}\index{RyleRadio.Tracks.RadioTrack@{RyleRadio.Tracks.RadioTrack}!GetSample@{GetSample}}
 \index{GetSample@{GetSample}!RyleRadio.Tracks.RadioTrack@{RyleRadio.Tracks.RadioTrack}}
@@ -55,6 +79,18 @@ Definition at line \mbox{\hyperlink{_radio_track_8cs_source_l00024}{24}} of file
 float Ryle\+Radio.\+Tracks.\+Radio\+Track.\+Get\+Sample (\begin{DoxyParamCaption}\item[{int}]{\+\_\+sample\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
 
 
+
+Gets a sample from the track. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+sample\+Index} & The index of the sample to retrieve\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The height of the sample
+\end{DoxyReturn}
+IRadio\+Track.\+Get\+Sample(int) 
 
 Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
 
@@ -65,6 +101,10 @@ Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{R
 void Ryle\+Radio.\+Tracks.\+Radio\+Track.\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
 
 
+
+Initializes this track. 
+
+IRadio\+Track.\+Init 
 
 Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
 
@@ -81,11 +121,15 @@ virtual int Ryle\+Radio.\+Tracks.\+Radio\+Track.\+Sample\+Count\hspace{0.3cm}{\t
 
 
 
+The number of samples in this track. 
+
+IRadio\+Track.\+Sample\+Count 
+
 Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_radio_track_8cs_source}{Radio\+Track.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_radio_track_8cs_source}{Radio\+Track.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_a3bc4c9f7923a9314dffdd21f41723941}\index{RyleRadio.Tracks.RadioTrack@{RyleRadio.Tracks.RadioTrack}!SampleRate@{SampleRate}}
 \index{SampleRate@{SampleRate}!RyleRadio.Tracks.RadioTrack@{RyleRadio.Tracks.RadioTrack}}
@@ -95,11 +139,15 @@ float Ryle\+Radio.\+Tracks.\+Radio\+Track.\+Sample\+Rate\hspace{0.3cm}{\ttfamily
 
 
 
+The sample rate of this track. 
+
+IRadio\+Track.\+Sample\+Rate 
+
 Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_radio_track_8cs_source}{Radio\+Track.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_radio_track_8cs_source}{Radio\+Track.\+cs}}.
 
 
 

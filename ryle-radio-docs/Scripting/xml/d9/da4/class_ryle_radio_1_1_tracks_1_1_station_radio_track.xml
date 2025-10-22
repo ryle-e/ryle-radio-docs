@@ -167,8 +167,19 @@
           <declname>_callback</declname>
         </param>
         <briefdescription>
+<para>Activates an event to run whenever this track ends. This is mainly used for stations to switch track when the previous one ends. </para>
         </briefdescription>
         <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>_callback</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A function to run when this track ends</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>

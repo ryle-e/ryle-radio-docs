@@ -12,16 +12,16 @@ Inheritance diagram for Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track\+:\begin{fi
 override void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a79ad6625c291fcf2857ee880f6d70610}{Init}} ()
 \item 
 override void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a827fb0f9f2d67ad7d48cb0a9dfbe5c18}{Add\+To\+Player\+End\+Callback}} (ref Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} $>$ \+\_\+callback)
-\item 
+\begin{DoxyCompactList}\small\item\em Activates an event to run whenever this track ends. This is mainly used for stations to switch track when the previous one ends. \end{DoxyCompactList}\item 
 override float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a2d64ffc17fd27c339dac115733da1ed1}{Get\+Sample}} (int \+\_\+sample\+Index)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Ryle\+Radio.\+Tracks.\+Radio\+Track}}}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a4f37e66ec62c41202c91b1fd6422a4bb}{Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes this track. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3d618faf79658a5e16fbf4ef3d9992dd}{Get\+Sample}} (int \+\_\+sample\+Index)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets a sample from the track. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -45,9 +45,9 @@ const string \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_trac
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3bc4c9f7923a9314dffdd21f41723941}{Sample\+Rate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em The sample rate of this track. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_ab9bc3ce18b760fcfd3ae4867ded40698}{Sample\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The number of samples in this track. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -84,7 +84,16 @@ override void Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track.\+Add\+To\+Player\+En
 
 
 
-Reimplemented from \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Ryle\+Radio.\+Tracks.\+Radio\+Track}}.
+Activates an event to run whenever this track ends. This is mainly used for stations to switch track when the previous one ends. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+callback} & A function to run when this track ends\\
+\hline
+\end{DoxyParams}
+
+
+Reimplemented from \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a702fda25cec925c0c3e7f8bf5eacfd47}{Ryle\+Radio.\+Tracks.\+Radio\+Track}}.
 
 
 

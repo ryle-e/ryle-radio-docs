@@ -57,14 +57,14 @@
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ IsInStation\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00054}00054\ }
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00055}00055\ }
-\DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ Init()}
+\DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a4f37e66ec62c41202c91b1fd6422a4bb}{Init}}()}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ random\ =\ \textcolor{keyword}{new}\ System.Random();}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ phase\ =\ 0;}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00060}00060\ }
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ this\ track\ has\ a\ duration,\ set\ the\ sample\ count\ to\ that\ duration,\ otherwise\ set\ it\ to\ ''''infinite''''}}
-\DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ SampleCount\ =\ (duration\ >\ 0)\ ?\ (\textcolor{keywordtype}{int})(duration\ *\ BASE\_SAMPLE\_RATE)\ :\ \textcolor{keywordtype}{int}.MaxValue;}
-\DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ SampleRate\ =\ BASE\_SAMPLE\_RATE;}
+\DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_ab9bc3ce18b760fcfd3ae4867ded40698}{SampleCount}}\ =\ (duration\ >\ 0)\ ?\ (\textcolor{keywordtype}{int})(duration\ *\ BASE\_SAMPLE\_RATE)\ :\ \textcolor{keywordtype}{int}.MaxValue;}
+\DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3bc4c9f7923a9314dffdd21f41723941}{SampleRate}}\ =\ BASE\_SAMPLE\_RATE;}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00065}00065\ }
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00066}00066\ }
@@ -111,7 +111,7 @@
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ use\ a\ sine\ wave\ to\ create\ a\ basic\ single\ tone}}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ from\ https://discussions.unity.com/t/generating-\/a-\/simple-\/sinewave/665023/16}}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ProceduralType.SineWave:}
-\DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ lastPhase\ =\ phase\ +\ (2\ *\ Mathf.PI\ *\ (waveFrequency\ /\ SampleRate));}
+\DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ lastPhase\ =\ phase\ +\ (2\ *\ Mathf.PI\ *\ (waveFrequency\ /\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3bc4c9f7923a9314dffdd21f41723941}{SampleRate}}));}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00111}00111\ }
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ phase\ =\ lastPhase;}
 \DoxyCodeLine{\Hypertarget{_procedural_radio_track_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (phase\ >\ 2\ *\ Mathf.PI)\ \textcolor{comment}{//\ ensure\ that\ phase\ doesn't\ get\ exponentially\ larger}}
