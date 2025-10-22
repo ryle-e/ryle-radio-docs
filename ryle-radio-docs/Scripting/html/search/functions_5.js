@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['nexttrack_0',['NextTrack',['../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#afedd66f27883a83686668ea3786504f5',1,'RyleRadio::Tracks::StationRadioTrack']]]
+  ['multiselectattribute_0',['MultiselectAttribute',['../d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html#aa147e9a2d2972e68f29cf086a444c0e5',1,'RyleRadio::MultiselectAttribute']]]
 ];

@@ -100,51 +100,48 @@
 \DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00143}00143\ \textcolor{preprocessor}{\#endif}}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00144}00144\ }
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ a\ new\ track\ of\ type\ depending\ on\ the\ provided\ id}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ note\ that\ this\ is\ static}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ also\ note\ that\ this\ uses\ IStationTrack,\ unlike\ RadioTrackWrapper}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00154}\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_aa2248a77e7b27ce0b66cbdfa8cfa48d9}{00154}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{IStationTrack}}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_aa2248a77e7b27ce0b66cbdfa8cfa48d9}{CreateTrackEditor}}(\textcolor{keywordtype}{string}\ \_name)}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ index\ of\ the\ chosen\ track\ type}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ Array.IndexOf(\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_aeede89c9032a208020a2d2f20e57d55a}{TrackNames}},\ \_name);}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00158}00158\ }
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ you\ somehow\ have\ an\ invalid\ track\ type,\ don't\ create\ anything}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0)}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00162}00162\ }
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ the\ track\ generically}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ more\ info\ in\ RadioTrackWrapper.CreateTrackEditor}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{IStationTrack}}\ outTrack\ =\ (\mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{IStationTrack}})Activator.CreateInstance(\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a01f0b55b5fd4bd1354aca7a637988223}{TrackTypes}}[index]);}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ outTrack.IsInStation\ =\ \textcolor{keyword}{true};}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00167}00167\ }
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ the\ track}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ outTrack;}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00171}00171\ }
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00175}\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a14940f32d7a0f9172ba0b34d408c7fdc}{00175}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a14940f32d7a0f9172ba0b34d408c7fdc}{Init}}()}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_ac1c015b49fe5e94be162f35da9d39348}{track}}.Init();}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00179}00179\ }
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00183}\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a2bb9727a6841b8f172bfb2fe0fc0b976}{00183}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a2bb9727a6841b8f172bfb2fe0fc0b976}{CreateTrackLocal}}()}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_ac1c015b49fe5e94be162f35da9d39348}{track}}\ =\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_aa2248a77e7b27ce0b66cbdfa8cfa48d9}{CreateTrackEditor}}(\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a2b82a60520332f26e6d537ddee315e2f}{trackType}});}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00187}00187\ }
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00193}\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a5a831d69b1ac9818a1a53d9b09f8146c}{00193}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a5a831d69b1ac9818a1a53d9b09f8146c}{GetSample}}(\textcolor{keywordtype}{int}\ \_sampleIndex)}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ track\ has\ a\ rest\ at\ the\ beginning\ at\ that\ sample\ index,\ return\ a\ silent\ sample}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_sampleIndex\ <\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a799b23c7506b428e14d7bf7bcb114b1c}{startAndEndRests}}.x)}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00151}\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_aa2248a77e7b27ce0b66cbdfa8cfa48d9}{00151}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{IStationTrack}}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_aa2248a77e7b27ce0b66cbdfa8cfa48d9}{CreateTrackEditor}}(\textcolor{keywordtype}{string}\ \_name)}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ index\ of\ the\ chosen\ track\ type}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ Array.IndexOf(\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_aeede89c9032a208020a2d2f20e57d55a}{TrackNames}},\ \_name);}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00155}00155\ }
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ you\ somehow\ have\ an\ invalid\ track\ type,\ don't\ create\ anything}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0)}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00159}00159\ }
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ the\ track\ generically}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ more\ info\ in\ RadioTrackWrapper.CreateTrackEditor}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{IStationTrack}}\ outTrack\ =\ (\mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{IStationTrack}})Activator.CreateInstance(\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a01f0b55b5fd4bd1354aca7a637988223}{TrackTypes}}[index]);}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ outTrack.IsInStation\ =\ \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ the\ track}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ outTrack;}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00168}00168\ }
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00172}\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a14940f32d7a0f9172ba0b34d408c7fdc}{00172}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a14940f32d7a0f9172ba0b34d408c7fdc}{Init}}()}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_ac1c015b49fe5e94be162f35da9d39348}{track}}.Init();}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00176}00176\ }
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00180}\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a2bb9727a6841b8f172bfb2fe0fc0b976}{00180}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a2bb9727a6841b8f172bfb2fe0fc0b976}{CreateTrackLocal}}()}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_ac1c015b49fe5e94be162f35da9d39348}{track}}\ =\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_aa2248a77e7b27ce0b66cbdfa8cfa48d9}{CreateTrackEditor}}(\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a2b82a60520332f26e6d537ddee315e2f}{trackType}});}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00184}00184\ }
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00190}\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a5a831d69b1ac9818a1a53d9b09f8146c}{00190}}\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a5a831d69b1ac9818a1a53d9b09f8146c}{GetSample}}(\textcolor{keywordtype}{int}\ \_sampleIndex)}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ track\ has\ a\ rest\ at\ the\ beginning\ at\ that\ sample\ index,\ return\ a\ silent\ sample}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_sampleIndex\ <\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a799b23c7506b428e14d7bf7bcb114b1c}{startAndEndRests}}.x)}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00195}00195\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ same\ thing\ but\ for\ a\ rest\ at\ the\ end\ of\ the\ track}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\_sampleIndex\ >\ (\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_ac1c015b49fe5e94be162f35da9d39348}{track}}.SampleCount\ +\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a799b23c7506b428e14d7bf7bcb114b1c}{startAndEndRests}}.x))}
 \DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ same\ thing\ but\ for\ a\ rest\ at\ the\ end\ of\ the\ track}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\_sampleIndex\ >\ (\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_ac1c015b49fe5e94be162f35da9d39348}{track}}.SampleCount\ +\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_a799b23c7506b428e14d7bf7bcb114b1c}{startAndEndRests}}.x))}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00201}00201\ }
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00202}00202\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ otherwise,\ return\ the\ sample\ from\ the\ track}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_ac1c015b49fe5e94be162f35da9d39348}{track}}.GetSample(\_sampleIndex);}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00205}00205\ \ \ \ \ \}}
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00206}00206\ }
-\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00207}00207\ \}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00198}00198\ }
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ otherwise,\ return\ the\ sample\ from\ the\ track}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_ac1c015b49fe5e94be162f35da9d39348}{track}}.GetSample(\_sampleIndex);}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00202}00202\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00203}00203\ }
+\DoxyCodeLine{\Hypertarget{_station_radio_track_wrapper_8cs_source_l00204}00204\ \}}
 
 \end{DoxyCode}

@@ -26,6 +26,7 @@ var class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper =
     [ "trackType", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#ad02b3c8a6fd28d31d8d728ec8f583e42", null ],
     [ "BeforeInit", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#aa2f9ad9dc93a68ba2fc72356777be59c", null ],
     [ "DefaultRangeCurve", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a74adba53bd688378c4a5fc3140ff4d67", null ],
+    [ "Gain", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a654a6d6c0fb9ef30e5d7383f633bbdb0", null ],
     [ "OnAddBroadcaster", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a20ef79299950a601ac26e06f320f1046", null ],
     [ "OnAddInsulator", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a371c6db231ca6c2ca44be011ae29fe03", null ],
     [ "OnInit", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a0e5992ef4634849c28ec66de1e3baef3", null ],

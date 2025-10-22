@@ -33,7 +33,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="121" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="121" bodyend="121"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" compoundref="da/de3/_radio_track_wrapper_8cs" startline="233" endline="246">RyleRadio.Tracks.RadioTrackWrapper.Init</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" compoundref="da/de3/_radio_track_wrapper_8cs" startline="238" endline="251">RyleRadio.Tracks.RadioTrackWrapper.Init</referencedby>
       </memberdef>
       <memberdef kind="property" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1aa2f9ad9dc93a68ba2fc72356777be59c" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>Action&lt; <ref refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper" kindref="compound">RadioTrackWrapper</ref> &gt;</type>
@@ -50,7 +50,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="123" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="123" bodyend="123"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" compoundref="da/de3/_radio_track_wrapper_8cs" startline="233" endline="246">RyleRadio.Tracks.RadioTrackWrapper.Init</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" compoundref="da/de3/_radio_track_wrapper_8cs" startline="238" endline="251">RyleRadio.Tracks.RadioTrackWrapper.Init</referencedby>
       </memberdef>
       <memberdef kind="property" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a20ef79299950a601ac26e06f320f1046" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>Action&lt; <ref refid="db/de5/class_ryle_radio_1_1_components_1_1_radio_broadcaster" kindref="compound">RadioBroadcaster</ref>, <ref refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper" kindref="compound">RadioTrackWrapper</ref> &gt;</type>
@@ -116,6 +116,21 @@
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="133" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="133" bodyend="133"/>
       </memberdef>
+      <memberdef kind="property" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a654a6d6c0fb9ef30e5d7383f633bbdb0" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float RyleRadio.Tracks.RadioTrackWrapper.Gain</definition>
+        <argsstring></argsstring>
+        <name>Gain</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackWrapper.Gain</qualifiedname>
+        <briefdescription>
+<para>The gain value scaled down to ones- e.g <ref refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac26cf86217a7fdab6269f90e09f3d590" kindref="member">gain</ref> at 200 is <ref refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a654a6d6c0fb9ef30e5d7383f633bbdb0" kindref="member">Gain</ref> at 2. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="139" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="139" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="property" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1af40754f1c0460eb3974799a71adc296e" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>Type[]</type>
         <definition>Type [] RyleRadio.Tracks.RadioTrackWrapper.TrackTypes</definition>
@@ -123,14 +138,16 @@
         <name>TrackTypes</name>
         <qualifiedname>RyleRadio.Tracks.RadioTrackWrapper.TrackTypes</qualifiedname>
         <briefdescription>
-<para>Static; the list of available track types that this wrapper can contain. This dynamically adds any custom track types so long as they inherit from <ref refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track" kindref="compound">IRadioTrack</ref>. </para>
+<para>A list of each type of track that this wrapper can contain- this is anything that inherits from <ref refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track" kindref="compound">IRadioTrack</ref>, and updates dynamically when creating new track types. <linebreak/>
+<linebreak/>
+<bold>See also: </bold> <ref refid="d4/d2c/class_ryle_radio_1_1_radio_utils_1ade2ef6c22eb2dd42613bdcf74f1587de" kindref="member">RadioUtils.FindDerivedTypes()</ref> </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="143" column="29" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="144" bodyend="152"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ab322b29cd3c310eb76cfcc32fc1a8898" compoundref="da/de3/_radio_track_wrapper_8cs" startline="269" endline="285">RyleRadio.Tracks.RadioTrackWrapper.CreateTrackEditor</referencedby>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="150" column="29" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="151" bodyend="159"/>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ab322b29cd3c310eb76cfcc32fc1a8898" compoundref="da/de3/_radio_track_wrapper_8cs" startline="274" endline="290">RyleRadio.Tracks.RadioTrackWrapper.CreateTrackEditor</referencedby>
       </memberdef>
       <memberdef kind="property" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ae8915dc640d6e927887836fe4c0257a0" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string[]</type>
@@ -145,8 +162,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="163" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="164" bodyend="174"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a909e0f98dc729f0baf120e04a3635a19" compoundref="da/de3/_radio_track_wrapper_8cs" startline="258" endline="262">RyleRadio.Tracks.RadioTrackWrapper.GetTrackType</referencedby>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="168" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="169" bodyend="179"/>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a909e0f98dc729f0baf120e04a3635a19" compoundref="da/de3/_radio_track_wrapper_8cs" startline="263" endline="267">RyleRadio.Tracks.RadioTrackWrapper.GetTrackType</referencedby>
       </memberdef>
       <memberdef kind="property" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a5ced7fa006129abc0db99e8093e89df5" prot="private" static="yes" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string[]</type>
@@ -161,9 +178,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="183" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="184" bodyend="194"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ab322b29cd3c310eb76cfcc32fc1a8898" compoundref="da/de3/_radio_track_wrapper_8cs" startline="269" endline="285">RyleRadio.Tracks.RadioTrackWrapper.CreateTrackEditor</referencedby>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a909e0f98dc729f0baf120e04a3635a19" compoundref="da/de3/_radio_track_wrapper_8cs" startline="258" endline="262">RyleRadio.Tracks.RadioTrackWrapper.GetTrackType</referencedby>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="188" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="189" bodyend="199"/>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ab322b29cd3c310eb76cfcc32fc1a8898" compoundref="da/de3/_radio_track_wrapper_8cs" startline="274" endline="290">RyleRadio.Tracks.RadioTrackWrapper.CreateTrackEditor</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a909e0f98dc729f0baf120e04a3635a19" compoundref="da/de3/_radio_track_wrapper_8cs" startline="263" endline="267">RyleRadio.Tracks.RadioTrackWrapper.GetTrackType</referencedby>
       </memberdef>
       <memberdef kind="property" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a371731bf6b4073531e24e375ca078d4a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>float</type>
@@ -178,7 +195,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="198" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="198" bodyend="-1"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="203" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="203" bodyend="-1"/>
       </memberdef>
       <memberdef kind="property" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a3bd3948910de5c7cd75d8d719f3b3181" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -193,7 +210,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="201" column="20" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="201" bodyend="-1"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="206" column="20" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="206" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-static-attrib">
@@ -212,7 +229,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="33" column="29" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="33" bodyend="-1"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a1cf48d746261684d3d9f5c3f88fa635d" compoundref="da/de3/_radio_track_wrapper_8cs" startline="313" endline="319">RyleRadio.Tracks.RadioTrackWrapper.ScaleRange</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a1cf48d746261684d3d9f5c3f88fa635d" compoundref="da/de3/_radio_track_wrapper_8cs" startline="315" endline="321">RyleRadio.Tracks.RadioTrackWrapper.ScaleRange</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-attrib">
@@ -263,8 +280,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="53" column="24" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="53" bodyend="-1"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac7d24219e5c27188f541c3134164ec64" compoundref="da/de3/_radio_track_wrapper_8cs" startline="328" endline="337">RyleRadio.Tracks.RadioTrackWrapper.GetTunePower</referencedby>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a1cf48d746261684d3d9f5c3f88fa635d" compoundref="da/de3/_radio_track_wrapper_8cs" startline="313" endline="319">RyleRadio.Tracks.RadioTrackWrapper.ScaleRange</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac7d24219e5c27188f541c3134164ec64" compoundref="da/de3/_radio_track_wrapper_8cs" startline="330" endline="339">RyleRadio.Tracks.RadioTrackWrapper.GetTunePower</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a1cf48d746261684d3d9f5c3f88fa635d" compoundref="da/de3/_radio_track_wrapper_8cs" startline="315" endline="321">RyleRadio.Tracks.RadioTrackWrapper.ScaleRange</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a22d4e4da504b452b0541aef93ce3cc06" prot="public" static="no" mutable="no">
         <type>AnimationCurve</type>
@@ -296,23 +313,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="65" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="65" bodyend="-1"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac7d24219e5c27188f541c3134164ec64" compoundref="da/de3/_radio_track_wrapper_8cs" startline="328" endline="337">RyleRadio.Tracks.RadioTrackWrapper.GetTunePower</referencedby>
-      </memberdef>
-      <memberdef kind="variable" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac26cf86217a7fdab6269f90e09f3d590" prot="public" static="no" mutable="no">
-        <type>float</type>
-        <definition>float RyleRadio.Tracks.RadioTrackWrapper.gain</definition>
-        <argsstring></argsstring>
-        <name>gain</name>
-        <qualifiedname>RyleRadio.Tracks.RadioTrackWrapper.gain</qualifiedname>
-        <initializer>= 100</initializer>
-        <briefdescription>
-<para>An added value to the volume of the track. This is applied before any other volume is calculated. </para>
-        </briefdescription>
-        <detaileddescription>
-        </detaileddescription>
-        <inbodydescription>
-        </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="71" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="71" bodyend="-1"/>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac7d24219e5c27188f541c3134164ec64" compoundref="da/de3/_radio_track_wrapper_8cs" startline="330" endline="339">RyleRadio.Tracks.RadioTrackWrapper.GetTunePower</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a58c4483f997c03f1ffbe7ffedd403c9e" prot="public" static="no" mutable="no">
         <type>float</type>
@@ -322,14 +323,14 @@
         <qualifiedname>RyleRadio.Tracks.RadioTrackWrapper.attenuation</qualifiedname>
         <initializer>= 0.1f</initializer>
         <briefdescription>
-<para>The amount that this track gets quieter when another track is playing on top of it (and that other track is above this one in RadioData.TrackWs. </para>
+<para>The amount that this track gets quieter when another track is playing on top of it (and that other track is above this one in RadioData.trackWs. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="77" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="77" bodyend="-1"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac7d24219e5c27188f541c3134164ec64" compoundref="da/de3/_radio_track_wrapper_8cs" startline="328" endline="337">RyleRadio.Tracks.RadioTrackWrapper.GetTunePower</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac7d24219e5c27188f541c3134164ec64" compoundref="da/de3/_radio_track_wrapper_8cs" startline="330" endline="339">RyleRadio.Tracks.RadioTrackWrapper.GetTunePower</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a35a80d969510b23d43d863c9c5e4bf6c" prot="public" static="no" mutable="no">
         <type>bool</type>
@@ -379,7 +380,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="95" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="95" bodyend="-1"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" compoundref="da/de3/_radio_track_wrapper_8cs" startline="233" endline="246">RyleRadio.Tracks.RadioTrackWrapper.Init</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" compoundref="da/de3/_radio_track_wrapper_8cs" startline="238" endline="251">RyleRadio.Tracks.RadioTrackWrapper.Init</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a9451083a83be02f5b4357fcffa198210" prot="public" static="no" mutable="no">
         <type>List&lt; <ref refid="de/def/class_ryle_radio_1_1_components_1_1_radio_insulator" kindref="compound">RadioInsulator</ref> &gt;</type>
@@ -397,10 +398,26 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="103" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="103" bodyend="-1"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" compoundref="da/de3/_radio_track_wrapper_8cs" startline="233" endline="246">RyleRadio.Tracks.RadioTrackWrapper.Init</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" compoundref="da/de3/_radio_track_wrapper_8cs" startline="238" endline="251">RyleRadio.Tracks.RadioTrackWrapper.Init</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac26cf86217a7fdab6269f90e09f3d590" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RyleRadio.Tracks.RadioTrackWrapper.gain</definition>
+        <argsstring></argsstring>
+        <name>gain</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackWrapper.gain</qualifiedname>
+        <initializer>= 100</initializer>
+        <briefdescription>
+<para>An added value to the volume of the track. This is applied before any other volume is calculated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="71" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="71" bodyend="-1"/>
+      </memberdef>
       <memberdef kind="variable" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ad02b3c8a6fd28d31d8d728ec8f583e42" prot="private" static="no" mutable="no">
         <type>string</type>
         <definition>string RyleRadio.Tracks.RadioTrackWrapper.trackType</definition>
@@ -415,8 +432,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="109" column="24" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="109" bodyend="-1"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a9426f429184e25913c4e6cd48527ca7c" compoundref="da/de3/_radio_track_wrapper_8cs" startline="291" endline="294">RyleRadio.Tracks.RadioTrackWrapper.CreateTrackLocal</referencedby>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a7da4a3eec70ac1c8d81288eea4669d58" compoundref="da/de3/_radio_track_wrapper_8cs" startline="207" endline="215">RyleRadio.Tracks.RadioTrackWrapper.RadioTrackWrapper</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a9426f429184e25913c4e6cd48527ca7c" compoundref="da/de3/_radio_track_wrapper_8cs" startline="296" endline="299">RyleRadio.Tracks.RadioTrackWrapper.CreateTrackLocal</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a7da4a3eec70ac1c8d81288eea4669d58" compoundref="da/de3/_radio_track_wrapper_8cs" startline="212" endline="220">RyleRadio.Tracks.RadioTrackWrapper.RadioTrackWrapper</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="protected-attrib">
@@ -435,11 +452,11 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="117" column="32" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="117" bodyend="-1"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a30d56787a07eb82ac7614174d48ad385" compoundref="da/de3/_radio_track_wrapper_8cs" startline="302" endline="305">RyleRadio.Tracks.RadioTrackWrapper.AddToPlayerEndCallback</referencedby>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a9426f429184e25913c4e6cd48527ca7c" compoundref="da/de3/_radio_track_wrapper_8cs" startline="291" endline="294">RyleRadio.Tracks.RadioTrackWrapper.CreateTrackLocal</referencedby>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a5bed44201bd34688ce018c8b0eef42f0" compoundref="da/de3/_radio_track_wrapper_8cs" startline="344" endline="347">RyleRadio.Tracks.RadioTrackWrapper.GetSample</referencedby>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" compoundref="da/de3/_radio_track_wrapper_8cs" startline="233" endline="246">RyleRadio.Tracks.RadioTrackWrapper.Init</referencedby>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a7da4a3eec70ac1c8d81288eea4669d58" compoundref="da/de3/_radio_track_wrapper_8cs" startline="207" endline="215">RyleRadio.Tracks.RadioTrackWrapper.RadioTrackWrapper</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a30d56787a07eb82ac7614174d48ad385" compoundref="da/de3/_radio_track_wrapper_8cs" startline="305" endline="308">RyleRadio.Tracks.RadioTrackWrapper.AddToPlayerEndCallback</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a9426f429184e25913c4e6cd48527ca7c" compoundref="da/de3/_radio_track_wrapper_8cs" startline="296" endline="299">RyleRadio.Tracks.RadioTrackWrapper.CreateTrackLocal</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a5bed44201bd34688ce018c8b0eef42f0" compoundref="da/de3/_radio_track_wrapper_8cs" startline="346" endline="349">RyleRadio.Tracks.RadioTrackWrapper.GetSample</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" compoundref="da/de3/_radio_track_wrapper_8cs" startline="238" endline="251">RyleRadio.Tracks.RadioTrackWrapper.Init</referencedby>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a7da4a3eec70ac1c8d81288eea4669d58" compoundref="da/de3/_radio_track_wrapper_8cs" startline="212" endline="220">RyleRadio.Tracks.RadioTrackWrapper.RadioTrackWrapper</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -456,7 +473,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="207" column="16" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="207" bodyend="215"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="212" column="16" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="212" bodyend="220"/>
       </memberdef>
       <memberdef kind="function" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a958441e5c561814d365f208cadf085aa" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -471,7 +488,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="233" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="233" bodyend="246"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="238" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="238" bodyend="251"/>
       </memberdef>
       <memberdef kind="function" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ae03e15c79a81c5388617fdf83878b647" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>override string</type>
@@ -486,7 +503,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="251" column="32"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="256" column="32"/>
       </memberdef>
       <memberdef kind="function" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a9426f429184e25913c4e6cd48527ca7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -502,8 +519,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="291" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="291" bodyend="294"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a7da4a3eec70ac1c8d81288eea4669d58" compoundref="da/de3/_radio_track_wrapper_8cs" startline="207" endline="215">RyleRadio.Tracks.RadioTrackWrapper.RadioTrackWrapper</referencedby>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="296" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="296" bodyend="299"/>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a7da4a3eec70ac1c8d81288eea4669d58" compoundref="da/de3/_radio_track_wrapper_8cs" startline="212" endline="220">RyleRadio.Tracks.RadioTrackWrapper.RadioTrackWrapper</referencedby>
       </memberdef>
       <memberdef kind="function" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a30d56787a07eb82ac7614174d48ad385" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -532,7 +549,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="302" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="302" bodyend="305"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="305" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="305" bodyend="308"/>
       </memberdef>
       <memberdef kind="function" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac7d24219e5c27188f541c3134164ec64" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -575,7 +592,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="328" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="328" bodyend="337"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="330" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="330" bodyend="339"/>
       </memberdef>
       <memberdef kind="function" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a5bed44201bd34688ce018c8b0eef42f0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>float</type>
@@ -606,7 +623,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="344" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="344" bodyend="347"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="346" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="346" bodyend="349"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
@@ -623,7 +640,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="222" column="28" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="222" bodyend="227"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="227" column="28" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="227" bodyend="232"/>
       </memberdef>
       <memberdef kind="function" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a909e0f98dc729f0baf120e04a3635a19" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
@@ -654,7 +671,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="258" column="30" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="258" bodyend="262"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="263" column="30" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="263" bodyend="267"/>
       </memberdef>
       <memberdef kind="function" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ab322b29cd3c310eb76cfcc32fc1a8898" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type><ref refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track" kindref="compound">IRadioTrack</ref></type>
@@ -685,8 +702,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="269" column="35" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="269" bodyend="285"/>
-        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a9426f429184e25913c4e6cd48527ca7c" compoundref="da/de3/_radio_track_wrapper_8cs" startline="291" endline="294">RyleRadio.Tracks.RadioTrackWrapper.CreateTrackLocal</referencedby>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="274" column="35" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="274" bodyend="290"/>
+        <referencedby refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a9426f429184e25913c4e6cd48527ca7c" compoundref="da/de3/_radio_track_wrapper_8cs" startline="296" endline="299">RyleRadio.Tracks.RadioTrackWrapper.CreateTrackLocal</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -705,7 +722,7 @@ This is called whenever the range is changed. <linebreak/>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="313" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="313" bodyend="319"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="315" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="315" bodyend="321"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -729,7 +746,7 @@ Wrappers also contain variables that exist for every track type, such as <ref re
         <link refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track"/>
       </node>
     </collaborationgraph>
-    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="19" column="11" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="20" bodyend="348"/>
+    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="19" column="11" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="20" bodyend="350"/>
     <listofallmembers>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a30d56787a07eb82ac7614174d48ad385" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>AddToPlayerEndCallback</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a58c4483f997c03f1ffbe7ffedd403c9e" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>attenuation</name></member>
@@ -739,7 +756,8 @@ Wrappers also contain variables that exist for every track type, such as <ref re
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a9426f429184e25913c4e6cd48527ca7c" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>CreateTrackLocal</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a74adba53bd688378c4a5fc3140ff4d67" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>DefaultRangeCurve</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a35a80d969510b23d43d863c9c5e4bf6c" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>forceGlobal</name></member>
-      <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac26cf86217a7fdab6269f90e09f3d590" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>gain</name></member>
+      <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a654a6d6c0fb9ef30e5d7383f633bbdb0" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>Gain</name></member>
+      <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac26cf86217a7fdab6269f90e09f3d590" prot="private" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>gain</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a5bed44201bd34688ce018c8b0eef42f0" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>GetSample</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a909e0f98dc729f0baf120e04a3635a19" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>GetTrackType</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1ac7d24219e5c27188f541c3134164ec64" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>GetTunePower</name></member>

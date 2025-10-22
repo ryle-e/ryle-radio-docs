@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Info/the Multiselect Attribute.md",
+                "file": "General/Info/Sample Rates- an important note.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "the Multiselect Attribute"
+              "title": "Sample Rates- an important note"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "General/Info/the Multiselect Attribute.md",
+                "file": "General/Info/Sample Rates- an important note.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of the Multiselect Attribute"
+              "title": "Outline of Sample Rates- an important note"
             }
           },
           {
@@ -190,22 +190,22 @@
   },
   "active": "0423b4e26318df5a",
   "lastOpenFiles": [
-    "Scripting/html/d3/d8d",
-    "Scripting/html/d3/d8c",
-    "Scripting/html/d3/d8b",
-    "Scripting/html/d3/d8a",
-    "Scripting/html/d3/d89",
-    "Scripting/html/d3/d88",
-    "Scripting/html/d3/d87",
-    "Scripting/html/d3/d86",
-    "Scripting/html/d3/d84",
-    "Scripting/html/d3/d83",
-    "Scripting/html/d3/d82",
+    "General/Plans, Todo.md",
+    "General/Patch Notes.md",
+    "General/Info/the Multiselect Attribute.md",
+    "Scripting/html/d4/dfd/class_ryle_radio_1_1_multiselect_attribute.js",
+    "Scripting/html/d3/db4",
+    "Scripting/html/d3/db3",
+    "Scripting/html/d3/db2",
+    "Scripting/html/d3/db1",
+    "Scripting/html/d3/db0",
+    "Scripting/html/d3/daf",
+    "Scripting/html/d3/dae",
+    "Scripting/html/d3/dad",
+    "Scripting/html/d3/dac",
     "General/About the Docs.md",
     "General/Info/What is Ryle Radio.md",
-    "General/Info/the Multiselect Attribute.md",
     "General/Info/Sample Rates- an important note.md",
-    "General/Plans, Todo.md",
     "General/Info/(Predicted) Common Issues and Questions.md",
     "Scripting/html/df/d29/class_ryle_radio_1_1_editor_1_1_station_radio_track_editor.png",
     "Scripting/html/d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor.png",
@@ -228,7 +228,6 @@
     "Main.md",
     "Scripting/Components/Base/RadioComponent.md",
     "Scripting/Tracks/RadioTrackWrapper.md",
-    "General/Patch Notes.md",
     "Scripting/Components/RadioOutput.md",
     "www.reddit.com/u/ryle-e_dev.md",
     "Scripting/RadioData.md",

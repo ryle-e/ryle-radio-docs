@@ -30,7 +30,7 @@ var annotated_dup =
         [ "StationRadioTrack", "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html", "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track" ],
         [ "StationRadioTrackWrapper", "de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html", "de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper" ]
       ] ],
-      [ "MultiselectAttribute", "d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html", null ],
+      [ "MultiselectAttribute", "d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html", "d4/dfd/class_ryle_radio_1_1_multiselect_attribute" ],
       [ "MultiselectDrawer", "d7/dcd/class_ryle_radio_1_1_multiselect_drawer.html", null ],
       [ "RadioData", "da/dc0/class_ryle_radio_1_1_radio_data.html", null ],
       [ "RadioUtils", "d4/d2c/class_ryle_radio_1_1_radio_utils.html", "d4/d2c/class_ryle_radio_1_1_radio_utils" ]

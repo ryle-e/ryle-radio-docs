@@ -136,10 +136,8 @@ Public Attributes</h2></td></tr>
 <tr class="memdesc:a778c05ac1056316fc9224e13c80c340c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The range of tunes in which this track can be heard. If a RadioOutput.Tune value is within this range, the tune power of this track will be &gt; 0, and it will be audible (not counting spatial components+gain+etc)  <br /></td></tr>
 <tr class="memitem:a22d4e4da504b452b0541aef93ce3cc06" id="r_a22d4e4da504b452b0541aef93ce3cc06"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a22d4e4da504b452b0541aef93ce3cc06">rangeCurve</a> = new(DefaultRangeCurve.keys)</td></tr>
 <tr class="memdesc:a22d4e4da504b452b0541aef93ce3cc06"><td class="mdescLeft">&#160;</td><td class="mdescRight">The curve defining the loudness of the track over its range. The progress between <span class="tt">range.x</span> and <span class="tt">range.y</span> the RadioOutput.Tune value is, is the progress along this curve the tune power is.  <br /></td></tr>
-<tr class="memitem:ac26cf86217a7fdab6269f90e09f3d590" id="r_ac26cf86217a7fdab6269f90e09f3d590"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac26cf86217a7fdab6269f90e09f3d590">gain</a> = 100</td></tr>
-<tr class="memdesc:ac26cf86217a7fdab6269f90e09f3d590"><td class="mdescLeft">&#160;</td><td class="mdescRight">An added value to the volume of the track. This is applied before any other volume is calculated.  <br /></td></tr>
 <tr class="memitem:a58c4483f997c03f1ffbe7ffedd403c9e" id="r_a58c4483f997c03f1ffbe7ffedd403c9e"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a58c4483f997c03f1ffbe7ffedd403c9e">attenuation</a> = 0.1f</td></tr>
-<tr class="memdesc:a58c4483f997c03f1ffbe7ffedd403c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount that this track gets quieter when another track is playing on top of it (and that other track is above this one in RadioData.TrackWs.  <br /></td></tr>
+<tr class="memdesc:a58c4483f997c03f1ffbe7ffedd403c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount that this track gets quieter when another track is playing on top of it (and that other track is above this one in RadioData.trackWs.  <br /></td></tr>
 <tr class="memitem:a35a80d969510b23d43d863c9c5e4bf6c" id="r_a35a80d969510b23d43d863c9c5e4bf6c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35a80d969510b23d43d863c9c5e4bf6c">forceGlobal</a> = true</td></tr>
 <tr class="memdesc:a35a80d969510b23d43d863c9c5e4bf6c"><td class="mdescLeft">&#160;</td><td class="mdescRight">If true, this track ignores any RadioBroadcaster influence and plays everywhere.  <br /></td></tr>
 <tr class="memitem:a2f7d1bb32fb5ca1503f746d6f0ff8cf0" id="r_a2f7d1bb32fb5ca1503f746d6f0ff8cf0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f7d1bb32fb5ca1503f746d6f0ff8cf0">playOnInit</a> = true</td></tr>
@@ -170,8 +168,12 @@ Properties</h2></td></tr>
 <tr class="memdesc:a371c6db231ca6c2ca44be011ae29fe03"><td class="mdescLeft">&#160;</td><td class="mdescRight">An event called when an insulator is added to the track.  <br /></td></tr>
 <tr class="memitem:a1c98ba01c1d2ec6303002217691c7d6e" id="r_a1c98ba01c1d2ec6303002217691c7d6e"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html">RadioInsulator</a>, <a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1c98ba01c1d2ec6303002217691c7d6e">OnRemoveInsulator</a> = new((_, _) =&gt; { })<code> [get, set]</code></td></tr>
 <tr class="memdesc:a1c98ba01c1d2ec6303002217691c7d6e"><td class="mdescLeft">&#160;</td><td class="mdescRight">An event called when an insulator is removed from this track.  <br /></td></tr>
+<tr class="memitem:a654a6d6c0fb9ef30e5d7383f633bbdb0" id="r_a654a6d6c0fb9ef30e5d7383f633bbdb0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a654a6d6c0fb9ef30e5d7383f633bbdb0">Gain</a><code> [get]</code></td></tr>
+<tr class="memdesc:a654a6d6c0fb9ef30e5d7383f633bbdb0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gain value scaled down to ones- e.g <a class="el" href="#ac26cf86217a7fdab6269f90e09f3d590">gain</a> at 200 is <a class="el" href="#a654a6d6c0fb9ef30e5d7383f633bbdb0">Gain</a> at 2.  <br /></td></tr>
 <tr class="memitem:af40754f1c0460eb3974799a71adc296e" id="r_af40754f1c0460eb3974799a71adc296e"><td class="memItemLeft" align="right" valign="top">static Type[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af40754f1c0460eb3974799a71adc296e">TrackTypes</a><code> [get]</code></td></tr>
-<tr class="memdesc:af40754f1c0460eb3974799a71adc296e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static; the list of available track types that this wrapper can contain. This dynamically adds any custom track types so long as they inherit from <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">IRadioTrack</a>.  <br /></td></tr>
+<tr class="memdesc:af40754f1c0460eb3974799a71adc296e"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of each type of track that this wrapper can contain- this is anything that inherits from <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">IRadioTrack</a>, and updates dynamically when creating new track types. <br  />
+<br  />
+<b>See also: </b> <a class="el" href="../../d4/d2c/class_ryle_radio_1_1_radio_utils.html#ade2ef6c22eb2dd42613bdcf74f1587de">RadioUtils.FindDerivedTypes()</a>  <br /></td></tr>
 <tr class="memitem:ae8915dc640d6e927887836fe4c0257a0" id="r_ae8915dc640d6e927887836fe4c0257a0"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8915dc640d6e927887836fe4c0257a0">TrackTypesAsStrings</a><code> [get]</code></td></tr>
 <tr class="memdesc:ae8915dc640d6e927887836fe4c0257a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Static; the list of available track types stored as their typename, NOT as their display names. This is used when reassigning track types in RadioDataEditor when the editor reloads, as we only have the typename of the track.  <br /></td></tr>
 <tr class="memitem:a5ced7fa006129abc0db99e8093e89df5" id="r_a5ced7fa006129abc0db99e8093e89df5"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ced7fa006129abc0db99e8093e89df5">TrackNames</a><code> [get]</code></td></tr>
@@ -190,6 +192,8 @@ This is called whenever the range is changed. <br  />
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:ac26cf86217a7fdab6269f90e09f3d590" id="r_ac26cf86217a7fdab6269f90e09f3d590"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac26cf86217a7fdab6269f90e09f3d590">gain</a> = 100</td></tr>
+<tr class="memdesc:ac26cf86217a7fdab6269f90e09f3d590"><td class="mdescLeft">&#160;</td><td class="mdescRight">An added value to the volume of the track. This is applied before any other volume is calculated.  <br /></td></tr>
 <tr class="memitem:ad02b3c8a6fd28d31d8d728ec8f583e42" id="r_ad02b3c8a6fd28d31d8d728ec8f583e42"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad02b3c8a6fd28d31d8d728ec8f583e42">trackType</a></td></tr>
 <tr class="memdesc:ad02b3c8a6fd28d31d8d728ec8f583e42"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of track for this wrapper to contain, selectable in the inspector. This variable is stored as the track name and displays with a dropdown according to <a class="el" href="#a5ced7fa006129abc0db99e8093e89df5">TrackNames</a>.  <br /></td></tr>
 </table><table class="memberdecls">
@@ -223,7 +227,7 @@ Wrappers also contain variables that exist for every track type, such as <a clas
 
 <p>Creates an empty wrapper. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00207">207</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00212">212</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -251,7 +255,7 @@ Wrappers also contain variables that exist for every track type, such as <a clas
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00302">302</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00305">305</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -287,9 +291,9 @@ Wrappers also contain variables that exist for every track type, such as <a clas
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The newly created <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">IRadioTrack</a></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00269">269</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00274">274</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00291">CreateTrackLocal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00296">CreateTrackLocal()</a>.</p>
 
 </div>
 </div>
@@ -311,9 +315,9 @@ Wrappers also contain variables that exist for every track type, such as <a clas
 <p>Set <a class="el" href="#a98298d1ae6f1d9111f9288f4fb905120">track</a> to a new track with type defined by <a class="el" href="#ad02b3c8a6fd28d31d8d728ec8f583e42">trackType</a> <br  />
 <b>See also: </b><a class="el" href="#ab322b29cd3c310eb76cfcc32fc1a8898">CreateTrackEditor()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00291">291</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00296">296</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00207">RadioTrackWrapper()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00212">RadioTrackWrapper()</a>.</p>
 
 </div>
 </div>
@@ -341,7 +345,7 @@ Wrappers also contain variables that exist for every track type, such as <a clas
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The sample as given by <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html#a3d618faf79658a5e16fbf4ef3d9992dd">RadioTrack.GetSample()</a></dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00344">344</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00346">346</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -377,7 +381,7 @@ Wrappers also contain variables that exist for every track type, such as <a clas
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The type with that name</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00258">258</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00263">263</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -410,7 +414,7 @@ Wrappers also contain variables that exist for every track type, such as <a clas
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>The tune power of this track with the provided values</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00328">328</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00330">330</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -431,7 +435,7 @@ Wrappers also contain variables that exist for every track type, such as <a clas
 
 <p>Initialize this wrapper and its track. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00233">233</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00238">238</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -460,7 +464,7 @@ Wrappers also contain variables that exist for every track type, such as <a clas
 
 <p>Static; resets available track types and names. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00222">222</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00227">227</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -491,7 +495,7 @@ Wrappers also contain variables that exist for every track type, such as <a clas
 This is called whenever the range is changed. <br  />
 <b>See: </b><a class="el" href="#aaa600370ee54d2252e2671d39368fa58">RANGE_DECIMAL_MULTIPLIER</a>. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00313">313</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00315">315</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -508,11 +512,11 @@ This is called whenever the range is changed. <br  />
       </table>
 </div><div class="memdoc">
 
-<p>The amount that this track gets quieter when another track is playing on top of it (and that other track is above this one in RadioData.TrackWs. </p>
+<p>The amount that this track gets quieter when another track is playing on top of it (and that other track is above this one in RadioData.trackWs. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00077">77</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00328">GetTunePower()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00330">GetTunePower()</a>.</p>
 
 </div>
 </div>
@@ -534,7 +538,7 @@ This is called whenever the range is changed. <br  />
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00095">95</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00233">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00238">Init()</a>.</p>
 
 </div>
 </div>
@@ -561,11 +565,19 @@ This is called whenever the range is changed. <br  />
 
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">float RyleRadio.Tracks.RadioTrackWrapper.gain = 100</td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>An added value to the volume of the track. This is applied before any other volume is calculated. </p>
@@ -610,7 +622,7 @@ This is called whenever the range is changed. <br  />
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00103">103</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00233">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00238">Init()</a>.</p>
 
 </div>
 </div>
@@ -670,7 +682,7 @@ This is called whenever the range is changed. <br  />
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00053">53</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00328">GetTunePower()</a>, and <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00313">ScaleRange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00330">GetTunePower()</a>, and <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00315">ScaleRange()</a>.</p>
 
 </div>
 </div>
@@ -698,7 +710,7 @@ This is called whenever the range is changed. <br  />
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00033">33</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00313">ScaleRange()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00315">ScaleRange()</a>.</p>
 
 </div>
 </div>
@@ -728,7 +740,7 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00065">65</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00328">GetTunePower()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00330">GetTunePower()</a>.</p>
 
 </div>
 </div>
@@ -757,7 +769,7 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00117">117</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00302">AddToPlayerEndCallback()</a>, <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00291">CreateTrackLocal()</a>, <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00344">GetSample()</a>, <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00233">Init()</a>, and <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00207">RadioTrackWrapper()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00305">AddToPlayerEndCallback()</a>, <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00296">CreateTrackLocal()</a>, <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00346">GetSample()</a>, <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00238">Init()</a>, and <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00212">RadioTrackWrapper()</a>.</p>
 
 </div>
 </div>
@@ -785,7 +797,7 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00109">109</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00291">CreateTrackLocal()</a>, and <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00207">RadioTrackWrapper()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00296">CreateTrackLocal()</a>, and <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00212">RadioTrackWrapper()</a>.</p>
 
 </div>
 </div>
@@ -814,7 +826,7 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00123">123</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00233">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00238">Init()</a>.</p>
 
 </div>
 </div>
@@ -841,6 +853,32 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 <p>The default <a class="el" href="#a22d4e4da504b452b0541aef93ce3cc06">rangeCurve</a> to use when an empty wrapper is created. It's a super basic and smooth closed curve from 0 to 0. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00024">24</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+
+</div>
+</div>
+<a id="a654a6d6c0fb9ef30e5d7383f633bbdb0" name="a654a6d6c0fb9ef30e5d7383f633bbdb0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a654a6d6c0fb9ef30e5d7383f633bbdb0">&#9670;&#160;</a></span>Gain</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float RyleRadio.Tracks.RadioTrackWrapper.Gain</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The gain value scaled down to ones- e.g <a class="el" href="#ac26cf86217a7fdab6269f90e09f3d590">gain</a> at 200 is <a class="el" href="#a654a6d6c0fb9ef30e5d7383f633bbdb0">Gain</a> at 2. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00139">139</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -920,7 +958,7 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00121">121</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00233">Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00238">Init()</a>.</p>
 
 </div>
 </div>
@@ -998,7 +1036,7 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 
 <p>An alias for the track's SampleCount as other classes cannot access <a class="el" href="#a98298d1ae6f1d9111f9288f4fb905120">track</a> directly. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00201">201</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00206">206</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -1024,7 +1062,7 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 
 <p>An alias for the track's SampleRate as other classes cannot access <a class="el" href="#a98298d1ae6f1d9111f9288f4fb905120">track</a> directly. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00198">198</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00203">203</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -1050,9 +1088,9 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 
 <p>Static; the list of track types stored as their display names. This is shown as a dropdown for <a class="el" href="#ad02b3c8a6fd28d31d8d728ec8f583e42">trackType</a> and is how types are usually displayed in the inspector. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00183">183</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00188">188</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00269">CreateTrackEditor()</a>, and <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00258">GetTrackType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00274">CreateTrackEditor()</a>, and <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00263">GetTrackType()</a>.</p>
 
 </div>
 </div>
@@ -1076,11 +1114,13 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 </table>
 </div><div class="memdoc">
 
-<p>Static; the list of available track types that this wrapper can contain. This dynamically adds any custom track types so long as they inherit from <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">IRadioTrack</a>. </p>
+<p>A list of each type of track that this wrapper can contain- this is anything that inherits from <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">IRadioTrack</a>, and updates dynamically when creating new track types. <br  />
+<br  />
+<b>See also: </b> <a class="el" href="../../d4/d2c/class_ryle_radio_1_1_radio_utils.html#ade2ef6c22eb2dd42613bdcf74f1587de">RadioUtils.FindDerivedTypes()</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00143">143</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00150">150</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00269">CreateTrackEditor()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00274">CreateTrackEditor()</a>.</p>
 
 </div>
 </div>
@@ -1106,9 +1146,9 @@ If the curve is goes up and down repeatedly, it will be at various different vol
 
 <p>Static; the list of available track types stored as their typename, NOT as their display names. This is used when reassigning track types in RadioDataEditor when the editor reloads, as we only have the typename of the track. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00163">163</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00168">168</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00258">GetTrackType()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00263">GetTrackType()</a>.</p>
 
 </div>
 </div>

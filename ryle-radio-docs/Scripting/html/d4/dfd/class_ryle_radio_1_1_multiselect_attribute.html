@@ -94,6 +94,9 @@ $(function(){initNavTree('d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html
   <div class="headertitle"><div class="title">RyleRadio.MultiselectAttribute Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A custom attribute that allows ints to display as a multiselect dropdown for a given collection, like a custom LayerMask. Due to int limitations you can only have up to 32 options.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for RyleRadio.MultiselectAttribute:</div>
 <div class="dyncontent">
@@ -104,21 +107,27 @@ Inheritance diagram for RyleRadio.MultiselectAttribute:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aa147e9a2d2972e68f29cf086a444c0e5" id="r_aa147e9a2d2972e68f29cf086a444c0e5"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa147e9a2d2972e68f29cf086a444c0e5">MultiselectAttribute</a> (string _optionsName)</td></tr>
+<tr class="memdesc:aa147e9a2d2972e68f29cf086a444c0e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises the attribute.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aba3020ba592eea3b61ead4cf18221fc6" id="r_aba3020ba592eea3b61ead4cf18221fc6"><td class="memItemLeft" align="right" valign="top">static T[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aba3020ba592eea3b61ead4cf18221fc6">To&lt; T &gt;</a> (int _flags, T[] _options)</td></tr>
+<tr class="memdesc:aba3020ba592eea3b61ead4cf18221fc6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts an int with the Multiselect attribute to a subset of a given list according to the int flags- converts the flag int to usable data.  <br /></td></tr>
 <tr class="memitem:a563578e97c9707a19a1a2a4b3bcb0ce2" id="r_a563578e97c9707a19a1a2a4b3bcb0ce2"><td class="memItemLeft" align="right" valign="top">static int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a563578e97c9707a19a1a2a4b3bcb0ce2">ToInt</a> (int _flags)</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a78e4acb7a1e6b89d62119307900a6363" id="r_a78e4acb7a1e6b89d62119307900a6363"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a78e4acb7a1e6b89d62119307900a6363">OptionsName</a><code> [get, private set]</code></td></tr>
+<tr class="memdesc:a78e4acb7a1e6b89d62119307900a6363"><td class="mdescLeft">&#160;</td><td class="mdescRight">Name of the variable this attribute uses for the options list.  <br /></td></tr>
 <tr class="memitem:a15a7d220b48d6d0e4589c392a9e7185a" id="r_a15a7d220b48d6d0e4589c392a9e7185a"><td class="memItemLeft" align="right" valign="top">static int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a15a7d220b48d6d0e4589c392a9e7185a">ZeroTo31</a><code> [get]</code></td></tr>
+<tr class="memdesc:a15a7d220b48d6d0e4589c392a9e7185a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A filler array with numbers 0 - 31, used when converting from a flag int to a list subset.  <br /></td></tr>
 <tr class="memitem:ac39c193ea12fa1e621d6c98a5ce8a7c9" id="r_ac39c193ea12fa1e621d6c98a5ce8a7c9"><td class="memItemLeft" align="right" valign="top">static int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac39c193ea12fa1e621d6c98a5ce8a7c9">OneTo32</a><code> [get]</code></td></tr>
+<tr class="memdesc:ac39c193ea12fa1e621d6c98a5ce8a7c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">A filler array with numbers 1 - 32. Not yet used, but theoretically helpful for indexing from the end of a list (list[^i] instead of list[i])  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
+<div class="textblock"><p>A custom attribute that allows ints to display as a multiselect dropdown for a given collection, like a custom LayerMask. Due to int limitations you can only have up to 32 options. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aa147e9a2d2972e68f29cf086a444c0e5" name="aa147e9a2d2972e68f29cf086a444c0e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa147e9a2d2972e68f29cf086a444c0e5">&#9670;&#160;</a></span>MultiselectAttribute()</h2>
@@ -135,7 +144,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
+<p>Initialises the attribute. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00053">53</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
 
 </div>
 </div>
@@ -167,7 +178,35 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00049">49</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
+<p>Converts an int with the Multiselect attribute to a subset of a given list according to the int flags- converts the flag int to usable data. </p>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td>The type content of the list we're converting the flags to</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_flags</td><td>The int with the Multiselect attribute- a flag int</td></tr>
+    <tr><td class="paramname">_options</td><td>The list we're getting a subset of according to the flags</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A subset of <span class="tt">_options</span> that matches the <span class="tt">_flags</span> int</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">string</span>[] options = <span class="keyword">new</span> <span class="keywordtype">string</span>[4] { <span class="stringliteral">&quot;awesome&quot;</span>, <span class="stringliteral">&quot;attribute&quot;</span>, <span class="stringliteral">&quot;thanks&quot;</span>, <span class="stringliteral">&quot;ryle-e&quot;</span> };</div>
+<div class="line"> </div>
+<div class="line">[Multiselect(<span class="stringliteral">&quot;options&quot;</span>)]</div>
+<div class="line"><span class="keyword">private</span> <span class="keywordtype">int</span> flags1; <span class="comment">// in the inspector, we set it to [&quot;awesome&quot;, &quot;thanks&quot;]- the first and third options in the inspector. this int then becomes 0x0101</span></div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">public</span> <span class="keywordtype">void</span> Convert()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keyword">private</span> <span class="keywordtype">int</span> flags2 = 0x1010; <span class="comment">// equivalent to selecting the second and fourth options in the inspector</span></div>
+<div class="line"> </div>
+<div class="line">    List&lt;string&gt; converted1 = Multiselect.To&lt;<span class="keywordtype">string</span>&gt;(flags1, options); <span class="comment">// sets to [&quot;awesome&quot;, &quot;thanks&quot;]</span></div>
+<div class="line">    List&lt;string&gt; converted2 = Multiselect.To&lt;<span class="keywordtype">string</span>&gt;(flags2, options); <span class="comment">// sets to [&quot;attribute&quot;, &quot;ryle-e&quot;]</span></div>
+<div class="line">}</div>
+</div><!-- fragment -->
+<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00080">80</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
 
 </div>
 </div>
@@ -194,7 +233,7 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00080">80</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00111">111</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
 
 </div>
 </div>
@@ -219,7 +258,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00040">40</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
+<p>A filler array with numbers 1 - 32. Not yet used, but theoretically helpful for indexing from the end of a list (list[^i] instead of list[i]) </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00041">41</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
 
 </div>
 </div>
@@ -243,7 +284,11 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
+<p>Name of the variable this attribute uses for the options list. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00053">MultiselectAttribute()</a>.</p>
 
 </div>
 </div>
@@ -267,7 +312,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
+<p>A filler array with numbers 0 - 31, used when converting from a flag int to a list subset. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d2/dda/_multiselect_attribute_8cs_source.html">MultiselectAttribute.cs</a>.</p>
 
 </div>
 </div>

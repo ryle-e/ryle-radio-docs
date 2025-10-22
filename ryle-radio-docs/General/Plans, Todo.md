@@ -1,5 +1,6 @@
 ## Known issues
 - Start and end rests on station tracks don't work - *High prio*
+- New RadioTrackWrappers get linked when added in a RadioData and mirror values in their child RadioTrack - *Mid prio, attempted to fix by creating RadioDataEditor but that doesn't appear to have done it*
 - Stations keep opening their dropdowns every time the inspector is switched - *Low prio, maybe mid if it gets too annoying*
 - Distortion when converting between sample rates at playback time - *Low prio, [[Sample Rates- an important note#How do we fix it?|partially fixed and sufficiently workaround-able]], but would prefer a future comprehensive fix*
 
