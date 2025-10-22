@@ -146,6 +146,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a79a7484b93704449f8b9691f13a25bc5" id="r_a79a7484b93704449f8b9691f13a25bc5"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79a7484b93704449f8b9691f13a25bc5">AffectedTracks</a><code> [get]</code></td></tr>
+<tr class="memdesc:a79a7484b93704449f8b9691f13a25bc5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Accessor for <a class="el" href="#a289de6dde811ce51a1207e5db4d95f96">affectedTrackNames</a> and <a class="el" href="#a4230b55ced5082f104e1dadd7f225737">affectedTracks</a> - uses <a class="el" href="../../d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html">MultiselectAttribute</a> to automatically convert the flag int to a string array.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -166,7 +167,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:afbedeb396a11124c15f3f8dc67f0c9b4" id="r_afbedeb396a11124c15f3f8dc67f0c9b4"><td class="memItemLeft" align="right" valign="top">List&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbedeb396a11124c15f3f8dc67f0c9b4">toDoOnUpdate</a> = new()</td></tr>
 <tr class="memdesc:afbedeb396a11124c15f3f8dc67f0c9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A buffer for events to run on Update. We cannot call UnityEvents in the audio thread, so we need a buffer here so we can run them in Update instead.  <br /></td></tr>
 <tr class="memitem:a289de6dde811ce51a1207e5db4d95f96" id="r_a289de6dde811ce51a1207e5db4d95f96"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a289de6dde811ce51a1207e5db4d95f96">affectedTrackNames</a></td></tr>
-<tr class="memdesc:a289de6dde811ce51a1207e5db4d95f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">affectedTracks as a list of names rather than a flag int. Cached in AffectedTracks  <br /></td></tr>
+<tr class="memdesc:a289de6dde811ce51a1207e5db4d95f96"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="#a4230b55ced5082f104e1dadd7f225737">affectedTracks</a> as a list of names rather than a flag int. Created and cached in <a class="el" href="#a79a7484b93704449f8b9691f13a25bc5">AffectedTracks</a>  <br /></td></tr>
 <tr class="memitem:a633bba9cac49e89ee1fa21434171b1e5" id="r_a633bba9cac49e89ee1fa21434171b1e5"><td class="memItemLeft" align="right" valign="top">bool[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a633bba9cac49e89ee1fa21434171b1e5">hasEventBeenAdded</a> = new bool[(int)<a class="el" href="#a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754">EventType.None</a>]</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
@@ -263,7 +264,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00136">136</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00141">141</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -290,7 +291,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00101">101</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00106">106</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -317,7 +318,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00107">107</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00112">112</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -348,7 +349,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00208">208</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00213">213</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -375,7 +376,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00262">262</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00267">267</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -402,7 +403,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00112">112</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00117">117</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -427,9 +428,9 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 </table>
 </div><div class="memdoc">
 
-<p>affectedTracks as a list of names rather than a flag int. Cached in AffectedTracks </p>
+<p><a class="el" href="#a4230b55ced5082f104e1dadd7f225737">affectedTracks</a> as a list of names rather than a flag int. Created and cached in <a class="el" href="#a79a7484b93704449f8b9691f13a25bc5">AffectedTracks</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00084">84</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00085">85</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -505,7 +506,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00098">98</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00103">103</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -557,7 +558,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 
 <p>A buffer for events to run on Update. We cannot call UnityEvents in the audio thread, so we need a buffer here so we can run them in Update instead. </p>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00073">73</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00074">74</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -582,7 +583,9 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00085">85</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p>Accessor for <a class="el" href="#a289de6dde811ce51a1207e5db4d95f96">affectedTrackNames</a> and <a class="el" href="#a4230b55ced5082f104e1dadd7f225737">affectedTracks</a> - uses <a class="el" href="../../d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html">MultiselectAttribute</a> to automatically convert the flag int to a string array. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00090">90</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>

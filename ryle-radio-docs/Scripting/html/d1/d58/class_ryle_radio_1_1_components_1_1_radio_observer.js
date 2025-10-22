@@ -25,5 +25,6 @@ var class_ryle_radio_1_1_components_1_1_radio_observer =
     [ "affectedTracks", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a4230b55ced5082f104e1dadd7f225737", null ],
     [ "events", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a0886bd8a2912dd7f6be8ba2f42ac6b1c", null ],
     [ "output", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a20e98887f8846c29e4f0155c36bf4c66", null ],
-    [ "toDoOnUpdate", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#afbedeb396a11124c15f3f8dc67f0c9b4", null ]
+    [ "toDoOnUpdate", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#afbedeb396a11124c15f3f8dc67f0c9b4", null ],
+    [ "AffectedTracks", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a79a7484b93704449f8b9691f13a25bc5", null ]
 ];
