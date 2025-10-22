@@ -18,14 +18,15 @@ It allows you to set up several [[1. Basic Radio Sample#Specific tracks|Tracks]]
 - Code integration for modifying radios, tracks, etc in user code
 - Built-in no-code event interactions (play, pause, stop, reset)
 - Open classes for custom components and functionality
+- Dynamic, automatic modularity- all you need to do is implement
 - Premade samples and full documentation
 - Open-source!
 
 I am a little worried that the way I wrote this feature list doesn't make total sense lol, so check out the [[Contact]] section to contact me with any questions :)
 
 ## Limitations
-- **All audio is reduced to mono**- does reflect real life radios, but could be annoying for more complex audio layouts. Theoretically you could use a different radio for each side as a workaround, but this would take a lot of effort to set up
-- **Some parts can't be modified at runtime**- specifically observers and adding new tracks to stations (the latter of which you technically can do but may require some tinkering, and can easily be worked-around)
+- **All audio output from a radio is reduced to mono**- does reflect real life radios, but could be annoying for more complex audio layouts. Theoretically you could use a different radio for each side as a workaround, but this would take a lot of effort to set up
+- **Some parts can't be modified at runtime**- specifically Observers and adding new tracks to stations (the latter of which you technically can do but may require some tinkering, and can easily be worked-around)
 
 ## Links
 - GitHub repo
