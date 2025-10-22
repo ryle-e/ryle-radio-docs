@@ -23,9 +23,9 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrack.cs" line="27" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrack.cs" bodystart="27" bodyend="27"/>
-        <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a383442f843004ce3898509ecc8e4bab5" compoundref="de/d9e/_procedural_radio_track_8cs" startline="67" endline="126">RyleRadio.Tracks.ProceduralRadioTrack.GetSample</referencedby>
+        <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a383442f843004ce3898509ecc8e4bab5" compoundref="de/d9e/_procedural_radio_track_8cs" startline="109" endline="168">RyleRadio.Tracks.ProceduralRadioTrack.GetSample</referencedby>
         <referencedby refid="de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track_1a35adc9929e2b6bfad7c63a08c7a75851" compoundref="df/d94/_clip_radio_track_8cs" startline="24" endline="30">RyleRadio.Tracks.ClipRadioTrack.Init</referencedby>
-        <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a49f57378ad34e028e3ae6f9bf652c154" compoundref="de/d9e/_procedural_radio_track_8cs" startline="56" endline="64">RyleRadio.Tracks.ProceduralRadioTrack.Init</referencedby>
+        <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a49f57378ad34e028e3ae6f9bf652c154" compoundref="de/d9e/_procedural_radio_track_8cs" startline="94" endline="102">RyleRadio.Tracks.ProceduralRadioTrack.Init</referencedby>
       </memberdef>
       <memberdef kind="property" id="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track_1ab9bc3ce18b760fcfd3ae4867ded40698" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -44,7 +44,7 @@
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrack.cs" line="33" column="28" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrack.cs" bodystart="33" bodyend="33"/>
         <referencedby refid="de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track_1a35adc9929e2b6bfad7c63a08c7a75851" compoundref="df/d94/_clip_radio_track_8cs" startline="24" endline="30">RyleRadio.Tracks.ClipRadioTrack.Init</referencedby>
-        <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a49f57378ad34e028e3ae6f9bf652c154" compoundref="de/d9e/_procedural_radio_track_8cs" startline="56" endline="64">RyleRadio.Tracks.ProceduralRadioTrack.Init</referencedby>
+        <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a49f57378ad34e028e3ae6f9bf652c154" compoundref="de/d9e/_procedural_radio_track_8cs" startline="94" endline="102">RyleRadio.Tracks.ProceduralRadioTrack.Init</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -135,7 +135,7 @@
     <detaileddescription>
 <para><ref refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track" kindref="compound">IRadioTrack</ref> </para>
 <para><bold>NOTE FOR CUSTOM TRACK CREATORS!!</bold></para>
-<para>!!! IMPORTANT NOTE - if you&apos;re creating a custom <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref>, you need to both inherit from this class AND have a const string named DISPLAY_NAME because the version of c# unity uses does not support static virtual data, we have no way of enforcing that you do this- but you will get errors otherwise it&apos;s necessary for wrappers when they&apos;re listing each available track type in a dropdown- NaughtyAttributes&apos; reflection system is used to pull -the display id so that it&apos;s selectable in the inspector. the only downside is a lack of enforcement :((( </para>
+<para>!!! IMPORTANT NOTE - if you&apos;re creating a custom <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref>, you need to both inherit from this class AND have a const string named <computeroutput>DISPLAY_NAME</computeroutput>. Because the version of c# unity uses does not support static virtual data, we have no way of enforcing that you do this- but you will get errors otherwise It&apos;s necessary for wrappers when they&apos;re listing each available track type in a dropdown- NaughtyAttributes&apos; reflection system is used to pull the display id so that it&apos;s selectable in the inspector. the only downside is a lack of enforcement :((( </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">

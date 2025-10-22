@@ -105,7 +105,7 @@ Inheritance diagram for RyleRadio.Tracks.RadioTrack:</div>
   <map id="RyleRadio_2ETracks_2ERadioTrack_map" name="RyleRadio_2ETracks_2ERadioTrack_map">
 <area href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html" title="Internal interface for a RadioTrack." alt="RyleRadio.Tracks.IRadioTrack" shape="rect" coords="252,0,494,24"/>
 <area href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html" alt="RyleRadio.Tracks.ClipRadioTrack" shape="rect" coords="0,112,242,136"/>
-<area href="../../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html" alt="RyleRadio.Tracks.ProceduralRadioTrack" shape="rect" coords="252,112,494,136"/>
+<area href="../../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html" title="A RadioTrack that plays procedurally generated audio, such as noice, silence, and waveforms." alt="RyleRadio.Tracks.ProceduralRadioTrack" shape="rect" coords="252,112,494,136"/>
 <area href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html" alt="RyleRadio.Tracks.StationRadioTrack" shape="rect" coords="504,112,746,136"/>
   </map>
 </div></div>
@@ -130,7 +130,7 @@ Properties</h2></td></tr>
 <div class="textblock"><p>A track to play as part of a radio. These are the fundamental objects that define the content of the radio, such as clips, procedural audio, stations, and any custom content you create. </p>
 <p><a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html" title="Internal interface for a RadioTrack.">IRadioTrack</a> </p>
 <p><b>NOTE FOR CUSTOM TRACK CREATORS!!</b></p>
-<p>!!! IMPORTANT NOTE - if you're creating a custom <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html" title="A track to play as part of a radio. These are the fundamental objects that define the content of the ...">RadioTrack</a>, you need to both inherit from this class AND have a const string named DISPLAY_NAME because the version of c# unity uses does not support static virtual data, we have no way of enforcing that you do this- but you will get errors otherwise it's necessary for wrappers when they're listing each available track type in a dropdown- NaughtyAttributes' reflection system is used to pull -the display id so that it's selectable in the inspector. the only downside is a lack of enforcement :((( </p>
+<p>!!! IMPORTANT NOTE - if you're creating a custom <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html" title="A track to play as part of a radio. These are the fundamental objects that define the content of the ...">RadioTrack</a>, you need to both inherit from this class AND have a const string named <span class="tt">DISPLAY_NAME</span>. Because the version of c# unity uses does not support static virtual data, we have no way of enforcing that you do this- but you will get errors otherwise It's necessary for wrappers when they're listing each available track type in a dropdown- NaughtyAttributes' reflection system is used to pull the display id so that it's selectable in the inspector. the only downside is a lack of enforcement :((( </p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dff/_radio_track_8cs_source.html#l00019">19</a> of file <a class="el" href="../../de/dff/_radio_track_8cs_source.html">RadioTrack.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -268,7 +268,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dff/_radio_track_8cs_source.html#l00033">33</a> of file <a class="el" href="../../de/dff/_radio_track_8cs_source.html">RadioTrack.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html#l00024">RyleRadio.Tracks.ClipRadioTrack.Init()</a>, and <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00056">RyleRadio.Tracks.ProceduralRadioTrack.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html#l00024">RyleRadio.Tracks.ClipRadioTrack.Init()</a>, and <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00094">RyleRadio.Tracks.ProceduralRadioTrack.Init()</a>.</p>
 
 </div>
 </div>
@@ -299,7 +299,7 @@ Properties</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="../../de/dff/_radio_track_8cs_source.html#l00027">27</a> of file <a class="el" href="../../de/dff/_radio_track_8cs_source.html">RadioTrack.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00067">RyleRadio.Tracks.ProceduralRadioTrack.GetSample()</a>, <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html#l00024">RyleRadio.Tracks.ClipRadioTrack.Init()</a>, and <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00056">RyleRadio.Tracks.ProceduralRadioTrack.Init()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00109">RyleRadio.Tracks.ProceduralRadioTrack.GetSample()</a>, <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html#l00024">RyleRadio.Tracks.ClipRadioTrack.Init()</a>, and <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00094">RyleRadio.Tracks.ProceduralRadioTrack.Init()</a>.</p>
 
 </div>
 </div>

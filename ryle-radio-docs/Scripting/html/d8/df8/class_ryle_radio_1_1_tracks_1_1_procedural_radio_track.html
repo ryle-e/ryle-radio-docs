@@ -94,6 +94,9 @@ $(function(){initNavTree('d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radi
   <div class="headertitle"><div class="title">RyleRadio.Tracks.ProceduralRadioTrack Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html" title="A track to play as part of a radio. These are the fundamental objects that define the content of the ...">RadioTrack</a> that plays procedurally generated audio, such as noice, silence, and waveforms.  
+ <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for RyleRadio.Tracks.ProceduralRadioTrack:</div>
 <div class="dyncontent">
@@ -109,22 +112,23 @@ Inheritance diagram for RyleRadio.Tracks.ProceduralRadioTrack:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a875d0aa43f7a037896786dd2f223c6b3" id="r_a875d0aa43f7a037896786dd2f223c6b3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><b>ProceduralType</b> { <br />
-&#160;&#160;<b>WhiteNoise</b>
-, <b>PinkNoise</b>
-, <b>BrownNoise</b>
-, <b>SineWave</b>
+<tr class="memitem:a875d0aa43f7a037896786dd2f223c6b3" id="r_a875d0aa43f7a037896786dd2f223c6b3"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3">ProceduralType</a> { <br />
+&#160;&#160;<a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3aad81a11fa6c9e7cb884c4c5e9d39f0da">WhiteNoise</a>
+, <a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3a38cdfe1ca463b28f853b4cb2140d0fb8">PinkNoise</a>
+, <a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3a6842953f56972d1802aeb60dec83cd94">BrownNoise</a>
+, <a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3a8bf2116522afa754f97dea7634116564">SineWave</a>
 , <br />
-&#160;&#160;<b>Silence</b>
+&#160;&#160;<a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3a880a7ef20988e107cb918e73bd969bd1">Silence</a>
 <br />
  }</td></tr>
+<tr class="memdesc:a875d0aa43f7a037896786dd2f223c6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of procedural audio this track is generating.  <a href="#a875d0aa43f7a037896786dd2f223c6b3">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a49f57378ad34e028e3ae6f9bf652c154" id="r_a49f57378ad34e028e3ae6f9bf652c154"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49f57378ad34e028e3ae6f9bf652c154">Init</a> ()</td></tr>
 <tr class="memdesc:a49f57378ad34e028e3ae6f9bf652c154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this track.  <br /></td></tr>
 <tr class="memitem:a383442f843004ce3898509ecc8e4bab5" id="r_a383442f843004ce3898509ecc8e4bab5"><td class="memItemLeft" align="right" valign="top">override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a383442f843004ce3898509ecc8e4bab5">GetSample</a> (int _sampleIndex)</td></tr>
-<tr class="memdesc:a383442f843004ce3898509ecc8e4bab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a sample at the provided index. This is the core method of a track- whatever you return here defines the audio that the track will play when selected.  <br /></td></tr>
+<tr class="memdesc:a383442f843004ce3898509ecc8e4bab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next sample of the selected procedural audio type.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RyleRadio.Tracks.RadioTrack</a></td></tr>
 <tr class="memitem:a4f37e66ec62c41202c91b1fd6422a4bb inherit pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track" id="r_a4f37e66ec62c41202c91b1fd6422a4bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html#a4f37e66ec62c41202c91b1fd6422a4bb">Init</a> ()</td></tr>
 <tr class="memdesc:a4f37e66ec62c41202c91b1fd6422a4bb inherit pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this track.  <br /></td></tr>
@@ -135,19 +139,24 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a5481dc232eea6f3128b0665bc658ac7b" id="r_a5481dc232eea6f3128b0665bc658ac7b"><td class="memItemLeft" align="right" valign="top">ProceduralType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5481dc232eea6f3128b0665bc658ac7b">proceduralType</a> = ProceduralType.WhiteNoise</td></tr>
+<tr class="memitem:a5481dc232eea6f3128b0665bc658ac7b" id="r_a5481dc232eea6f3128b0665bc658ac7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3">ProceduralType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5481dc232eea6f3128b0665bc658ac7b">proceduralType</a> = <a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3aad81a11fa6c9e7cb884c4c5e9d39f0da">ProceduralType.WhiteNoise</a></td></tr>
+<tr class="memdesc:a5481dc232eea6f3128b0665bc658ac7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The selected type of noise for this track.  <br /></td></tr>
 <tr class="memitem:a3fd80112352b4996a78634016a0b0c4a" id="r_a3fd80112352b4996a78634016a0b0c4a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fd80112352b4996a78634016a0b0c4a">duration</a> = 0</td></tr>
+<tr class="memdesc:a3fd80112352b4996a78634016a0b0c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this track is inside of a <a class="el" href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html">StationRadioTrack</a>, then it should only play for a certain duration- this is that duration.  <br /></td></tr>
 <tr class="memitem:a947a0cd5b897659b62e96322153045a0" id="r_a947a0cd5b897659b62e96322153045a0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a947a0cd5b897659b62e96322153045a0">waveFrequency</a> = 100</td></tr>
+<tr class="memdesc:a947a0cd5b897659b62e96322153045a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The frequency/pitch of the waveform.  <br /></td></tr>
 <tr class="memitem:a2f55f1e9b9cc531f14e2c06f7a5b7998" id="r_a2f55f1e9b9cc531f14e2c06f7a5b7998"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f55f1e9b9cc531f14e2c06f7a5b7998">brownWalkPower</a> = 0.5f</td></tr>
+<tr class="memdesc:a2f55f1e9b9cc531f14e2c06f7a5b7998"><td class="mdescLeft">&#160;</td><td class="mdescRight">The value used to define the sound of brown noise.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:aff4713f204f1d974cd7d5fb3ed763394" id="r_aff4713f204f1d974cd7d5fb3ed763394"><td class="memItemLeft" align="right" valign="top">const string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff4713f204f1d974cd7d5fb3ed763394">DISPLAY_NAME</a> = &quot;Procedural&quot;</td></tr>
+<tr class="memdesc:aff4713f204f1d974cd7d5fb3ed763394"><td class="mdescLeft">&#160;</td><td class="mdescRight">The name of this class in the editor- required by <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html" title="A track to play as part of a radio. These are the fundamental objects that define the content of the ...">RadioTrack</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:ae8a1338da49edef807a0baf69aaa8f51" id="r_ae8a1338da49edef807a0baf69aaa8f51"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8a1338da49edef807a0baf69aaa8f51">IsInStation</a><code> [get, set]</code></td></tr>
-<tr class="memdesc:ae8a1338da49edef807a0baf69aaa8f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not this track is part of a station.  <br /></td></tr>
+<tr class="memdesc:ae8a1338da49edef807a0baf69aaa8f51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether this is in a station or not. Required by <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html" title="A RadioTrack that can be played as part of a station.">IStationTrack</a>.  <br /></td></tr>
 <tr class="inherit_header properties_class_ryle_radio_1_1_tracks_1_1_radio_track"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_ryle_radio_1_1_tracks_1_1_radio_track')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Properties inherited from <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RyleRadio.Tracks.RadioTrack</a></td></tr>
 <tr class="memitem:a3bc4c9f7923a9314dffdd21f41723941 inherit properties_class_ryle_radio_1_1_tracks_1_1_radio_track" id="r_a3bc4c9f7923a9314dffdd21f41723941"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html#a3bc4c9f7923a9314dffdd21f41723941">SampleRate</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a3bc4c9f7923a9314dffdd21f41723941 inherit properties_class_ryle_radio_1_1_tracks_1_1_radio_track"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sample rate of this track.  <br /></td></tr>
@@ -158,6 +167,7 @@ Properties</h2></td></tr>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ae463580eb5d099720606b06920fc22e1" id="r_ae463580eb5d099720606b06920fc22e1"><td class="memItemLeft" align="right" valign="top">System.Random&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae463580eb5d099720606b06920fc22e1">random</a></td></tr>
 <tr class="memitem:a4016f69a5ae84b80181379d85920cb9a" id="r_a4016f69a5ae84b80181379d85920cb9a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4016f69a5ae84b80181379d85920cb9a">phase</a> = 0</td></tr>
+<tr class="memdesc:a4016f69a5ae84b80181379d85920cb9a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The progress of the waveform used when generating it.  <br /></td></tr>
 <tr class="memitem:a54d1f206bc42e5cea335c475a5ebd387" id="r_a54d1f206bc42e5cea335c475a5ebd387"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a54d1f206bc42e5cea335c475a5ebd387">p0</a> = 0</td></tr>
 <tr class="memitem:a8262955601ceef43905421f30f971a56" id="r_a8262955601ceef43905421f30f971a56"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8262955601ceef43905421f30f971a56">p1</a> = 0</td></tr>
 <tr class="memitem:a38ac598d2a48d670b98c44729a4d97b3" id="r_a38ac598d2a48d670b98c44729a4d97b3"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38ac598d2a48d670b98c44729a4d97b3">p2</a> = 0</td></tr>
@@ -166,16 +176,21 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a2b3c93309aff8e3c6cbcceb6859e88c1" id="r_a2b3c93309aff8e3c6cbcceb6859e88c1"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b3c93309aff8e3c6cbcceb6859e88c1">p5</a> = 0</td></tr>
 <tr class="memitem:a5f51630cc919d9d4dfa5ab6f722d8e6d" id="r_a5f51630cc919d9d4dfa5ab6f722d8e6d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f51630cc919d9d4dfa5ab6f722d8e6d">p6</a> = 0</td></tr>
 <tr class="memitem:a6cc0c26e63118f80da3d49e826ef5334" id="r_a6cc0c26e63118f80da3d49e826ef5334"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6cc0c26e63118f80da3d49e826ef5334">lastBrown</a> = 0</td></tr>
+<tr class="memdesc:a6cc0c26e63118f80da3d49e826ef5334"><td class="mdescLeft">&#160;</td><td class="mdescRight">The generated brown noise from the previous sample.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a434bffdbfd2ef9af32d3f72a0b568c72" id="r_a434bffdbfd2ef9af32d3f72a0b568c72"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a434bffdbfd2ef9af32d3f72a0b568c72">NOISE_MULTIPLIER</a> = .2f</td></tr>
+<tr class="memdesc:a434bffdbfd2ef9af32d3f72a0b568c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base multiplier for noise- because the samples can go all the way up to 1, noise tends to be a lot louder than other tracks, e.g: AudioClips in <a class="el" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html">ClipRadioTrack</a>.  <br /></td></tr>
 <tr class="memitem:af26081ed87f3ae3d96f8b179aee39b54" id="r_af26081ed87f3ae3d96f8b179aee39b54"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af26081ed87f3ae3d96f8b179aee39b54">PINK_MULTIPLIER</a> = .5f</td></tr>
+<tr class="memdesc:af26081ed87f3ae3d96f8b179aee39b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pink noise is even louder than the other noise types, so we curb it a little.  <br /></td></tr>
 <tr class="memitem:a51558907afb31032aaeebf27b2360ecd" id="r_a51558907afb31032aaeebf27b2360ecd"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51558907afb31032aaeebf27b2360ecd">BASE_SAMPLE_RATE</a> = 44100</td></tr>
+<tr class="memdesc:a51558907afb31032aaeebf27b2360ecd"><td class="mdescLeft">&#160;</td><td class="mdescRight">The default sample rate for the procedural tracks, can adjust this if required.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00009">9</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<div class="textblock"><p>A <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html" title="A track to play as part of a radio. These are the fundamental objects that define the content of the ...">RadioTrack</a> that plays procedurally generated audio, such as noice, silence, and waveforms. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00011">11</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 </div><a name="doc-enum-members" id="doc-enum-members"></a><h2 id="header-doc-enum-members" class="groupheader">Member Enumeration Documentation</h2>
 <a id="a875d0aa43f7a037896786dd2f223c6b3" name="a875d0aa43f7a037896786dd2f223c6b3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a875d0aa43f7a037896786dd2f223c6b3">&#9670;&#160;</a></span>ProceduralType</h2>
@@ -184,12 +199,26 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">enum RyleRadio.Tracks.ProceduralRadioTrack.ProceduralType</td>
+          <td class="memname">enum <a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3">RyleRadio.Tracks.ProceduralRadioTrack.ProceduralType</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00013">13</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>The type of procedural audio this track is generating. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3aad81a11fa6c9e7cb884c4c5e9d39f0da" name="a875d0aa43f7a037896786dd2f223c6b3aad81a11fa6c9e7cb884c4c5e9d39f0da"></a>WhiteNoise&#160;</td><td class="fielddoc"><p>White noise: random samples between 0 and 1. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3a38cdfe1ca463b28f853b4cb2140d0fb8" name="a875d0aa43f7a037896786dd2f223c6b3a38cdfe1ca463b28f853b4cb2140d0fb8"></a>PinkNoise&#160;</td><td class="fielddoc"><p>Special type of noise defined by Paul Kellet's refined method (pk3): sounds "fuller" than white noise. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3a6842953f56972d1802aeb60dec83cd94" name="a875d0aa43f7a037896786dd2f223c6b3a6842953f56972d1802aeb60dec83cd94"></a>BrownNoise&#160;</td><td class="fielddoc"><p>Special type of noise using a value (<a class="el" href="#a2f55f1e9b9cc531f14e2c06f7a5b7998">brownWalkPower</a>): sounds softer and deeper. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3a8bf2116522afa754f97dea7634116564" name="a875d0aa43f7a037896786dd2f223c6b3a8bf2116522afa754f97dea7634116564"></a>SineWave&#160;</td><td class="fielddoc"><p>A waveform: shaped as a sine wave at a given frequency. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3a880a7ef20988e107cb918e73bd969bd1" name="a875d0aa43f7a037896786dd2f223c6b3a880a7ef20988e107cb918e73bd969bd1"></a>Silence&#160;</td><td class="fielddoc"><p>Silence: samples at 0. </p>
+</td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00021">21</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -209,18 +238,18 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get a sample at the provided index. This is the core method of a track- whatever you return here defines the audio that the track will play when selected. </p>
+<p>Get the next sample of the selected procedural audio type. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_sampleIndex</td><td>The index of the sample to get</td></tr>
+    <tr><td class="paramname">_sampleIndex</td><td>The index of the sample- useless for noise, useful for waveforms</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The sample- a value between -1 and 1 representing the y-value of the sound wave</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>The sample of generated audio</dd></dl>
 
 <p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html#a53788b5811f9cb2463da7185ba9ccf33">RyleRadio.Tracks.IRadioTrack</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00067">67</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00109">109</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -243,7 +272,7 @@ Static Private Attributes</h2></td></tr>
 
 <p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html#a5be3ac4abb6bf515b54341c39d2aa417">RyleRadio.Tracks.IRadioTrack</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00056">56</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00094">94</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -268,7 +297,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00024">24</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>The default sample rate for the procedural tracks, can adjust this if required. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00032">32</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00094">Init()</a>.</p>
 
 </div>
 </div>
@@ -284,7 +317,12 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00041">41</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>The value used to define the sound of brown noise. </p>
+<p>Brown noise works by adding the generated sample to all previous generated samples. This float is what these generated samples are multiplied by when stored. This means that the higher the walk power, the larger the difference that each sample makes on average, and the closer it sounds to white noise. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00063">63</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00109">GetSample()</a>.</p>
 
 </div>
 </div>
@@ -308,7 +346,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00011">11</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>The name of this class in the editor- required by <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html" title="A track to play as part of a radio. These are the fundamental objects that define the content of the ...">RadioTrack</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00016">16</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -324,7 +364,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00031">31</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>If this track is inside of a <a class="el" href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html">StationRadioTrack</a>, then it should only play for a certain duration- this is that duration. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00045">45</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00094">Init()</a>.</p>
 
 </div>
 </div>
@@ -348,7 +392,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00051">51</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>The generated brown noise from the previous sample. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00083">83</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00109">GetSample()</a>.</p>
 
 </div>
 </div>
@@ -372,7 +420,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00022">22</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>A base multiplier for noise- because the samples can go all the way up to 1, noise tends to be a lot louder than other tracks, e.g: AudioClips in <a class="el" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html">ClipRadioTrack</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00030">30</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00109">GetSample()</a>.</p>
 
 </div>
 </div>
@@ -396,7 +448,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00050">50</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00077">77</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -420,7 +472,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00050">50</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00077">77</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -444,7 +496,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00050">50</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00077">77</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -468,7 +520,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00050">50</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00077">77</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -492,7 +544,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00050">50</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00077">77</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -516,7 +568,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00050">50</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00077">77</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -540,7 +592,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00050">50</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00077">77</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -564,7 +616,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00047">47</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>The progress of the waveform used when generating it. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00073">73</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00109">GetSample()</a>, and <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00094">Init()</a>.</p>
 
 </div>
 </div>
@@ -588,7 +644,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00023">23</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>Pink noise is even louder than the other noise types, so we curb it a little. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00031">31</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00109">GetSample()</a>.</p>
 
 </div>
 </div>
@@ -599,12 +659,16 @@ Static Private Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ProceduralType RyleRadio.Tracks.ProceduralRadioTrack.proceduralType = ProceduralType.WhiteNoise</td>
+          <td class="memname"><a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3">ProceduralType</a> RyleRadio.Tracks.ProceduralRadioTrack.proceduralType = <a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3aad81a11fa6c9e7cb884c4c5e9d39f0da">ProceduralType.WhiteNoise</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00026">26</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>The selected type of noise for this track. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00037">37</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00109">GetSample()</a>.</p>
 
 </div>
 </div>
@@ -628,7 +692,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00044">44</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00067">67</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -644,7 +708,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00035">35</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p>The frequency/pitch of the waveform. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00051">51</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00109">GetSample()</a>.</p>
 
 </div>
 </div>
@@ -669,11 +737,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Whether or not this track is part of a station. </p>
+<p>Whether this is in a station or not. Required by <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html" title="A RadioTrack that can be played as part of a station.">IStationTrack</a>. </p>
 
 <p>Implements <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html#a494288d59288c18ba985d7b9a7e9fc50">RyleRadio.Tracks.IStationTrack</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00053">53</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00088">88</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
 </div>
 </div>

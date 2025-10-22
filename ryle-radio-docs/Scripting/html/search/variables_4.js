@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['todoonupdate_0',['toDoOnUpdate',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#afbedeb396a11124c15f3f8dc67f0c9b4',1,'RyleRadio::Components::RadioObserver']]]
+  ['lastbrown_0',['lastBrown',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a6cc0c26e63118f80da3d49e826ef5334',1,'RyleRadio::Tracks::ProceduralRadioTrack']]]
 ];

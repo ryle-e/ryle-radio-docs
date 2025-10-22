@@ -1,7 +1,4 @@
 var searchData=
 [
-  ['gain_0',['Gain',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88',1,'RyleRadio::Components::RadioObserver']]],
-  ['getsample_1',['GetSample',['../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html#a3d618faf79658a5e16fbf4ef3d9992dd',1,'RyleRadio.Tracks.RadioTrack.GetSample()'],['../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html#a8f81c3c434fc00cc4fb25e9fdf03b672',1,'RyleRadio.Tracks.ClipRadioTrack.GetSample()'],['../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html#a53788b5811f9cb2463da7185ba9ccf33',1,'RyleRadio.Tracks.IRadioTrack.GetSample()'],['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a383442f843004ce3898509ecc8e4bab5',1,'RyleRadio.Tracks.ProceduralRadioTrack.GetSample()'],['../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a2d64ffc17fd27c339dac115733da1ed1',1,'RyleRadio.Tracks.StationRadioTrack.GetSample()']]],
-  ['greaterthan_2',['GreaterThan',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7af6d044fe1f01fb0c956b80099e2a3072',1,'RyleRadio::Components::RadioObserver']]],
-  ['greaterthanorequal_3',['GreaterThanOrEqual',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7a25c44812e9d75f685d2a0b815dea1ebe',1,'RyleRadio::Components::RadioObserver']]]
+  ['findderivedtypes_0',['FindDerivedTypes',['../d4/d2c/class_ryle_radio_1_1_radio_utils.html#ade2ef6c22eb2dd42613bdcf74f1587de',1,'RyleRadio::RadioUtils']]]
 ];

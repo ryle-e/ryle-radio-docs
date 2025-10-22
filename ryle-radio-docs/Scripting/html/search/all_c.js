@@ -1,25 +1,9 @@
 var searchData=
 [
-  ['radiobroadcaster_0',['RadioBroadcaster',['../db/de5/class_ryle_radio_1_1_components_1_1_radio_broadcaster.html',1,'RyleRadio::Components']]],
-  ['radiobroadcastereditor_1',['RadioBroadcasterEditor',['../d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor.html',1,'RyleRadio::Editor']]],
-  ['radiocomponent_2',['RadioComponent',['../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html',1,'RyleRadio::Components::Base']]],
-  ['radiocomponentdataaccessor_3',['RadioComponentDataAccessor',['../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html',1,'RyleRadio::Components::Base']]],
-  ['radiodata_4',['RadioData',['../da/dc0/class_ryle_radio_1_1_radio_data.html',1,'RyleRadio']]],
-  ['radiodataeditor_5',['RadioDataEditor',['../d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_editor.html',1,'RyleRadio::Editor']]],
-  ['radioinsulator_6',['RadioInsulator',['../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html',1,'RyleRadio::Components']]],
-  ['radioinsulatoreditor_7',['RadioInsulatorEditor',['../d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor.html',1,'RyleRadio::Editor']]],
-  ['radiointeractor_8',['RadioInteractor',['../d3/d85/class_ryle_radio_1_1_components_1_1_radio_interactor.html',1,'RyleRadio::Components']]],
-  ['radioobserver_9',['RadioObserver',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html',1,'RyleRadio::Components']]],
-  ['radiooutput_10',['RadioOutput',['../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html',1,'RyleRadio::Components']]],
-  ['radiooutputtrackaccessor_11',['RadioOutputTrackAccessor',['../d2/d11/class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor.html',1,'RyleRadio::Components::Base']]],
-  ['radiotrack_12',['RadioTrack',['../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html',1,'RyleRadio::Tracks']]],
-  ['radiotrackplayer_13',['RadioTrackPlayer',['../da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html',1,'RyleRadio::Tracks']]],
-  ['radiotrackwrapper_14',['RadioTrackWrapper',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html',1,'RyleRadio::Tracks']]],
-  ['radioutils_15',['RadioUtils',['../d4/d2c/class_ryle_radio_1_1_radio_utils.html',1,'RyleRadio']]],
-  ['remap_16',['Remap',['../d4/d2c/class_ryle_radio_1_1_radio_utils.html#a1a8c22e08dfc7d8d6353209d713e1453',1,'RyleRadio::RadioUtils']]],
-  ['ryleradio_17',['RyleRadio',['../da/d5f/namespace_ryle_radio.html',1,'']]],
-  ['ryleradio_3a_3acomponents_18',['Components',['../da/d43/namespace_ryle_radio_1_1_components.html',1,'RyleRadio']]],
-  ['ryleradio_3a_3acomponents_3a_3abase_19',['Base',['../db/d1f/namespace_ryle_radio_1_1_components_1_1_base.html',1,'RyleRadio::Components']]],
-  ['ryleradio_3a_3aeditor_20',['Editor',['../de/da0/namespace_ryle_radio_1_1_editor.html',1,'RyleRadio']]],
-  ['ryleradio_3a_3atracks_21',['Tracks',['../d0/d28/namespace_ryle_radio_1_1_tracks.html',1,'RyleRadio']]]
+  ['phase_0',['phase',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a4016f69a5ae84b80181379d85920cb9a',1,'RyleRadio::Tracks::ProceduralRadioTrack']]],
+  ['pink_5fmultiplier_1',['PINK_MULTIPLIER',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#af26081ed87f3ae3d96f8b179aee39b54',1,'RyleRadio::Tracks::ProceduralRadioTrack']]],
+  ['pinknoise_2',['PinkNoise',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a875d0aa43f7a037896786dd2f223c6b3a38cdfe1ca463b28f853b4cb2140d0fb8',1,'RyleRadio::Tracks::ProceduralRadioTrack']]],
+  ['proceduralradiotrack_3',['ProceduralRadioTrack',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html',1,'RyleRadio::Tracks']]],
+  ['proceduraltype_4',['ProceduralType',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a875d0aa43f7a037896786dd2f223c6b3',1,'RyleRadio::Tracks::ProceduralRadioTrack']]],
+  ['proceduraltype_5',['proceduralType',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a5481dc232eea6f3128b0665bc658ac7b',1,'RyleRadio::Tracks::ProceduralRadioTrack']]]
 ];
