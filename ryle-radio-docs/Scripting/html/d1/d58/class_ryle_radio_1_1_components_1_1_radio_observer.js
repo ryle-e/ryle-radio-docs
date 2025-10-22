@@ -21,10 +21,15 @@ var class_ryle_radio_1_1_components_1_1_radio_observer =
       [ "OutputTune", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582a774d19c914fce2e5fcbdfcb9481aedf0", null ],
       [ "None", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754", null ]
     ] ],
+    [ "AssignEvents", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a9be9fb66df9434dd8a2c0117255a1787", null ],
+    [ "TriggerEvent", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a1a767f69b2219c279f0f1431d558ebbd", null ],
+    [ "Update", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#af96f1100853e1768cb363ec4aafe116d", null ],
+    [ "ValueEvent", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#acd2af3c4da2389d18d35280c8e580d94", null ],
     [ "affectedTrackNames", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a289de6dde811ce51a1207e5db4d95f96", null ],
     [ "affectedTracks", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a4230b55ced5082f104e1dadd7f225737", null ],
     [ "events", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a0886bd8a2912dd7f6be8ba2f42ac6b1c", null ],
     [ "output", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a20e98887f8846c29e4f0155c36bf4c66", null ],
+    [ "stayedEvents", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#aff4fedc113a7a5670bbefe68bb33e62d", null ],
     [ "toDoOnUpdate", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#afbedeb396a11124c15f3f8dc67f0c9b4", null ],
     [ "AffectedTracks", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a79a7484b93704449f8b9691f13a25bc5", null ]
 ];
