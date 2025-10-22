@@ -6,5 +6,6 @@ var searchData=
   ['affectedtracks_3',['AffectedTracks',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a79a7484b93704449f8b9691f13a25bc5',1,'RyleRadio::Components::RadioObserver']]],
   ['affectedtracks_4',['affectedTracks',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a4230b55ced5082f104e1dadd7f225737',1,'RyleRadio::Components::RadioObserver']]],
   ['assignevents_5',['AssignEvents',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a9be9fb66df9434dd8a2c0117255a1787',1,'RyleRadio::Components::RadioObserver']]],
-  ['awake_6',['Awake',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#ab6c602f2a4cbcf49a14ebdf644fac793',1,'RyleRadio::Components::RadioObserver']]]
+  ['attenuation_6',['attenuation',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a58c4483f997c03f1ffbe7ffedd403c9e',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
+  ['awake_7',['Awake',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#ab6c602f2a4cbcf49a14ebdf644fac793',1,'RyleRadio::Components::RadioObserver']]]
 ];

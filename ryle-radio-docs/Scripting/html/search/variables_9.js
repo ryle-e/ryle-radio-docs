@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['randomsequence_0',['randomSequence',['../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a9c325018c6641f7f483127889959ccd4',1,'RyleRadio::Tracks::StationRadioTrack']]],
-  ['remainingtracksbeforerepeat_1',['remainingTracksBeforeRepeat',['../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a68f7d080e44965f4fa8b2fb489cf96d4',1,'RyleRadio::Tracks::StationRadioTrack']]]
+  ['name_0',['name',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a9f005bfe46c540e21264bad404da9927',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
+  ['noise_5fmultiplier_1',['NOISE_MULTIPLIER',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a434bffdbfd2ef9af32d3f72a0b568c72',1,'RyleRadio::Tracks::ProceduralRadioTrack']]]
 ];

@@ -14,7 +14,7 @@ var annotated_dup =
         [ "RadioOutput", "d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html", null ]
       ] ],
       [ "Editor", "de/da0/namespace_ryle_radio_1_1_editor.html", [
-        [ "RadioBroadcasterEditor", "d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor.html", null ],
+        [ "RadioBroadcasterEditor", "d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor.html", "d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor" ],
         [ "RadioDataEditor", "d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_editor.html", null ],
         [ "RadioInsulatorEditor", "d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor.html", null ],
         [ "StationRadioTrackEditor", "df/d29/class_ryle_radio_1_1_editor_1_1_station_radio_track_editor.html", null ]
@@ -26,9 +26,9 @@ var annotated_dup =
         [ "ProceduralRadioTrack", "d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html", "d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track" ],
         [ "RadioTrack", "df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html", "df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" ],
         [ "RadioTrackPlayer", "da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html", null ],
-        [ "RadioTrackWrapper", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html", null ],
+        [ "RadioTrackWrapper", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper" ],
         [ "StationRadioTrack", "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html", "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track" ],
-        [ "StationRadioTrackWrapper", "de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html", null ]
+        [ "StationRadioTrackWrapper", "de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html", "de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper" ]
       ] ],
       [ "MultiselectAttribute", "d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html", null ],
       [ "MultiselectDrawer", "d7/dcd/class_ryle_radio_1_1_multiselect_drawer.html", null ],

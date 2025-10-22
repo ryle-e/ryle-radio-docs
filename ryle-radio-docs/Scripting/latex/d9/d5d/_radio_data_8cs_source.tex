@@ -95,7 +95,7 @@
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{RadioTrackWrapper}}\ track\ =\ TrackWrappers[i];}
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00092}00092\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ find\ any\ other\ tracks\ with\ the\ same\ id\ as\ this\ one}}
-\DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ othersWithID\ =\ trackIDs.Where(t\ =>\ t\ ==\ track.id);}
+\DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ var\ othersWithID\ =\ trackIDs.Where(t\ =>\ t\ ==\ track.\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a3404fec117e04c7edbd0c7711e3416f0}{id}});}
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00095}00095\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ there\ are\ others,\ change\ the\ id\ of\ this\ track\ to\ match}}
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (othersWithID.Count()\ >\ 0)}
@@ -107,7 +107,7 @@
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00103}00103\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ store\ the\ id\ and\ id}}
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trackNames.Add(name);}
-\DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trackIDs.Add(track.id);}
+\DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trackIDs.Add(track.\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a3404fec117e04c7edbd0c7711e3416f0}{id}});}
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00107}00107\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ assign\ the\ id}}
 \DoxyCodeLine{\Hypertarget{_radio_data_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ track.name\ =\ name;}

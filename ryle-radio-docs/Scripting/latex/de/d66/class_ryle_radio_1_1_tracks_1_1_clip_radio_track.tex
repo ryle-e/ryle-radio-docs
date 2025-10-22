@@ -1,5 +1,10 @@
 \doxysection{Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track Class Reference}
 \hypertarget{class_ryle_radio_1_1_tracks_1_1_clip_radio_track}{}\label{class_ryle_radio_1_1_tracks_1_1_clip_radio_track}\index{RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}}
+
+
+A type of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} that plays from a chosen Audio\+Clip object.  
+
+
 Inheritance diagram for Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,11 +15,11 @@ Inheritance diagram for Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track\+:\begin{figur
 \begin{DoxyCompactItemize}
 \item 
 override void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a35adc9929e2b6bfad7c63a08c7a75851}{Init}} ()
-\begin{DoxyCompactList}\small\item\em Initializes this track. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Initializes this track. This needs to be called every time the clip is changed. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a887d3aa598057c9fe49b549430fefdef}{Read\+Clip\+And\+Force\+To\+Mono}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Reads the clip into the \doxylink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_afb9a8b8a3532d55b7ba050ec54b9e40a}{Samples} array, and combines its channels into one. \end{DoxyCompactList}\item 
 override float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a8f81c3c434fc00cc4fb25e9fdf03b672}{Get\+Sample}} (int \+\_\+sample\+Index)
-\begin{DoxyCompactList}\small\item\em Get a sample at the provided index. This is the core method of a track-\/ whatever you return here defines the audio that the track will play when selected. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets a sample from the clip. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Ryle\+Radio.\+Tracks.\+Radio\+Track}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,19 +33,19 @@ virtual void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a702fd
 \begin{DoxyCompactItemize}
 \item 
 Audio\+Clip \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a87dfc8f7b4853ea27efd49296d98d1a7}{clip}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The clip that this track plays. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Static Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
 const string \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a9beccbfade63b25d72da8471a9653d38}{DISPLAY\+\_\+\+NAME}} = "{}Audio Clip"{}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The display name of this track in the editor. Required in \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 float\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_afb9a8b8a3532d55b7ba050ec54b9e40a}{Samples}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em The individual samples of this clip, as it needs to be played sample-\/by-\/sample (a limitation of Unity\textquotesingle{}s Audio\+Clip) \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a13c42bae43d0ccf878f9d40667b59dac}{Is\+In\+Station}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\begin{DoxyCompactList}\small\item\em Whether or not this track is part of a station. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Whether or not this is in a \doxylink{class_ryle_radio_1_1_tracks_1_1_station_radio_track}{Station\+Radio\+Track} Required by \doxylink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{IStation\+Track}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Ryle\+Radio.\+Tracks.\+Radio\+Track}}}
 \begin{DoxyCompactItemize}
 \item 
@@ -48,17 +53,12 @@ float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3bc4c9f7923a
 \begin{DoxyCompactList}\small\item\em The sample rate of this track. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_ab9bc3ce18b760fcfd3ae4867ded40698}{Sample\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \begin{DoxyCompactList}\small\item\em The number of samples in this track. \end{DoxyCompactList}\end{DoxyCompactItemize}
-\doxysubsubsection*{Static Private Attributes}
-\begin{DoxyCompactItemize}
-\item 
-const bool \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a8da67af183b00b3c92ef5c63601dc630}{FORCE\+\_\+\+SAMPLE\+\_\+\+RATE}} = true
-\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+A type of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} that plays from a chosen Audio\+Clip object. 
 
-
-Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
 
 
@@ -73,15 +73,15 @@ override float Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+Get\+Sample (\begin{D
 
 
 
-Get a sample at the provided index. This is the core method of a track-\/ whatever you return here defines the audio that the track will play when selected. 
+Gets a sample from the clip. 
 
 
 \begin{DoxyParams}{Parameters}
-{\em \+\_\+sample\+Index} & The index of the sample to get\\
+{\em \+\_\+sample\+Index} & The index of the sample\\
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-The sample-\/ a value between -\/1 and 1 representing the y-\/value of the sound wave
+A sample from the clip at the given index
 \end{DoxyReturn}
 
 
@@ -89,7 +89,7 @@ Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track_a5
 
 
 
-Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00060}{60}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00082}{82}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a35adc9929e2b6bfad7c63a08c7a75851}\index{RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}!Init@{Init}}
 \index{Init@{Init}!RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}}
@@ -99,7 +99,7 @@ override void Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+Init (\begin{DoxyParam
 
 
 
-Initializes this track. 
+Initializes this track. This needs to be called every time the clip is changed. 
 
 
 
@@ -107,7 +107,7 @@ Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track_a5
 
 
 
-Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00037}{37}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a887d3aa598057c9fe49b549430fefdef}\index{RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}!ReadClipAndForceToMono@{ReadClipAndForceToMono}}
 \index{ReadClipAndForceToMono@{ReadClipAndForceToMono}!RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}}
@@ -117,7 +117,16 @@ void Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+Read\+Clip\+And\+Force\+To\+Mon
 
 
 
-Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+Reads the clip into the \doxylink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_afb9a8b8a3532d55b7ba050ec54b9e40a}{Samples} array, and combines its channels into one. 
+
+We need to flatten the clip into one channel to play it from a Radio\+Output as the Output is only using one channel. Theoretically, we could expand the Output to use multiple channels, but given this would be the only track type to do this it\textquotesingle{}s probably not worth the significant effort. ~\newline
+For the moment, we\textquotesingle{}ll treat Outputs as AM radios (which are mono in real life) 
+
+Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00051}{51}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_clip_radio_track_8cs_source_l00037}{Init()}}.
 
 
 
@@ -132,7 +141,15 @@ Audio\+Clip Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+clip}
 
 
 
-Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+The clip that this track plays. 
+
+
+
+Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_clip_radio_track_8cs_source_l00037}{Init()}}, and \mbox{\hyperlink{_clip_radio_track_8cs_source_l00051}{Read\+Clip\+And\+Force\+To\+Mono()}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a9beccbfade63b25d72da8471a9653d38}\index{RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}!DISPLAY\_NAME@{DISPLAY\_NAME}}
 \index{DISPLAY\_NAME@{DISPLAY\_NAME}!RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}}
@@ -142,17 +159,11 @@ const string Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+DISPLAY\+\_\+\+NAME = "
 
 
 
-Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
-
-\Hypertarget{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a8da67af183b00b3c92ef5c63601dc630}\index{RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}!FORCE\_SAMPLE\_RATE@{FORCE\_SAMPLE\_RATE}}
-\index{FORCE\_SAMPLE\_RATE@{FORCE\_SAMPLE\_RATE}!RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}}
-\doxysubsubsection{\texorpdfstring{FORCE\_SAMPLE\_RATE}{FORCE\_SAMPLE\_RATE}}
-{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a8da67af183b00b3c92ef5c63601dc630} 
-const bool Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+FORCE\+\_\+\+SAMPLE\+\_\+\+RATE = true\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [private]}}
+The display name of this track in the editor. Required in \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track}. 
 
 
 
-Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
 
 
@@ -167,7 +178,7 @@ bool Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+Is\+In\+Station\hspace{0.3cm}{\
 
 
 
-Whether or not this track is part of a station. 
+Whether or not this is in a \doxylink{class_ryle_radio_1_1_tracks_1_1_station_radio_track}{Station\+Radio\+Track} Required by \doxylink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{IStation\+Track}. 
 
 
 
@@ -175,7 +186,7 @@ Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track_
 
 
 
-Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_afb9a8b8a3532d55b7ba050ec54b9e40a}\index{RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}!Samples@{Samples}}
 \index{Samples@{Samples}!RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}}
@@ -185,7 +196,15 @@ float \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+Samples\h
 
 
 
-Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+The individual samples of this clip, as it needs to be played sample-\/by-\/sample (a limitation of Unity\textquotesingle{}s Audio\+Clip) 
+
+
+
+Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_clip_radio_track_8cs_source_l00082}{Get\+Sample()}}, \mbox{\hyperlink{_clip_radio_track_8cs_source_l00037}{Init()}}, and \mbox{\hyperlink{_clip_radio_track_8cs_source_l00051}{Read\+Clip\+And\+Force\+To\+Mono()}}.
 
 
 

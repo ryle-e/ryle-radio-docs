@@ -6,7 +6,7 @@ var namespace_ryle_radio_1_1_tracks =
     [ "ProceduralRadioTrack", "d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html", "d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track" ],
     [ "RadioTrack", "df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html", "df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" ],
     [ "RadioTrackPlayer", "da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html", null ],
-    [ "RadioTrackWrapper", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html", null ],
+    [ "RadioTrackWrapper", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html", "d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper" ],
     [ "StationRadioTrack", "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html", "d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track" ],
-    [ "StationRadioTrackWrapper", "de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html", null ]
+    [ "StationRadioTrackWrapper", "de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html", "de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper" ]
 ];

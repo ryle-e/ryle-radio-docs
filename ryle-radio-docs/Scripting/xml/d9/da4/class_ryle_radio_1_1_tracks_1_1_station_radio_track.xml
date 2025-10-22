@@ -109,6 +109,7 @@ i.e with eleven tracks and a threshold of 0.8f, <computeroutput>round_down((11 -
 <para>i.e if tracks A, B and C are being randomly chosen with a <ref refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a0c00f4dc7e31b6de324b8e406aac62f2" kindref="member">thresholdBeforeRepeats</ref> of 0.5f, they each need to have 1 other track play before each can repeat (see comments above thresholdBeforeRepeats) <linebreak/>
 So if track A was just played after B and C, this array would look like [1, 0, -1]. That is, track A needs another track to be played once before it can be repeated, B doesn&apos;t need any other tracks to play and thus can be repeated, and same for C <linebreak/>
 <emphasis>(a number below 0 is treated as 0 for this system)</emphasis><linebreak/>
+<linebreak/>
  <bold>See:</bold> <ref refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1afedd66f27883a83686668ea3786504f5" kindref="member">NextTrack()</ref> </para>
         </detaileddescription>
         <inbodydescription>

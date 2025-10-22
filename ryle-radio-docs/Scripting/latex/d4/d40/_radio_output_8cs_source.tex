@@ -124,7 +124,7 @@
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer}{RadioObserver}}\ observer\ \textcolor{keywordflow}{in}\ Observers)}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ an\ observer\ is\ watching\ this\ track}}
-\DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (observer.\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a79a7484b93704449f8b9691f13a25bc5}{AffectedTracks}}.Contains(\_player.TrackW.name))}
+\DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (observer.\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a79a7484b93704449f8b9691f13a25bc5}{AffectedTracks}}.Contains(\_player.TrackW.\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a9f005bfe46c540e21264bad404da9927}{name}}))}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ observer.\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a9be9fb66df9434dd8a2c0117255a1787}{AssignEvents}}(\_player);\ \textcolor{comment}{//\ point\ it\ towards\ this\ new\ player}}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
@@ -135,7 +135,7 @@
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ that\ are\ supposed\ to\ get\ quieter\ when\ another\ is\ played\ (attenuate)\ will\ not\ do\ so\ if\ the\ other\ player\ was\ created\ afterwards.}}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00132}00132\ }
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ index\ of\ the\ track\ in\ the\ RadioData\ track\ list-\/\ the\ order\ of\ the\ Data\ in\ the\ inspector}}
-\DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indexInData\ =\ Data.TrackIDs.IndexOf(\_player.TrackW.id);}
+\DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indexInData\ =\ Data.TrackIDs.IndexOf(\_player.TrackW.\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a3404fec117e04c7edbd0c7711e3416f0}{id}});}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00135}00135\ }
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ index\ at\ which\ to\ put\ the\ newly\ created\ player}}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indexForNewPlayer\ =\ players.Count;}
@@ -164,7 +164,7 @@
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{RadioTrackWrapper}}\ trackW\ \textcolor{keywordflow}{in}\ Data.TrackWrappers)}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ track\ is\ supposed\ to\ play\ on\ game\ start}}
-\DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (trackW.playOnInit)}
+\DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (trackW.\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a2f7d1bb32fb5ca1503f746d6f0ff8cf0}{playOnInit}})}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ a\ looping\ player\ for\ it}}
 \DoxyCodeLine{\Hypertarget{_radio_output_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{RadioTrackPlayer}}\ player\ =\ \textcolor{keyword}{new}\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{RadioTrackPlayer}}(trackW,\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{RadioTrackPlayer}}.PlayerType.Loop,\ baseSampleRate);}

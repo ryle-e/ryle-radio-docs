@@ -1,5 +1,10 @@
 \doxysection{Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper Class Reference}
 \hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{}\label{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
+
+
+A wrapper class for \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} so that track types can be switched between in the inspector! Also contains various values that are track-\/agnostic.  
+
+
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -29,21 +34,21 @@ static \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{IRadi
 \begin{DoxyCompactItemize}
 \item 
 string \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a3404fec117e04c7edbd0c7711e3416f0}{id}}
-\item 
+\begin{DoxyCompactList}\small\item\em The ID of this track-\/ used to find and manipulate it in custom code. \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a9f005bfe46c540e21264bad404da9927}{name}}
-\item 
+\begin{DoxyCompactList}\small\item\em The name of this track for use (and easy identification) in the inspector. This is usually in the format of {\ttfamily \{ID\}, \{range.\+x\} -\/ \{range.\+y\}} \end{DoxyCompactList}\item 
 Vector2 \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a778c05ac1056316fc9224e13c80c340c}{range}}
-\item 
+\begin{DoxyCompactList}\small\item\em The range of tunes in which this track can be heard. If a Radio\+Output.\+Tune value is within this range, the tune power of this track will be \texorpdfstring{$>$}{>} 0, and it will be audible (not counting spatial components+gain+etc) \end{DoxyCompactList}\item 
 Animation\+Curve \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a22d4e4da504b452b0541aef93ce3cc06}{range\+Curve}} = new(Default\+Range\+Curve.\+keys)
-\item 
+\begin{DoxyCompactList}\small\item\em The curve defining the loudness of the track over its range. The progress between {\ttfamily range.\+x} and {\ttfamily range.\+y} the Radio\+Output.\+Tune value is, is the progress along this curve the tune power is. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ac26cf86217a7fdab6269f90e09f3d590}{gain}} = 100
-\item 
+\begin{DoxyCompactList}\small\item\em An added value to the volume of the track. This is applied before any other volume is calculated. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a58c4483f997c03f1ffbe7ffedd403c9e}{attenuation}} = 0.\+1f
-\item 
+\begin{DoxyCompactList}\small\item\em The amount that this track gets quieter when another track is playing on top of it (and it\textquotesingle{}s above this track in Radio\+Data.\+track\+Ws. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a35a80d969510b23d43d863c9c5e4bf6c}{force\+Global}} = true
-\item 
+\begin{DoxyCompactList}\small\item\em If true, this track ignores any Radio\+Broadcaster influence and plays everywhere. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a2f7d1bb32fb5ca1503f746d6f0ff8cf0}{play\+On\+Init}} = true
-\item 
+\begin{DoxyCompactList}\small\item\em If true, this track plays on Radio\+Data.\+Init() -\/ usually on game start. \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster}{Radio\+Broadcaster}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a5cdcbc0b98d93a71c50bea2c0116552a}{broadcasters}}
 \item 
 List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator}{Radio\+Insulator}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a9451083a83be02f5b4357fcffa198210}{insulators}}
@@ -57,7 +62,7 @@ List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator}{Ra
 \begin{DoxyCompactItemize}
 \item 
 static Animation\+Curve \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a74adba53bd688378c4a5fc3140ff4d67}{Default\+Range\+Curve}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em The default \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a22d4e4da504b452b0541aef93ce3cc06}{range\+Curve} to use when an empty wrapper is created. It\textquotesingle{}s a super basic and smooth closed curve from 0 to 0. \end{DoxyCompactList}\item 
 Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a0e5992ef4634849c28ec66de1e3baef3}{On\+Init}} = new(\+\_\+ =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
 Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_aa2f9ad9dc93a68ba2fc72356777be59c}{Before\+Init}} = new(\+\_\+ =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
@@ -94,7 +99,7 @@ string \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ad02
 \begin{DoxyCompactItemize}
 \item 
 const float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_aaa600370ee54d2252e2671d39368fa58}{RANGE\+\_\+\+DECIMAL\+\_\+\+MULTIPLIER}} = 10f
-\item 
+\begin{DoxyCompactList}\small\item\em The number of decimal places used in the range-\/ the number of zeroes is the number of decimal points, e.\+g\+: 10 == 1dp, 100 == 2dp, 1 == 0dp (whole numbers) \end{DoxyCompactList}\item 
 static Type\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a0158f2d8cf2ba647c96fd26cc856e52e}{track\+Types}}
 \item 
 static string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ad999f57fcbc42966e63638af4c7d9ca2}{track\+Types\+As\+Strings}}
@@ -104,9 +109,13 @@ static string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1
 
 
 \doxysubsection{Detailed Description}
+A wrapper class for \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} so that track types can be switched between in the inspector! Also contains various values that are track-\/agnostic. 
 
+This is how a \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} is stored and accessed in \doxylink{class_ryle_radio_1_1_radio_data}{Radio\+Data}. ~\newline
+If we didn\textquotesingle{}t use a wrapper like this, you wouldn\textquotesingle{}t be able to choose track\+Type in a dropdown and see it change in the inspector-\/ it\textquotesingle{}s not possible (to my knowledge) to do that without some kind of wrapper and {\ttfamily \mbox{[}Serialize\+Reference\mbox{]}}. ~\newline
+Wrappers also contain variables that exist for every track type, such as \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a778c05ac1056316fc9224e13c80c340c}{range} and \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ac26cf86217a7fdab6269f90e09f3d590}{gain}. 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 
 
@@ -121,7 +130,7 @@ Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Radio\+Track\+Wrapper (\begin{Dox
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00109}{109}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00157}{157}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 
 
@@ -136,7 +145,7 @@ void Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Add\+To\+Player\+End\+Callba
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00182}{182}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00230}{230}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ab322b29cd3c310eb76cfcc32fc1a8898}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!CreateTrackEditor@{CreateTrackEditor}}
 \index{CreateTrackEditor@{CreateTrackEditor}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -146,7 +155,7 @@ Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00182}{182}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00156}{156}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00204}{204}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a9426f429184e25913c4e6cd48527ca7c}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!CreateTrackLocal@{CreateTrackLocal}}
 \index{CreateTrackLocal@{CreateTrackLocal}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -156,7 +165,7 @@ void Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Create\+Track\+Local (\begin
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00175}{175}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00223}{223}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a5bed44201bd34688ce018c8b0eef42f0}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!GetSample@{GetSample}}
 \index{GetSample@{GetSample}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -166,7 +175,7 @@ float Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Get\+Sample (\begin{DoxyPar
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00210}{210}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00258}{258}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a909e0f98dc729f0baf120e04a3635a19}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!GetTrackType@{GetTrackType}}
 \index{GetTrackType@{GetTrackType}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -176,7 +185,7 @@ string Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Get\+Track\+Type (\begin{D
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00148}{148}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00196}{196}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ac7d24219e5c27188f541c3134164ec64}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!GetTunePower@{GetTunePower}}
 \index{GetTunePower@{GetTunePower}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -186,7 +195,7 @@ float Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Get\+Tune\+Power (\begin{Do
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00198}{198}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00246}{246}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a958441e5c561814d365f208cadf085aa}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!Init@{Init}}
 \index{Init@{Init}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -196,7 +205,7 @@ void Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Init (\begin{DoxyParamCaptio
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00130}{130}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00178}{178}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a632ad84a7c30eb757c83f9dfd559821a}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!OnReload@{OnReload}}
 \index{OnReload@{OnReload}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -206,7 +215,7 @@ void Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+On\+Reload (\begin{DoxyParam
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00121}{121}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00169}{169}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a1cf48d746261684d3d9f5c3f88fa635d}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!ScaleRange@{ScaleRange}}
 \index{ScaleRange@{ScaleRange}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -216,7 +225,7 @@ void Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Scale\+Range (\begin{DoxyPar
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00188}{188}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00236}{236}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 
 
@@ -231,7 +240,11 @@ float Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+attenuation = 0.\+1f}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+The amount that this track gets quieter when another track is playing on top of it (and it\textquotesingle{}s above this track in Radio\+Data.\+track\+Ws. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00077}{77}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a5cdcbc0b98d93a71c50bea2c0116552a}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!broadcasters@{broadcasters}}
 \index{broadcasters@{broadcasters}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -241,7 +254,7 @@ List$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster}{R
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00089}{89}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a35a80d969510b23d43d863c9c5e4bf6c}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!forceGlobal@{forceGlobal}}
 \index{forceGlobal@{forceGlobal}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -251,7 +264,11 @@ bool Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+force\+Global = true}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+If true, this track ignores any Radio\+Broadcaster influence and plays everywhere. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00082}{82}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ac26cf86217a7fdab6269f90e09f3d590}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!gain@{gain}}
 \index{gain@{gain}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -261,7 +278,11 @@ float Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+gain = 100}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+An added value to the volume of the track. This is applied before any other volume is calculated. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00071}{71}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a3404fec117e04c7edbd0c7711e3416f0}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!id@{id}}
 \index{id@{id}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -271,7 +292,11 @@ string Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+id}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+The ID of this track-\/ used to find and manipulate it in custom code. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a9451083a83be02f5b4357fcffa198210}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!insulators@{insulators}}
 \index{insulators@{insulators}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -281,7 +306,7 @@ List$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator}{Rad
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00090}{90}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a9f005bfe46c540e21264bad404da9927}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!name@{name}}
 \index{name@{name}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -291,7 +316,11 @@ string Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+name}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+The name of this track for use (and easy identification) in the inspector. This is usually in the format of {\ttfamily \{ID\}, \{range.\+x\} -\/ \{range.\+y\}} 
+
+This is assigned in Radio\+Data\+Editor.\+Init\+New\+Track() 
+
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a2f7d1bb32fb5ca1503f746d6f0ff8cf0}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!playOnInit@{playOnInit}}
 \index{playOnInit@{playOnInit}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -301,7 +330,11 @@ bool Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+play\+On\+Init = true}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00039}{39}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+If true, this track plays on Radio\+Data.\+Init() -\/ usually on game start. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00087}{87}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a778c05ac1056316fc9224e13c80c340c}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!range@{range}}
 \index{range@{range}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -311,7 +344,11 @@ Vector2 Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+range}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+The range of tunes in which this track can be heard. If a Radio\+Output.\+Tune value is within this range, the tune power of this track will be \texorpdfstring{$>$}{>} 0, and it will be audible (not counting spatial components+gain+etc) 
+
+This range is clamped between Radio\+Data.\+LOW\+\_\+\+TUNE and Radio\+Data.\+HIGH\+\_\+\+TUNE 
+
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_aaa600370ee54d2252e2671d39368fa58}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!RANGE\_DECIMAL\_MULTIPLIER@{RANGE\_DECIMAL\_MULTIPLIER}}
 \index{RANGE\_DECIMAL\_MULTIPLIER@{RANGE\_DECIMAL\_MULTIPLIER}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -321,7 +358,11 @@ const float Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+RANGE\+\_\+\+DECIMAL\
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+The number of decimal places used in the range-\/ the number of zeroes is the number of decimal points, e.\+g\+: 10 == 1dp, 100 == 2dp, 1 == 0dp (whole numbers) 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a22d4e4da504b452b0541aef93ce3cc06}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!rangeCurve@{rangeCurve}}
 \index{rangeCurve@{rangeCurve}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -331,7 +372,17 @@ Animation\+Curve Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+range\+Curve = n
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+The curve defining the loudness of the track over its range. The progress between {\ttfamily range.\+x} and {\ttfamily range.\+y} the Radio\+Output.\+Tune value is, is the progress along this curve the tune power is. 
+
+
+\begin{DoxyItemize}
+\item If the curve is the default curve (smooth from 0 to 1 to 0), it will smoothly get louder towards the center of the range, and quieter towards the edge. 
+\item If the curve is a flat line at y=1, it will be the same volume across the entire range 
+\item If the curve is a line from 0 -\/ 1, it will be louder the further along the range the tune is, getting loudest at {\ttfamily range.\+y} 
+\item If the curve is goes up and down repeatedly, it will be at various different volumes depending on what you set, moving between them along the range 
+\end{DoxyItemize}
+
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00065}{65}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a98298d1ae6f1d9111f9288f4fb905120}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!track@{track}}
 \index{track@{track}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -341,7 +392,7 @@ Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00030}{30}}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00049}{49}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00097}{97}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a0a82b1df06366c3018d518fdc20ceddc}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!trackNames@{trackNames}}
 \index{trackNames@{trackNames}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -351,7 +402,7 @@ string \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+track
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00090}{90}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00138}{138}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ad02b3c8a6fd28d31d8d728ec8f583e42}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!trackType@{trackType}}
 \index{trackType@{trackType}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -361,7 +412,7 @@ string Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+track\+Type\hspace{0.3cm}{
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00093}{93}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a0158f2d8cf2ba647c96fd26cc856e52e}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!trackTypes@{trackTypes}}
 \index{trackTypes@{trackTypes}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -371,7 +422,7 @@ Type \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+track\+
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00061}{61}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00109}{109}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ad999f57fcbc42966e63638af4c7d9ca2}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!trackTypesAsStrings@{trackTypesAsStrings}}
 \index{trackTypesAsStrings@{trackTypesAsStrings}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -381,7 +432,7 @@ string \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+track
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00075}{75}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00123}{123}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 
 
@@ -396,7 +447,7 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{R
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00052}{52}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00100}{100}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a74adba53bd688378c4a5fc3140ff4d67}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!DefaultRangeCurve@{DefaultRangeCurve}}
 \index{DefaultRangeCurve@{DefaultRangeCurve}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -406,7 +457,11 @@ Animation\+Curve Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Default\+Range\+
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+The default \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a22d4e4da504b452b0541aef93ce3cc06}{range\+Curve} to use when an empty wrapper is created. It\textquotesingle{}s a super basic and smooth closed curve from 0 to 0. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a20ef79299950a601ac26e06f320f1046}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!OnAddBroadcaster@{OnAddBroadcaster}}
 \index{OnAddBroadcaster@{OnAddBroadcaster}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -416,7 +471,7 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00054}{54}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00102}{102}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a371c6db231ca6c2ca44be011ae29fe03}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!OnAddInsulator@{OnAddInsulator}}
 \index{OnAddInsulator@{OnAddInsulator}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -426,7 +481,7 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator}{R
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00057}{57}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00105}{105}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a0e5992ef4634849c28ec66de1e3baef3}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!OnInit@{OnInit}}
 \index{OnInit@{OnInit}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -436,7 +491,7 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{R
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00051}{51}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00099}{99}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a2e298eae6270b5e163f4aae805cc3dd4}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!OnRemoveBroadcaster@{OnRemoveBroadcaster}}
 \index{OnRemoveBroadcaster@{OnRemoveBroadcaster}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -446,7 +501,7 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00055}{55}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00103}{103}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a1c98ba01c1d2ec6303002217691c7d6e}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!OnRemoveInsulator@{OnRemoveInsulator}}
 \index{OnRemoveInsulator@{OnRemoveInsulator}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -456,7 +511,7 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator}{R
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00058}{58}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00106}{106}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a3bd3948910de5c7cd75d8d719f3b3181}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!SampleCount@{SampleCount}}
 \index{SampleCount@{SampleCount}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -466,7 +521,7 @@ int Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Sample\+Count\hspace{0.3cm}{\
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00106}{106}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00154}{154}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a371731bf6b4073531e24e375ca078d4a}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!SampleRate@{SampleRate}}
 \index{SampleRate@{SampleRate}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -476,7 +531,7 @@ float Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Sample\+Rate\hspace{0.3cm}{
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00105}{105}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00153}{153}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a5ced7fa006129abc0db99e8093e89df5}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!TrackNames@{TrackNames}}
 \index{TrackNames@{TrackNames}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -486,7 +541,7 @@ string \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Track
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00091}{91}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00139}{139}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_af40754f1c0460eb3974799a71adc296e}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!TrackTypes@{TrackTypes}}
 \index{TrackTypes@{TrackTypes}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -496,7 +551,7 @@ Type \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Track\+
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00062}{62}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00110}{110}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ae8915dc640d6e927887836fe4c0257a0}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!TrackTypesAsStrings@{TrackTypesAsStrings}}
 \index{TrackTypesAsStrings@{TrackTypesAsStrings}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
@@ -506,7 +561,7 @@ string \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Track
 
 
 
-Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00076}{76}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00124}{124}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 
 

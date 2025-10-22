@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['stationtrackws_0',['stationTrackWs',['../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#ab9992c3d9eaa3024e96a0ecc53b5b5b2',1,'RyleRadio::Tracks::StationRadioTrack']]],
-  ['stayedevents_1',['stayedEvents',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#aff4fedc113a7a5670bbefe68bb33e62d',1,'RyleRadio::Components::RadioObserver']]]
+  ['outercolor_0',['outerColor',['../d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor.html#a717e3a50e8e7e1fa24973babdfe00cd6',1,'RyleRadio::Editor::RadioBroadcasterEditor']]],
+  ['output_1',['output',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a20e98887f8846c29e4f0155c36bf4c66',1,'RyleRadio::Components::RadioObserver']]]
 ];

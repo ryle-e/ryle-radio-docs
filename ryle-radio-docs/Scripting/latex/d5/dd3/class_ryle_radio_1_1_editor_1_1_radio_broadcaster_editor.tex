@@ -1,5 +1,12 @@
 \doxysection{Ryle\+Radio.\+Editor.\+Radio\+Broadcaster\+Editor Class Reference}
 \hypertarget{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor}{}\label{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor}\index{RyleRadio.Editor.RadioBroadcasterEditor@{RyleRadio.Editor.RadioBroadcasterEditor}}
+
+
+Custom inspector for a \doxylink{class_ryle_radio_1_1_components_1_1_radio_broadcaster}{Radio\+Broadcaster} ~\newline
+~\newline
+This is mainly so that we can use {\ttfamily Handles} (draggable gizmos).  
+
+
 Inheritance diagram for Ryle\+Radio.\+Editor.\+Radio\+Broadcaster\+Editor\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,29 +17,33 @@ Inheritance diagram for Ryle\+Radio.\+Editor.\+Radio\+Broadcaster\+Editor\+:\beg
 \begin{DoxyCompactItemize}
 \item 
 override void \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_a209736f65769ba491bbaab0e7e169ea4}{On\+Inspector\+GUI}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Draw the actual inspector as default. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_aae0f16b02f6e44fe2f8a8b8d56f8bcd8}{On\+Enable}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes this inspector. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_a3d84d9e0776ee8e58ebea202505b13c3}{On\+Scene\+GUI}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Displays the handles for Radio\+Broadcaster.\+broadcast\+Radius in the scene. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster}{Radio\+Broadcaster}} \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_a3269facecc1498751eb743346b2a1907}{broadcaster}}
-\item 
+\begin{DoxyCompactList}\small\item\em The broadcaster this is linked to. \end{DoxyCompactList}\item 
 Color \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_a77f1f25e34c7937b06e778e5f691d6fd}{inner\+Color}}
-\item 
+\begin{DoxyCompactList}\small\item\em The colour of the gizmo for the x/inner value of Radio\+Broadcaster.\+broadcast\+Radius. \end{DoxyCompactList}\item 
 Color \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_a717e3a50e8e7e1fa24973babdfe00cd6}{outer\+Color}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The colour of the gizmo for the y/outer value of Radio\+Broadcaster.\+broadcast\+Radius. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Custom inspector for a \doxylink{class_ryle_radio_1_1_components_1_1_radio_broadcaster}{Radio\+Broadcaster} ~\newline
+~\newline
+This is mainly so that we can use {\ttfamily Handles} (draggable gizmos). 
 
+{\bfseries{See\+: }} \doxylink{class_ryle_radio_1_1_components_1_1_radio_broadcaster}{Radio\+Broadcaster} 
 
-Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
 
 
 
@@ -47,7 +58,11 @@ void Ryle\+Radio.\+Editor.\+Radio\+Broadcaster\+Editor.\+On\+Enable (\begin{Doxy
 
 
 
-Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
+Initializes this inspector. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_a209736f65769ba491bbaab0e7e169ea4}\index{RyleRadio.Editor.RadioBroadcasterEditor@{RyleRadio.Editor.RadioBroadcasterEditor}!OnInspectorGUI@{OnInspectorGUI}}
 \index{OnInspectorGUI@{OnInspectorGUI}!RyleRadio.Editor.RadioBroadcasterEditor@{RyleRadio.Editor.RadioBroadcasterEditor}}
@@ -57,7 +72,11 @@ override void Ryle\+Radio.\+Editor.\+Radio\+Broadcaster\+Editor.\+On\+Inspector\
 
 
 
-Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00061}{61}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
+Draw the actual inspector as default. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00081}{81}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_a3d84d9e0776ee8e58ebea202505b13c3}\index{RyleRadio.Editor.RadioBroadcasterEditor@{RyleRadio.Editor.RadioBroadcasterEditor}!OnSceneGUI@{OnSceneGUI}}
 \index{OnSceneGUI@{OnSceneGUI}!RyleRadio.Editor.RadioBroadcasterEditor@{RyleRadio.Editor.RadioBroadcasterEditor}}
@@ -67,7 +86,11 @@ void Ryle\+Radio.\+Editor.\+Radio\+Broadcaster\+Editor.\+On\+Scene\+GUI (\begin{
 
 
 
-Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00043}{43}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
+Displays the handles for Radio\+Broadcaster.\+broadcast\+Radius in the scene. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00061}{61}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
 
 
 
@@ -82,7 +105,15 @@ Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00043}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
+The broadcaster this is linked to. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00038}{On\+Enable()}}, and \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00061}{On\+Scene\+GUI()}}.
 
 \Hypertarget{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_a77f1f25e34c7937b06e778e5f691d6fd}\index{RyleRadio.Editor.RadioBroadcasterEditor@{RyleRadio.Editor.RadioBroadcasterEditor}!innerColor@{innerColor}}
 \index{innerColor@{innerColor}!RyleRadio.Editor.RadioBroadcasterEditor@{RyleRadio.Editor.RadioBroadcasterEditor}}
@@ -92,7 +123,15 @@ Color Ryle\+Radio.\+Editor.\+Radio\+Broadcaster\+Editor.\+inner\+Color\hspace{0.
 
 
 
-Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
+The colour of the gizmo for the x/inner value of Radio\+Broadcaster.\+broadcast\+Radius. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00027}{27}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00038}{On\+Enable()}}, and \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00061}{On\+Scene\+GUI()}}.
 
 \Hypertarget{class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_a717e3a50e8e7e1fa24973babdfe00cd6}\index{RyleRadio.Editor.RadioBroadcasterEditor@{RyleRadio.Editor.RadioBroadcasterEditor}!outerColor@{outerColor}}
 \index{outerColor@{outerColor}!RyleRadio.Editor.RadioBroadcasterEditor@{RyleRadio.Editor.RadioBroadcasterEditor}}
@@ -102,7 +141,15 @@ Color Ryle\+Radio.\+Editor.\+Radio\+Broadcaster\+Editor.\+outer\+Color\hspace{0.
 
 
 
-Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
+The colour of the gizmo for the y/outer value of Radio\+Broadcaster.\+broadcast\+Radius. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source}{Radio\+Broadcaster\+Editor.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00038}{On\+Enable()}}, and \mbox{\hyperlink{_radio_broadcaster_editor_8cs_source_l00061}{On\+Scene\+GUI()}}.
 
 
 

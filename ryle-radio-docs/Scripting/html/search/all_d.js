@@ -17,11 +17,15 @@ var searchData=
   ['radiotrackwrapper_14',['RadioTrackWrapper',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html',1,'RyleRadio::Tracks']]],
   ['radioutils_15',['RadioUtils',['../d4/d2c/class_ryle_radio_1_1_radio_utils.html',1,'RyleRadio']]],
   ['randomsequence_16',['randomSequence',['../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a9c325018c6641f7f483127889959ccd4',1,'RyleRadio::Tracks::StationRadioTrack']]],
-  ['remainingtracksbeforerepeat_17',['remainingTracksBeforeRepeat',['../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a68f7d080e44965f4fa8b2fb489cf96d4',1,'RyleRadio::Tracks::StationRadioTrack']]],
-  ['remap_18',['Remap',['../d4/d2c/class_ryle_radio_1_1_radio_utils.html#a1a8c22e08dfc7d8d6353209d713e1453',1,'RyleRadio::RadioUtils']]],
-  ['ryleradio_19',['RyleRadio',['../da/d5f/namespace_ryle_radio.html',1,'']]],
-  ['ryleradio_3a_3acomponents_20',['Components',['../da/d43/namespace_ryle_radio_1_1_components.html',1,'RyleRadio']]],
-  ['ryleradio_3a_3acomponents_3a_3abase_21',['Base',['../db/d1f/namespace_ryle_radio_1_1_components_1_1_base.html',1,'RyleRadio::Components']]],
-  ['ryleradio_3a_3aeditor_22',['Editor',['../de/da0/namespace_ryle_radio_1_1_editor.html',1,'RyleRadio']]],
-  ['ryleradio_3a_3atracks_23',['Tracks',['../d0/d28/namespace_ryle_radio_1_1_tracks.html',1,'RyleRadio']]]
+  ['range_17',['range',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a778c05ac1056316fc9224e13c80c340c',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
+  ['range_5fdecimal_5fmultiplier_18',['RANGE_DECIMAL_MULTIPLIER',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#aaa600370ee54d2252e2671d39368fa58',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
+  ['rangecurve_19',['rangeCurve',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a22d4e4da504b452b0541aef93ce3cc06',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
+  ['readclipandforcetomono_20',['ReadClipAndForceToMono',['../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html#a887d3aa598057c9fe49b549430fefdef',1,'RyleRadio::Tracks::ClipRadioTrack']]],
+  ['remainingtracksbeforerepeat_21',['remainingTracksBeforeRepeat',['../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html#a68f7d080e44965f4fa8b2fb489cf96d4',1,'RyleRadio::Tracks::StationRadioTrack']]],
+  ['remap_22',['Remap',['../d4/d2c/class_ryle_radio_1_1_radio_utils.html#a1a8c22e08dfc7d8d6353209d713e1453',1,'RyleRadio::RadioUtils']]],
+  ['ryleradio_23',['RyleRadio',['../da/d5f/namespace_ryle_radio.html',1,'']]],
+  ['ryleradio_3a_3acomponents_24',['Components',['../da/d43/namespace_ryle_radio_1_1_components.html',1,'RyleRadio']]],
+  ['ryleradio_3a_3acomponents_3a_3abase_25',['Base',['../db/d1f/namespace_ryle_radio_1_1_components_1_1_base.html',1,'RyleRadio::Components']]],
+  ['ryleradio_3a_3aeditor_26',['Editor',['../de/da0/namespace_ryle_radio_1_1_editor.html',1,'RyleRadio']]],
+  ['ryleradio_3a_3atracks_27',['Tracks',['../d0/d28/namespace_ryle_radio_1_1_tracks.html',1,'RyleRadio']]]
 ];

@@ -94,51 +94,68 @@ $(function(){initNavTree('de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_t
   <div class="headertitle"><div class="title">RyleRadio.Tracks.StationRadioTrackWrapper Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A smaller, separate version of <a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> for use in a <a class="el" href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html">StationRadioTrack</a>.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aaf2b07b35b24d041dc8e0c2989c07416" id="r_aaf2b07b35b24d041dc8e0c2989c07416"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaf2b07b35b24d041dc8e0c2989c07416">StationRadioTrackWrapper</a> (<a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a> _track)</td></tr>
+<tr class="memdesc:aaf2b07b35b24d041dc8e0c2989c07416"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates an empty wrapper for a station.  <br /></td></tr>
 <tr class="memitem:a14940f32d7a0f9172ba0b34d408c7fdc" id="r_a14940f32d7a0f9172ba0b34d408c7fdc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14940f32d7a0f9172ba0b34d408c7fdc">Init</a> ()</td></tr>
+<tr class="memdesc:a14940f32d7a0f9172ba0b34d408c7fdc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the track stored in this wrapper.  <br /></td></tr>
 <tr class="memitem:a2bb9727a6841b8f172bfb2fe0fc0b976" id="r_a2bb9727a6841b8f172bfb2fe0fc0b976"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bb9727a6841b8f172bfb2fe0fc0b976">CreateTrackLocal</a> ()</td></tr>
+<tr class="memdesc:a2bb9727a6841b8f172bfb2fe0fc0b976"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a new track in this wrapper. This is called when <a class="el" href="#a2b82a60520332f26e6d537ddee315e2f">trackType</a> is updated.  <br /></td></tr>
 <tr class="memitem:a5a831d69b1ac9818a1a53d9b09f8146c" id="r_a5a831d69b1ac9818a1a53d9b09f8146c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a831d69b1ac9818a1a53d9b09f8146c">GetSample</a> (int _sampleIndex)</td></tr>
+<tr class="memdesc:a5a831d69b1ac9818a1a53d9b09f8146c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a sample from the contained track.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a016d170f7da06c65dbd1d77c36552d70" id="r_a016d170f7da06c65dbd1d77c36552d70"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a016d170f7da06c65dbd1d77c36552d70">OnReload</a> ()</td></tr>
+<tr class="memdesc:a016d170f7da06c65dbd1d77c36552d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates track types and names on script reload to detect any new types.  <br /></td></tr>
 <tr class="memitem:aa2248a77e7b27ce0b66cbdfa8cfa48d9" id="r_aa2248a77e7b27ce0b66cbdfa8cfa48d9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2248a77e7b27ce0b66cbdfa8cfa48d9">CreateTrackEditor</a> (string _name)</td></tr>
+<tr class="memdesc:aa2248a77e7b27ce0b66cbdfa8cfa48d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a new track to be used in a wrapper- note that this is marked as <span class="tt">static</span><br  />
+ This is mainly used in the editor to update the track type when it's selected on <a class="el" href="#a2b82a60520332f26e6d537ddee315e2f">trackType</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:aaeb0ded3e52e83983df5683292b76493" id="r_aaeb0ded3e52e83983df5683292b76493"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaeb0ded3e52e83983df5683292b76493">gain</a> = 100</td></tr>
+<tr class="memdesc:aaeb0ded3e52e83983df5683292b76493"><td class="mdescLeft">&#160;</td><td class="mdescRight">The additional volume of this track. See <a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#ac26cf86217a7fdab6269f90e09f3d590">RadioTrackWrapper.gain</a>.  <br /></td></tr>
 <tr class="memitem:a799b23c7506b428e14d7bf7bcb114b1c" id="r_a799b23c7506b428e14d7bf7bcb114b1c"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a799b23c7506b428e14d7bf7bcb114b1c">startAndEndRests</a> = Vector2.zero</td></tr>
+<tr class="memdesc:a799b23c7506b428e14d7bf7bcb114b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The amount of time at the start and end of the track for which there's silence. This allows you to spread tracks apart a little bit.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:ac1c015b49fe5e94be162f35da9d39348" id="r_ac1c015b49fe5e94be162f35da9d39348"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1c015b49fe5e94be162f35da9d39348">track</a></td></tr>
+<tr class="memdesc:ac1c015b49fe5e94be162f35da9d39348"><td class="mdescLeft">&#160;</td><td class="mdescRight">The track contained in this wrapper.<br  />
+ Note that this is an <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a> and not an <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">IRadioTrack</a> like in the normal <a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> Some custom track types might not be usable in a station (e.g a station within a station)- hence we need to separate those that can be in one from those that can't.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:acee204112cba233b2d6af63bdde646dd" id="r_acee204112cba233b2d6af63bdde646dd"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acee204112cba233b2d6af63bdde646dd">ID</a><code> [get]</code></td></tr>
-<tr class="memitem:a57bfd2c389766fba7f3b63da067a4c8d" id="r_a57bfd2c389766fba7f3b63da067a4c8d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a57bfd2c389766fba7f3b63da067a4c8d">SampleRate</a><code> [get]</code></td></tr>
-<tr class="memitem:af3573e33e6e6bf749950c9eafcca9494" id="r_af3573e33e6e6bf749950c9eafcca9494"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3573e33e6e6bf749950c9eafcca9494">SampleCount</a><code> [get]</code></td></tr>
 <tr class="memitem:a7be1f3ed2241473e4b7f74b34a18e25d" id="r_a7be1f3ed2241473e4b7f74b34a18e25d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7be1f3ed2241473e4b7f74b34a18e25d">Gain</a><code> [get]</code></td></tr>
+<tr class="memdesc:a7be1f3ed2241473e4b7f74b34a18e25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gain value scaled down to ones- e.g <a class="el" href="#aaeb0ded3e52e83983df5683292b76493">gain</a> at 200 is <a class="el" href="#a7be1f3ed2241473e4b7f74b34a18e25d">Gain</a> at 2.  <br /></td></tr>
 <tr class="memitem:a01f0b55b5fd4bd1354aca7a637988223" id="r_a01f0b55b5fd4bd1354aca7a637988223"><td class="memItemLeft" align="right" valign="top">static Type[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01f0b55b5fd4bd1354aca7a637988223">TrackTypes</a><code> [get]</code></td></tr>
+<tr class="memdesc:a01f0b55b5fd4bd1354aca7a637988223"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of each type of track that this wrapper can contain- this is anything that inherits from <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a> <br  />
+<br  />
+<b>See also: </b> <a class="el" href="../../d4/d2c/class_ryle_radio_1_1_radio_utils.html#ade2ef6c22eb2dd42613bdcf74f1587de">RadioUtils.FindDerivedTypes()</a>  <br /></td></tr>
 <tr class="memitem:aeede89c9032a208020a2d2f20e57d55a" id="r_aeede89c9032a208020a2d2f20e57d55a"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeede89c9032a208020a2d2f20e57d55a">TrackNames</a><code> [get]</code></td></tr>
+<tr class="memdesc:aeede89c9032a208020a2d2f20e57d55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of the names of each type in <a class="el" href="#a01f0b55b5fd4bd1354aca7a637988223">TrackTypes</a> This is what's displayed in the inspector for the user to choose from.  <br /></td></tr>
 <tr class="memitem:a4bd6de08c4d2f2f2758cee00cb3c5c0b" id="r_a4bd6de08c4d2f2f2758cee00cb3c5c0b"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bd6de08c4d2f2f2758cee00cb3c5c0b">EditorChildClip</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4bd6de08c4d2f2f2758cee00cb3c5c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this wrapper contains a <a class="el" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html">ClipRadioTrack</a> , this becomes a reference to the track's clip. Used when forcing sample rates in RadioDataEditor.ForceSampleRate()  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a5e869b7aa74e7406c2329108d5434f86" id="r_a5e869b7aa74e7406c2329108d5434f86"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e869b7aa74e7406c2329108d5434f86">id</a></td></tr>
+<tr class="memdesc:a5e869b7aa74e7406c2329108d5434f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of this track.  <br /></td></tr>
 <tr class="memitem:a2b82a60520332f26e6d537ddee315e2f" id="r_a2b82a60520332f26e6d537ddee315e2f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b82a60520332f26e6d537ddee315e2f">trackType</a> = &quot;None&quot;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
-Static Private Attributes</h2></td></tr>
-<tr class="memitem:a0b75a20362b4b44ee8e1ec333a23005c" id="r_a0b75a20362b4b44ee8e1ec333a23005c"><td class="memItemLeft" align="right" valign="top">static Type[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0b75a20362b4b44ee8e1ec333a23005c">trackTypes</a></td></tr>
-<tr class="memitem:aa4fdee616584a43e9fe02a73ba07fbec" id="r_aa4fdee616584a43e9fe02a73ba07fbec"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa4fdee616584a43e9fe02a73ba07fbec">trackNames</a></td></tr>
+<tr class="memdesc:a2b82a60520332f26e6d537ddee315e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current type of this track as chosen in the editor. Displayed as a dropdown of <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RadioTrack</a> <span class="tt">DISPLAY_NAME</span>s.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<div class="textblock"><p>A smaller, separate version of <a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> for use in a <a class="el" href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html">StationRadioTrack</a>. </p>
+<p>This is how child tracks are contained inside stations- very similar to how normal tracks themselves are stored in <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a></p>
+<p>We could probably use an interface in future for both this and <a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html" title="A wrapper class for RadioTrack so that track types can be switched between in the inspector!...">RadioTrackWrapper</a>, but I fear we won't ever use that interface again and it would just obfuscate functionality If it'd be useful, though, I'm happy to implement </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 </div><a name="doc-constructors" id="doc-constructors"></a><h2 id="header-doc-constructors" class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="aaf2b07b35b24d041dc8e0c2989c07416" name="aaf2b07b35b24d041dc8e0c2989c07416"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaf2b07b35b24d041dc8e0c2989c07416">&#9670;&#160;</a></span>StationRadioTrackWrapper()</h2>
@@ -155,7 +172,15 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00083">83</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>Creates an empty wrapper for a station. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_track</td><td>The default track type to use</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00124">124</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -183,7 +208,19 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00110">110</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>Gets a new track to be used in a wrapper- note that this is marked as <span class="tt">static</span><br  />
+ This is mainly used in the editor to update the track type when it's selected on <a class="el" href="#a2b82a60520332f26e6d537ddee315e2f">trackType</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_name</td><td>The name of the track type to create</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A new track with the given type</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00154">154</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00183">CreateTrackLocal()</a>.</p>
 
 </div>
 </div>
@@ -202,7 +239,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00129">129</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>Creates a new track in this wrapper. This is called when <a class="el" href="#a2b82a60520332f26e6d537ddee315e2f">trackType</a> is updated. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00183">183</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00124">StationRadioTrackWrapper()</a>.</p>
 
 </div>
 </div>
@@ -221,7 +262,16 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00135">135</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>Gets a sample from the contained track. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_sampleIndex</td><td>Index of the sample to get</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A sample from the contained track</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00193">193</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -240,7 +290,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00102">102</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>Initialize the track stored in this wrapper. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00175">175</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00080">RyleRadio.Tracks.StationRadioTrack.Init()</a>.</p>
 
 </div>
 </div>
@@ -267,7 +321,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00094">94</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>Updates track types and names on script reload to detect any new types. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00138">138</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -284,7 +340,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00023">23</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>The additional volume of this track. See <a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#ac26cf86217a7fdab6269f90e09f3d590">RadioTrackWrapper.gain</a>. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00124">StationRadioTrackWrapper()</a>.</p>
 
 </div>
 </div>
@@ -308,7 +368,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>The ID of this track. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -324,7 +386,11 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>The amount of time at the start and end of the track for which there's silence. This allows you to spread tracks apart a little bit. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00036">36</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00193">GetSample()</a>.</p>
 
 </div>
 </div>
@@ -348,31 +414,12 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00036">36</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>The track contained in this wrapper.<br  />
+ Note that this is an <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a> and not an <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">IRadioTrack</a> like in the normal <a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> Some custom track types might not be usable in a station (e.g a station within a station)- hence we need to separate those that can be in one from those that can't. </p>
 
-</div>
-</div>
-<a id="aa4fdee616584a43e9fe02a73ba07fbec" name="aa4fdee616584a43e9fe02a73ba07fbec"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa4fdee616584a43e9fe02a73ba07fbec">&#9670;&#160;</a></span>trackNames</h2>
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string [] RyleRadio.Tracks.StationRadioTrackWrapper.trackNames</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00064">64</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00183">CreateTrackLocal()</a>, <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00193">GetSample()</a>, <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00175">Init()</a>, and <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00124">StationRadioTrackWrapper()</a>.</p>
 
 </div>
 </div>
@@ -396,31 +443,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00030">30</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>The current type of this track as chosen in the editor. Displayed as a dropdown of <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RadioTrack</a> <span class="tt">DISPLAY_NAME</span>s. </p>
 
-</div>
-</div>
-<a id="a0b75a20362b4b44ee8e1ec333a23005c" name="a0b75a20362b4b44ee8e1ec333a23005c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0b75a20362b4b44ee8e1ec333a23005c">&#9670;&#160;</a></span>trackTypes</h2>
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00042">42</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">Type [] RyleRadio.Tracks.StationRadioTrackWrapper.trackTypes</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00052">52</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00183">CreateTrackLocal()</a>.</p>
 
 </div>
 </div>
@@ -445,7 +472,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00079">79</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>If this wrapper contains a <a class="el" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html">ClipRadioTrack</a> , this becomes a reference to the track's clip. Used when forcing sample rates in RadioDataEditor.ForceSampleRate() </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00117">117</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -469,79 +498,9 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>The gain value scaled down to ones- e.g <a class="el" href="#aaeb0ded3e52e83983df5683292b76493">gain</a> at 200 is <a class="el" href="#a7be1f3ed2241473e4b7f74b34a18e25d">Gain</a> at 2. </p>
 
-</div>
-</div>
-<a id="acee204112cba233b2d6af63bdde646dd" name="acee204112cba233b2d6af63bdde646dd"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acee204112cba233b2d6af63bdde646dd">&#9670;&#160;</a></span>ID</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">string RyleRadio.Tracks.StationRadioTrackWrapper.ID</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00038">38</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
-
-</div>
-</div>
-<a id="af3573e33e6e6bf749950c9eafcca9494" name="af3573e33e6e6bf749950c9eafcca9494"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af3573e33e6e6bf749950c9eafcca9494">&#9670;&#160;</a></span>SampleCount</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int RyleRadio.Tracks.StationRadioTrackWrapper.SampleCount</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00041">41</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
-
-</div>
-</div>
-<a id="a57bfd2c389766fba7f3b63da067a4c8d" name="a57bfd2c389766fba7f3b63da067a4c8d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a57bfd2c389766fba7f3b63da067a4c8d">&#9670;&#160;</a></span>SampleRate</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">float RyleRadio.Tracks.StationRadioTrackWrapper.SampleRate</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel get">get</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00040">40</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00073">73</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
 </div>
 </div>
@@ -565,7 +524,11 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00065">65</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>A list of the names of each type in <a class="el" href="#a01f0b55b5fd4bd1354aca7a637988223">TrackTypes</a> This is what's displayed in the inspector for the user to choose from. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00100">100</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00154">CreateTrackEditor()</a>.</p>
 
 </div>
 </div>
@@ -589,7 +552,13 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00053">53</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+<p>A list of each type of track that this wrapper can contain- this is anything that inherits from <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a> <br  />
+<br  />
+<b>See also: </b> <a class="el" href="../../d4/d2c/class_ryle_radio_1_1_radio_utils.html#ade2ef6c22eb2dd42613bdcf74f1587de">RadioUtils.FindDerivedTypes()</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00082">82</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00154">CreateTrackEditor()</a>.</p>
 
 </div>
 </div>
