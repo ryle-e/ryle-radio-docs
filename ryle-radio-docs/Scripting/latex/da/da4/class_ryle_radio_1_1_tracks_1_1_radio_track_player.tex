@@ -29,13 +29,13 @@ float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_ae5a7f
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}} \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_acfdd338125deed698d82e168e23f7dff}{TrackW}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}} \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_acfdd338125deed698d82e168e23f7dff}{TrackW}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \item 
-double \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a2b0e7569f0ed06667c8ba97478b7ba41}{Progress}} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+double \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a2b0e7569f0ed06667c8ba97478b7ba41}{Progress}} = 0\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a1399740d1521db736029501f7506306a}{Progress\+Fraction}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \item 
-Player\+Type \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a8aa5c6b343b84685a405b34ce5c120a7}{Play\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+Player\+Type \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a8aa5c6b343b84685a405b34ce5c120a7}{Play\+Type}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \item 
 Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_abcc18a8eb8d857fcf5ce5f41b033ee7d}{Do\+Destroy}} = new(\+\_\+ =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
@@ -60,6 +60,19 @@ Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{R
 Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}}, float $>$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a28a0c7a0016780429e3eef5dd7255d55}{On\+Insulation}} = new((\+\_\+, \+\_\+) =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
 bool \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a735ce7ede282d98fd8ad863781dd8a69}{Paused}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_abcba3346ec5fdb3ec03b96ff1870e13e}{on\+End}} = \+\_\+ =$>$ \{ \}
+\item 
+bool \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_ac2fc2b2d0cbfe0ac9a94ff858724d270}{paused}} = false
+\item 
+float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_ab7c938bd53ccb285095903249eec286b}{sample\+Increment}}
+\item 
+float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a780415cf951d50bbef7b00ca10b79012}{base\+Sample\+Rate}}
+\item 
+bool \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player_aa1fc7801999a5e50f19d8b95dbf12c12}{is\+Stopped}} = false
 \end{DoxyCompactItemize}
 
 
@@ -172,6 +185,61 @@ void Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+Update\+Sample\+Increment (\b
 
 
 Definition at line \mbox{\hyperlink{_radio_track_player_8cs_source_l00096}{96}} of file \mbox{\hyperlink{_radio_track_player_8cs_source}{Radio\+Track\+Player.\+cs}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_player_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a780415cf951d50bbef7b00ca10b79012}\index{RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}!baseSampleRate@{baseSampleRate}}
+\index{baseSampleRate@{baseSampleRate}!RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}}
+\doxysubsubsection{\texorpdfstring{baseSampleRate}{baseSampleRate}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a780415cf951d50bbef7b00ca10b79012} 
+float Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+base\+Sample\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_player_8cs_source_l00074}{74}} of file \mbox{\hyperlink{_radio_track_player_8cs_source}{Radio\+Track\+Player.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_player_aa1fc7801999a5e50f19d8b95dbf12c12}\index{RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}!isStopped@{isStopped}}
+\index{isStopped@{isStopped}!RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}}
+\doxysubsubsection{\texorpdfstring{isStopped}{isStopped}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_radio_track_player_aa1fc7801999a5e50f19d8b95dbf12c12} 
+bool Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+is\+Stopped = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_player_8cs_source_l00076}{76}} of file \mbox{\hyperlink{_radio_track_player_8cs_source}{Radio\+Track\+Player.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_player_abcba3346ec5fdb3ec03b96ff1870e13e}\index{RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}!onEnd@{onEnd}}
+\index{onEnd@{onEnd}!RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}}
+\doxysubsubsection{\texorpdfstring{onEnd}{onEnd}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_radio_track_player_abcba3346ec5fdb3ec03b96ff1870e13e} 
+Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}}$>$ Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+on\+End = \+\_\+ =$>$ \{ \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_player_8cs_source_l00049}{49}} of file \mbox{\hyperlink{_radio_track_player_8cs_source}{Radio\+Track\+Player.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_player_ac2fc2b2d0cbfe0ac9a94ff858724d270}\index{RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}!paused@{paused}}
+\index{paused@{paused}!RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}}
+\doxysubsubsection{\texorpdfstring{paused}{paused}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_radio_track_player_ac2fc2b2d0cbfe0ac9a94ff858724d270} 
+bool Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+paused = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_player_8cs_source_l00062}{62}} of file \mbox{\hyperlink{_radio_track_player_8cs_source}{Radio\+Track\+Player.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_player_ab7c938bd53ccb285095903249eec286b}\index{RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}!sampleIncrement@{sampleIncrement}}
+\index{sampleIncrement@{sampleIncrement}!RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}}
+\doxysubsubsection{\texorpdfstring{sampleIncrement}{sampleIncrement}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_radio_track_player_ab7c938bd53ccb285095903249eec286b} 
+float Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+sample\+Increment\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_track_player_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_radio_track_player_8cs_source}{Radio\+Track\+Player.\+cs}}.
 
 
 
@@ -302,7 +370,7 @@ Definition at line \mbox{\hyperlink{_radio_track_player_8cs_source_l00063}{63}} 
 \index{PlayType@{PlayType}!RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}}
 \doxysubsubsection{\texorpdfstring{PlayType}{PlayType}}
 {\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a8aa5c6b343b84685a405b34ce5c120a7} 
-Player\+Type Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+Play\+Type\hspace{0.3cm}{\ttfamily [get]}}
+Player\+Type Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+Play\+Type\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 
@@ -312,7 +380,7 @@ Definition at line \mbox{\hyperlink{_radio_track_player_8cs_source_l00039}{39}} 
 \index{Progress@{Progress}!RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}}
 \doxysubsubsection{\texorpdfstring{Progress}{Progress}}
 {\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_radio_track_player_a2b0e7569f0ed06667c8ba97478b7ba41} 
-double Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+Progress = 0\hspace{0.3cm}{\ttfamily [get]}}
+double Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+Progress = 0\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 
@@ -332,7 +400,7 @@ Definition at line \mbox{\hyperlink{_radio_track_player_8cs_source_l00025}{25}} 
 \index{TrackW@{TrackW}!RyleRadio.Tracks.RadioTrackPlayer@{RyleRadio.Tracks.RadioTrackPlayer}}
 \doxysubsubsection{\texorpdfstring{TrackW}{TrackW}}
 {\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_radio_track_player_acfdd338125deed698d82e168e23f7dff} 
-\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}} Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+TrackW\hspace{0.3cm}{\ttfamily [get]}}
+\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}} Ryle\+Radio.\+Tracks.\+Radio\+Track\+Player.\+TrackW\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 

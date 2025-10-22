@@ -3,8 +3,7 @@
 
 
 A component used to watch for specific happenings on a \doxylink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output}, e.\+g\+: a clip being a certain volume, a track starting, the tune being in a certain range~\newline
-We don\textquotesingle{}t inherit from Radio\+Component here since we don\textquotesingle{}t need to use a \doxylink{class_ryle_radio_1_1_radio_data}{Radio\+Data} ref, but it\textquotesingle{}s very similar~\newline
-.  
+We don\textquotesingle{}t inherit from Radio\+Component here since we don\textquotesingle{}t need to use a \doxylink{class_ryle_radio_1_1_radio_data}{Radio\+Data} ref, but it\textquotesingle{}s very similar.  
 
 
 Inheritance diagram for Ryle\+Radio.\+Components.\+Radio\+Observer\+:\begin{figure}[H]
@@ -22,7 +21,7 @@ class \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_ob
 \begin{DoxyCompactItemize}
 \item 
 enum \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582}{Event\+Type}} \{ \newline
-{\bfseries Output\+Volume}
+\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a4c1a5c5891c13b2e68ec26994b08bc14}{Output\+Volume}}
 , \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88}{Gain}}
 , \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a2c7cc15fb1e8401b0c054fc415c66be2}{Tune\+Power}}
 , \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a9c5156561aae5c21f53ad13034f6e1fd}{Broadcast\+Power}}
@@ -56,12 +55,39 @@ void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a9be9fb
 \item 
 string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a79a7484b93704449f8b9691f13a25bc5}{Affected\+Tracks}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_ab6c602f2a4cbcf49a14ebdf644fac793}{Awake}} ()
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a5cf3400db9f76f6dac74444a693bfa4e}{On\+Destroy}} ()
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_af96f1100853e1768cb363ec4aafe116d}{Update}} ()
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a7c2706d6c5ec3fa2eb7de2f22ca6ea0c}{Stay\+Event}} (\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}} \+\_\+event, float \+\_\+value)
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a1a767f69b2219c279f0f1431d558ebbd}{Trigger\+Event}} (\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}} \+\_\+event)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a20e98887f8846c29e4f0155c36bf4c66}{output}}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output} this observer is attached to. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a4230b55ced5082f104e1dadd7f225737}{affected\+Tracks}}
+\begin{DoxyCompactList}\small\item\em The tracks that this observer is watching for events on. This is a flag int and is translated to a list of names in Affected\+Tracks. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a0886bd8a2912dd7f6be8ba2f42ac6b1c}{events}}
+\begin{DoxyCompactList}\small\item\em The events that this Observer responds to. \end{DoxyCompactList}\item 
+List$<$ Action $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_afbedeb396a11124c15f3f8dc67f0c9b4}{to\+Do\+On\+Update}} = new()
+\begin{DoxyCompactList}\small\item\em A buffer for events to run on Update. We cannot call Unity\+Events in the audio thread, so we need a buffer here so we can run them in Update instead. \end{DoxyCompactList}\item 
+string\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a289de6dde811ce51a1207e5db4d95f96}{affected\+Track\+Names}}
+\begin{DoxyCompactList}\small\item\em affected\+Tracks as a list of names rather than a flag int. Cached in Affected\+Tracks \end{DoxyCompactList}\item 
+bool\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a633bba9cac49e89ee1fa21434171b1e5}{has\+Event\+Been\+Added}} = new bool\mbox{[}(int)\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754}{Event\+Type.\+None}}\mbox{]}
+\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 A component used to watch for specific happenings on a \doxylink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output}, e.\+g\+: a clip being a certain volume, a track starting, the tune being in a certain range~\newline
-We don\textquotesingle{}t inherit from Radio\+Component here since we don\textquotesingle{}t need to use a \doxylink{class_ryle_radio_1_1_radio_data}{Radio\+Data} ref, but it\textquotesingle{}s very similar~\newline
-. 
+We don\textquotesingle{}t inherit from Radio\+Component here since we don\textquotesingle{}t need to use a \doxylink{class_ryle_radio_1_1_radio_data}{Radio\+Data} ref, but it\textquotesingle{}s very similar. 
 
 One major thing to notice about this class is that each individual Observer component has specific tracks it\textquotesingle{}s watching for-\/ NOT each individual \doxylink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}. This is due to limitations of Multiselect\+Attribute-\/ it doesn\textquotesingle{}t display in nested lists properly. This is theoretically something I can fix, but I\textquotesingle{}m not fantastic at custom editors so I\textquotesingle{}d prefer to accept this limitation for now. With that being said, this means it {\itshape is} a bit cleaner to navigate multiple Observers in the scene-\/ not all bad! 
 
@@ -110,7 +136,7 @@ Between\+Exclusive&The value is between numbers x and y, including if it\textquo
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!EventType@{EventType}}
 \index{EventType@{EventType}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
@@ -123,42 +149,46 @@ enum \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b4
 The event an observer is looking for. For all options except Track\+Ends and Track\+Starts, we need an other value(s) to detect when this event occurs-\/ for example, checking if volume is above a threshold. 
 
 \begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{OutputVolume@{OutputVolume}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!OutputVolume@{OutputVolume}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a4c1a5c5891c13b2e68ec26994b08bc14}\label{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a4c1a5c5891c13b2e68ec26994b08bc14} 
+Output\+Volume&The volume of the track\+: tune power \texorpdfstring{$\ast$}{*} broadcast power \texorpdfstring{$\ast$}{*} insulation. \\
+\hline
+
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Gain@{Gain}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!Gain@{Gain}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88}\label{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88} 
-Gain&The volume of the track\+: tune power \texorpdfstring{$\ast$}{*} broadcast power \texorpdfstring{$\ast$}{*} insulation. \\
+Gain&The gain of the track\+: this is currently defined exclusively in the track\textquotesingle{}s gain variable. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TunePower@{TunePower}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!TunePower@{TunePower}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a2c7cc15fb1e8401b0c054fc415c66be2}\label{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a2c7cc15fb1e8401b0c054fc415c66be2} 
-Tune\+Power&The gain of the track\+: this is currently defined exclusively in the track\textquotesingle{}s gain variable. \\
+Tune\+Power&The tune power of the track\+: how close the Radio\+Output.\+Tune value is to the range of the track. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{BroadcastPower@{BroadcastPower}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!BroadcastPower@{BroadcastPower}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a9c5156561aae5c21f53ad13034f6e1fd}\label{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a9c5156561aae5c21f53ad13034f6e1fd} 
-Broadcast\+Power&The tune power of the track\+: how close the Radio\+Output.\+Tune value is to the range of the track. \\
+Broadcast\+Power&The broadcast power of the track\+: how close to any active Radio\+Broadcasters the output\textquotesingle{}s transform is. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{Insulation@{Insulation}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!Insulation@{Insulation}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582aac49d4d549aa6409857531a4d093d1df}\label{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582aac49d4d549aa6409857531a4d093d1df} 
-Insulation&The broadcast power of the track\+: how close to any active Radio\+Broadcasters the output\textquotesingle{}s transform is. \\
+Insulation&The insulation of the track\+: the higher the value the less insulation-\/ the power of any \doxylink{class_ryle_radio_1_1_components_1_1_radio_insulator}{Radio\+Insulator} the output is inside of. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TrackEnds@{TrackEnds}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!TrackEnds@{TrackEnds}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a76b9817b7b0d6397d04ab9dd7a22d6bf}\label{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a76b9817b7b0d6397d04ab9dd7a22d6bf} 
-Track\+Ends&The insulation of the track\+: the higher the value the less insulation-\/ the power of any \doxylink{class_ryle_radio_1_1_components_1_1_radio_insulator}{Radio\+Insulator} the output is inside of. \\
+Track\+Ends&The track ends, or loops-\/ this is a singular event. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{TrackStarts@{TrackStarts}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!TrackStarts@{TrackStarts}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582ab6000982d6da8560c9c7ab95efed3f4b}\label{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582ab6000982d6da8560c9c7ab95efed3f4b} 
-Track\+Starts&The track ends, or loops-\/ this is a singular event. \\
+Track\+Starts&The track starts, or loops (happens after Track\+Ends)-\/ this is a singular event. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{OutputTune@{OutputTune}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!OutputTune@{OutputTune}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a774d19c914fce2e5fcbdfcb9481aedf0}\label{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a774d19c914fce2e5fcbdfcb9481aedf0} 
-Output\+Tune&The track starts, or loops (happens after Track\+Ends)-\/ this is a singular event. \\
+Output\+Tune&The tune on the \doxylink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output} is changed. \\
 \hline
 
 \raisebox{\heightof{T}}[0pt][0pt]{\index{None@{None}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!None@{None}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754}\label{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754} 
-None&The tune on the output is changed. Empty, mainly to temporarily disable an event without deleting it \\
+None&Empty, mainly to temporarily disable an event without deleting it. \\
 \hline
 
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
 
 
 
@@ -173,7 +203,142 @@ void Ryle\+Radio.\+Components.\+Radio\+Observer.\+Assign\+Events (\begin{DoxyPar
 
 
 
-Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00131}{131}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00136}{136}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_ab6c602f2a4cbcf49a14ebdf644fac793}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!Awake@{Awake}}
+\index{Awake@{Awake}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{Awake()}{Awake()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_ab6c602f2a4cbcf49a14ebdf644fac793} 
+void Ryle\+Radio.\+Components.\+Radio\+Observer.\+Awake (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00101}{101}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a5cf3400db9f76f6dac74444a693bfa4e}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!OnDestroy@{OnDestroy}}
+\index{OnDestroy@{OnDestroy}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{OnDestroy()}{OnDestroy()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_a5cf3400db9f76f6dac74444a693bfa4e} 
+void Ryle\+Radio.\+Components.\+Radio\+Observer.\+On\+Destroy (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00107}{107}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a7c2706d6c5ec3fa2eb7de2f22ca6ea0c}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!StayEvent@{StayEvent}}
+\index{StayEvent@{StayEvent}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{StayEvent()}{StayEvent()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_a7c2706d6c5ec3fa2eb7de2f22ca6ea0c} 
+void Ryle\+Radio.\+Components.\+Radio\+Observer.\+Stay\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}}}]{\+\_\+event}{, }\item[{float}]{\+\_\+value}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00208}{208}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a1a767f69b2219c279f0f1431d558ebbd}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!TriggerEvent@{TriggerEvent}}
+\index{TriggerEvent@{TriggerEvent}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{TriggerEvent()}{TriggerEvent()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_a1a767f69b2219c279f0f1431d558ebbd} 
+void Ryle\+Radio.\+Components.\+Radio\+Observer.\+Trigger\+Event (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}}}]{\+\_\+event}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00262}{262}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_af96f1100853e1768cb363ec4aafe116d}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!Update@{Update}}
+\index{Update@{Update}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_af96f1100853e1768cb363ec4aafe116d} 
+void Ryle\+Radio.\+Components.\+Radio\+Observer.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00112}{112}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+
+
+\label{doc-variable-members}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a289de6dde811ce51a1207e5db4d95f96}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!affectedTrackNames@{affectedTrackNames}}
+\index{affectedTrackNames@{affectedTrackNames}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{affectedTrackNames}{affectedTrackNames}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_a289de6dde811ce51a1207e5db4d95f96} 
+string \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Components.\+Radio\+Observer.\+affected\+Track\+Names\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+affected\+Tracks as a list of names rather than a flag int. Cached in Affected\+Tracks 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00084}{84}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a4230b55ced5082f104e1dadd7f225737}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!affectedTracks@{affectedTracks}}
+\index{affectedTracks@{affectedTracks}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{affectedTracks}{affectedTracks}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_a4230b55ced5082f104e1dadd7f225737} 
+int Ryle\+Radio.\+Components.\+Radio\+Observer.\+affected\+Tracks\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The tracks that this observer is watching for events on. This is a flag int and is translated to a list of names in Affected\+Tracks. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00062}{62}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a0886bd8a2912dd7f6be8ba2f42ac6b1c}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!events@{events}}
+\index{events@{events}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{events}{events}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_a0886bd8a2912dd7f6be8ba2f42ac6b1c} 
+List$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event}{Observer\+Event}}$>$ Ryle\+Radio.\+Components.\+Radio\+Observer.\+events\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The events that this Observer responds to. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00067}{67}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a633bba9cac49e89ee1fa21434171b1e5}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!hasEventBeenAdded@{hasEventBeenAdded}}
+\index{hasEventBeenAdded@{hasEventBeenAdded}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{hasEventBeenAdded}{hasEventBeenAdded}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_a633bba9cac49e89ee1fa21434171b1e5} 
+bool \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Components.\+Radio\+Observer.\+has\+Event\+Been\+Added = new bool\mbox{[}(int)\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer_a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754}{Event\+Type.\+None}}\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00098}{98}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_a20e98887f8846c29e4f0155c36bf4c66}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!output@{output}}
+\index{output@{output}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{output}{output}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_a20e98887f8846c29e4f0155c36bf4c66} 
+\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output}} Ryle\+Radio.\+Components.\+Radio\+Observer.\+output\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The \doxylink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output} this observer is attached to. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_observer_afbedeb396a11124c15f3f8dc67f0c9b4}\index{RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}!toDoOnUpdate@{toDoOnUpdate}}
+\index{toDoOnUpdate@{toDoOnUpdate}!RyleRadio.Components.RadioObserver@{RyleRadio.Components.RadioObserver}}
+\doxysubsubsection{\texorpdfstring{toDoOnUpdate}{toDoOnUpdate}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_observer_afbedeb396a11124c15f3f8dc67f0c9b4} 
+List$<$Action$>$ Ryle\+Radio.\+Components.\+Radio\+Observer.\+to\+Do\+On\+Update = new()\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+A buffer for events to run on Update. We cannot call Unity\+Events in the audio thread, so we need a buffer here so we can run them in Update instead. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
 
 
 
@@ -188,7 +353,7 @@ string \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Components.\+Radio\+Observer.\+Affecte
 
 
 
-Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00080}{80}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_observer_8cs_source_l00085}{85}} of file \mbox{\hyperlink{_radio_observer_8cs_source}{Radio\+Observer.\+cs}}.
 
 
 

@@ -36,13 +36,33 @@ List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wra
 \item 
 const string \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_aec7a9e25b5afaaddef97b1517ba0d361}{DISPLAY\+\_\+\+NAME}} = "{}Station aka Multi-\/select"{}
 \end{DoxyCompactItemize}
-\doxysubsubsection*{Additional Inherited Members}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper}{Station\+Radio\+Track\+Wrapper}} \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a1e3ff626739a9a98cc08cbaed6d43c98}{Current\+TrackW}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Ryle\+Radio.\+Tracks.\+Radio\+Track}}}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3bc4c9f7923a9314dffdd21f41723941}{Sample\+Rate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
 virtual int \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_ab9bc3ce18b760fcfd3ae4867ded40698}{Sample\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_afedd66f27883a83686668ea3786504f5}{Next\+Track}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_ab28772fad82afd2449c73bcf1a1c643d}{current\+Track\+Index}}
+\item 
+System.\+Random \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a87bb20c4cea6ff3e843a1c155a513969}{random}}
+\item 
+int\mbox{[}$\,$\mbox{]} \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a68f7d080e44965f4fa8b2fb489cf96d4}{remaining\+Tracks\+Before\+Repeat}}
+\item 
+bool \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a3dc169984c4566a72610bb9e52e1aebc}{has\+Printed\+Error}}
 \end{DoxyCompactItemize}
 
 
@@ -98,11 +118,31 @@ Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{R
 
 Definition at line \mbox{\hyperlink{_station_radio_track_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_station_radio_track_8cs_source}{Station\+Radio\+Track.\+cs}}.
 
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_afedd66f27883a83686668ea3786504f5}\index{RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}!NextTrack@{NextTrack}}
+\index{NextTrack@{NextTrack}!RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}}
+\doxysubsubsection{\texorpdfstring{NextTrack()}{NextTrack()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_station_radio_track_afedd66f27883a83686668ea3786504f5} 
+void Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track.\+Next\+Track (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_8cs_source_l00091}{91}} of file \mbox{\hyperlink{_station_radio_track_8cs_source}{Station\+Radio\+Track.\+cs}}.
+
 
 
 \label{doc-variable-members}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_doc-variable-members}
 \doxysubsection{Member Data Documentation}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_ab28772fad82afd2449c73bcf1a1c643d}\index{RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}!currentTrackIndex@{currentTrackIndex}}
+\index{currentTrackIndex@{currentTrackIndex}!RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}}
+\doxysubsubsection{\texorpdfstring{currentTrackIndex}{currentTrackIndex}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_station_radio_track_ab28772fad82afd2449c73bcf1a1c643d} 
+int Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track.\+current\+Track\+Index\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_station_radio_track_8cs_source}{Station\+Radio\+Track.\+cs}}.
+
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_aec7a9e25b5afaaddef97b1517ba0d361}\index{RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}!DISPLAY\_NAME@{DISPLAY\_NAME}}
 \index{DISPLAY\_NAME@{DISPLAY\_NAME}!RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}}
 \doxysubsubsection{\texorpdfstring{DISPLAY\_NAME}{DISPLAY\_NAME}}
@@ -113,6 +153,26 @@ const string Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track.\+DISPLAY\+\_\+\+NAME 
 
 Definition at line \mbox{\hyperlink{_station_radio_track_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_station_radio_track_8cs_source}{Station\+Radio\+Track.\+cs}}.
 
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a3dc169984c4566a72610bb9e52e1aebc}\index{RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}!hasPrintedError@{hasPrintedError}}
+\index{hasPrintedError@{hasPrintedError}!RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}}
+\doxysubsubsection{\texorpdfstring{hasPrintedError}{hasPrintedError}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a3dc169984c4566a72610bb9e52e1aebc} 
+bool Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track.\+has\+Printed\+Error\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_station_radio_track_8cs_source}{Station\+Radio\+Track.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a87bb20c4cea6ff3e843a1c155a513969}\index{RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}!random@{random}}
+\index{random@{random}!RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}}
+\doxysubsubsection{\texorpdfstring{random}{random}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a87bb20c4cea6ff3e843a1c155a513969} 
+System.\+Random Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track.\+random\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_8cs_source_l00039}{39}} of file \mbox{\hyperlink{_station_radio_track_8cs_source}{Station\+Radio\+Track.\+cs}}.
+
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a9c325018c6641f7f483127889959ccd4}\index{RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}!randomSequence@{randomSequence}}
 \index{randomSequence@{randomSequence}!RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}}
 \doxysubsubsection{\texorpdfstring{randomSequence}{randomSequence}}
@@ -122,6 +182,16 @@ bool Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track.\+random\+Sequence = true}
 
 
 Definition at line \mbox{\hyperlink{_station_radio_track_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_station_radio_track_8cs_source}{Station\+Radio\+Track.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a68f7d080e44965f4fa8b2fb489cf96d4}\index{RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}!remainingTracksBeforeRepeat@{remainingTracksBeforeRepeat}}
+\index{remainingTracksBeforeRepeat@{remainingTracksBeforeRepeat}!RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}}
+\doxysubsubsection{\texorpdfstring{remainingTracksBeforeRepeat}{remainingTracksBeforeRepeat}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a68f7d080e44965f4fa8b2fb489cf96d4} 
+int \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track.\+remaining\+Tracks\+Before\+Repeat\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_8cs_source_l00047}{47}} of file \mbox{\hyperlink{_station_radio_track_8cs_source}{Station\+Radio\+Track.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_ab9992c3d9eaa3024e96a0ecc53b5b5b2}\index{RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}!stationTrackWs@{stationTrackWs}}
 \index{stationTrackWs@{stationTrackWs}!RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}}
@@ -142,6 +212,21 @@ float Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track.\+threshold\+Before\+Repeats}
 
 
 Definition at line \mbox{\hyperlink{_station_radio_track_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_station_radio_track_8cs_source}{Station\+Radio\+Track.\+cs}}.
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a1e3ff626739a9a98cc08cbaed6d43c98}\index{RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}!CurrentTrackW@{CurrentTrackW}}
+\index{CurrentTrackW@{CurrentTrackW}!RyleRadio.Tracks.StationRadioTrack@{RyleRadio.Tracks.StationRadioTrack}}
+\doxysubsubsection{\texorpdfstring{CurrentTrackW}{CurrentTrackW}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_station_radio_track_a1e3ff626739a9a98cc08cbaed6d43c98} 
+\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper}{Station\+Radio\+Track\+Wrapper}} Ryle\+Radio.\+Tracks.\+Station\+Radio\+Track.\+Current\+TrackW\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_station_radio_track_8cs_source}{Station\+Radio\+Track.\+cs}}.
 
 
 

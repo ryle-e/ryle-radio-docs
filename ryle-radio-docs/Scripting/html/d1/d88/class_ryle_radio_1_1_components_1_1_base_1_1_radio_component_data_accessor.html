@@ -126,8 +126,17 @@ Properties</h2></td></tr>
 <tr class="memitem:a18d15e5703cd4ae9c95a1514cc71ab0a" id="r_a18d15e5703cd4ae9c95a1514cc71ab0a"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a18d15e5703cd4ae9c95a1514cc71ab0a">TrackNames</a><code> [get]</code></td></tr>
 <tr class="memitem:aff234a98e8505ef320008539fb96289f" id="r_aff234a98e8505ef320008539fb96289f"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html">RadioComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff234a98e8505ef320008539fb96289f">OnInit</a> = new(_ =&gt; { })<code> [get, set]</code></td></tr>
 <tr class="inherit_header properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Properties inherited from <a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html">RyleRadio.Components.Base.RadioComponent</a></td></tr>
-<tr class="memitem:a4793e3a84e577d89c5fb781f124ae86c inherit properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component" id="r_a4793e3a84e577d89c5fb781f124ae86c"><td class="memItemLeft" align="right" valign="top">static Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html#a4793e3a84e577d89c5fb781f124ae86c">InitAllComponents</a> = new(() =&gt; { })<code> [get]</code></td></tr>
+<tr class="memitem:a4793e3a84e577d89c5fb781f124ae86c inherit properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component" id="r_a4793e3a84e577d89c5fb781f124ae86c"><td class="memItemLeft" align="right" valign="top">static Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html#a4793e3a84e577d89c5fb781f124ae86c">InitAllComponents</a> = new(() =&gt; { })<code> [get, private set]</code></td></tr>
 <tr class="memitem:a335030dac70cfaabc169f1e5743bcacd inherit properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component" id="r_a335030dac70cfaabc169f1e5743bcacd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html#a335030dac70cfaabc169f1e5743bcacd">Data</a><code> [get]</code></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:a35177fa85c52331735ed26eadf793574" id="r_a35177fa85c52331735ed26eadf793574"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35177fa85c52331735ed26eadf793574">AssignToTracksGeneric</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a9c87649b6167695a3b0a649c50961744" id="r_a9c87649b6167695a3b0a649c50961744"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c87649b6167695a3b0a649c50961744">affectedTracks</a></td></tr>
+<tr class="memitem:a5b160b4c1c9f9cb88eaeec59a03f2a31" id="r_a5b160b4c1c9f9cb88eaeec59a03f2a31"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b160b4c1c9f9cb88eaeec59a03f2a31">lastAffectedTracks</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-inherited" class="groupheader"><a id="inherited" name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -165,6 +174,33 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a35177fa85c52331735ed26eadf793574" name="a35177fa85c52331735ed26eadf793574"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35177fa85c52331735ed26eadf793574">&#9670;&#160;</a></span>AssignToTracksGeneric()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RyleRadio.Components.Base.RadioComponentDataAccessor.AssignToTracksGeneric </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d94/_radio_component_data_accessor_8cs_source.html#l00035">35</a> of file <a class="el" href="../../d2/d94/_radio_component_data_accessor_8cs_source.html">RadioComponentDataAccessor.cs</a>.</p>
+
+</div>
+</div>
 <a id="a97e324fd72344ee550241979fc85d5b5" name="a97e324fd72344ee550241979fc85d5b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a97e324fd72344ee550241979fc85d5b5">&#9670;&#160;</a></span>Init()</h2>
 
@@ -181,6 +217,55 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/d94/_radio_component_data_accessor_8cs_source.html#l00025">25</a> of file <a class="el" href="../../d2/d94/_radio_component_data_accessor_8cs_source.html">RadioComponentDataAccessor.cs</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a9c87649b6167695a3b0a649c50961744" name="a9c87649b6167695a3b0a649c50961744"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c87649b6167695a3b0a649c50961744">&#9670;&#160;</a></span>affectedTracks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RyleRadio.Components.Base.RadioComponentDataAccessor.affectedTracks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d94/_radio_component_data_accessor_8cs_source.html#l00013">13</a> of file <a class="el" href="../../d2/d94/_radio_component_data_accessor_8cs_source.html">RadioComponentDataAccessor.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5b160b4c1c9f9cb88eaeec59a03f2a31" name="a5b160b4c1c9f9cb88eaeec59a03f2a31"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b160b4c1c9f9cb88eaeec59a03f2a31">&#9670;&#160;</a></span>lastAffectedTracks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RyleRadio.Components.Base.RadioComponentDataAccessor.lastAffectedTracks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d2/d94/_radio_component_data_accessor_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d2/d94/_radio_component_data_accessor_8cs_source.html">RadioComponentDataAccessor.cs</a>.</p>
 
 </div>
 </div>

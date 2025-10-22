@@ -58,7 +58,7 @@ Vector3 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a78d10
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radio\+Observer}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a1d1c31221ea897d47f1bc6751c723edd}{Observers}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radio\+Observer}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a1d1c31221ea897d47f1bc6751c723edd}{Observers}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \item 
 Action$<$ float $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a0b1152b45511492e7c2d154ab4232dcb}{On\+Tune}} = new(\+\_\+ =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
 \item 
@@ -71,9 +71,25 @@ float \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a8506b03
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component}}}
 \begin{DoxyCompactItemize}
 \item 
-static Action \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a4793e3a84e577d89c5fb781f124ae86c}{Init\+All\+Components}} = new(() =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+static Action \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a4793e3a84e577d89c5fb781f124ae86c}{Init\+All\+Components}} = new(() =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \item 
 \mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{Radio\+Data}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a335030dac70cfaabc169f1e5743bcacd}{Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_ada8745b2d1d0bb312a4e3df310d7cc92}{Exec\+On\+Tune}} ()
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a8025d5d2093e568efc9ef70f7d7d748f}{Start}} ()
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a64b45eb880590441ac5d24eef4303ba4}{Start\+Players}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_ad8016bfd177ced7adb9d24031587c019}{base\+Sample\+Rate}}
+\item 
+Action \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a8d23a3577408968b72322be398f0ca97}{play\+Events}} = () =$>$ \{ \}
 \end{DoxyCompactItemize}
 
 
@@ -102,6 +118,16 @@ Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00021}{21}} of fil
 \label{doc-func-members}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_doc-func-members}
 \doxysubsection{Member Function Documentation}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_ada8745b2d1d0bb312a4e3df310d7cc92}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!ExecOnTune@{ExecOnTune}}
+\index{ExecOnTune@{ExecOnTune}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
+\doxysubsubsection{\texorpdfstring{ExecOnTune()}{ExecOnTune()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_output_ada8745b2d1d0bb312a4e3df310d7cc92} 
+void Ryle\+Radio.\+Components.\+Radio\+Output.\+Exec\+On\+Tune (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00077}{77}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a93bf83f9468286d8b5ceec2e11fe400c}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Init@{Init}}
 \index{Init@{Init}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{Init()}{Init()}}
@@ -162,6 +188,26 @@ Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00206}{206}} of fi
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00175}{175}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a8025d5d2093e568efc9ef70f7d7d748f}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Start@{Start}}
+\index{Start@{Start}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
+\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_output_a8025d5d2093e568efc9ef70f7d7d748f} 
+void Ryle\+Radio.\+Components.\+Radio\+Output.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00091}{91}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a64b45eb880590441ac5d24eef4303ba4}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!StartPlayers@{StartPlayers}}
+\index{StartPlayers@{StartPlayers}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
+\doxysubsubsection{\texorpdfstring{StartPlayers()}{StartPlayers()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_output_a64b45eb880590441ac5d24eef4303ba4} 
+void Ryle\+Radio.\+Components.\+Radio\+Output.\+Start\+Players (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00157}{157}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_ab3bc47036b92f51fe9ff4deebf6a0edf}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!TryGetPlayer@{TryGetPlayer}}
 \index{TryGetPlayer@{TryGetPlayer}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{TryGetPlayer()}{TryGetPlayer()}}
@@ -187,6 +233,16 @@ Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00084}{84}} of fil
 \label{doc-variable-members}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_doc-variable-members}
 \doxysubsection{Member Data Documentation}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_ad8016bfd177ced7adb9d24031587c019}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!baseSampleRate@{baseSampleRate}}
+\index{baseSampleRate@{baseSampleRate}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
+\doxysubsubsection{\texorpdfstring{baseSampleRate}{baseSampleRate}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_output_ad8016bfd177ced7adb9d24031587c019} 
+float Ryle\+Radio.\+Components.\+Radio\+Output.\+base\+Sample\+Rate\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a78d108fcf5c713a73f416b05199d139d}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!cachedPos@{cachedPos}}
 \index{cachedPos@{cachedPos}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{cachedPos}{cachedPos}}
@@ -206,6 +262,16 @@ List$<$\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radi
 
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a8d23a3577408968b72322be398f0ca97}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!playEvents@{playEvents}}
+\index{playEvents@{playEvents}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
+\doxysubsubsection{\texorpdfstring{playEvents}{playEvents}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_output_a8d23a3577408968b72322be398f0ca97} 
+Action Ryle\+Radio.\+Components.\+Radio\+Output.\+play\+Events = () =$>$ \{ \}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_aa9d468c4d678c5e50ffd5536bc3a0a5f}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!tune@{tune}}
 \index{tune@{tune}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -236,7 +302,7 @@ Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00070}{70}} of fil
 \index{Observers@{Observers}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{Observers}{Observers}}
 {\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_output_a1d1c31221ea897d47f1bc6751c723edd} 
-List$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radio\+Observer}}$>$ Ryle\+Radio.\+Components.\+Radio\+Output.\+Observers = new()\hspace{0.3cm}{\ttfamily [get]}}
+List$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radio\+Observer}}$>$ Ryle\+Radio.\+Components.\+Radio\+Output.\+Observers = new()\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 

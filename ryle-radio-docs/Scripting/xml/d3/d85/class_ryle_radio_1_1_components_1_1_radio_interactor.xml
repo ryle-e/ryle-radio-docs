@@ -178,6 +178,9 @@
         <link refid="d3/d85/class_ryle_radio_1_1_components_1_1_radio_interactor"/>
         <childnode refid="2" relation="public-inheritance">
         </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>playerSelector</edgelabel>
+        </childnode>
       </node>
       <node id="5">
         <label>RyleRadio.Components.Base.RadioComponent</label>

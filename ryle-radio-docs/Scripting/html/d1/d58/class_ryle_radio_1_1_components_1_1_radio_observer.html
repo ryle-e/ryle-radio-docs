@@ -96,8 +96,7 @@ $(function(){initNavTree('d1/d58/class_ryle_radio_1_1_components_1_1_radio_obser
 <div class="contents">
 
 <p>A component used to watch for specific happenings on a <a class="el" href="../../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html">RadioOutput</a>, e.g: a clip being a certain volume, a track starting, the tune being in a certain range<br  />
-We don't inherit from RadioComponent here since we don't need to use a <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a> ref, but it's very similar<br  />
-.  
+We don't inherit from RadioComponent here since we don't need to use a <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a> ref, but it's very similar.  
  <a href="#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for RyleRadio.Components.RadioObserver:</div>
@@ -113,7 +112,7 @@ Classes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-types" class="groupheader"><a id="pub-types" name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a7c36b405481c6e9460645aa9b0418582" id="r_a7c36b405481c6e9460645aa9b0418582"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c36b405481c6e9460645aa9b0418582">EventType</a> { <br />
-&#160;&#160;<b>OutputVolume</b>
+&#160;&#160;<a class="el" href="#a7c36b405481c6e9460645aa9b0418582a4c1a5c5891c13b2e68ec26994b08bc14">OutputVolume</a>
 , <a class="el" href="#a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88">Gain</a>
 , <a class="el" href="#a7c36b405481c6e9460645aa9b0418582a2c7cc15fb1e8401b0c054fc415c66be2">TunePower</a>
 , <a class="el" href="#a7c36b405481c6e9460645aa9b0418582a9c5156561aae5c21f53ad13034f6e1fd">BroadcastPower</a>
@@ -147,11 +146,32 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a79a7484b93704449f8b9691f13a25bc5" id="r_a79a7484b93704449f8b9691f13a25bc5"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79a7484b93704449f8b9691f13a25bc5">AffectedTracks</a><code> [get]</code></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:ab6c602f2a4cbcf49a14ebdf644fac793" id="r_ab6c602f2a4cbcf49a14ebdf644fac793"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6c602f2a4cbcf49a14ebdf644fac793">Awake</a> ()</td></tr>
+<tr class="memitem:a5cf3400db9f76f6dac74444a693bfa4e" id="r_a5cf3400db9f76f6dac74444a693bfa4e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5cf3400db9f76f6dac74444a693bfa4e">OnDestroy</a> ()</td></tr>
+<tr class="memitem:af96f1100853e1768cb363ec4aafe116d" id="r_af96f1100853e1768cb363ec4aafe116d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af96f1100853e1768cb363ec4aafe116d">Update</a> ()</td></tr>
+<tr class="memitem:a7c2706d6c5ec3fa2eb7de2f22ca6ea0c" id="r_a7c2706d6c5ec3fa2eb7de2f22ca6ea0c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7c2706d6c5ec3fa2eb7de2f22ca6ea0c">StayEvent</a> (<a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a> _event, float _value)</td></tr>
+<tr class="memitem:a1a767f69b2219c279f0f1431d558ebbd" id="r_a1a767f69b2219c279f0f1431d558ebbd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1a767f69b2219c279f0f1431d558ebbd">TriggerEvent</a> (<a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a> _event)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a20e98887f8846c29e4f0155c36bf4c66" id="r_a20e98887f8846c29e4f0155c36bf4c66"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html">RadioOutput</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20e98887f8846c29e4f0155c36bf4c66">output</a></td></tr>
+<tr class="memdesc:a20e98887f8846c29e4f0155c36bf4c66"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html">RadioOutput</a> this observer is attached to.  <br /></td></tr>
+<tr class="memitem:a4230b55ced5082f104e1dadd7f225737" id="r_a4230b55ced5082f104e1dadd7f225737"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4230b55ced5082f104e1dadd7f225737">affectedTracks</a></td></tr>
+<tr class="memdesc:a4230b55ced5082f104e1dadd7f225737"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tracks that this observer is watching for events on. This is a flag int and is translated to a list of names in AffectedTracks.  <br /></td></tr>
+<tr class="memitem:a0886bd8a2912dd7f6be8ba2f42ac6b1c" id="r_a0886bd8a2912dd7f6be8ba2f42ac6b1c"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0886bd8a2912dd7f6be8ba2f42ac6b1c">events</a></td></tr>
+<tr class="memdesc:a0886bd8a2912dd7f6be8ba2f42ac6b1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The events that this Observer responds to.  <br /></td></tr>
+<tr class="memitem:afbedeb396a11124c15f3f8dc67f0c9b4" id="r_afbedeb396a11124c15f3f8dc67f0c9b4"><td class="memItemLeft" align="right" valign="top">List&lt; Action &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbedeb396a11124c15f3f8dc67f0c9b4">toDoOnUpdate</a> = new()</td></tr>
+<tr class="memdesc:afbedeb396a11124c15f3f8dc67f0c9b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">A buffer for events to run on Update. We cannot call UnityEvents in the audio thread, so we need a buffer here so we can run them in Update instead.  <br /></td></tr>
+<tr class="memitem:a289de6dde811ce51a1207e5db4d95f96" id="r_a289de6dde811ce51a1207e5db4d95f96"><td class="memItemLeft" align="right" valign="top">string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a289de6dde811ce51a1207e5db4d95f96">affectedTrackNames</a></td></tr>
+<tr class="memdesc:a289de6dde811ce51a1207e5db4d95f96"><td class="mdescLeft">&#160;</td><td class="mdescRight">affectedTracks as a list of names rather than a flag int. Cached in AffectedTracks  <br /></td></tr>
+<tr class="memitem:a633bba9cac49e89ee1fa21434171b1e5" id="r_a633bba9cac49e89ee1fa21434171b1e5"><td class="memItemLeft" align="right" valign="top">bool[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a633bba9cac49e89ee1fa21434171b1e5">hasEventBeenAdded</a> = new bool[(int)<a class="el" href="#a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754">EventType.None</a>]</td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A component used to watch for specific happenings on a <a class="el" href="../../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html">RadioOutput</a>, e.g: a clip being a certain volume, a track starting, the tune being in a certain range<br  />
-We don't inherit from RadioComponent here since we don't need to use a <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a> ref, but it's very similar<br  />
-. </p>
+We don't inherit from RadioComponent here since we don't need to use a <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a> ref, but it's very similar. </p>
 <p>One major thing to notice about this class is that each individual Observer component has specific tracks it's watching for- NOT each individual <a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a>. This is due to limitations of MultiselectAttribute- it doesn't display in nested lists properly. This is theoretically something I can fix, but I'm not fantastic at custom editors so I'd prefer to accept this limitation for now. With that being said, this means it <em>is</em> a bit cleaner to navigate multiple Observers in the scene- not all bad! </p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00009">9</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
@@ -185,7 +205,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00041">41</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00042">42</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -203,26 +223,27 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 
 <p>The event an observer is looking for. For all options except TrackEnds and TrackStarts, we need an other value(s) to detect when this event occurs- for example, checking if volume is above a threshold. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88" name="a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88"></a>Gain&#160;</td><td class="fielddoc"><p>The volume of the track: tune power * broadcast power * insulation. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a4c1a5c5891c13b2e68ec26994b08bc14" name="a7c36b405481c6e9460645aa9b0418582a4c1a5c5891c13b2e68ec26994b08bc14"></a>OutputVolume&#160;</td><td class="fielddoc"><p>The volume of the track: tune power * broadcast power * insulation. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a2c7cc15fb1e8401b0c054fc415c66be2" name="a7c36b405481c6e9460645aa9b0418582a2c7cc15fb1e8401b0c054fc415c66be2"></a>TunePower&#160;</td><td class="fielddoc"><p>The gain of the track: this is currently defined exclusively in the track's gain variable. </p>
+<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88" name="a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88"></a>Gain&#160;</td><td class="fielddoc"><p>The gain of the track: this is currently defined exclusively in the track's gain variable. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a9c5156561aae5c21f53ad13034f6e1fd" name="a7c36b405481c6e9460645aa9b0418582a9c5156561aae5c21f53ad13034f6e1fd"></a>BroadcastPower&#160;</td><td class="fielddoc"><p>The tune power of the track: how close the RadioOutput.Tune value is to the range of the track. </p>
+<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a2c7cc15fb1e8401b0c054fc415c66be2" name="a7c36b405481c6e9460645aa9b0418582a2c7cc15fb1e8401b0c054fc415c66be2"></a>TunePower&#160;</td><td class="fielddoc"><p>The tune power of the track: how close the RadioOutput.Tune value is to the range of the track. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582aac49d4d549aa6409857531a4d093d1df" name="a7c36b405481c6e9460645aa9b0418582aac49d4d549aa6409857531a4d093d1df"></a>Insulation&#160;</td><td class="fielddoc"><p>The broadcast power of the track: how close to any active RadioBroadcasters the output's transform is. </p>
+<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a9c5156561aae5c21f53ad13034f6e1fd" name="a7c36b405481c6e9460645aa9b0418582a9c5156561aae5c21f53ad13034f6e1fd"></a>BroadcastPower&#160;</td><td class="fielddoc"><p>The broadcast power of the track: how close to any active RadioBroadcasters the output's transform is. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a76b9817b7b0d6397d04ab9dd7a22d6bf" name="a7c36b405481c6e9460645aa9b0418582a76b9817b7b0d6397d04ab9dd7a22d6bf"></a>TrackEnds&#160;</td><td class="fielddoc"><p>The insulation of the track: the higher the value the less insulation- the power of any <a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html">RadioInsulator</a> the output is inside of. </p>
+<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582aac49d4d549aa6409857531a4d093d1df" name="a7c36b405481c6e9460645aa9b0418582aac49d4d549aa6409857531a4d093d1df"></a>Insulation&#160;</td><td class="fielddoc"><p>The insulation of the track: the higher the value the less insulation- the power of any <a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html">RadioInsulator</a> the output is inside of. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582ab6000982d6da8560c9c7ab95efed3f4b" name="a7c36b405481c6e9460645aa9b0418582ab6000982d6da8560c9c7ab95efed3f4b"></a>TrackStarts&#160;</td><td class="fielddoc"><p>The track ends, or loops- this is a singular event. </p>
+<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a76b9817b7b0d6397d04ab9dd7a22d6bf" name="a7c36b405481c6e9460645aa9b0418582a76b9817b7b0d6397d04ab9dd7a22d6bf"></a>TrackEnds&#160;</td><td class="fielddoc"><p>The track ends, or loops- this is a singular event. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a774d19c914fce2e5fcbdfcb9481aedf0" name="a7c36b405481c6e9460645aa9b0418582a774d19c914fce2e5fcbdfcb9481aedf0"></a>OutputTune&#160;</td><td class="fielddoc"><p>The track starts, or loops (happens after TrackEnds)- this is a singular event. </p>
+<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582ab6000982d6da8560c9c7ab95efed3f4b" name="a7c36b405481c6e9460645aa9b0418582ab6000982d6da8560c9c7ab95efed3f4b"></a>TrackStarts&#160;</td><td class="fielddoc"><p>The track starts, or loops (happens after TrackEnds)- this is a singular event. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754" name="a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>The tune on the output is changed. </p>
-<p>Empty, mainly to temporarily disable an event without deleting it </p>
+<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a774d19c914fce2e5fcbdfcb9481aedf0" name="a7c36b405481c6e9460645aa9b0418582a774d19c914fce2e5fcbdfcb9481aedf0"></a>OutputTune&#160;</td><td class="fielddoc"><p>The tune on the <a class="el" href="../../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html">RadioOutput</a> is changed. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754" name="a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754"></a>None&#160;</td><td class="fielddoc"><p>Empty, mainly to temporarily disable an event without deleting it. </p>
 </td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00024">24</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00025">25</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -242,7 +263,301 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00131">131</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00136">136</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a id="ab6c602f2a4cbcf49a14ebdf644fac793" name="ab6c602f2a4cbcf49a14ebdf644fac793"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab6c602f2a4cbcf49a14ebdf644fac793">&#9670;&#160;</a></span>Awake()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RyleRadio.Components.RadioObserver.Awake </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00101">101</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a id="a5cf3400db9f76f6dac74444a693bfa4e" name="a5cf3400db9f76f6dac74444a693bfa4e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5cf3400db9f76f6dac74444a693bfa4e">&#9670;&#160;</a></span>OnDestroy()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RyleRadio.Components.RadioObserver.OnDestroy </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00107">107</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a id="a7c2706d6c5ec3fa2eb7de2f22ca6ea0c" name="a7c2706d6c5ec3fa2eb7de2f22ca6ea0c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7c2706d6c5ec3fa2eb7de2f22ca6ea0c">&#9670;&#160;</a></span>StayEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RyleRadio.Components.RadioObserver.StayEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a></td>          <td class="paramname"><span class="paramname"><em>_event</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>_value</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00208">208</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a id="a1a767f69b2219c279f0f1431d558ebbd" name="a1a767f69b2219c279f0f1431d558ebbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1a767f69b2219c279f0f1431d558ebbd">&#9670;&#160;</a></span>TriggerEvent()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RyleRadio.Components.RadioObserver.TriggerEvent </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a></td>          <td class="paramname"><span class="paramname"><em>_event</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00262">262</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a id="af96f1100853e1768cb363ec4aafe116d" name="af96f1100853e1768cb363ec4aafe116d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af96f1100853e1768cb363ec4aafe116d">&#9670;&#160;</a></span>Update()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RyleRadio.Components.RadioObserver.Update </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00112">112</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a289de6dde811ce51a1207e5db4d95f96" name="a289de6dde811ce51a1207e5db4d95f96"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a289de6dde811ce51a1207e5db4d95f96">&#9670;&#160;</a></span>affectedTrackNames</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">string [] RyleRadio.Components.RadioObserver.affectedTrackNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>affectedTracks as a list of names rather than a flag int. Cached in AffectedTracks </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00084">84</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a id="a4230b55ced5082f104e1dadd7f225737" name="a4230b55ced5082f104e1dadd7f225737"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4230b55ced5082f104e1dadd7f225737">&#9670;&#160;</a></span>affectedTracks</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RyleRadio.Components.RadioObserver.affectedTracks</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The tracks that this observer is watching for events on. This is a flag int and is translated to a list of names in AffectedTracks. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00062">62</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a id="a0886bd8a2912dd7f6be8ba2f42ac6b1c" name="a0886bd8a2912dd7f6be8ba2f42ac6b1c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0886bd8a2912dd7f6be8ba2f42ac6b1c">&#9670;&#160;</a></span>events</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="../../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html">ObserverEvent</a>&gt; RyleRadio.Components.RadioObserver.events</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The events that this Observer responds to. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00067">67</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a id="a633bba9cac49e89ee1fa21434171b1e5" name="a633bba9cac49e89ee1fa21434171b1e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a633bba9cac49e89ee1fa21434171b1e5">&#9670;&#160;</a></span>hasEventBeenAdded</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool [] RyleRadio.Components.RadioObserver.hasEventBeenAdded = new bool[(int)<a class="el" href="#a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754">EventType.None</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00098">98</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a id="a20e98887f8846c29e4f0155c36bf4c66" name="a20e98887f8846c29e4f0155c36bf4c66"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20e98887f8846c29e4f0155c36bf4c66">&#9670;&#160;</a></span>output</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html">RadioOutput</a> RyleRadio.Components.RadioObserver.output</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>The <a class="el" href="../../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html">RadioOutput</a> this observer is attached to. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00056">56</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+
+</div>
+</div>
+<a id="afbedeb396a11124c15f3f8dc67f0c9b4" name="afbedeb396a11124c15f3f8dc67f0c9b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbedeb396a11124c15f3f8dc67f0c9b4">&#9670;&#160;</a></span>toDoOnUpdate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;Action&gt; RyleRadio.Components.RadioObserver.toDoOnUpdate = new()</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>A buffer for events to run on Update. We cannot call UnityEvents in the audio thread, so we need a buffer here so we can run them in Update instead. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00073">73</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>
@@ -267,7 +582,7 @@ We don't inherit from RadioComponent here since we don't need to use a <a class=
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00080">80</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00085">85</a> of file <a class="el" href="../../da/d11/_radio_observer_8cs_source.html">RadioObserver.cs</a>.</p>
 
 </div>
 </div>

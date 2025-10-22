@@ -71,7 +71,7 @@
   <option  id='NUM_PROC_THREADS' default='yes' type='int'><value>1</value></option>
   <option  id='TIMESTAMP' default='no' type='string'><value>DATE</value></option>
   <option  id='EXTRACT_ALL' default='yes' type='bool'><value>NO</value></option>
-  <option  id='EXTRACT_PRIVATE' default='yes' type='bool'><value>NO</value></option>
+  <option  id='EXTRACT_PRIVATE' default='no' type='bool'><value>YES</value></option>
   <option  id='EXTRACT_PRIV_VIRTUAL' default='yes' type='bool'><value>NO</value></option>
   <option  id='EXTRACT_PACKAGE' default='no' type='bool'><value>YES</value></option>
   <option  id='EXTRACT_STATIC' default='no' type='bool'><value>YES</value></option>
@@ -355,7 +355,8 @@
   </option>
   <option  id='INCLUDE_FILE_PATTERNS' default='yes' type='stringlist'>
   </option>
-  <option  id='PREDEFINED' default='yes' type='stringlist'>
+  <option  id='PREDEFINED' default='no' type='stringlist'>
+    <value><![CDATA[SKIP_IN_DOXYGEN]]></value>
   </option>
   <option  id='EXPAND_AS_DEFINED' default='yes' type='stringlist'>
   </option>

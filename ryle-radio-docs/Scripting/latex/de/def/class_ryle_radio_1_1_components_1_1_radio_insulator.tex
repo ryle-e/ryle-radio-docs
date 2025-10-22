@@ -47,9 +47,11 @@ virtual void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-Vector3 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator_a955179f46aa6eb7a35aa264b3e9122c3}{Inner\+Box\+Size\+Adjusted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+Vector3 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator_a955179f46aa6eb7a35aa264b3e9122c3}{Inner\+Box\+Size\+Adjusted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \item 
-Vector3 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator_a6f1684f954ccec6377dcb1c70fcf2416}{Outer\+Box\+Size\+Adjusted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+Vector3 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator_a6f1684f954ccec6377dcb1c70fcf2416}{Outer\+Box\+Size\+Adjusted}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
+\item 
+bool \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator_a025d76cec1f1d224879fa4896f89610f}{Show\+Apply\+To\+All\+Outputs}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component\+Data\+Accessor}}}
 \begin{DoxyCompactItemize}
@@ -61,9 +63,25 @@ Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_co
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component}}}
 \begin{DoxyCompactItemize}
 \item 
-static Action \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a4793e3a84e577d89c5fb781f124ae86c}{Init\+All\+Components}} = new(() =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+static Action \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a4793e3a84e577d89c5fb781f124ae86c}{Init\+All\+Components}} = new(() =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
 \item 
 \mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{Radio\+Data}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a335030dac70cfaabc169f1e5743bcacd}{Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator_ac6afd2bb17f315fe56a0a0c7d7f68cb7}{Update}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator_a937d05bd717235907743c8210e4082b9}{insulation}} = new(0, 0.\+5f)
+\item 
+Animation\+Curve \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator_af8ab13698fc249886c12a3a5f0337ef1}{insulation\+Curve}} = Animation\+Curve.\+Linear(0, 0, 1, 1)
+\item 
+bool \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator_a4cd08ae8124b74a038182505a759ad4d}{apply\+To\+All\+Outputs\+Outside}} = false
+\item 
+Vector3 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator_ac6c5ef702e17cb7d8b3281f06809b443}{cached\+Pos}}
 \end{DoxyCompactItemize}
 \doxysubsubsection*{Additional Inherited Members}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component}}}
@@ -113,11 +131,41 @@ override void Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Remove\+From\+Track 
 
 Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00065}{65}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
 
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_ac6afd2bb17f315fe56a0a0c7d7f68cb7}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!Update@{Update}}
+\index{Update@{Update}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
+\doxysubsubsection{\texorpdfstring{Update()}{Update()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_insulator_ac6afd2bb17f315fe56a0a0c7d7f68cb7} 
+void Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00048}{48}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
+
 
 
 \label{doc-variable-members}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_doc-variable-members}
 \doxysubsection{Member Data Documentation}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_a4cd08ae8124b74a038182505a759ad4d}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!applyToAllOutputsOutside@{applyToAllOutputsOutside}}
+\index{applyToAllOutputsOutside@{applyToAllOutputsOutside}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
+\doxysubsubsection{\texorpdfstring{applyToAllOutputsOutside}{applyToAllOutputsOutside}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_insulator_a4cd08ae8124b74a038182505a759ad4d} 
+bool Ryle\+Radio.\+Components.\+Radio\+Insulator.\+apply\+To\+All\+Outputs\+Outside = false\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_ac6c5ef702e17cb7d8b3281f06809b443}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!cachedPos@{cachedPos}}
+\index{cachedPos@{cachedPos}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
+\doxysubsubsection{\texorpdfstring{cachedPos}{cachedPos}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_insulator_ac6c5ef702e17cb7d8b3281f06809b443} 
+Vector3 Ryle\+Radio.\+Components.\+Radio\+Insulator.\+cached\+Pos\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00039}{39}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
+
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_a8ab1aa848d9e6f4546d18a8964484494}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!innerBoxSize@{innerBoxSize}}
 \index{innerBoxSize@{innerBoxSize}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
 \doxysubsubsection{\texorpdfstring{innerBoxSize}{innerBoxSize}}
@@ -127,6 +175,26 @@ Vector3 Ryle\+Radio.\+Components.\+Radio\+Insulator.\+inner\+Box\+Size = Vector3
 
 
 Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_a937d05bd717235907743c8210e4082b9}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!insulation@{insulation}}
+\index{insulation@{insulation}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
+\doxysubsubsection{\texorpdfstring{insulation}{insulation}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_insulator_a937d05bd717235907743c8210e4082b9} 
+Vector2 Ryle\+Radio.\+Components.\+Radio\+Insulator.\+insulation = new(0, 0.\+5f)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_af8ab13698fc249886c12a3a5f0337ef1}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!insulationCurve@{insulationCurve}}
+\index{insulationCurve@{insulationCurve}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
+\doxysubsubsection{\texorpdfstring{insulationCurve}{insulationCurve}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_insulator_af8ab13698fc249886c12a3a5f0337ef1} 
+Animation\+Curve Ryle\+Radio.\+Components.\+Radio\+Insulator.\+insulation\+Curve = Animation\+Curve.\+Linear(0, 0, 1, 1)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_a74ee8d59c8f87b39a40658639aa40277}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!outerBoxSize@{outerBoxSize}}
 \index{outerBoxSize@{outerBoxSize}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
@@ -147,7 +215,7 @@ Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00018}{18}} of 
 \index{InnerBoxSizeAdjusted@{InnerBoxSizeAdjusted}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
 \doxysubsubsection{\texorpdfstring{InnerBoxSizeAdjusted}{InnerBoxSizeAdjusted}}
 {\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_insulator_a955179f46aa6eb7a35aa264b3e9122c3} 
-Vector3 Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Inner\+Box\+Size\+Adjusted\hspace{0.3cm}{\ttfamily [get]}}
+Vector3 Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Inner\+Box\+Size\+Adjusted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 
@@ -157,11 +225,21 @@ Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00042}{42}} of 
 \index{OuterBoxSizeAdjusted@{OuterBoxSizeAdjusted}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
 \doxysubsubsection{\texorpdfstring{OuterBoxSizeAdjusted}{OuterBoxSizeAdjusted}}
 {\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_insulator_a6f1684f954ccec6377dcb1c70fcf2416} 
-Vector3 Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Outer\+Box\+Size\+Adjusted\hspace{0.3cm}{\ttfamily [get]}}
+Vector3 Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Outer\+Box\+Size\+Adjusted\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private set]}}
 
 
 
 Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00043}{43}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_a025d76cec1f1d224879fa4896f89610f}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!ShowApplyToAllOutputs@{ShowApplyToAllOutputs}}
+\index{ShowApplyToAllOutputs@{ShowApplyToAllOutputs}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
+\doxysubsubsection{\texorpdfstring{ShowApplyToAllOutputs}{ShowApplyToAllOutputs}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_insulator_a025d76cec1f1d224879fa4896f89610f} 
+bool Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Show\+Apply\+To\+All\+Outputs\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00045}{45}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
 
 
 

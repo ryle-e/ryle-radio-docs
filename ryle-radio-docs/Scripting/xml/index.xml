@@ -185,7 +185,6 @@
     <member refid="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1afbedeb396a11124c15f3f8dc67f0c9b4" kind="variable"><name>toDoOnUpdate</name></member>
     <member refid="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a289de6dde811ce51a1207e5db4d95f96" kind="variable"><name>affectedTrackNames</name></member>
     <member refid="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a633bba9cac49e89ee1fa21434171b1e5" kind="variable"><name>hasEventBeenAdded</name></member>
-    <member refid="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a8fe3c1584e2f35db9d5ffa221538b39e" kind="property"><name>TrackNames</name></member>
     <member refid="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a79a7484b93704449f8b9691f13a25bc5" kind="property"><name>AffectedTracks</name></member>
     <member refid="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1ab6c602f2a4cbcf49a14ebdf644fac793" kind="function"><name>Awake</name></member>
     <member refid="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a5cf3400db9f76f6dac74444a693bfa4e" kind="function"><name>OnDestroy</name></member>

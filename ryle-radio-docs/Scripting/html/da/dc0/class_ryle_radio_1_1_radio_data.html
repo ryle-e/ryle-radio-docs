@@ -125,6 +125,21 @@ Properties</h2></td></tr>
 <tr class="memitem:a5a42756743881b7805496fe526a97e89" id="r_a5a42756743881b7805496fe526a97e89"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5a42756743881b7805496fe526a97e89">BeforeInit</a> = new(_ =&gt; { })<code> [get, set]</code></td></tr>
 <tr class="memitem:a30d76fe4d36f356e5033ec3b0ac4da98" id="r_a30d76fe4d36f356e5033ec3b0ac4da98"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a30d76fe4d36f356e5033ec3b0ac4da98">TrackNames</a><code> [get]</code></td></tr>
 <tr class="memitem:ae60ad3469559e4f5ae2aee67a07cbe1d" id="r_ae60ad3469559e4f5ae2aee67a07cbe1d"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae60ad3469559e4f5ae2aee67a07cbe1d">TrackIDs</a><code> [get]</code></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
+Private Member Functions</h2></td></tr>
+<tr class="memitem:afdc16ff5993225b7c87d624fd9410d10" id="r_afdc16ff5993225b7c87d624fd9410d10"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afdc16ff5993225b7c87d624fd9410d10">PopulateTrackIDs</a> ()</td></tr>
+<tr class="memitem:a5396e065404ea0cb12ce09528becc71b" id="r_a5396e065404ea0cb12ce09528becc71b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5396e065404ea0cb12ce09528becc71b">OnValidate</a> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Private Attributes</h2></td></tr>
+<tr class="memitem:a475f0aa7ea25e7c0940c96679b9ff676" id="r_a475f0aa7ea25e7c0940c96679b9ff676"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a475f0aa7ea25e7c0940c96679b9ff676">gizmoColor</a> = new Color32(200, 180, 255, 255)</td></tr>
+<tr class="memitem:a9c1bbc31d3afeffc4310e4a16b234e16" id="r_a9c1bbc31d3afeffc4310e4a16b234e16"><td class="memItemLeft" align="right" valign="top">Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c1bbc31d3afeffc4310e4a16b234e16">gizmoColorSecondary</a> = new Color32(175, 105, 205, 255)</td></tr>
+<tr class="memitem:aeaf77cbe4f16f3f034d6aea1d5f11763" id="r_aeaf77cbe4f16f3f034d6aea1d5f11763"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeaf77cbe4f16f3f034d6aea1d5f11763">forceClipSampleRate</a> = true</td></tr>
+<tr class="memitem:a2d062f0c6983a8cc774c521cc7ff9738" id="r_a2d062f0c6983a8cc774c521cc7ff9738"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d062f0c6983a8cc774c521cc7ff9738">forcedSampleRate</a> = 0</td></tr>
+<tr class="memitem:adbb478e6938bfa62dc148c6f5a5cfe17" id="r_adbb478e6938bfa62dc148c6f5a5cfe17"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adbb478e6938bfa62dc148c6f5a5cfe17">trackWs</a> = new() { new() }</td></tr>
+<tr class="memitem:a67bdd9e7290aa5cb3d9245eb964d4e34" id="r_a67bdd9e7290aa5cb3d9245eb964d4e34"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a67bdd9e7290aa5cb3d9245eb964d4e34">trackNames</a></td></tr>
+<tr class="memitem:a2bbbec28c4d6f5e9306835efa03ca03c" id="r_a2bbbec28c4d6f5e9306835efa03ca03c"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2bbbec28c4d6f5e9306835efa03ca03c">trackIDs</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock">
@@ -195,6 +210,60 @@ Properties</h2></td></tr>
 
 </div>
 </div>
+<a id="a5396e065404ea0cb12ce09528becc71b" name="a5396e065404ea0cb12ce09528becc71b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5396e065404ea0cb12ce09528becc71b">&#9670;&#160;</a></span>OnValidate()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RyleRadio.RadioData.OnValidate </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00114">114</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
+
+</div>
+</div>
+<a id="afdc16ff5993225b7c87d624fd9410d10" name="afdc16ff5993225b7c87d624fd9410d10"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc16ff5993225b7c87d624fd9410d10">&#9670;&#160;</a></span>PopulateTrackIDs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void RyleRadio.RadioData.PopulateTrackIDs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00077">77</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
+
+</div>
+</div>
 <a id="ad27ed8d69e9bb9813157bdc45f50d032" name="ad27ed8d69e9bb9813157bdc45f50d032"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad27ed8d69e9bb9813157bdc45f50d032">&#9670;&#160;</a></span>TryGetTrack()</h2>
 
@@ -224,6 +293,102 @@ Properties</h2></td></tr>
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="aeaf77cbe4f16f3f034d6aea1d5f11763" name="aeaf77cbe4f16f3f034d6aea1d5f11763"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaf77cbe4f16f3f034d6aea1d5f11763">&#9670;&#160;</a></span>forceClipSampleRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool RyleRadio.RadioData.forceClipSampleRate = true</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00027">27</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2d062f0c6983a8cc774c521cc7ff9738" name="a2d062f0c6983a8cc774c521cc7ff9738"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d062f0c6983a8cc774c521cc7ff9738">&#9670;&#160;</a></span>forcedSampleRate</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int RyleRadio.RadioData.forcedSampleRate = 0</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
+
+</div>
+</div>
+<a id="a475f0aa7ea25e7c0940c96679b9ff676" name="a475f0aa7ea25e7c0940c96679b9ff676"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a475f0aa7ea25e7c0940c96679b9ff676">&#9670;&#160;</a></span>gizmoColor</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color RyleRadio.RadioData.gizmoColor = new Color32(200, 180, 255, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
+
+</div>
+</div>
+<a id="a9c1bbc31d3afeffc4310e4a16b234e16" name="a9c1bbc31d3afeffc4310e4a16b234e16"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c1bbc31d3afeffc4310e4a16b234e16">&#9670;&#160;</a></span>gizmoColorSecondary</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Color RyleRadio.RadioData.gizmoColorSecondary = new Color32(175, 105, 205, 255)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00025">25</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
+
+</div>
+</div>
 <a id="ae1d656e07f3493408e4232ebb69d98c4" name="ae1d656e07f3493408e4232ebb69d98c4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1d656e07f3493408e4232ebb69d98c4">&#9670;&#160;</a></span>HIGH_TUNE</h2>
 
@@ -269,6 +434,78 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
+
+</div>
+</div>
+<a id="a2bbbec28c4d6f5e9306835efa03ca03c" name="a2bbbec28c4d6f5e9306835efa03ca03c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2bbbec28c4d6f5e9306835efa03ca03c">&#9670;&#160;</a></span>trackIDs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;string&gt; RyleRadio.RadioData.trackIDs</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00056">56</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
+
+</div>
+</div>
+<a id="a67bdd9e7290aa5cb3d9245eb964d4e34" name="a67bdd9e7290aa5cb3d9245eb964d4e34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67bdd9e7290aa5cb3d9245eb964d4e34">&#9670;&#160;</a></span>trackNames</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;string&gt; RyleRadio.RadioData.trackNames</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00042">42</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
+
+</div>
+</div>
+<a id="adbb478e6938bfa62dc148c6f5a5cfe17" name="adbb478e6938bfa62dc148c6f5a5cfe17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adbb478e6938bfa62dc148c6f5a5cfe17">&#9670;&#160;</a></span>trackWs</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">List&lt;<a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a>&gt; RyleRadio.RadioData.trackWs = new() { new() }</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
 
 </div>
 </div>
