@@ -173,11 +173,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>        {</div>
-<div class="line"><span class="lineno">   52</span>            _track.broadcasters.Add(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   53</span>            _track.OnAddBroadcaster(<span class="keyword">this</span>, _track);</div>
-<div class="line"><span class="lineno">   54</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a521f92574cfd54f14c3ecfa87013683c" name="a521f92574cfd54f14c3ecfa87013683c"></a>
@@ -196,24 +192,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00064">64</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   65</span>        {</div>
-<div class="line"><span class="lineno">   66</span>            <span class="comment">// the distance between the output and this broadcaster</span></div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordtype">float</span> distance = Vector3.Distance(cachedPos, _receiverPos);</div>
-<div class="line"><span class="lineno">   68</span> </div>
-<div class="line"><span class="lineno">   69</span>            <span class="comment">// how far between the inner and outer radii the distance is</span></div>
-<div class="line"><span class="lineno">   70</span>            <span class="keywordtype">float</span> radiusProg = Mathf.Clamp01(Mathf.InverseLerp(broadcastRadius.x, broadcastRadius.y, distance));</div>
-<div class="line"><span class="lineno">   71</span> </div>
-<div class="line"><span class="lineno">   72</span>            <span class="comment">// get the adjusted power according to the distance falloff</span></div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordtype">float</span> adjustedT = distanceFalloff.Evaluate(radiusProg);</div>
-<div class="line"><span class="lineno">   74</span> </div>
-<div class="line"><span class="lineno">   75</span>            <span class="comment">// if the output is outside of the range of this broadcaster and it&#39;s not global when outside, return a power of 0</span></div>
-<div class="line"><span class="lineno">   76</span>            <span class="keywordflow">if</span> (adjustedT &lt;= 0 &amp;&amp; (ShowApplyToAllOutputs &amp;&amp; !applyToAllOutputsOutside))</div>
-<div class="line"><span class="lineno">   77</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">   78</span> </div>
-<div class="line"><span class="lineno">   79</span>            <span class="comment">// return the actual broadcast power according to values supplied in the broadcastPowers variable</span></div>
-<div class="line"><span class="lineno">   80</span>            <span class="keywordflow">return</span> Mathf.Lerp(broadcastPowers.x, broadcastPowers.y, adjustedT);</div>
-<div class="line"><span class="lineno">   81</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="aa6ed4532561f98f364e0b5b7270a470c" name="aa6ed4532561f98f364e0b5b7270a470c"></a>
@@ -240,11 +219,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00056">56</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>        {</div>
-<div class="line"><span class="lineno">   58</span>            _track.broadcasters.Remove(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   59</span>            _track.OnRemoveBroadcaster(<span class="keyword">this</span>, _track);</div>
-<div class="line"><span class="lineno">   60</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>

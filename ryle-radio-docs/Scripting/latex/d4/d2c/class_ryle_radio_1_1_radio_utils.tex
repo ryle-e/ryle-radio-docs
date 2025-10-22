@@ -31,17 +31,6 @@ Vector3 Ryle\+Radio.\+Radio\+Utils.\+Abs (\begin{DoxyParamCaption}\item[{this Ve
 
 Definition at line \mbox{\hyperlink{_radio_utils_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_radio_utils_8cs_source}{Radio\+Utils.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ Vector3(}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Mathf.Abs(\_value.x),}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Mathf.Abs(\_value.y),}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Mathf.Abs(\_value.z)}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ );}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_radio_utils_ab89c4040b90df3ca482a77958cd4fab6}\index{RyleRadio.RadioUtils@{RyleRadio.RadioUtils}!FindDerivedTypes@{FindDerivedTypes}}
 \index{FindDerivedTypes@{FindDerivedTypes}!RyleRadio.RadioUtils@{RyleRadio.RadioUtils}}
 \doxysubsubsection{\texorpdfstring{FindDerivedTypes()}{FindDerivedTypes()}}
@@ -52,30 +41,6 @@ Type\mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Radio\+Utils.\+Find\+Derived\+Types (\beg
 
 Definition at line \mbox{\hyperlink{_radio_utils_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_radio_utils_8cs_source}{Radio\+Utils.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ use\ all\ assemblies\ here\ for\ ease\ of\ use\ to\ developers\ creating\ and\ testing\ new\ tracks}}
-\DoxyCodeLine{00033\ }
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ all\ assemblies\ used\ in\ the\ project}}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ Assembly[]\ assemblies\ =\ AppDomain.CurrentDomain.GetAssemblies();}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ IEnumerable<Type>\ types\ =\ \textcolor{keyword}{new}\ List<Type>();}
-\DoxyCodeLine{00037\ }
-\DoxyCodeLine{00038\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ search\ through\ every\ assembly\ applicable\ classes}}
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (Assembly\ assembly\ \textcolor{keywordflow}{in}\ assemblies)}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ types\ =\ types.Union(assembly.GetTypes().Where(t\ =>\ \textcolor{comment}{//\ find\ classes\ that,}}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ t\ !=\ baseType\ \textcolor{comment}{//\ aren't\ the\ given\ type}}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ baseType.IsAssignableFrom(t)\ \ \textcolor{comment}{//\ inherit\ from\ the\ given\ type}}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ !t.IsInterface\ \textcolor{comment}{//\ aren't\ interfaces}}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ !t.IsGenericType\ \textcolor{comment}{//\ aren't\ generic}}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \&\&\ !t.IsAbstract\ \textcolor{comment}{//\ aren't\ abstract}}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ));}
-\DoxyCodeLine{00047\ }
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ returns\ the\ types}}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ types.ToArray();}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_radio_utils_a036ebc66444a8aa0a208acecee60d761}\index{RyleRadio.RadioUtils@{RyleRadio.RadioUtils}!Remap@{Remap}}
 \index{Remap@{Remap}!RyleRadio.RadioUtils@{RyleRadio.RadioUtils}}
 \doxysubsubsection{\texorpdfstring{Remap()}{Remap()}}
@@ -86,13 +51,6 @@ float Ryle\+Radio.\+Radio\+Utils.\+Remap (\begin{DoxyParamCaption}\item[{this fl
 
 Definition at line \mbox{\hyperlink{_radio_utils_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_radio_utils_8cs_source}{Radio\+Utils.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ (value\ -\/\ from1)\ /\ (to1\ -\/\ from1)\ *\ (to2\ -\/\ from2)\ +\ from2;}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

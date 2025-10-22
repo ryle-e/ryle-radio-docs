@@ -129,14 +129,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d50/_radio_utils_8cs_source.html#l00020">20</a> of file <a class="el" href="../../d8/d50/_radio_utils_8cs_source.html">RadioUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   21</span>        {</div>
-<div class="line"><span class="lineno">   22</span>            <span class="keywordflow">return</span> <span class="keyword">new</span> Vector3(</div>
-<div class="line"><span class="lineno">   23</span>                Mathf.Abs(_value.x),</div>
-<div class="line"><span class="lineno">   24</span>                Mathf.Abs(_value.y),</div>
-<div class="line"><span class="lineno">   25</span>                Mathf.Abs(_value.z)</div>
-<div class="line"><span class="lineno">   26</span>            );</div>
-<div class="line"><span class="lineno">   27</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab89c4040b90df3ca482a77958cd4fab6" name="ab89c4040b90df3ca482a77958cd4fab6"></a>
@@ -163,27 +156,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d50/_radio_utils_8cs_source.html#l00030">30</a> of file <a class="el" href="../../d8/d50/_radio_utils_8cs_source.html">RadioUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   31</span>        {</div>
-<div class="line"><span class="lineno">   32</span>            <span class="comment">// we use all assemblies here for ease of use to developers creating and testing new tracks</span></div>
-<div class="line"><span class="lineno">   33</span> </div>
-<div class="line"><span class="lineno">   34</span>            <span class="comment">// get all assemblies used in the project</span></div>
-<div class="line"><span class="lineno">   35</span>            Assembly[] assemblies = AppDomain.CurrentDomain.GetAssemblies();</div>
-<div class="line"><span class="lineno">   36</span>            IEnumerable&lt;Type&gt; types = <span class="keyword">new</span> List&lt;Type&gt;();</div>
-<div class="line"><span class="lineno">   37</span> </div>
-<div class="line"><span class="lineno">   38</span>            <span class="comment">// search through every assembly applicable classes</span></div>
-<div class="line"><span class="lineno">   39</span>            <span class="keywordflow">foreach</span> (Assembly assembly <span class="keywordflow">in</span> assemblies)</div>
-<div class="line"><span class="lineno">   40</span>                types = types.Union(assembly.GetTypes().Where(t =&gt; <span class="comment">// find classes that,</span></div>
-<div class="line"><span class="lineno">   41</span>                    t != baseType <span class="comment">// aren&#39;t the given type</span></div>
-<div class="line"><span class="lineno">   42</span>                    &amp;&amp; baseType.IsAssignableFrom(t)  <span class="comment">// inherit from the given type</span></div>
-<div class="line"><span class="lineno">   43</span>                    &amp;&amp; !t.IsInterface <span class="comment">// aren&#39;t interfaces</span></div>
-<div class="line"><span class="lineno">   44</span>                    &amp;&amp; !t.IsGenericType <span class="comment">// aren&#39;t generic</span></div>
-<div class="line"><span class="lineno">   45</span>                    &amp;&amp; !t.IsAbstract <span class="comment">// aren&#39;t abstract</span></div>
-<div class="line"><span class="lineno">   46</span>                ));</div>
-<div class="line"><span class="lineno">   47</span> </div>
-<div class="line"><span class="lineno">   48</span>            <span class="comment">// returns the types</span></div>
-<div class="line"><span class="lineno">   49</span>            <span class="keywordflow">return</span> types.ToArray();</div>
-<div class="line"><span class="lineno">   50</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a036ebc66444a8aa0a208acecee60d761" name="a036ebc66444a8aa0a208acecee60d761"></a>
@@ -229,10 +202,7 @@ Static Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d8/d50/_radio_utils_8cs_source.html#l00014">14</a> of file <a class="el" href="../../d8/d50/_radio_utils_8cs_source.html">RadioUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   15</span>        {</div>
-<div class="line"><span class="lineno">   16</span>            <span class="keywordflow">return</span> (value - from1) / (to1 - from1) * (to2 - from2) + from2;</div>
-<div class="line"><span class="lineno">   17</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

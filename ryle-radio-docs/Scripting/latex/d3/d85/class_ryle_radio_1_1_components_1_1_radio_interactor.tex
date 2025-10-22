@@ -61,24 +61,6 @@ void Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Flip\+Pause (\begin{DoxyPara
 
 Definition at line \mbox{\hyperlink{_radio_interactor_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_radio_interactor_8cs_source}{Radio\+Interactor.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ apply\ the\ pause\ flip\ to\ all\ affected\ tracks}}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ DoTrackAction(affectedTracks,\ \textcolor{keywordtype}{id}\ =>}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ there\ is\ a\ RadioTrackPlayer\ active\ for\ this\ track,}}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (output.TryGetPlayer(\textcolor{keywordtype}{id},\ out\ RadioTrackPlayer\ player,\ \textcolor{keyword}{false},\ playerSelector))}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.Paused\ =\ !player.Paused;\ \textcolor{comment}{//\ pause/unpause\ it}}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ otherwise,\ let\ us\ know}}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (debugAll)}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}No\ players\ with\ ID\ \{id\}\ are\ currently\ playing,\ and\ so\ none\ have\ been\ stopped!"{}});}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_interactor_a2218d7ba03a61a0fe84633d8f88dc01e}\index{RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}!Pause@{Pause}}
 \index{Pause@{Pause}!RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}}
 \doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
@@ -89,24 +71,6 @@ void Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Pause (\begin{DoxyParamCapti
 
 Definition at line \mbox{\hyperlink{_radio_interactor_8cs_source_l00073}{73}} of file \mbox{\hyperlink{_radio_interactor_8cs_source}{Radio\+Interactor.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ apply\ the\ pause\ to\ all\ affected\ tracks}}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ DoTrackAction(affectedTracks,\ \textcolor{keywordtype}{id}\ =>}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ there\ is\ a\ RadioTrackPlayer\ active\ for\ this\ track,}}
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (output.TryGetPlayer(\textcolor{keywordtype}{id},\ out\ RadioTrackPlayer\ player,\ \textcolor{keyword}{false},\ playerSelector))}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.Paused\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ pause\ it}}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ otherwise,\ let\ us\ know}}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (debugAll)}
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}No\ players\ with\ ID\ \{id\}\ are\ currently\ playing,\ and\ so\ none\ have\ been\ stopped!"{}});}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_interactor_acaa244df7cfb8c1648ad2d679939ff7e}\index{RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}!PlayLoop@{PlayLoop}}
 \index{PlayLoop@{PlayLoop}!RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}}
 \doxysubsubsection{\texorpdfstring{PlayLoop()}{PlayLoop()}}
@@ -117,14 +81,6 @@ void Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Play\+Loop (\begin{DoxyParam
 
 Definition at line \mbox{\hyperlink{_radio_interactor_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_radio_interactor_8cs_source}{Radio\+Interactor.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ apply\ the\ loop\ play\ to\ all\ affected\ tracks}}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ DoTrackAction(affectedTracks,\ \textcolor{keywordtype}{id}\ =>\ output.PlayLoop(\textcolor{keywordtype}{id}));}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_interactor_a76ed1537407cf9c1f559a9cdcbd6bc36}\index{RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}!PlayOneShot@{PlayOneShot}}
 \index{PlayOneShot@{PlayOneShot}!RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}}
 \doxysubsubsection{\texorpdfstring{PlayOneShot()}{PlayOneShot()}}
@@ -135,14 +91,6 @@ void Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Play\+One\+Shot (\begin{Doxy
 
 Definition at line \mbox{\hyperlink{_radio_interactor_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_radio_interactor_8cs_source}{Radio\+Interactor.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ apply\ the\ oneshot\ play\ to\ all\ affected\ tracks}}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \ \ \ \ DoTrackAction(affectedTracks,\ \textcolor{keywordtype}{id}\ =>\ output.PlayOneShot(\textcolor{keywordtype}{id}));}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_interactor_ac10c0d04ced744c4acd38a0db496d1d8}\index{RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}!ResetProgress@{ResetProgress}}
 \index{ResetProgress@{ResetProgress}!RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}}
 \doxysubsubsection{\texorpdfstring{ResetProgress()}{ResetProgress()}}
@@ -153,24 +101,6 @@ void Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Reset\+Progress (\begin{Doxy
 
 Definition at line \mbox{\hyperlink{_radio_interactor_8cs_source_l00107}{107}} of file \mbox{\hyperlink{_radio_interactor_8cs_source}{Radio\+Interactor.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ apply\ the\ reset\ to\ all\ affected\ tracks}}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ DoTrackAction(affectedTracks,\ \textcolor{keywordtype}{id}\ =>}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ there\ is\ a\ RadioTrackPlayer\ active\ for\ this\ track,}}
-\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (output.TryGetPlayer(\textcolor{keywordtype}{id},\ out\ RadioTrackPlayer\ player,\ \textcolor{keyword}{false},\ playerSelector))}
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.ResetProgress();\ \textcolor{comment}{//\ reset\ its\ progress\ (restart\ the\ playback)}}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ otherwise,\ let\ us\ know}}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (debugAll)}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}No\ players\ with\ ID\ \{id\}\ are\ currently\ playing,\ and\ so\ none\ have\ been\ stopped!"{}});}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_interactor_aee9232aa8824c5aa51e947103b4df690}\index{RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}!Stop@{Stop}}
 \index{Stop@{Stop}!RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}}
 \doxysubsubsection{\texorpdfstring{Stop()}{Stop()}}
@@ -181,24 +111,6 @@ void Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Stop (\begin{DoxyParamCaptio
 
 Definition at line \mbox{\hyperlink{_radio_interactor_8cs_source_l00039}{39}} of file \mbox{\hyperlink{_radio_interactor_8cs_source}{Radio\+Interactor.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ apply\ the\ stop\ to\ all\ affected\ tracks}}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ DoTrackAction(affectedTracks,\ \textcolor{keywordtype}{id}\ =>}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ there\ is\ a\ RadioTrackPlayer\ active\ for\ this\ track,}}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (output.TryGetPlayer(\textcolor{keywordtype}{id},\ out\ RadioTrackPlayer\ player,\ \textcolor{keyword}{false},\ playerSelector))}
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.Stop();\ \textcolor{comment}{//\ stop\ it}}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ otherwise,\ let\ us\ know}}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (debugAll)}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}No\ players\ with\ ID\ \{id\}\ are\ currently\ playing,\ and\ so\ none\ have\ been\ stopped!"{}});}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_interactor_abfaf73ef2135f4dbbf681c405ee8341e}\index{RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}!Unpause@{Unpause}}
 \index{Unpause@{Unpause}!RyleRadio.Components.RadioInteractor@{RyleRadio.Components.RadioInteractor}}
 \doxysubsubsection{\texorpdfstring{Unpause()}{Unpause()}}
@@ -209,24 +121,6 @@ void Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Unpause (\begin{DoxyParamCap
 
 Definition at line \mbox{\hyperlink{_radio_interactor_8cs_source_l00090}{90}} of file \mbox{\hyperlink{_radio_interactor_8cs_source}{Radio\+Interactor.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ apply\ the\ unpause\ to\ all\ affected\ tracks}}
-\DoxyCodeLine{00093\ \ \ \ \ \ \ \ \ \ \ \ \ DoTrackAction(affectedTracks,\ \textcolor{keywordtype}{id}\ =>}
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ there\ is\ a\ RadioTrackPlayer\ active\ for\ this\ track,}}
-\DoxyCodeLine{00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (output.TryGetPlayer(\textcolor{keywordtype}{id},\ out\ RadioTrackPlayer\ player,\ \textcolor{keyword}{false},\ playerSelector))}
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.Paused\ =\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ unpause\ it}}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{\ \textcolor{comment}{//\ otherwise,\ let\ us\ know}}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (debugAll)}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}No\ players\ with\ ID\ \{id\}\ are\ currently\ playing,\ and\ so\ none\ have\ been\ stopped!"{}});}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \});}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

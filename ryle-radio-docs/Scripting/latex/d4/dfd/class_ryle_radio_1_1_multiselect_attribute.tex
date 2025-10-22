@@ -50,13 +50,6 @@ Ryle\+Radio.\+Multiselect\+Attribute.\+Multiselect\+Attribute (\begin{DoxyParamC
 Definition at line \mbox{\hyperlink{_multiselect_attribute_8cs_source_l00023}{23}} of file \mbox{\hyperlink{_multiselect_attribute_8cs_source}{Multiselect\+Attribute.\+cs}}.
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ OptionsName\ =\ \_optionsName;}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
-
 
 \label{doc-func-members}
 \Hypertarget{class_ryle_radio_1_1_multiselect_attribute_doc-func-members}
@@ -71,38 +64,6 @@ T\mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Multiselect\+Attribute.\+To$<$ T $>$ (\begin
 
 Definition at line \mbox{\hyperlink{_multiselect_attribute_8cs_source_l00049}{49}} of file \mbox{\hyperlink{_multiselect_attribute_8cs_source}{Multiselect\+Attribute.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00050\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_flags\ <\ 0)}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\textcolor{stringliteral}{"{}A\ value\ less\ than\ 0\ is\ being\ used\ as\ the\ flag\ variable\ in\ a\ MultiselectAttribute.To<T>()\ call!\ The\ value\ is\ "{}}\ +\ \_flags);}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ T[0];}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00056\ }
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ outIndexes\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[32];}
-\DoxyCodeLine{00058\ }
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ each\ number\ 0\ -\/\ 32,}}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 32;\ i++)}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ check\ if\ the\ int\ has\ the\ bit\ flag\ for\ this\ index}}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\_flags\ \&\ (1\ <<\ i))\ !=\ 0)}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outIndexes[i]\ =\ i;\ \textcolor{comment}{//\ if\ it\ does,\ add\ the\ index\ to\ the\ output\ list}}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outIndexes[i]\ =\ -\/1;\ \textcolor{comment}{//\ otherwise\ make\ the\ index\ invalid}}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ items\ out\ of\ the\ options\ list\ based\ on\ the\ valid\ indexes\ in\ the\ output\ list}}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ T[]\ o\ =\ outIndexes}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(b\ =>\ b\ >=\ 0)}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(i\ =>\ \_options[i])}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToArray();}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ give\ back\ the\ output\ list\ as\ T}}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ o;}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_multiselect_attribute_a563578e97c9707a19a1a2a4b3bcb0ce2}\index{RyleRadio.MultiselectAttribute@{RyleRadio.MultiselectAttribute}!ToInt@{ToInt}}
 \index{ToInt@{ToInt}!RyleRadio.MultiselectAttribute@{RyleRadio.MultiselectAttribute}}
 \doxysubsubsection{\texorpdfstring{ToInt()}{ToInt()}}
@@ -113,13 +74,6 @@ int\mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Multiselect\+Attribute.\+To\+Int (\begin{D
 
 Definition at line \mbox{\hyperlink{_multiselect_attribute_8cs_source_l00080}{80}} of file \mbox{\hyperlink{_multiselect_attribute_8cs_source}{Multiselect\+Attribute.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ To<int>(\_flags,\ ZeroTo31);}
-\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 
 
 \label{doc-property-members}
@@ -135,17 +89,6 @@ int \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Multiselect\+Attribute.\+One\+To32\hspace
 
 Definition at line \mbox{\hyperlink{_multiselect_attribute_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_multiselect_attribute_8cs_source}{Multiselect\+Attribute.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ 1,\ \ 2,\ \ 3,\ \ 4,\ \ 5,\ \ 6,\ \ 7,\ \ 8,}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ 9,\ \ 10,\ 11,\ 12,\ 13,\ 14,\ 15,\ 16,}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ 17,\ 18,\ 19,\ 20,\ 21,\ 22,\ 23,\ 24,}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ 25,\ 26,\ 27,\ 28,\ 29,\ 30,\ 31,}
-\DoxyCodeLine{00045\ \ \ \ \ \ \ \ \ 32}
-\DoxyCodeLine{00046\ \ \ \ \ \};}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_multiselect_attribute_a78e4acb7a1e6b89d62119307900a6363}\index{RyleRadio.MultiselectAttribute@{RyleRadio.MultiselectAttribute}!OptionsName@{OptionsName}}
 \index{OptionsName@{OptionsName}!RyleRadio.MultiselectAttribute@{RyleRadio.MultiselectAttribute}}
 \doxysubsubsection{\texorpdfstring{OptionsName}{OptionsName}}
@@ -156,11 +99,6 @@ string Ryle\+Radio.\+Multiselect\+Attribute.\+Options\+Name\hspace{0.3cm}{\ttfam
 
 Definition at line \mbox{\hyperlink{_multiselect_attribute_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_multiselect_attribute_8cs_source}{Multiselect\+Attribute.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00021\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_multiselect_attribute_a15a7d220b48d6d0e4589c392a9e7185a}\index{RyleRadio.MultiselectAttribute@{RyleRadio.MultiselectAttribute}!ZeroTo31@{ZeroTo31}}
 \index{ZeroTo31@{ZeroTo31}!RyleRadio.MultiselectAttribute@{RyleRadio.MultiselectAttribute}}
 \doxysubsubsection{\texorpdfstring{ZeroTo31}{ZeroTo31}}
@@ -171,17 +109,6 @@ int \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Multiselect\+Attribute.\+Zero\+To31\hspac
 
 Definition at line \mbox{\hyperlink{_multiselect_attribute_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_multiselect_attribute_8cs_source}{Multiselect\+Attribute.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00031\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00032\ \ \ \ \ \ \ \ \ 0,\ \ }
-\DoxyCodeLine{00033\ \ \ \ \ \ \ \ \ 1,\ \ 2,\ \ 3,\ \ 4,\ \ 5,\ \ 6,\ \ 7,\ \ 8,}
-\DoxyCodeLine{00034\ \ \ \ \ \ \ \ \ 9,\ \ 10,\ 11,\ 12,\ 13,\ 14,\ 15,\ 16,}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ 17,\ 18,\ 19,\ 20,\ 21,\ 22,\ 23,\ 24,}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ 25,\ 26,\ 27,\ 28,\ 29,\ 30,\ 31}
-\DoxyCodeLine{00037\ \ \ \ \ \};}
-
-\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

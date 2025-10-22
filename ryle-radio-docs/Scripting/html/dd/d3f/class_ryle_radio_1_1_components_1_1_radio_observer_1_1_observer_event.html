@@ -103,7 +103,7 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a50ff32a03be08deae07437639a8b1597" id="r_a50ff32a03be08deae07437639a8b1597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50ff32a03be08deae07437639a8b1597">type</a></td></tr>
-<tr class="memitem:aa3f3983f522937ed634525992a500f83" id="r_aa3f3983f522937ed634525992a500f83"><td class="memItemLeft" align="right" valign="top">ComparisonType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3f3983f522937ed634525992a500f83">comparison</a></td></tr>
+<tr class="memitem:aa3f3983f522937ed634525992a500f83" id="r_aa3f3983f522937ed634525992a500f83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7">ComparisonType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3f3983f522937ed634525992a500f83">comparison</a></td></tr>
 <tr class="memitem:aeca94155d569db8deaa7b59d930bae20" id="r_aeca94155d569db8deaa7b59d930bae20"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeca94155d569db8deaa7b59d930bae20">clampedValue</a></td></tr>
 <tr class="memitem:a6837b1a846554381d8768afc18a65b8a" id="r_a6837b1a846554381d8768afc18a65b8a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6837b1a846554381d8768afc18a65b8a">tuneValue</a></td></tr>
 <tr class="memitem:affbce23bf4759630e020d7b21308eca6" id="r_affbce23bf4759630e020d7b21308eca6"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affbce23bf4759630e020d7b21308eca6">clampedRange</a></td></tr>
@@ -143,42 +143,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00086">86</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   87</span>            {</div>
-<div class="line"><span class="lineno">   88</span>                <span class="comment">// if the event is not a comparison you should not be calling this method (unless it&#39;s being used on many events at once)</span></div>
-<div class="line"><span class="lineno">   89</span>                <span class="keywordflow">if</span> (NotNeedComparison)</div>
-<div class="line"><span class="lineno">   90</span>                    <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   91</span> </div>
-<div class="line"><span class="lineno">   92</span>                <span class="keywordtype">float</span> value;</div>
-<div class="line"><span class="lineno">   93</span>                Vector2 range;</div>
-<div class="line"><span class="lineno">   94</span> </div>
-<div class="line"><span class="lineno">   95</span>                <span class="comment">// if this event uses OutputTune, then make sure we&#39;re comparing to the tune values</span></div>
-<div class="line"><span class="lineno">   96</span>                <span class="keywordflow">if</span> (IsTune)</div>
-<div class="line"><span class="lineno">   97</span>                {</div>
-<div class="line"><span class="lineno">   98</span>                    range = tuneRange;</div>
-<div class="line"><span class="lineno">   99</span>                    value = tuneValue;</div>
-<div class="line"><span class="lineno">  100</span>                }</div>
-<div class="line"><span class="lineno">  101</span>                <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">  102</span>                {</div>
-<div class="line"><span class="lineno">  103</span>                    value = clampedValue;</div>
-<div class="line"><span class="lineno">  104</span>                    range = clampedRange;</div>
-<div class="line"><span class="lineno">  105</span>                }</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>                <span class="comment">// evaluate the specific comparison- just logical operators</span></div>
-<div class="line"><span class="lineno">  108</span>                <span class="keywordflow">return</span> comparison <span class="keywordflow">switch</span></div>
-<div class="line"><span class="lineno">  109</span>                {</div>
-<div class="line"><span class="lineno">  110</span>                    ComparisonType.Equal =&gt; _cValue == value,</div>
-<div class="line"><span class="lineno">  111</span>                    ComparisonType.GreaterThan =&gt; _cValue &gt; value,</div>
-<div class="line"><span class="lineno">  112</span>                    ComparisonType.GreaterThanOrEqual =&gt; _cValue &gt;= value,</div>
-<div class="line"><span class="lineno">  113</span>                    ComparisonType.LessThan =&gt; _cValue &lt; value,</div>
-<div class="line"><span class="lineno">  114</span>                    ComparisonType.LessThanOrEqual =&gt; _cValue &lt;= value,</div>
-<div class="line"><span class="lineno">  115</span> </div>
-<div class="line"><span class="lineno">  116</span>                    ComparisonType.BetweenExclusive =&gt; range.x &lt; _cValue &amp;&amp; _cValue &lt; range.y, <span class="comment">// i want (x &lt; value &lt; y) notation &gt;:)</span></div>
-<div class="line"><span class="lineno">  117</span>                    ComparisonType.BetweenInclusive =&gt; range.x &lt;= _cValue &amp;&amp; _cValue &lt;= range.y,</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>                    _ =&gt; <span class="keyword">false</span>,</div>
-<div class="line"><span class="lineno">  120</span>                };</div>
-<div class="line"><span class="lineno">  121</span>            }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab9b5a0e73d00052e5dc8e08244bdf4bf" name="ab9b5a0e73d00052e5dc8e08244bdf4bf"></a>
@@ -197,10 +162,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00123">123</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  124</span>            {</div>
-<div class="line"><span class="lineno">  125</span>                <span class="keywordflow">return</span> type + <span class="stringliteral">&quot;/&quot;</span> + comparison;</div>
-<div class="line"><span class="lineno">  126</span>            }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -243,7 +205,7 @@ Properties</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ComparisonType RyleRadio.Components.RadioObserver.ObserverEvent.comparison</td>
+          <td class="memname"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7">ComparisonType</a> RyleRadio.Components.RadioObserver.ObserverEvent.comparison</td>
         </tr>
       </table>
 </div><div class="memdoc">

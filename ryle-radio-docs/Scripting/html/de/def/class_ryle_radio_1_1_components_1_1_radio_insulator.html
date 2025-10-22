@@ -174,11 +174,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dad/_radio_insulator_8cs_source.html#l00059">59</a> of file <a class="el" href="../../d4/dad/_radio_insulator_8cs_source.html">RadioInsulator.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   60</span>        {</div>
-<div class="line"><span class="lineno">   61</span>            _track.insulators.Add(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   62</span>            _track.OnAddInsulator(<span class="keyword">this</span>, _track);</div>
-<div class="line"><span class="lineno">   63</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a4b7df054ad1dc61eb31421bcc78b7d5a" name="a4b7df054ad1dc61eb31421bcc78b7d5a"></a>
@@ -197,65 +193,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dad/_radio_insulator_8cs_source.html#l00072">72</a> of file <a class="el" href="../../d4/dad/_radio_insulator_8cs_source.html">RadioInsulator.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   73</span>        {</div>
-<div class="line"><span class="lineno">   74</span>            <span class="keywordtype">float</span> power = 0;</div>
-<div class="line"><span class="lineno">   75</span> </div>
-<div class="line"><span class="lineno">   76</span>            <span class="comment">// converts the boxes to bounds so that we can use the basic methods in the bounds class</span></div>
-<div class="line"><span class="lineno">   77</span>            Bounds innerBounds = <span class="keyword">new</span> Bounds(cachedPos, InnerBoxSizeAdjusted);</div>
-<div class="line"><span class="lineno">   78</span>            Bounds outerBounds = <span class="keyword">new</span> Bounds(cachedPos, OuterBoxSizeAdjusted);</div>
-<div class="line"><span class="lineno">   79</span> </div>
-<div class="line"><span class="lineno">   80</span>            <span class="comment">// if the output is in the inner bounds, insulation is at maximum</span></div>
-<div class="line"><span class="lineno">   81</span>            <span class="keywordflow">if</span> (innerBounds.Contains(_position))</div>
-<div class="line"><span class="lineno">   82</span>                power = 1;</div>
-<div class="line"><span class="lineno">   83</span> </div>
-<div class="line"><span class="lineno">   84</span>            <span class="comment">// if the output is outside the outer bounds, insulation is at minimum</span></div>
-<div class="line"><span class="lineno">   85</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!outerBounds.Contains(_position))</div>
-<div class="line"><span class="lineno">   86</span>                power = 0;</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>            <span class="comment">// if the output is between the inner and outer bounds, calculate how far between them it is</span></div>
-<div class="line"><span class="lineno">   89</span>            <span class="keywordflow">else</span></div>
-<div class="line"><span class="lineno">   90</span>            {</div>
-<div class="line"><span class="lineno">   91</span>                <span class="comment">// originally i used a signed distance field for this, but for reasons i do not recall it didn&#39;t end up working as i wanted-</span></div>
-<div class="line"><span class="lineno">   92</span>                <span class="comment">// i eventually worked out a way to calculate how far between a and b the point is using rays and bounds</span></div>
-<div class="line"><span class="lineno">   93</span> </div>
-<div class="line"><span class="lineno">   94</span>                <span class="comment">// get the direction from the center of the boxes towards the given position</span></div>
-<div class="line"><span class="lineno">   95</span>                Vector3 dir = (_position - outerBounds.center).normalized;</div>
-<div class="line"><span class="lineno">   96</span> </div>
-<div class="line"><span class="lineno">   97</span>                <span class="comment">// scale that distance by the size of the larger box so that it sits just outside (or on the corner of) the largest box</span></div>
-<div class="line"><span class="lineno">   98</span>                Vector3 scaledDir = <span class="keyword">new</span> Vector3(dir.x * outerBounds.size.x, dir.y * outerBounds.size.y, dir.z * outerBounds.size.z);</div>
-<div class="line"><span class="lineno">   99</span> </div>
-<div class="line"><span class="lineno">  100</span>                <span class="comment">// create a ray from the center of the box to the point just outside</span></div>
-<div class="line"><span class="lineno">  101</span>                Ray ray = <span class="keyword">new</span> Ray(outerBounds.center, scaledDir);</div>
-<div class="line"><span class="lineno">  102</span> </div>
-<div class="line"><span class="lineno">  103</span>                <span class="comment">// use this ray to find the distance from the center of the closest point on the outside of the inner and outer boxes</span></div>
-<div class="line"><span class="lineno">  104</span>                innerBounds.IntersectRay(ray, out <span class="keywordtype">float</span> distance2);</div>
-<div class="line"><span class="lineno">  105</span>                outerBounds.IntersectRay(ray, out <span class="keywordtype">float</span> distance);</div>
-<div class="line"><span class="lineno">  106</span> </div>
-<div class="line"><span class="lineno">  107</span>                <span class="comment">// find the closest points on the faces of the boxes using this distance</span></div>
-<div class="line"><span class="lineno">  108</span>                Vector3 closestOnInner = innerBounds.center + ray.direction.normalized * -distance2;</div>
-<div class="line"><span class="lineno">  109</span>                Vector3 closestOnOuter = outerBounds.center + ray.direction.normalized * -distance;</div>
-<div class="line"><span class="lineno">  110</span> </div>
-<div class="line"><span class="lineno">  111</span>                <span class="comment">// get the distance between the outer and inner points</span></div>
-<div class="line"><span class="lineno">  112</span>                <span class="keywordtype">float</span> outerInnerDistance = Vector3.Distance(closestOnOuter, closestOnInner);</div>
-<div class="line"><span class="lineno">  113</span> </div>
-<div class="line"><span class="lineno">  114</span>                <span class="comment">// get the distance from the inner to the given position</span></div>
-<div class="line"><span class="lineno">  115</span>                <span class="keywordtype">float</span> d = Vector3.Distance(_position, closestOnInner);</div>
-<div class="line"><span class="lineno">  116</span> </div>
-<div class="line"><span class="lineno">  117</span>                <span class="comment">// work out how far between the inner and outer points the given position is</span></div>
-<div class="line"><span class="lineno">  118</span>                power = 1 - d / outerInnerDistance;</div>
-<div class="line"><span class="lineno">  119</span>            }</div>
-<div class="line"><span class="lineno">  120</span> </div>
-<div class="line"><span class="lineno">  121</span>            <span class="comment">// adjust the power by the insulation curve</span></div>
-<div class="line"><span class="lineno">  122</span>            <span class="keywordtype">float</span> adjustedT = insulationCurve.Evaluate(power);</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>            <span class="comment">// if it&#39;s outside the boxes and does not universally apply, set the insulation to 0</span></div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">if</span> (adjustedT &lt;= 0 &amp;&amp; (ShowApplyToAllOutputs &amp;&amp; !applyToAllOutputsOutside))</div>
-<div class="line"><span class="lineno">  126</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  127</span> </div>
-<div class="line"><span class="lineno">  128</span>            <span class="comment">// return the actual insulation using the min and max values</span></div>
-<div class="line"><span class="lineno">  129</span>            <span class="keywordflow">return</span> Mathf.Lerp(insulation.x, insulation.y, adjustedT);</div>
-<div class="line"><span class="lineno">  130</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2d5c8e4963c58f553412aafb806c567b" name="a2d5c8e4963c58f553412aafb806c567b"></a>
@@ -282,11 +220,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dad/_radio_insulator_8cs_source.html#l00065">65</a> of file <a class="el" href="../../d4/dad/_radio_insulator_8cs_source.html">RadioInsulator.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   66</span>        {</div>
-<div class="line"><span class="lineno">   67</span>            _track.insulators.Remove(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">   68</span>            _track.OnRemoveInsulator(<span class="keyword">this</span>, _track);</div>
-<div class="line"><span class="lineno">   69</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -344,8 +278,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dad/_radio_insulator_8cs_source.html#l00042">42</a> of file <a class="el" href="../../d4/dad/_radio_insulator_8cs_source.html">RadioInsulator.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a6f1684f954ccec6377dcb1c70fcf2416" name="a6f1684f954ccec6377dcb1c70fcf2416"></a>
@@ -369,8 +302,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d4/dad/_radio_insulator_8cs_source.html#l00043">43</a> of file <a class="el" href="../../d4/dad/_radio_insulator_8cs_source.html">RadioInsulator.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   43</span>{ <span class="keyword">get</span>; <span class="keyword">private</span> <span class="keyword">set</span>; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

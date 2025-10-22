@@ -91,14 +91,6 @@ override void Ryle\+Radio.\+Components.\+Radio\+Broadcaster.\+Assign\+To\+Track 
 
 Definition at line \mbox{\hyperlink{_radio_broadcaster_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_radio_broadcaster_8cs_source}{Radio\+Broadcaster.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.broadcasters.Add(\textcolor{keyword}{this});}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.OnAddBroadcaster(\textcolor{keyword}{this},\ \_track);}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster_a521f92574cfd54f14c3ecfa87013683c}\index{RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}!GetPower@{GetPower}}
 \index{GetPower@{GetPower}!RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}}
 \doxysubsubsection{\texorpdfstring{GetPower()}{GetPower()}}
@@ -109,27 +101,6 @@ float Ryle\+Radio.\+Components.\+Radio\+Broadcaster.\+Get\+Power (\begin{DoxyPar
 
 Definition at line \mbox{\hyperlink{_radio_broadcaster_8cs_source_l00064}{64}} of file \mbox{\hyperlink{_radio_broadcaster_8cs_source}{Radio\+Broadcaster.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ distance\ between\ the\ output\ and\ this\ broadcaster}}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ distance\ =\ Vector3.Distance(cachedPos,\ \_receiverPos);}
-\DoxyCodeLine{00068\ }
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ how\ far\ between\ the\ inner\ and\ outer\ radii\ the\ distance\ is}}
-\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ radiusProg\ =\ Mathf.Clamp01(Mathf.InverseLerp(broadcastRadius.x,\ broadcastRadius.y,\ distance));}
-\DoxyCodeLine{00071\ }
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ adjusted\ power\ according\ to\ the\ distance\ falloff}}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ adjustedT\ =\ distanceFalloff.Evaluate(radiusProg);}
-\DoxyCodeLine{00074\ }
-\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ output\ is\ outside\ of\ the\ range\ of\ this\ broadcaster\ and\ it's\ not\ global\ when\ outside,\ return\ a\ power\ of\ 0}}
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (adjustedT\ <=\ 0\ \&\&\ (ShowApplyToAllOutputs\ \&\&\ !applyToAllOutputsOutside))}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00078\ }
-\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ the\ actual\ broadcast\ power\ according\ to\ values\ supplied\ in\ the\ broadcastPowers\ variable}}
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Mathf.Lerp(broadcastPowers.x,\ broadcastPowers.y,\ adjustedT);}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster_aa6ed4532561f98f364e0b5b7270a470c}\index{RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}!RemoveFromTrack@{RemoveFromTrack}}
 \index{RemoveFromTrack@{RemoveFromTrack}!RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}}
 \doxysubsubsection{\texorpdfstring{RemoveFromTrack()}{RemoveFromTrack()}}
@@ -140,14 +111,6 @@ override void Ryle\+Radio.\+Components.\+Radio\+Broadcaster.\+Remove\+From\+Trac
 
 Definition at line \mbox{\hyperlink{_radio_broadcaster_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_radio_broadcaster_8cs_source}{Radio\+Broadcaster.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.broadcasters.Remove(\textcolor{keyword}{this});}
-\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.OnRemoveBroadcaster(\textcolor{keyword}{this},\ \_track);}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 
 
 \label{doc-variable-members}

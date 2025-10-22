@@ -1,6 +1,15 @@
 var class_ryle_radio_1_1_components_1_1_radio_observer =
 [
     [ "ObserverEvent", "dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html", null ],
+    [ "ComparisonType", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7", [
+      [ "Equal", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7af5f286e73bda105e538310b3190f75c5", null ],
+      [ "GreaterThan", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7af6d044fe1f01fb0c956b80099e2a3072", null ],
+      [ "GreaterThanOrEqual", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7a25c44812e9d75f685d2a0b815dea1ebe", null ],
+      [ "LessThan", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7ac6d9d7bb9939f62f01c80f8b1251501c", null ],
+      [ "LessThanOrEqual", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7a4ab671acbbaacb0db7d8477cfe4f4e0b", null ],
+      [ "BetweenInclusive", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7adc69d8c6291bae10413401baf17f5589", null ],
+      [ "BetweenExclusive", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7a420f6965ca553e6bff717bdd49373fcc", null ]
+    ] ],
     [ "EventType", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582", [
       [ "OutputVolume", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582a4c1a5c5891c13b2e68ec26994b08bc14", null ],
       [ "Gain", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88", null ],

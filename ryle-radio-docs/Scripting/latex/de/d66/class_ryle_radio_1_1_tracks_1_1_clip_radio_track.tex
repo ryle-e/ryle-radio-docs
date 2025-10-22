@@ -74,14 +74,6 @@ Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{R
 
 Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00060}{60}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ already\ have\ all\ the\ samples,\ so\ we\ just\ get\ the\ one\ at\ the\ given\ index}}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Samples[\_sampleIndex];}
-\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a35adc9929e2b6bfad7c63a08c7a75851}\index{RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}!Init@{Init}}
 \index{Init@{Init}!RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}}
 \doxysubsubsection{\texorpdfstring{Init()}{Init()}}
@@ -96,16 +88,6 @@ Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{R
 
 Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ ReadClipAndForceToMono();}
-\DoxyCodeLine{00027\ }
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ SampleCount\ =\ Samples.Length;\ \textcolor{comment}{//\ assign\ clip\ values\ based\ on\ chosen\ clip}}
-\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ SampleRate\ =\ clip.frequency;}
-\DoxyCodeLine{00030\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_a887d3aa598057c9fe49b549430fefdef}\index{RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}!ReadClipAndForceToMono@{ReadClipAndForceToMono}}
 \index{ReadClipAndForceToMono@{ReadClipAndForceToMono}!RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}}
 \doxysubsubsection{\texorpdfstring{ReadClipAndForceToMono()}{ReadClipAndForceToMono()}}
@@ -116,34 +98,6 @@ void Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+Read\+Clip\+And\+Force\+To\+Mon
 
 Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00034}{34}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00035\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00036\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}[]\ allSamples\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[clip.samples\ *\ clip.channels];\ \textcolor{comment}{//\ all\ samples\ from\ both\ channels}}
-\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ Samples\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{float}[clip.samples];\ \textcolor{comment}{//\ samples\ combined\ to\ one\ channel}}
-\DoxyCodeLine{00038\ }
-\DoxyCodeLine{00039\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ clip\ is\ invalid\ for\ some\ reason,\ tell\ the\ user}}
-\DoxyCodeLine{00040\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (!clip.GetData(allSamples,\ 0))}
-\DoxyCodeLine{00041\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00042\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError(\textcolor{stringliteral}{"{}Cannot\ access\ clip\ data\ from\ track\ "{}}\ +\ clip.name);}
-\DoxyCodeLine{00043\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return};}
-\DoxyCodeLine{00044\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00045\ }
-\DoxyCodeLine{00046\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ each\ sample\ (all\ channels)}}
-\DoxyCodeLine{00047\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ sample\ =\ 0;\ sample\ <\ clip.samples;\ sample++)}
-\DoxyCodeLine{00048\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00049\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ combined\ =\ 0;}
-\DoxyCodeLine{00050\ }
-\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ each\ channel\ in\ this\ sample,\ combine\ the\ audio}}
-\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ channel\ =\ 0;\ channel\ <\ clip.channels;\ channel++)}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combined\ +=\ allSamples[(sample\ *\ clip.channels)\ +\ channel];}
-\DoxyCodeLine{00054\ }
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combined\ /=\ clip.channels;\ \textcolor{comment}{//\ find\ the\ average\ of\ the\ channels'\ audio}}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Samples[sample]\ =\ combined;\ \textcolor{comment}{//\ make\ the\ mono\ sample\ the\ average}}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 
 
 \label{doc-variable-members}
@@ -188,11 +142,6 @@ Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}
 
 Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00020\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_afb9a8b8a3532d55b7ba050ec54b9e40a}\index{RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}!Samples@{Samples}}
 \index{Samples@{Samples}!RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}}
 \doxysubsubsection{\texorpdfstring{Samples}{Samples}}
@@ -203,11 +152,6 @@ float \mbox{[}$\,$\mbox{]} Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+Samples\h
 
 Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00018\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
-
-\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

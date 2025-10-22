@@ -98,15 +98,6 @@ enum Ryle\+Radio.\+Components.\+Radio\+Output.\+Multiple\+Players\+Selector}
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ Youngest,}
-\DoxyCodeLine{00024\ \ \ \ \ \ \ \ \ \ \ \ \ Oldest,}
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ Random}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
-
 
 \label{doc-func-members}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_doc-func-members}
@@ -121,19 +112,6 @@ override void Ryle\+Radio.\+Components.\+Radio\+Output.\+Init (\begin{DoxyParamC
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00106}{106}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ save\ the\ sample\ rate\ of\ the\ whole\ Unity\ player}}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ baseSampleRate\ =\ AudioSettings.outputSampleRate;}
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ and\ start\ all\ track\ players}}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ StartPlayers();}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ OnTune(tune);}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a275462937bf79b9a91d5f8942b97c450}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!LocalInit@{LocalInit}}
 \index{LocalInit@{LocalInit}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{LocalInit()}{LocalInit()}}
@@ -144,16 +122,6 @@ void Ryle\+Radio.\+Components.\+Radio\+Output.\+Local\+Init (\begin{DoxyParamCap
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00098}{98}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ initialize\ the\ associated\ RadioData}}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ note:\ this\ should\ be\ the\ only\ component\ that\ calls\ this-\/\ just\ for\ safety}}
-\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ data.Init();}
-\DoxyCodeLine{00103\ }
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a2f58b179da3607ed1176621fd6517cfb}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!OnAudioFilterRead@{OnAudioFilterRead}}
 \index{OnAudioFilterRead@{OnAudioFilterRead}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{OnAudioFilterRead()}{OnAudioFilterRead()}}
@@ -164,55 +132,6 @@ virtual void Ryle\+Radio.\+Components.\+Radio\+Output.\+On\+Audio\+Filter\+Read 
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00299}{299}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00300\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00301\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ output\ only\ plays\ back\ one\ channel,\ so\ we\ have\ to\ account\ for\ this\ when\ the\ radio\ is\ using}}
-\DoxyCodeLine{00302\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ tracks\ with\ more\ than\ one\ channel}}
-\DoxyCodeLine{00303\ }
-\DoxyCodeLine{00304\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ number\ of\ samples\ for,\ total-\/\ the\ \_data\ array\ has\ an\ entry\ for\ each\ channel\ by\ default.\ e.g\ if\ \_data\ was\ 2048}}
-\DoxyCodeLine{00305\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ entries\ long,\ and\ there\ were\ two\ channels-\/\ there\ would\ actually\ only\ be\ 1024\ samples}}
-\DoxyCodeLine{00306\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ monoSampleCount\ =\ \_data.Length\ /\ \_channels;}
-\DoxyCodeLine{00307\ }
-\DoxyCodeLine{00308\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ every\ sample\ in\ the\ data\ array}}
-\DoxyCodeLine{00309\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ index\ =\ 0;\ index\ <\ monoSampleCount;\ index++)}
-\DoxyCodeLine{00310\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00311\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ want\ to\ store\ the\ sample\ itself,\ and\ the\ added\ volume\ of\ all\ previous\ tracks}}
-\DoxyCodeLine{00312\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ sample\ =\ 0;}
-\DoxyCodeLine{00313\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ combinedVolume\ =\ 0;}
-\DoxyCodeLine{00314\ }
-\DoxyCodeLine{00315\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ every\ active\ track,}}
-\DoxyCodeLine{00316\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (RadioTrackPlayer\ player\ \textcolor{keywordflow}{in}\ players)}
-\DoxyCodeLine{00317\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00318\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ audio\ in\ this\ sample}}
-\DoxyCodeLine{00319\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ sample\ +=\ player.GetSample(Tune,\ cachedPos,\ combinedVolume,\ out\ \textcolor{keywordtype}{float}\ outVolume,\ \textcolor{keyword}{true});}
-\DoxyCodeLine{00320\ }
-\DoxyCodeLine{00321\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ then\ move\ along\ to\ the\ next\ sample}}
-\DoxyCodeLine{00322\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.IncrementSample();}
-\DoxyCodeLine{00323\ }
-\DoxyCodeLine{00324\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ store\ the\ volume\ so\ far\ so\ that\ tracks\ with\ attenuation\ can\ adjust\ accordingly-\/\ see\ RadioTrackPlayer.GetSample()}}
-\DoxyCodeLine{00325\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ combinedVolume\ +=\ outVolume;}
-\DoxyCodeLine{00326\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00327\ }
-\DoxyCodeLine{00328\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ function\ uses\ \_data\ for\ each\ sample\ packed\ into\ one\ big\ list-\/\ each\ channel\ is\ joined\ end\ to\ end}}
-\DoxyCodeLine{00329\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ that\ means\ if\ there\ are\ multiple\ \_channels,\ we\ need\ to\ apply\ the\ audio\ to\ each\ of\ them\ before\ jumping\ to\ the\ next\ sample}}
-\DoxyCodeLine{00330\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ therefore\ we\ iterate\ through\ every\ channel,\ for\ every\ sample}}
-\DoxyCodeLine{00331\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indexWithChannels\ =\ index\ *\ \_channels;}
-\DoxyCodeLine{00332\ }
-\DoxyCodeLine{00333\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ each\ channel,}}
-\DoxyCodeLine{00334\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ channel\ =\ indexWithChannels;\ channel\ <\ indexWithChannels\ +\ \_channels;\ channel++)}
-\DoxyCodeLine{00335\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_data[channel]\ +=\ sample;\ \textcolor{comment}{//\ apply\ the\ sample}}
-\DoxyCodeLine{00336\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00337\ }
-\DoxyCodeLine{00338\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ execute\ all\ events\ waiting\ for\ this\ read\ sequence\ to\ end}}
-\DoxyCodeLine{00339\ \ \ \ \ \ \ \ \ \ \ \ \ lock\ (playEvents) }
-\DoxyCodeLine{00340\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00341\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playEvents();\ \textcolor{comment}{//\ execute\ the\ delegate}}
-\DoxyCodeLine{00342\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playEvents\ =\ ()\ =>\ \{\ \};\ \textcolor{comment}{//\ clear\ it}}
-\DoxyCodeLine{00343\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00344\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_ad2d125d8048b92240e3d066fc6f1fbcd}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!PlayerCreation@{PlayerCreation}}
 \index{PlayerCreation@{PlayerCreation}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{PlayerCreation()}{PlayerCreation()}}
@@ -223,46 +142,6 @@ void Ryle\+Radio.\+Components.\+Radio\+Output.\+Player\+Creation (\begin{DoxyPar
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00118}{118}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (RadioObserver\ observer\ \textcolor{keywordflow}{in}\ Observers)}
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ an\ observer\ is\ watching\ this\ track}}
-\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (observer.AffectedTracks.Contains(\_player.TrackW.name))}
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ observer.AssignEvents(\_player);\ \textcolor{comment}{//\ point\ it\ towards\ this\ new\ player}}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00127\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00128\ }
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ below\ here\ is\ a\ section\ where\ we\ insert\ the\ new\ player\ into\ the\ list\ while\ preserving\ the\ order\ of\ the\ tracks\ in\ the\ Data\ inspector.}}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ do\ this\ so\ that\ attenuation\ is\ preserved.\ if\ we\ just\ added\ players\ to\ the\ list\ one\ by\ one,\ the\ order\ would\ change,\ and\ so\ tracks}}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ that\ are\ supposed\ to\ get\ quieter\ when\ another\ is\ played\ (attenuate)\ will\ not\ do\ so\ if\ the\ other\ player\ was\ created\ afterwards.}}
-\DoxyCodeLine{00132\ }
-\DoxyCodeLine{00133\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ index\ of\ the\ track\ in\ the\ RadioData\ track\ list-\/\ the\ order\ of\ the\ Data\ in\ the\ inspector}}
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indexInData\ =\ Data.TrackIDs.IndexOf(\_player.TrackW.id);}
-\DoxyCodeLine{00135\ }
-\DoxyCodeLine{00136\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ index\ at\ which\ to\ put\ the\ newly\ created\ player}}
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ indexForNewPlayer\ =\ players.Count;}
-\DoxyCodeLine{00138\ }
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ search\ through\ the\ currently\ existent\ players\ to\ find\ one\ with\ a\ higher\ index\ in\ Data}}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ players.Count;\ i++)}
-\DoxyCodeLine{00141\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Data.TrackIDs.IndexOf(players[i].TrackW.id)\ >\ indexInData)}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ indexForNewPlayer\ =\ i;}
-\DoxyCodeLine{00145\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00147\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00148\ }
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ store\ the\ player}}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (players.Count\ ==\ 0)}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ players.Add(\_player);}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ players.Insert(indexForNewPlayer,\ \_player);}
-\DoxyCodeLine{00154\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a031b4f204740357fe39f0b843f5d2165}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!PlayLoop@{PlayLoop}}
 \index{PlayLoop@{PlayLoop}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{PlayLoop()}{PlayLoop()}}
@@ -273,32 +152,6 @@ Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00118}{118}} of fi
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00206}{206}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00208\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ track\ with\ the\ given\ id}}
-\DoxyCodeLine{00209\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Data.TryGetTrack(\_id,\ out\ RadioTrackWrapper\ track))}
-\DoxyCodeLine{00210\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ a\ new\ player\ for\ the\ track,\ set\ to\ loop}}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RadioTrackPlayer\ player\ =\ \textcolor{keyword}{new}(track,\ RadioTrackPlayer.PlayerType.Loop,\ baseSampleRate);}
-\DoxyCodeLine{00213\ }
-\DoxyCodeLine{00214\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ store\ the\ player}}
-\DoxyCodeLine{00215\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lock\ (playEvents)}
-\DoxyCodeLine{00216\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playEvents\ +=\ ()\ =>\ PlayerCreation(player);}
-\DoxyCodeLine{00217\ }
-\DoxyCodeLine{00218\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ the\ player}}
-\DoxyCodeLine{00219\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ player;}
-\DoxyCodeLine{00220\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00221\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ it\ can't\ find\ a\ player\ with\ the\ id,\ warn\ the\ user}}
-\DoxyCodeLine{00222\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00223\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00224\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}Can't\ find\ track\ with\ id\ \{\_id\}\ to\ play\ as\ a\ loop!"{}});}
-\DoxyCodeLine{00225\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
-\DoxyCodeLine{00226\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00227\ }
-\DoxyCodeLine{00228\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_aff40c1b83a7f20c0e421a54d183c890f}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!PlayOneShot@{PlayOneShot}}
 \index{PlayOneShot@{PlayOneShot}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{PlayOneShot()}{PlayOneShot()}}
@@ -309,38 +162,6 @@ Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00206}{206}} of fi
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00175}{175}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ track\ with\ the\ given\ id}}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (Data.TryGetTrack(\_id,\ out\ RadioTrackWrapper\ track))}
-\DoxyCodeLine{00179\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00180\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ a\ new\ player\ for\ the\ track,\ set\ to\ one-\/shot}}
-\DoxyCodeLine{00181\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ RadioTrackPlayer\ player\ =\ \textcolor{keyword}{new}(track,\ RadioTrackPlayer.PlayerType.OneShot,\ baseSampleRate);}
-\DoxyCodeLine{00182\ }
-\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ store\ the\ player}}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lock\ (playEvents)}
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playEvents\ +=\ ()\ =>\ PlayerCreation(player);}
-\DoxyCodeLine{00186\ }
-\DoxyCodeLine{00187\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ensure\ that\ the\ new\ player\ is\ cleaned\ up\ when\ it's\ destroyed}}
-\DoxyCodeLine{00188\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ player.DoDestroy\ +=\ player\ =>}
-\DoxyCodeLine{00189\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lock\ (playEvents)}
-\DoxyCodeLine{00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ playEvents\ +=\ ()\ =>\ players.Remove(player);}
-\DoxyCodeLine{00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \};}
-\DoxyCodeLine{00193\ }
-\DoxyCodeLine{00194\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ the\ player}}
-\DoxyCodeLine{00195\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ player;}
-\DoxyCodeLine{00196\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00197\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ it\ can't\ find\ a\ player\ with\ the\ id,\ warn\ the\ user}}
-\DoxyCodeLine{00198\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\$\textcolor{stringliteral}{"{}Can't\ find\ track\ with\ id\ \{\_id\}\ to\ play\ as\ a\ one-\/shot!"{}});}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
-\DoxyCodeLine{00202\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_ab3bc47036b92f51fe9ff4deebf6a0edf}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!TryGetPlayer@{TryGetPlayer}}
 \index{TryGetPlayer@{TryGetPlayer}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{TryGetPlayer()}{TryGetPlayer()}}
@@ -351,66 +172,6 @@ bool Ryle\+Radio.\+Components.\+Radio\+Output.\+Try\+Get\+Player (\begin{DoxyPar
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00231}{231}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00237\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00238\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ find\ any\ players\ associated\ with\ the\ track\ with\ the\ given\ id}}
-\DoxyCodeLine{00239\ \ \ \ \ \ \ \ \ \ \ \ \ var\ found\ =\ players.Where(p\ =>\ p.TrackW.id\ ==\ \_trackID);}
-\DoxyCodeLine{00240\ }
-\DoxyCodeLine{00241\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ there\ are\ multiple\ players,}}
-\DoxyCodeLine{00242\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (found.Count()\ >\ 1)}
-\DoxyCodeLine{00243\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00244\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ select\ one\ based\ off\ the\ given\ selector}}
-\DoxyCodeLine{00245\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (\_multiplePlayerSelector)}
-\DoxyCodeLine{00246\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00247\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:\ \textcolor{comment}{//\ choose\ the\ youngest\ player}}
-\DoxyCodeLine{00248\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ MultiplePlayersSelector.Youngest:}
-\DoxyCodeLine{00249\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_player\ =\ found.Last();}
-\DoxyCodeLine{00250\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00251\ }
-\DoxyCodeLine{00252\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ choose\ the\ oldest\ player}}
-\DoxyCodeLine{00253\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ MultiplePlayersSelector.Oldest:}
-\DoxyCodeLine{00254\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_player\ =\ found.First();}
-\DoxyCodeLine{00255\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00256\ }
-\DoxyCodeLine{00257\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ choose\ a\ random\ player}}
-\DoxyCodeLine{00258\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ MultiplePlayersSelector.Random:}
-\DoxyCodeLine{00259\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ Random.Range(0,\ found.Count());}
-\DoxyCodeLine{00260\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_player\ =\ found.ElementAt(index);}
-\DoxyCodeLine{00261\ }
-\DoxyCodeLine{00262\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{break};}
-\DoxyCodeLine{00263\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00264\ }
-\DoxyCodeLine{00265\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ a\ player\ was\ found,\ so\ return\ true}}
-\DoxyCodeLine{00266\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00267\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00268\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ there\ is\ one\ player,}}
-\DoxyCodeLine{00269\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (found.Count()\ >\ 0)}
-\DoxyCodeLine{00270\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00271\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ choose\ it\ and\ return\ true}}
-\DoxyCodeLine{00272\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_player\ =\ found.First();}
-\DoxyCodeLine{00273\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};}
-\DoxyCodeLine{00274\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00275\ }
-\DoxyCodeLine{00276\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ there\ aren't\ any\ players\ for\ this\ track,}}
-\DoxyCodeLine{00277\ }
-\DoxyCodeLine{00278\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ the\ method\ is\ set\ to\ make\ a\ new\ one,}}
-\DoxyCodeLine{00279\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (\_createNew)}
-\DoxyCodeLine{00280\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00281\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ a\ new\ player\ for\ this\ track}}
-\DoxyCodeLine{00282\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ you\ want\ it\ to\ be\ a\ loop,\ play\ it\ manually-\/\ this\ is\ more\ of\ an\ error\ catch\ than\ an\ actual\ method\ of\ creation}}
-\DoxyCodeLine{00283\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_player\ =\ PlayOneShot(\_trackID);}
-\DoxyCodeLine{00284\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ and\ return\ true}}
-\DoxyCodeLine{00285\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00286\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ and\ we\ aren't\ creating\ a\ new\ one,}}
-\DoxyCodeLine{00287\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00288\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00289\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_player\ =\ \textcolor{keyword}{null};\ \textcolor{comment}{//\ there\ is\ no\ player}}
-\DoxyCodeLine{00290\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{false};\ \textcolor{comment}{//\ so\ we\ return\ false}}
-\DoxyCodeLine{00291\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00292\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_afb8d28cce63a6ed69654faddcb838aab}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Update@{Update}}
 \index{Update@{Update}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{Update()}{Update()}}
@@ -421,14 +182,6 @@ virtual void Ryle\+Radio.\+Components.\+Radio\+Output.\+Update (\begin{DoxyParam
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00084}{84}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ cache\ the\ position\ of\ this\ output}}
-\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ cachedPos\ =\ transform.position;}
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 
 
 \label{doc-variable-members}
@@ -479,13 +232,6 @@ float Ryle\+Radio.\+Components.\+Radio\+Output.\+Display\+Tune\hspace{0.3cm}{\tt
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00070}{70}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00071\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ Mathf.Round(tune\ *\ 10)\ /\ 10;}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a1d1c31221ea897d47f1bc6751c723edd}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Observers@{Observers}}
 \index{Observers@{Observers}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{Observers}{Observers}}
@@ -496,11 +242,6 @@ List$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radi
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00047}{47}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00047\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}();}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a0b1152b45511492e7c2d154ab4232dcb}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!OnTune@{OnTune}}
 \index{OnTune@{OnTune}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{OnTune}{OnTune}}
@@ -511,11 +252,6 @@ Action$<$float$>$ Ryle\+Radio.\+Components.\+Radio\+Output.\+On\+Tune = new(\+\_
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00050\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}(\_\ =>\ \{\ \});}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Tune@{Tune}}
 \index{Tune@{Tune}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{Tune}{Tune}}
@@ -526,21 +262,6 @@ float Ryle\+Radio.\+Components.\+Radio\+Output.\+Tune\hspace{0.3cm}{\ttfamily [g
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00052}{52}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ tune;}
-\DoxyCodeLine{00055\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{set}}
-\DoxyCodeLine{00056\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ clamp\ the\ tune\ to\ the\ available\ range\ (not\ needed\ in\ inspector,\ needed\ if\ tune\ changed\ in\ code)}}
-\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ tune\ =\ Mathf.Clamp(value,\ RadioData.LOW\_TUNE,\ RadioData.HIGH\_TUNE);}
-\DoxyCodeLine{00059\ }
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ invoke\ the\ tune\ change\ callback}}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ OnTune(tune);}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a263ebb1a84ef2b7731c52f7b5fd9bba7}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Tune01@{Tune01}}
 \index{Tune01@{Tune01}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{Tune01}{Tune01}}
@@ -551,13 +272,6 @@ float Ryle\+Radio.\+Components.\+Radio\+Output.\+Tune01\hspace{0.3cm}{\ttfamily 
 
 Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00065}{65}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}\ =>\ Mathf.InverseLerp(RadioData.LOW\_TUNE,\ RadioData.HIGH\_TUNE,\ Tune);}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

@@ -18,7 +18,7 @@
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="15" column="30" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="15" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aa3f3983f522937ed634525992a500f83" prot="public" static="no" mutable="no">
-        <type>ComparisonType</type>
+        <type><ref refid="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1adedd1d6ce5d8cf86977d7187ca74cfd7" kindref="member">ComparisonType</ref></type>
         <definition>ComparisonType RyleRadio.Components.RadioObserver.ObserverEvent.comparison</definition>
         <argsstring></argsstring>
         <name>comparison</name>

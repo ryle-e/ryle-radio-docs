@@ -19,7 +19,7 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c36b405481c6e9460645aa9b0418582a35d72fa7d84f4ae67d705373d1d44b88" prot="public">
           <name>Gain</name>
           <briefdescription>
-<para>the volume of the track: gain * broadcast power * insulation </para>
+<para>The volume of the track: tune power * broadcast power * insulation. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -27,7 +27,7 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c36b405481c6e9460645aa9b0418582a2c7cc15fb1e8401b0c054fc415c66be2" prot="public">
           <name>TunePower</name>
           <briefdescription>
-<para>the gain of the track: this is combined from the gain variable on the track and the tuning power on the output </para>
+<para>The gain of the track: this is currently defined exclusively in the track&apos;s gain variable. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -35,7 +35,7 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c36b405481c6e9460645aa9b0418582a9c5156561aae5c21f53ad13034f6e1fd" prot="public">
           <name>BroadcastPower</name>
           <briefdescription>
-<para>the gain of the track: this is combined from the gain variable on the track and the tuning power on the output </para>
+<para>The tune power of the track: how close the RadioOutput.Tune value is to the range of the track. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -43,7 +43,7 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c36b405481c6e9460645aa9b0418582aac49d4d549aa6409857531a4d093d1df" prot="public">
           <name>Insulation</name>
           <briefdescription>
-<para>the broadcast power of the track: how close to any active RadioBroadcasters the output is </para>
+<para>The broadcast power of the track: how close to any active RadioBroadcasters the output&apos;s transform is. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -51,7 +51,7 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c36b405481c6e9460645aa9b0418582a76b9817b7b0d6397d04ab9dd7a22d6bf" prot="public">
           <name>TrackEnds</name>
           <briefdescription>
-<para>the insulation of the track: the higher the value the less insulation- the power of any <ref refid="de/def/class_ryle_radio_1_1_components_1_1_radio_insulator" kindref="compound">RadioInsulator</ref> the output is in </para>
+<para>The insulation of the track: the higher the value the less insulation- the power of any <ref refid="de/def/class_ryle_radio_1_1_components_1_1_radio_insulator" kindref="compound">RadioInsulator</ref> the output is inside of. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -59,7 +59,7 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c36b405481c6e9460645aa9b0418582ab6000982d6da8560c9c7ab95efed3f4b" prot="public">
           <name>TrackStarts</name>
           <briefdescription>
-<para>the track ends, or loops </para>
+<para>The track ends, or loops- this is a singular event. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -67,7 +67,7 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c36b405481c6e9460645aa9b0418582a774d19c914fce2e5fcbdfcb9481aedf0" prot="public">
           <name>OutputTune</name>
           <briefdescription>
-<para>the track starts, or loops (happens after TrackEnds) </para>
+<para>The track starts, or loops (happens after TrackEnds)- this is a singular event. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -75,19 +75,20 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754" prot="public">
           <name>None</name>
           <briefdescription>
-<para>the tune on the output is changed </para>
+<para>The tune on the output is changed. </para>
           </briefdescription>
           <detaileddescription>
+<para>Empty, mainly to temporarily disable an event without deleting it </para>
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>The event an observer is looking for. </para>
+<para>The event an observer is looking for. For all options except TrackEnds and TrackStarts, we need an other value(s) to detect when this event occurs- for example, checking if volume is above a threshold. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="20" column="15" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="21" bodyend="32"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="24" column="15" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="25" bodyend="36"/>
       </memberdef>
       <memberdef kind="enum" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1adedd1d6ce5d8cf86977d7187ca74cfd7" prot="public" static="no" strong="yes">
         <type></type>
@@ -103,13 +104,16 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1adedd1d6ce5d8cf86977d7187ca74cfd7af6d044fe1f01fb0c956b80099e2a3072" prot="public">
           <name>GreaterThan</name>
           <briefdescription>
+<para>The value is equal to a number. </para>
           </briefdescription>
           <detaileddescription>
+<para>We&apos;re using floats for almost every <ref refid="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c36b405481c6e9460645aa9b0418582" kindref="member">EventType</ref> with a value, so this won&apos;t be used often</para>
           </detaileddescription>
         </enumvalue>
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1adedd1d6ce5d8cf86977d7187ca74cfd7a25c44812e9d75f685d2a0b815dea1ebe" prot="public">
           <name>GreaterThanOrEqual</name>
           <briefdescription>
+<para>The value is greater than a number. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -117,6 +121,7 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1adedd1d6ce5d8cf86977d7187ca74cfd7ac6d9d7bb9939f62f01c80f8b1251501c" prot="public">
           <name>LessThan</name>
           <briefdescription>
+<para>The value is greater than or equal to a number. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -124,6 +129,7 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1adedd1d6ce5d8cf86977d7187ca74cfd7a4ab671acbbaacb0db7d8477cfe4f4e0b" prot="public">
           <name>LessThanOrEqual</name>
           <briefdescription>
+<para>The value is less than a number. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -131,6 +137,7 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1adedd1d6ce5d8cf86977d7187ca74cfd7adc69d8c6291bae10413401baf17f5589" prot="public">
           <name>BetweenInclusive</name>
           <briefdescription>
+<para>The value is less than or equal to a number. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -138,17 +145,19 @@
         <enumvalue id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1adedd1d6ce5d8cf86977d7187ca74cfd7a420f6965ca553e6bff717bdd49373fcc" prot="public">
           <name>BetweenExclusive</name>
           <briefdescription>
+<para>The value is between numbers x and y, including if it&apos;s equal to x or y. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
         </enumvalue>
         <briefdescription>
+<para>The method of comparison used for an event. For example, checking if the volume is greater than a number, or in a certain range. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="35" column="15" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="36" bodyend="44"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="41" column="15" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="42" bodyend="50"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-attrib">
@@ -159,12 +168,13 @@
         <name>output</name>
         <qualifiedname>RyleRadio.Components.RadioObserver.output</qualifiedname>
         <briefdescription>
+<para>The <ref refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output" kindref="compound">RadioOutput</ref> this observer is attached to. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="47" column="30" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="47" bodyend="-1"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="55" column="30" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="55" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a4230b55ced5082f104e1dadd7f225737" prot="private" static="no" mutable="no">
         <type>int</type>
@@ -173,12 +183,14 @@
         <name>affectedTracks</name>
         <qualifiedname>RyleRadio.Components.RadioObserver.affectedTracks</qualifiedname>
         <briefdescription>
+<para>The tracks that this observer is watching for events on. </para>
         </briefdescription>
         <detaileddescription>
+<para>Note again: each Observer has its own tracks, not each <ref refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event" kindref="compound">ObserverEvent</ref>. It&apos;s a limitation on <ref refid="d4/dfd/class_ryle_radio_1_1_multiselect_attribute" kindref="compound">MultiselectAttribute</ref> </para>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="52" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="52" bodyend="-1"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="64" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="64" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a0886bd8a2912dd7f6be8ba2f42ac6b1c" prot="private" static="no" mutable="no">
         <type>List&lt; <ref refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event" kindref="compound">ObserverEvent</ref> &gt;</type>
@@ -192,7 +204,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="55" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="55" bodyend="-1"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="67" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="67" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1afbedeb396a11124c15f3f8dc67f0c9b4" prot="private" static="no" mutable="no">
         <type>List&lt; Action &gt;</type>
@@ -207,7 +219,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="60" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="60" bodyend="-1"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="72" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="72" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a289de6dde811ce51a1207e5db4d95f96" prot="private" static="no" mutable="no">
         <type>string[]</type>
@@ -221,7 +233,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="67" column="24" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="67" bodyend="-1"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="79" column="24" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="79" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a633bba9cac49e89ee1fa21434171b1e5" prot="private" static="no" mutable="no">
         <type>bool[]</type>
@@ -236,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="81" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="81" bodyend="-1"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="93" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="93" bodyend="-1"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="property">
@@ -252,7 +264,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="63" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="63" bodyend="63"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="75" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="75" bodyend="75"/>
       </memberdef>
       <memberdef kind="property" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a79a7484b93704449f8b9691f13a25bc5" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
         <type>string[]</type>
@@ -266,7 +278,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="68" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="69" bodyend="77"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="80" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="81" bodyend="89"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -282,7 +294,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="84" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="84" bodyend="88"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="96" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="96" bodyend="100"/>
       </memberdef>
       <memberdef kind="function" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a5cf3400db9f76f6dac74444a693bfa4e" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -296,7 +308,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="90" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="90" bodyend="93"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="102" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="102" bodyend="105"/>
       </memberdef>
       <memberdef kind="function" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1af96f1100853e1768cb363ec4aafe116d" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -310,7 +322,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="95" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="95" bodyend="116"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="107" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="107" bodyend="128"/>
       </memberdef>
       <memberdef kind="function" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c2706d6c5ec3fa2eb7de2f22ca6ea0c" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -332,7 +344,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="191" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="191" bodyend="242"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="203" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="203" bodyend="254"/>
       </memberdef>
       <memberdef kind="function" id="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a1a767f69b2219c279f0f1431d558ebbd" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -350,7 +362,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="245" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="245" bodyend="250"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="257" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="257" bodyend="262"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -370,16 +382,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="119" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="119" bodyend="188"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" line="131" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/RadioObserver.cs" bodystart="131" bodyend="200"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para><linebreak/>
- A component used to watch for specific happenings on a <ref refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output" kindref="compound">RadioOutput</ref>, e.g: a clip being a certain volume, a track starting, the tune being in a certain range<linebreak/>
+<para>A component used to watch for specific happenings on a <ref refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output" kindref="compound">RadioOutput</ref>, e.g: a clip being a certain volume, a track starting, the tune being in a certain range<linebreak/>
 We don&apos;t inherit from RadioComponent here since we don&apos;t need to use a <ref refid="da/dc0/class_ryle_radio_1_1_radio_data" kindref="compound">RadioData</ref> ref, but it&apos;s very similar<linebreak/>
-</para>
+. </para>
     </briefdescription>
     <detaileddescription>
+<para>One major thing to notice about this class is that each individual Observer component has specific tracks it&apos;s watching for- NOT each individual <ref refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event" kindref="compound">ObserverEvent</ref>. This is due to limitations of MultiselectAttribute- it doesn&apos;t display in nested lists properly. This is theoretically something I can fix, but I&apos;m not fantastic at custom editors so I&apos;d prefer to accept this limitation for now. With that being said, this means it <emphasis>is</emphasis> a bit cleaner to navigate multiple Observers in the scene- not all bad! </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="2">

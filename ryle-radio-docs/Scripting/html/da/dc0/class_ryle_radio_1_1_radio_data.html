@@ -146,11 +146,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00134">134</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  135</span>        {</div>
-<div class="line"><span class="lineno">  136</span>            TrackNames.Clear();</div>
-<div class="line"><span class="lineno">  137</span>            TrackIDs.Clear();</div>
-<div class="line"><span class="lineno">  138</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a80f66f572dbfa7712696284f36eec5c3" name="a80f66f572dbfa7712696284f36eec5c3"></a>
@@ -169,19 +165,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00120">120</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  121</span>        {</div>
-<div class="line"><span class="lineno">  122</span>            BeforeInit(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>            <span class="comment">// initialize all the tracks</span></div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">foreach</span> (RadioTrackWrapper trackW <span class="keywordflow">in</span> TrackWrappers)</div>
-<div class="line"><span class="lineno">  126</span>                trackW.Init();</div>
-<div class="line"><span class="lineno">  127</span> </div>
-<div class="line"><span class="lineno">  128</span>            <span class="comment">// initialize all components, e.g broadcasters, insulators, outputs</span></div>
-<div class="line"><span class="lineno">  129</span>            RadioComponent.InitAllComponents();</div>
-<div class="line"><span class="lineno">  130</span> </div>
-<div class="line"><span class="lineno">  131</span>            OnInit(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  132</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a64ff39a80e08e2f0f9949fea56fbe6d2" name="a64ff39a80e08e2f0f9949fea56fbe6d2"></a>
@@ -208,10 +192,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00071">71</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   72</span>        {</div>
-<div class="line"><span class="lineno">   73</span>            <span class="keywordflow">return</span> _name.Split(<span class="stringliteral">&quot;, &quot;</span>)[0];</div>
-<div class="line"><span class="lineno">   74</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ad27ed8d69e9bb9813157bdc45f50d032" name="ad27ed8d69e9bb9813157bdc45f50d032"></a>
@@ -239,33 +220,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00141">141</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  142</span>        {</div>
-<div class="line"><span class="lineno">  143</span>            <span class="comment">// either an id or id can be supplied here, but we always convert it to an id for this</span></div>
-<div class="line"><span class="lineno">  144</span>            <span class="keywordtype">string</span> <span class="keywordtype">id</span> = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  145</span> </div>
-<div class="line"><span class="lineno">  146</span>            <span class="keywordflow">if</span> (_useID) <span class="comment">// if an id was provided, use it</span></div>
-<div class="line"><span class="lineno">  147</span>                <span class="keywordtype">id</span> = _idOrName;</div>
-<div class="line"><span class="lineno">  148</span>            <span class="keywordflow">else</span> <span class="comment">// if a id was provided, convert it to the id</span></div>
-<div class="line"><span class="lineno">  149</span>                <span class="keywordtype">id</span> = NameToID(_idOrName);</div>
-<div class="line"><span class="lineno">  150</span> </div>
-<div class="line"><span class="lineno">  151</span>            <span class="comment">// find any track with that id</span></div>
-<div class="line"><span class="lineno">  152</span>            var found = TrackWrappers.Find(t =&gt; t.id == <span class="keywordtype">id</span>);</div>
-<div class="line"><span class="lineno">  153</span> </div>
-<div class="line"><span class="lineno">  154</span>            <span class="comment">// if a track is found,</span></div>
-<div class="line"><span class="lineno">  155</span>            <span class="keywordflow">if</span> (found != <span class="keyword">null</span>)</div>
-<div class="line"><span class="lineno">  156</span>            {</div>
-<div class="line"><span class="lineno">  157</span>                <span class="comment">// output it and return true</span></div>
-<div class="line"><span class="lineno">  158</span>                _trackW = found;</div>
-<div class="line"><span class="lineno">  159</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  160</span>            }</div>
-<div class="line"><span class="lineno">  161</span>            <span class="keywordflow">else</span> <span class="comment">// otherwise</span></div>
-<div class="line"><span class="lineno">  162</span>            {</div>
-<div class="line"><span class="lineno">  163</span>                <span class="comment">// output it and return false</span></div>
-<div class="line"><span class="lineno">  164</span>                _trackW = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  165</span>                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">  166</span>            }</div>
-<div class="line"><span class="lineno">  167</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -339,8 +294,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00039">39</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   39</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>(_ =&gt; { }); <span class="comment">// invoked when Init() is called, but before anything happens</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9764ddee8f9b2c8b0bcae807a8ab4f23" name="a9764ddee8f9b2c8b0bcae807a8ab4f23"></a>
@@ -412,8 +366,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00038">38</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   38</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>(_ =&gt; { }); <span class="comment">// invoked when Init() is called</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ae60ad3469559e4f5ae2aee67a07cbe1d" name="ae60ad3469559e4f5ae2aee67a07cbe1d"></a>
@@ -437,17 +390,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00057">57</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>        {</div>
-<div class="line"><span class="lineno">   59</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   60</span>            {</div>
-<div class="line"><span class="lineno">   61</span>                <span class="comment">// if the ids haven&#39;t been generated, generate them</span></div>
-<div class="line"><span class="lineno">   62</span>                <span class="keywordflow">if</span> (trackIDs == <span class="keyword">null</span> || trackIDs.Count &lt;= 0)</div>
-<div class="line"><span class="lineno">   63</span>                    PopulateTrackIDs();</div>
-<div class="line"><span class="lineno">   64</span> </div>
-<div class="line"><span class="lineno">   65</span>                <span class="keywordflow">return</span> trackIDs;</div>
-<div class="line"><span class="lineno">   66</span>            }</div>
-<div class="line"><span class="lineno">   67</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a30d76fe4d36f356e5033ec3b0ac4da98" name="a30d76fe4d36f356e5033ec3b0ac4da98"></a>
@@ -471,17 +414,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html#l00043">43</a> of file <a class="el" href="../../d9/d5d/_radio_data_8cs_source.html">RadioData.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   44</span>        {</div>
-<div class="line"><span class="lineno">   45</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   46</span>            {</div>
-<div class="line"><span class="lineno">   47</span>                <span class="comment">// if the names haven&#39;t been generated, generate them</span></div>
-<div class="line"><span class="lineno">   48</span>                <span class="keywordflow">if</span> (trackNames == <span class="keyword">null</span> || trackNames.Count &lt;= 0)</div>
-<div class="line"><span class="lineno">   49</span>                    PopulateTrackIDs();</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>                <span class="keywordflow">return</span> trackNames;</div>
-<div class="line"><span class="lineno">   52</span>            }</div>
-<div class="line"><span class="lineno">   53</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="af6467a15aba98c56347d3468e8c96fa4" name="af6467a15aba98c56347d3468e8c96fa4"></a>

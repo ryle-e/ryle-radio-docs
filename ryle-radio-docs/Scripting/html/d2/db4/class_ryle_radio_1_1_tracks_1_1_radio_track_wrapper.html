@@ -159,15 +159,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00109">109</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  110</span>        {</div>
-<div class="line"><span class="lineno">  111</span>            track = <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  112</span>            trackType = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><span class="lineno">  113</span> </div>
-<div class="line"><span class="lineno">  114</span>            <span class="comment">// forces this wrapper to have a track on creation so that we don&#39;t get inspector errors</span></div>
-<div class="line"><span class="lineno">  115</span>            <span class="comment">// this gets called when the wrapper is created, not when it&#39;s initialized</span></div>
-<div class="line"><span class="lineno">  116</span>            CreateTrackLocal();</div>
-<div class="line"><span class="lineno">  117</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -187,10 +179,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00182">182</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  183</span>        {</div>
-<div class="line"><span class="lineno">  184</span>            track.AddToPlayerEndCallback(ref _callback);</div>
-<div class="line"><span class="lineno">  185</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ab322b29cd3c310eb76cfcc32fc1a8898" name="ab322b29cd3c310eb76cfcc32fc1a8898"></a>
@@ -217,23 +206,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00156">156</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  157</span>        {</div>
-<div class="line"><span class="lineno">  158</span>            <span class="comment">// get the index of the chosen track type</span></div>
-<div class="line"><span class="lineno">  159</span>            <span class="keywordtype">int</span> index = Array.IndexOf(TrackNames, _name);</div>
-<div class="line"><span class="lineno">  160</span> </div>
-<div class="line"><span class="lineno">  161</span>            <span class="comment">// if you somehow have an invalid track type, don&#39;t create anything</span></div>
-<div class="line"><span class="lineno">  162</span>            <span class="keywordflow">if</span> (index &lt; 0)</div>
-<div class="line"><span class="lineno">  163</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  164</span> </div>
-<div class="line"><span class="lineno">  165</span>            <span class="comment">// create the track generically</span></div>
-<div class="line"><span class="lineno">  166</span>            <span class="comment">// (we have to use Activator.CreateInstance here as it uses the Type as an argument- we can&#39;t generically instantiate a variable</span></div>
-<div class="line"><span class="lineno">  167</span>            <span class="comment">// from a given Type any other viable way</span></div>
-<div class="line"><span class="lineno">  168</span>            IRadioTrack outTrack = (IRadioTrack)Activator.CreateInstance(TrackTypes[index]);</div>
-<div class="line"><span class="lineno">  169</span> </div>
-<div class="line"><span class="lineno">  170</span>            <span class="comment">// return the new track</span></div>
-<div class="line"><span class="lineno">  171</span>            <span class="keywordflow">return</span> outTrack;</div>
-<div class="line"><span class="lineno">  172</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a9426f429184e25913c4e6cd48527ca7c" name="a9426f429184e25913c4e6cd48527ca7c"></a>
@@ -252,10 +225,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00175">175</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  176</span>        {</div>
-<div class="line"><span class="lineno">  177</span>            track = CreateTrackEditor(trackType);</div>
-<div class="line"><span class="lineno">  178</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5bed44201bd34688ce018c8b0eef42f0" name="a5bed44201bd34688ce018c8b0eef42f0"></a>
@@ -274,10 +244,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00210">210</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  211</span>        {</div>
-<div class="line"><span class="lineno">  212</span>            <span class="keywordflow">return</span> track.GetSample(_sampleIndex);</div>
-<div class="line"><span class="lineno">  213</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a909e0f98dc729f0baf120e04a3635a19" name="a909e0f98dc729f0baf120e04a3635a19"></a>
@@ -304,11 +271,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00148">148</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  149</span>        {</div>
-<div class="line"><span class="lineno">  150</span>            <span class="keywordtype">int</span> index = Array.IndexOf(TrackTypesAsStrings, _typeName.Split(<span class="stringliteral">&quot;.&quot;</span>)[^1]);</div>
-<div class="line"><span class="lineno">  151</span>            <span class="keywordflow">return</span> TrackNames[index];</div>
-<div class="line"><span class="lineno">  152</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="ac7d24219e5c27188f541c3134164ec64" name="ac7d24219e5c27188f541c3134164ec64"></a>
@@ -331,16 +294,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00198">198</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  199</span>        {</div>
-<div class="line"><span class="lineno">  200</span>            <span class="keywordflow">if</span> (_tune &lt; range.x || _tune &gt; range.y) <span class="comment">// if the tune is out of this track&#39;s range, it cannot be heard</span></div>
-<div class="line"><span class="lineno">  201</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  202</span> </div>
-<div class="line"><span class="lineno">  203</span>            <span class="keywordtype">float</span> tunePower = rangeCurve.Evaluate(_tune.Remap(range.x, range.y, 0f, 1f)); <span class="comment">// get the volume based on the tune and where it sits on the gain curve</span></div>
-<div class="line"><span class="lineno">  204</span>            <span class="keywordtype">float</span> attenPower = 1f - (Mathf.Clamp01(_otherVolume) * attenuation); <span class="comment">// get the volume based on attenuation and other playing trackWs</span></div>
-<div class="line"><span class="lineno">  205</span> </div>
-<div class="line"><span class="lineno">  206</span>            <span class="keywordflow">return</span> tunePower * attenPower; <span class="comment">// combine the values into one singular volume</span></div>
-<div class="line"><span class="lineno">  207</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a958441e5c561814d365f208cadf085aa" name="a958441e5c561814d365f208cadf085aa"></a>
@@ -359,20 +313,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00130">130</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  131</span>        {</div>
-<div class="line"><span class="lineno">  132</span>            BeforeInit(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  133</span> </div>
-<div class="line"><span class="lineno">  134</span>            <span class="comment">// initialize the track itself</span></div>
-<div class="line"><span class="lineno">  135</span>            track.Init();</div>
-<div class="line"><span class="lineno">  136</span> </div>
-<div class="line"><span class="lineno">  137</span>            <span class="comment">// reset stored components as they will otherwise be kept from the last play mode</span></div>
-<div class="line"><span class="lineno">  138</span>            <span class="comment">// this doesn&#39;t really matter in a build but is needed for the editor</span></div>
-<div class="line"><span class="lineno">  139</span>            broadcasters.Clear();</div>
-<div class="line"><span class="lineno">  140</span>            insulators.Clear();</div>
-<div class="line"><span class="lineno">  141</span> </div>
-<div class="line"><span class="lineno">  142</span>            OnInit(<span class="keyword">this</span>);</div>
-<div class="line"><span class="lineno">  143</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -582,8 +523,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00052">52</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   52</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>(_ =&gt; { }); <span class="comment">// called when the wraper is about to be initialized</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a74adba53bd688378c4a5fc3140ff4d67" name="a74adba53bd688378c4a5fc3140ff4d67"></a>
@@ -631,8 +571,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00054">54</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   54</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>((_, _) =&gt; { }); <span class="comment">// called when a broadcaster is added to the track</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a371c6db231ca6c2ca44be011ae29fe03" name="a371c6db231ca6c2ca44be011ae29fe03"></a>
@@ -656,8 +595,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00057">57</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>((_, _) =&gt; { }); <span class="comment">// called when an insulator is added to the track</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a0e5992ef4634849c28ec66de1e3baef3" name="a0e5992ef4634849c28ec66de1e3baef3"></a>
@@ -681,8 +619,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00051">51</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   51</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>(_ =&gt; { }); <span class="comment">// called when the wrapper is initialized</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2e298eae6270b5e163f4aae805cc3dd4" name="a2e298eae6270b5e163f4aae805cc3dd4"></a>
@@ -706,8 +643,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00055">55</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   55</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>((_, _) =&gt; { }); <span class="comment">// called when a broadcaster is removed from the track</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a1c98ba01c1d2ec6303002217691c7d6e" name="a1c98ba01c1d2ec6303002217691c7d6e"></a>
@@ -731,8 +667,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00058">58</a> of file <a class="el" href="../../da/de3/_radio_track_wrapper_8cs_source.html">RadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   58</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; } = <span class="keyword">new</span>((_, _) =&gt; { }); <span class="comment">// called when an insulator is removed from the track</span></div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a3bd3948910de5c7cd75d8d719f3b3181" name="a3bd3948910de5c7cd75d8d719f3b3181"></a>

@@ -160,11 +160,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Reimplemented from <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RyleRadio.Tracks.RadioTrack</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00076">76</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   77</span>        {</div>
-<div class="line"><span class="lineno">   78</span>            _callback += p =&gt; NextTrack(); <span class="comment">// choose the next track when the Player completes the last one</span></div>
-<div class="line"><span class="lineno">   79</span>            _callback += p =&gt; p.UpdateSampleIncrement(); <span class="comment">// update the Player&#39;s SampleCount/Length when the next track is chosen</span></div>
-<div class="line"><span class="lineno">   80</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2d64ffc17fd27c339dac115733da1ed1" name="a2d64ffc17fd27c339dac115733da1ed1"></a>
@@ -185,12 +181,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">RyleRadio.Tracks.IRadioTrack</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00082">82</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   83</span>        {</div>
-<div class="line"><span class="lineno">   84</span>            <span class="comment">// get the sample from the currently playing track</span></div>
-<div class="line"><span class="lineno">   85</span>            <span class="comment">// station tracks also have their own gain variable so apply that</span></div>
-<div class="line"><span class="lineno">   86</span>            <span class="keywordflow">return</span> CurrentTrackW.GetSample(_sampleIndex) * CurrentTrackW.Gain;</div>
-<div class="line"><span class="lineno">   87</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a79ad6625c291fcf2857ee880f6d70610" name="a79ad6625c291fcf2857ee880f6d70610"></a>
@@ -211,23 +202,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">RyleRadio.Tracks.IRadioTrack</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00056">56</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   57</span>        {</div>
-<div class="line"><span class="lineno">   58</span>            random = <span class="keyword">new</span> System.Random();</div>
-<div class="line"><span class="lineno">   59</span> </div>
-<div class="line"><span class="lineno">   60</span>            <span class="comment">// creates an entry for every track</span></div>
-<div class="line"><span class="lineno">   61</span>            remainingTracksBeforeRepeat = <span class="keyword">new</span> <span class="keywordtype">int</span>[stationTrackWs.Count];</div>
-<div class="line"><span class="lineno">   62</span>            currentTrackIndex = 0;</div>
-<div class="line"><span class="lineno">   63</span> </div>
-<div class="line"><span class="lineno">   64</span>            hasPrintedError = <span class="keyword">false</span>;</div>
-<div class="line"><span class="lineno">   65</span> </div>
-<div class="line"><span class="lineno">   66</span>            <span class="comment">// initializes all child tracks</span></div>
-<div class="line"><span class="lineno">   67</span>            <span class="keywordflow">foreach</span> (StationRadioTrackWrapper trackW <span class="keywordflow">in</span> stationTrackWs)</div>
-<div class="line"><span class="lineno">   68</span>                trackW.Init();</div>
-<div class="line"><span class="lineno">   69</span> </div>
-<div class="line"><span class="lineno">   70</span>            <span class="comment">// selects the first track to play</span></div>
-<div class="line"><span class="lineno">   71</span>            NextTrack();</div>
-<div class="line"><span class="lineno">   72</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>

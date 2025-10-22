@@ -142,14 +142,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00083">83</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   84</span>        {</div>
-<div class="line"><span class="lineno">   85</span>            track = _track;</div>
-<div class="line"><span class="lineno">   86</span>            gain = 100;</div>
-<div class="line"><span class="lineno">   87</span> </div>
-<div class="line"><span class="lineno">   88</span>            <span class="comment">// ensure this wrapper is not empty</span></div>
-<div class="line"><span class="lineno">   89</span>            CreateTrackLocal();</div>
-<div class="line"><span class="lineno">   90</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
@@ -177,23 +170,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00110">110</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  111</span>        {</div>
-<div class="line"><span class="lineno">  112</span>            <span class="comment">// get the index of the chosen track type</span></div>
-<div class="line"><span class="lineno">  113</span>            <span class="keywordtype">int</span> index = Array.IndexOf(TrackNames, _name);</div>
-<div class="line"><span class="lineno">  114</span> </div>
-<div class="line"><span class="lineno">  115</span>            <span class="comment">// if you somehow have an invalid track type, don&#39;t create anything</span></div>
-<div class="line"><span class="lineno">  116</span>            <span class="keywordflow">if</span> (index &lt; 0)</div>
-<div class="line"><span class="lineno">  117</span>                <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><span class="lineno">  118</span> </div>
-<div class="line"><span class="lineno">  119</span>            <span class="comment">// create the track generically</span></div>
-<div class="line"><span class="lineno">  120</span>            <span class="comment">// more info in RadioTrackWrapper.CreateTrackEditor</span></div>
-<div class="line"><span class="lineno">  121</span>            IStationTrack outTrack = (IStationTrack)Activator.CreateInstance(TrackTypes[index]);</div>
-<div class="line"><span class="lineno">  122</span>            outTrack.IsInStation = <span class="keyword">true</span>;</div>
-<div class="line"><span class="lineno">  123</span> </div>
-<div class="line"><span class="lineno">  124</span>            <span class="comment">// return the track</span></div>
-<div class="line"><span class="lineno">  125</span>            <span class="keywordflow">return</span> outTrack;</div>
-<div class="line"><span class="lineno">  126</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a2bb9727a6841b8f172bfb2fe0fc0b976" name="a2bb9727a6841b8f172bfb2fe0fc0b976"></a>
@@ -212,10 +189,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00129">129</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  130</span>        {</div>
-<div class="line"><span class="lineno">  131</span>            track = CreateTrackEditor(trackType);</div>
-<div class="line"><span class="lineno">  132</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a5a831d69b1ac9818a1a53d9b09f8146c" name="a5a831d69b1ac9818a1a53d9b09f8146c"></a>
@@ -234,18 +208,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00135">135</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  136</span>        {</div>
-<div class="line"><span class="lineno">  137</span>            <span class="comment">// if the track has a rest at the beginning at that sample index, return a silent sample</span></div>
-<div class="line"><span class="lineno">  138</span>            <span class="keywordflow">if</span> (_sampleIndex &lt; startAndEndRests.x)</div>
-<div class="line"><span class="lineno">  139</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  140</span>            <span class="comment">// same thing but for a rest at the end of the track</span></div>
-<div class="line"><span class="lineno">  141</span>            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (_sampleIndex &gt; (track.SampleCount + startAndEndRests.x))</div>
-<div class="line"><span class="lineno">  142</span>                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><span class="lineno">  143</span> </div>
-<div class="line"><span class="lineno">  144</span>            <span class="comment">// otherwise, return the sample from the track</span></div>
-<div class="line"><span class="lineno">  145</span>            <span class="keywordflow">return</span> track.GetSample(_sampleIndex);</div>
-<div class="line"><span class="lineno">  146</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a14940f32d7a0f9172ba0b34d408c7fdc" name="a14940f32d7a0f9172ba0b34d408c7fdc"></a>
@@ -264,10 +227,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00102">102</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">  103</span>        {</div>
-<div class="line"><span class="lineno">  104</span>            track.Init();</div>
-<div class="line"><span class="lineno">  105</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -397,14 +357,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00041">41</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   42</span>        {</div>
-<div class="line"><span class="lineno">   43</span>            <span class="keyword">get</span></div>
-<div class="line"><span class="lineno">   44</span>            {</div>
-<div class="line"><span class="lineno">   45</span>                <span class="comment">// adds the rests to the number of samples in this track</span></div>
-<div class="line"><span class="lineno">   46</span>                <span class="keywordflow">return</span> track.SampleCount + (int)((startAndEndRests.x + startAndEndRests.y) * track.SampleRate);</div>
-<div class="line"><span class="lineno">   47</span>            }</div>
-<div class="line"><span class="lineno">   48</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a57bfd2c389766fba7f3b63da067a4c8d" name="a57bfd2c389766fba7f3b63da067a4c8d"></a>

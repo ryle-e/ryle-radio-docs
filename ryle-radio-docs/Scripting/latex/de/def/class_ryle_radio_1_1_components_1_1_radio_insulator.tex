@@ -93,14 +93,6 @@ override void Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Assign\+To\+Track (\
 
 Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00059}{59}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.insulators.Add(\textcolor{keyword}{this});}
-\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.OnAddInsulator(\textcolor{keyword}{this},\ \_track);}
-\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_a4b7df054ad1dc61eb31421bcc78b7d5a}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!GetPower@{GetPower}}
 \index{GetPower@{GetPower}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
 \doxysubsubsection{\texorpdfstring{GetPower()}{GetPower()}}
@@ -111,68 +103,6 @@ float Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Get\+Power (\begin{DoxyParam
 
 Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00072}{72}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ power\ =\ 0;}
-\DoxyCodeLine{00075\ }
-\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ converts\ the\ boxes\ to\ bounds\ so\ that\ we\ can\ use\ the\ basic\ methods\ in\ the\ bounds\ class}}
-\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ Bounds\ innerBounds\ =\ \textcolor{keyword}{new}\ Bounds(cachedPos,\ InnerBoxSizeAdjusted);}
-\DoxyCodeLine{00078\ \ \ \ \ \ \ \ \ \ \ \ \ Bounds\ outerBounds\ =\ \textcolor{keyword}{new}\ Bounds(cachedPos,\ OuterBoxSizeAdjusted);}
-\DoxyCodeLine{00079\ }
-\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ output\ is\ in\ the\ inner\ bounds,\ insulation\ is\ at\ maximum}}
-\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (innerBounds.Contains(\_position))}
-\DoxyCodeLine{00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ power\ =\ 1;}
-\DoxyCodeLine{00083\ }
-\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ output\ is\ outside\ the\ outer\ bounds,\ insulation\ is\ at\ minimum}}
-\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (!outerBounds.Contains(\_position))}
-\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ power\ =\ 0;}
-\DoxyCodeLine{00087\ }
-\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ output\ is\ between\ the\ inner\ and\ outer\ bounds,\ calculate\ how\ far\ between\ them\ it\ is}}
-\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ originally\ i\ used\ a\ signed\ distance\ field\ for\ this,\ but\ for\ reasons\ i\ do\ not\ recall\ it\ didn't\ end\ up\ working\ as\ i\ wanted-\/}}
-\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ i\ eventually\ worked\ out\ a\ way\ to\ calculate\ how\ far\ between\ a\ and\ b\ the\ point\ is\ using\ rays\ and\ bounds}}
-\DoxyCodeLine{00093\ }
-\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ direction\ from\ the\ center\ of\ the\ boxes\ towards\ the\ given\ position}}
-\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ dir\ =\ (\_position\ -\/\ outerBounds.center).normalized;}
-\DoxyCodeLine{00096\ }
-\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ scale\ that\ distance\ by\ the\ size\ of\ the\ larger\ box\ so\ that\ it\ sits\ just\ outside\ (or\ on\ the\ corner\ of)\ the\ largest\ box}}
-\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ scaledDir\ =\ \textcolor{keyword}{new}\ Vector3(dir.x\ *\ outerBounds.size.x,\ dir.y\ *\ outerBounds.size.y,\ dir.z\ *\ outerBounds.size.z);}
-\DoxyCodeLine{00099\ }
-\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ a\ ray\ from\ the\ center\ of\ the\ box\ to\ the\ point\ just\ outside}}
-\DoxyCodeLine{00101\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Ray\ ray\ =\ \textcolor{keyword}{new}\ Ray(outerBounds.center,\ scaledDir);}
-\DoxyCodeLine{00102\ }
-\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ use\ this\ ray\ to\ find\ the\ distance\ from\ the\ center\ of\ the\ closest\ point\ on\ the\ outside\ of\ the\ inner\ and\ outer\ boxes}}
-\DoxyCodeLine{00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ innerBounds.IntersectRay(ray,\ out\ \textcolor{keywordtype}{float}\ distance2);}
-\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outerBounds.IntersectRay(ray,\ out\ \textcolor{keywordtype}{float}\ distance);}
-\DoxyCodeLine{00106\ }
-\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ find\ the\ closest\ points\ on\ the\ faces\ of\ the\ boxes\ using\ this\ distance}}
-\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ closestOnInner\ =\ innerBounds.center\ +\ ray.direction.normalized\ *\ -\/distance2;}
-\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Vector3\ closestOnOuter\ =\ outerBounds.center\ +\ ray.direction.normalized\ *\ -\/distance;}
-\DoxyCodeLine{00110\ }
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ distance\ between\ the\ outer\ and\ inner\ points}}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ outerInnerDistance\ =\ Vector3.Distance(closestOnOuter,\ closestOnInner);}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ distance\ from\ the\ inner\ to\ the\ given\ position}}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ d\ =\ Vector3.Distance(\_position,\ closestOnInner);}
-\DoxyCodeLine{00116\ }
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ work\ out\ how\ far\ between\ the\ inner\ and\ outer\ points\ the\ given\ position\ is}}
-\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ power\ =\ 1\ -\/\ d\ /\ outerInnerDistance;}
-\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
-\DoxyCodeLine{00120\ }
-\DoxyCodeLine{00121\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ adjust\ the\ power\ by\ the\ insulation\ curve}}
-\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ adjustedT\ =\ insulationCurve.Evaluate(power);}
-\DoxyCodeLine{00123\ }
-\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ it's\ outside\ the\ boxes\ and\ does\ not\ universally\ apply,\ set\ the\ insulation\ to\ 0}}
-\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (adjustedT\ <=\ 0\ \&\&\ (ShowApplyToAllOutputs\ \&\&\ !applyToAllOutputsOutside))}
-\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00127\ }
-\DoxyCodeLine{00128\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ the\ actual\ insulation\ using\ the\ min\ and\ max\ values}}
-\DoxyCodeLine{00129\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Mathf.Lerp(insulation.x,\ insulation.y,\ adjustedT);}
-\DoxyCodeLine{00130\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_a2d5c8e4963c58f553412aafb806c567b}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!RemoveFromTrack@{RemoveFromTrack}}
 \index{RemoveFromTrack@{RemoveFromTrack}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
 \doxysubsubsection{\texorpdfstring{RemoveFromTrack()}{RemoveFromTrack()}}
@@ -183,14 +113,6 @@ override void Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Remove\+From\+Track 
 
 Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00065}{65}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.insulators.Remove(\textcolor{keyword}{this});}
-\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.OnRemoveInsulator(\textcolor{keyword}{this},\ \_track);}
-\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 
 
 \label{doc-variable-members}
@@ -231,11 +153,6 @@ Vector3 Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Inner\+Box\+Size\+Adjusted
 
 Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00042}{42}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00042\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_insulator_a6f1684f954ccec6377dcb1c70fcf2416}\index{RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}!OuterBoxSizeAdjusted@{OuterBoxSizeAdjusted}}
 \index{OuterBoxSizeAdjusted@{OuterBoxSizeAdjusted}!RyleRadio.Components.RadioInsulator@{RyleRadio.Components.RadioInsulator}}
 \doxysubsubsection{\texorpdfstring{OuterBoxSizeAdjusted}{OuterBoxSizeAdjusted}}
@@ -246,11 +163,6 @@ Vector3 Ryle\+Radio.\+Components.\+Radio\+Insulator.\+Outer\+Box\+Size\+Adjusted
 
 Definition at line \mbox{\hyperlink{_radio_insulator_8cs_source_l00043}{43}} of file \mbox{\hyperlink{_radio_insulator_8cs_source}{Radio\+Insulator.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00043\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
-
-\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

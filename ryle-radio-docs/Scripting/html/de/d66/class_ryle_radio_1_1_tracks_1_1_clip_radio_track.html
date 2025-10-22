@@ -155,11 +155,7 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">RyleRadio.Tracks.IRadioTrack</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html#l00060">60</a> of file <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html">ClipRadioTrack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   61</span>        {</div>
-<div class="line"><span class="lineno">   62</span>            <span class="comment">// we already have all the samples, so we just get the one at the given index</span></div>
-<div class="line"><span class="lineno">   63</span>            <span class="keywordflow">return</span> Samples[_sampleIndex];</div>
-<div class="line"><span class="lineno">   64</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a35adc9929e2b6bfad7c63a08c7a75851" name="a35adc9929e2b6bfad7c63a08c7a75851"></a>
@@ -180,13 +176,7 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">RyleRadio.Tracks.IRadioTrack</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html#l00024">24</a> of file <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html">ClipRadioTrack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   25</span>        {</div>
-<div class="line"><span class="lineno">   26</span>            ReadClipAndForceToMono();</div>
-<div class="line"><span class="lineno">   27</span> </div>
-<div class="line"><span class="lineno">   28</span>            SampleCount = Samples.Length; <span class="comment">// assign clip values based on chosen clip</span></div>
-<div class="line"><span class="lineno">   29</span>            SampleRate = clip.frequency;</div>
-<div class="line"><span class="lineno">   30</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="a887d3aa598057c9fe49b549430fefdef" name="a887d3aa598057c9fe49b549430fefdef"></a>
@@ -205,31 +195,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html#l00034">34</a> of file <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html">ClipRadioTrack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   35</span>        {</div>
-<div class="line"><span class="lineno">   36</span>            <span class="keywordtype">float</span>[] allSamples = <span class="keyword">new</span> <span class="keywordtype">float</span>[clip.samples * clip.channels]; <span class="comment">// all samples from both channels</span></div>
-<div class="line"><span class="lineno">   37</span>            Samples = <span class="keyword">new</span> <span class="keywordtype">float</span>[clip.samples]; <span class="comment">// samples combined to one channel</span></div>
-<div class="line"><span class="lineno">   38</span> </div>
-<div class="line"><span class="lineno">   39</span>            <span class="comment">// if the clip is invalid for some reason, tell the user</span></div>
-<div class="line"><span class="lineno">   40</span>            <span class="keywordflow">if</span> (!clip.GetData(allSamples, 0))</div>
-<div class="line"><span class="lineno">   41</span>            {</div>
-<div class="line"><span class="lineno">   42</span>                Debug.LogError(<span class="stringliteral">&quot;Cannot access clip data from track &quot;</span> + clip.name);</div>
-<div class="line"><span class="lineno">   43</span>                <span class="keywordflow">return</span>;</div>
-<div class="line"><span class="lineno">   44</span>            }</div>
-<div class="line"><span class="lineno">   45</span> </div>
-<div class="line"><span class="lineno">   46</span>            <span class="comment">// for each sample (all channels)</span></div>
-<div class="line"><span class="lineno">   47</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> sample = 0; sample &lt; clip.samples; sample++)</div>
-<div class="line"><span class="lineno">   48</span>            {</div>
-<div class="line"><span class="lineno">   49</span>                <span class="keywordtype">float</span> combined = 0;</div>
-<div class="line"><span class="lineno">   50</span> </div>
-<div class="line"><span class="lineno">   51</span>                <span class="comment">// for each channel in this sample, combine the audio</span></div>
-<div class="line"><span class="lineno">   52</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> channel = 0; channel &lt; clip.channels; channel++)</div>
-<div class="line"><span class="lineno">   53</span>                    combined += allSamples[(sample * clip.channels) + channel];</div>
-<div class="line"><span class="lineno">   54</span> </div>
-<div class="line"><span class="lineno">   55</span>                combined /= clip.channels; <span class="comment">// find the average of the channels&#39; audio</span></div>
-<div class="line"><span class="lineno">   56</span>                Samples[sample] = combined; <span class="comment">// make the mono sample the average</span></div>
-<div class="line"><span class="lineno">   57</span>            }</div>
-<div class="line"><span class="lineno">   58</span>        }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
@@ -297,8 +263,7 @@ Properties</h2></td></tr>
 <p>Implements <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">RyleRadio.Tracks.IStationTrack</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html#l00020">20</a> of file <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html">ClipRadioTrack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   20</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <a id="afb9a8b8a3532d55b7ba050ec54b9e40a" name="afb9a8b8a3532d55b7ba050ec54b9e40a"></a>
@@ -322,8 +287,7 @@ Properties</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html#l00018">18</a> of file <a class="el" href="../../df/d94/_clip_radio_track_8cs_source.html">ClipRadioTrack.cs</a>.</p>
-<div class="fragment"><div class="line"><span class="lineno">   18</span>{ <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
-</div><!-- fragment -->
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>

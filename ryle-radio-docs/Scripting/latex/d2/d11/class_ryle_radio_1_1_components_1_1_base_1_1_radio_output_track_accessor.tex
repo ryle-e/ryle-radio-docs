@@ -44,18 +44,6 @@ void Ryle\+Radio.\+Components.\+Base.\+Radio\+Output\+Track\+Accessor.\+Do\+Trac
 Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_radio_output_track_accessor_8cs_source}{Radio\+Output\+Track\+Accessor.\+cs}}.
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00021\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00022\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ convert\ the\ multiselect\ to\ a\ list\ of\ track\ indexes}}
-\DoxyCodeLine{00023\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ wrapperIndexes\ =\ MultiselectAttribute.ToInt(\_trackMask);}
-\DoxyCodeLine{00024\ }
-\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ perform\ the\ action\ on\ each\ track\ selected\ using\ their\ indexes}}
-\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\textcolor{keywordtype}{int}\ index\ \textcolor{keywordflow}{in}\ wrapperIndexes)}
-\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \_action.Invoke(output.Data.TrackIDs[index]);}
-\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
-
 
 \label{doc-variable-members}
 \Hypertarget{class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor_doc-variable-members}
@@ -85,11 +73,6 @@ List$<$string$>$ Ryle\+Radio.\+Components.\+Base.\+Radio\+Output\+Track\+Accesso
 
 Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_radio_output_track_accessor_8cs_source}{Radio\+Output\+Track\+Accessor.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ :\ \textcolor{keyword}{new}()\ \{\ \textcolor{stringliteral}{"{}Output\ not\ assigned!"{}}\ \};}
-
-\end{DoxyCode}
 
 
 The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}

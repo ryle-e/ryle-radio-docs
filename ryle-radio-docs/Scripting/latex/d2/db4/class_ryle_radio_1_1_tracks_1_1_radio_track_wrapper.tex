@@ -95,18 +95,6 @@ Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Radio\+Track\+Wrapper (\begin{Dox
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00109}{109}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
 
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00111\ \ \ \ \ \ \ \ \ \ \ \ \ track\ =\ \textcolor{keyword}{null};}
-\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ trackType\ =\ \textcolor{stringliteral}{"{}"{}};}
-\DoxyCodeLine{00113\ }
-\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ forces\ this\ wrapper\ to\ have\ a\ track\ on\ creation\ so\ that\ we\ don't\ get\ inspector\ errors}}
-\DoxyCodeLine{00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ gets\ called\ when\ the\ wrapper\ is\ created,\ not\ when\ it's\ initialized}}
-\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ CreateTrackLocal();}
-\DoxyCodeLine{00117\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
-
 
 \label{doc-func-members}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_doc-func-members}
@@ -121,13 +109,6 @@ void Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Add\+To\+Player\+End\+Callba
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00182}{182}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00183\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00184\ \ \ \ \ \ \ \ \ \ \ \ \ track.AddToPlayerEndCallback(ref\ \_callback);}
-\DoxyCodeLine{00185\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ab322b29cd3c310eb76cfcc32fc1a8898}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!CreateTrackEditor@{CreateTrackEditor}}
 \index{CreateTrackEditor@{CreateTrackEditor}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{CreateTrackEditor()}{CreateTrackEditor()}}
@@ -138,26 +119,6 @@ Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00182}{182}
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00156}{156}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00157\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ index\ of\ the\ chosen\ track\ type}}
-\DoxyCodeLine{00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ Array.IndexOf(TrackNames,\ \_name);}
-\DoxyCodeLine{00160\ }
-\DoxyCodeLine{00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ you\ somehow\ have\ an\ invalid\ track\ type,\ don't\ create\ anything}}
-\DoxyCodeLine{00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0)}
-\DoxyCodeLine{00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
-\DoxyCodeLine{00164\ }
-\DoxyCodeLine{00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ the\ track\ generically}}
-\DoxyCodeLine{00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (we\ have\ to\ use\ Activator.CreateInstance\ here\ as\ it\ uses\ the\ Type\ as\ an\ argument-\/\ we\ can't\ generically\ instantiate\ a\ variable}}
-\DoxyCodeLine{00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ from\ a\ given\ Type\ any\ other\ viable\ way}}
-\DoxyCodeLine{00168\ \ \ \ \ \ \ \ \ \ \ \ \ IRadioTrack\ outTrack\ =\ (IRadioTrack)Activator.CreateInstance(TrackTypes[index]);}
-\DoxyCodeLine{00169\ }
-\DoxyCodeLine{00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ the\ new\ track}}
-\DoxyCodeLine{00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ outTrack;}
-\DoxyCodeLine{00172\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a9426f429184e25913c4e6cd48527ca7c}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!CreateTrackLocal@{CreateTrackLocal}}
 \index{CreateTrackLocal@{CreateTrackLocal}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{CreateTrackLocal()}{CreateTrackLocal()}}
@@ -168,13 +129,6 @@ void Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Create\+Track\+Local (\begin
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00175}{175}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00176\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00177\ \ \ \ \ \ \ \ \ \ \ \ \ track\ =\ CreateTrackEditor(trackType);}
-\DoxyCodeLine{00178\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a5bed44201bd34688ce018c8b0eef42f0}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!GetSample@{GetSample}}
 \index{GetSample@{GetSample}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{GetSample()}{GetSample()}}
@@ -185,13 +139,6 @@ float Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Get\+Sample (\begin{DoxyPar
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00210}{210}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00211\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ track.GetSample(\_sampleIndex);}
-\DoxyCodeLine{00213\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a909e0f98dc729f0baf120e04a3635a19}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!GetTrackType@{GetTrackType}}
 \index{GetTrackType@{GetTrackType}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{GetTrackType()}{GetTrackType()}}
@@ -202,14 +149,6 @@ string Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Get\+Track\+Type (\begin{D
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00148}{148}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00149\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ Array.IndexOf(TrackTypesAsStrings,\ \_typeName.Split(\textcolor{stringliteral}{"{}."{}})[\string^1]);}
-\DoxyCodeLine{00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TrackNames[index];}
-\DoxyCodeLine{00152\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_ac7d24219e5c27188f541c3134164ec64}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!GetTunePower@{GetTunePower}}
 \index{GetTunePower@{GetTunePower}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{GetTunePower()}{GetTunePower()}}
@@ -220,19 +159,6 @@ float Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Get\+Tune\+Power (\begin{Do
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00198}{198}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00199\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_tune\ <\ range.x\ ||\ \_tune\ >\ range.y)\ \textcolor{comment}{//\ if\ the\ tune\ is\ out\ of\ this\ track's\ range,\ it\ cannot\ be\ heard}}
-\DoxyCodeLine{00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
-\DoxyCodeLine{00202\ }
-\DoxyCodeLine{00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tunePower\ =\ rangeCurve.Evaluate(\_tune.Remap(range.x,\ range.y,\ 0f,\ 1f));\ \textcolor{comment}{//\ get\ the\ volume\ based\ on\ the\ tune\ and\ where\ it\ sits\ on\ the\ gain\ curve}}
-\DoxyCodeLine{00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ attenPower\ =\ 1f\ -\/\ (Mathf.Clamp01(\_otherVolume)\ *\ attenuation);\ \textcolor{comment}{//\ get\ the\ volume\ based\ on\ attenuation\ and\ other\ playing\ trackWs}}
-\DoxyCodeLine{00205\ }
-\DoxyCodeLine{00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tunePower\ *\ attenPower;\ \textcolor{comment}{//\ combine\ the\ values\ into\ one\ singular\ volume}}
-\DoxyCodeLine{00207\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a958441e5c561814d365f208cadf085aa}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!Init@{Init}}
 \index{Init@{Init}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{Init()}{Init()}}
@@ -243,23 +169,6 @@ void Ryle\+Radio.\+Tracks.\+Radio\+Track\+Wrapper.\+Init (\begin{DoxyParamCaptio
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00130}{130}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00131\ \ \ \ \ \ \ \ \ \{}
-\DoxyCodeLine{00132\ \ \ \ \ \ \ \ \ \ \ \ \ BeforeInit(\textcolor{keyword}{this});}
-\DoxyCodeLine{00133\ }
-\DoxyCodeLine{00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ initialize\ the\ track\ itself}}
-\DoxyCodeLine{00135\ \ \ \ \ \ \ \ \ \ \ \ \ track.Init();}
-\DoxyCodeLine{00136\ }
-\DoxyCodeLine{00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ reset\ stored\ components\ as\ they\ will\ otherwise\ be\ kept\ from\ the\ last\ play\ mode}}
-\DoxyCodeLine{00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ doesn't\ really\ matter\ in\ a\ build\ but\ is\ needed\ for\ the\ editor}}
-\DoxyCodeLine{00139\ \ \ \ \ \ \ \ \ \ \ \ \ broadcasters.Clear();}
-\DoxyCodeLine{00140\ \ \ \ \ \ \ \ \ \ \ \ \ insulators.Clear();}
-\DoxyCodeLine{00141\ }
-\DoxyCodeLine{00142\ \ \ \ \ \ \ \ \ \ \ \ \ OnInit(\textcolor{keyword}{this});}
-\DoxyCodeLine{00143\ \ \ \ \ \ \ \ \ \}}
-
-\end{DoxyCode}
 
 
 \label{doc-variable-members}
@@ -390,11 +299,6 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{R
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00052}{52}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00052\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}(\_\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ the\ wraper\ is\ about\ to\ be\ initialized}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a74adba53bd688378c4a5fc3140ff4d67}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!DefaultRangeCurve@{DefaultRangeCurve}}
 \index{DefaultRangeCurve@{DefaultRangeCurve}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{DefaultRangeCurve}{DefaultRangeCurve}}
@@ -415,11 +319,6 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster}
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00054}{54}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00054\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}((\_,\ \_)\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ a\ broadcaster\ is\ added\ to\ the\ track}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a371c6db231ca6c2ca44be011ae29fe03}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!OnAddInsulator@{OnAddInsulator}}
 \index{OnAddInsulator@{OnAddInsulator}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{OnAddInsulator}{OnAddInsulator}}
@@ -430,11 +329,6 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator}{R
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00057}{57}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00057\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}((\_,\ \_)\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ an\ insulator\ is\ added\ to\ the\ track}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a0e5992ef4634849c28ec66de1e3baef3}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!OnInit@{OnInit}}
 \index{OnInit@{OnInit}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{OnInit}{OnInit}}
@@ -445,11 +339,6 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{R
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00051}{51}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00051\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}(\_\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ the\ wrapper\ is\ initialized}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a2e298eae6270b5e163f4aae805cc3dd4}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!OnRemoveBroadcaster@{OnRemoveBroadcaster}}
 \index{OnRemoveBroadcaster@{OnRemoveBroadcaster}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{OnRemoveBroadcaster}{OnRemoveBroadcaster}}
@@ -460,11 +349,6 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster}
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00055}{55}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00055\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}((\_,\ \_)\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ a\ broadcaster\ is\ removed\ from\ the\ track}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a1c98ba01c1d2ec6303002217691c7d6e}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!OnRemoveInsulator@{OnRemoveInsulator}}
 \index{OnRemoveInsulator@{OnRemoveInsulator}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{OnRemoveInsulator}{OnRemoveInsulator}}
@@ -475,11 +359,6 @@ Action$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_insulator}{R
 
 Definition at line \mbox{\hyperlink{_radio_track_wrapper_8cs_source_l00058}{58}} of file \mbox{\hyperlink{_radio_track_wrapper_8cs_source}{Radio\+Track\+Wrapper.\+cs}}.
 
-
-\begin{DoxyCode}{0}
-\DoxyCodeLine{00058\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}((\_,\ \_)\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ an\ insulator\ is\ removed\ from\ the\ track}}
-
-\end{DoxyCode}
 \Hypertarget{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_a3bd3948910de5c7cd75d8d719f3b3181}\index{RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}!SampleCount@{SampleCount}}
 \index{SampleCount@{SampleCount}!RyleRadio.Tracks.RadioTrackWrapper@{RyleRadio.Tracks.RadioTrackWrapper}}
 \doxysubsubsection{\texorpdfstring{SampleCount}{SampleCount}}
