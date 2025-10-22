@@ -1,0 +1,309 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event" kind="class" language="C#" prot="public">
+    <compoundname>RyleRadio::Components::RadioObserver::ObserverEvent</compoundname>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a50ff32a03be08deae07437639a8b1597" prot="public" static="no" mutable="no">
+        <type><ref refid="d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer_1a7c36b405481c6e9460645aa9b0418582" kindref="member">EventType</ref></type>
+        <definition>EventType RyleRadio.Components.RadioObserver.ObserverEvent.type</definition>
+        <argsstring></argsstring>
+        <name>type</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.type</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="15" column="30" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="15" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aa3f3983f522937ed634525992a500f83" prot="public" static="no" mutable="no">
+        <type>ComparisonType</type>
+        <definition>ComparisonType RyleRadio.Components.RadioObserver.ObserverEvent.comparison</definition>
+        <argsstring></argsstring>
+        <name>comparison</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.comparison</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="18" column="35" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="18" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aeca94155d569db8deaa7b59d930bae20" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RyleRadio.Components.RadioObserver.ObserverEvent.clampedValue</definition>
+        <argsstring></argsstring>
+        <name>clampedValue</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.clampedValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="23" column="26" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="23" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a6837b1a846554381d8768afc18a65b8a" prot="public" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RyleRadio.Components.RadioObserver.ObserverEvent.tuneValue</definition>
+        <argsstring></argsstring>
+        <name>tuneValue</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.tuneValue</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="28" column="26" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1affbce23bf4759630e020d7b21308eca6" prot="public" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 RyleRadio.Components.RadioObserver.ObserverEvent.clampedRange</definition>
+        <argsstring></argsstring>
+        <name>clampedRange</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.clampedRange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="33" column="28" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1ac147c66df74bec1095e1193e6c2c8ee6" prot="public" static="no" mutable="no">
+        <type>Vector2</type>
+        <definition>Vector2 RyleRadio.Components.RadioObserver.ObserverEvent.tuneRange</definition>
+        <argsstring></argsstring>
+        <name>tuneRange</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.tuneRange</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="38" column="28" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a12fd064c8875e47b2ac6b8fa95f8ca77" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Components.RadioObserver.ObserverEvent.showEvents</definition>
+        <argsstring></argsstring>
+        <name>showEvents</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.showEvents</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="41" column="25" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a186a6a2a54305ebbce87cf0601c64ff6" prot="public" static="no" mutable="no">
+        <type>UnityEvent&lt; float &gt;</type>
+        <definition>UnityEvent&lt;float&gt; RyleRadio.Components.RadioObserver.ObserverEvent.onTrigger</definition>
+        <argsstring></argsstring>
+        <name>onTrigger</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.onTrigger</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="47" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a9728b6d7ed2b226c043e7163dfe422cc" prot="public" static="no" mutable="no">
+        <type>UnityEvent&lt; float &gt;</type>
+        <definition>UnityEvent&lt;float&gt; RyleRadio.Components.RadioObserver.ObserverEvent.onStay</definition>
+        <argsstring></argsstring>
+        <name>onStay</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.onStay</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="53" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1ac13837061117ac1dfefe770da602239e" prot="public" static="no" mutable="no">
+        <type>UnityEvent&lt; float &gt;</type>
+        <definition>UnityEvent&lt;float&gt; RyleRadio.Components.RadioObserver.ObserverEvent.onEnd</definition>
+        <argsstring></argsstring>
+        <name>onEnd</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.onEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="58" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="58" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1abd8073223fc9376c41efdaa17fe9e5b3" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Components.RadioObserver.ObserverEvent.staying</definition>
+        <argsstring></argsstring>
+        <name>staying</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.staying</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="61" column="26" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="61" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a212260a9bdcbea20caf04a84b7733ace" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Components.RadioObserver.ObserverEvent.NotNeedComparison</definition>
+        <argsstring></argsstring>
+        <name>NotNeedComparison</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.NotNeedComparison</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="64" column="25" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a9bb5e28acbe1f8437393c86e73f8340f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Components.RadioObserver.ObserverEvent.NeedComparison</definition>
+        <argsstring></argsstring>
+        <name>NeedComparison</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.NeedComparison</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="65" column="25" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a4c521059cfef6cfde8bd05f76ec65a9f" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Components.RadioObserver.ObserverEvent.NotNeedVector</definition>
+        <argsstring></argsstring>
+        <name>NotNeedVector</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.NotNeedVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="74" column="25" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1ac6cef953c886ee37e195fde5932a3110" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Components.RadioObserver.ObserverEvent.NeedVector</definition>
+        <argsstring></argsstring>
+        <name>NeedVector</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.NeedVector</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="75" column="25" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aeb0376c5a08f8adce8d61ad4ef0daaad" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Components.RadioObserver.ObserverEvent.NotIsTune</definition>
+        <argsstring></argsstring>
+        <name>NotIsTune</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.NotIsTune</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="80" column="25" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="property" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1ac612701e3beeae1bf06ee0a704c7fe91" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Components.RadioObserver.ObserverEvent.IsTune</definition>
+        <argsstring></argsstring>
+        <name>IsTune</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.IsTune</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="81" column="25" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="81" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aaa9e08ebd80bd3f269868020d0659335" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool RyleRadio.Components.RadioObserver.ObserverEvent.EvaluateComparison</definition>
+        <argsstring>(float _cValue)</argsstring>
+        <name>EvaluateComparison</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.EvaluateComparison</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>_cValue</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="86" column="25" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="86" bodyend="121"/>
+      </memberdef>
+      <memberdef kind="function" id="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1ab9b5a0e73d00052e5dc8e08244bdf4bf" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>override string</type>
+        <definition>override string RyleRadio.Components.RadioObserver.ObserverEvent.ToString</definition>
+        <argsstring>()</argsstring>
+        <name>ToString</name>
+        <qualifiedname>RyleRadio.Components.RadioObserver.ObserverEvent.ToString</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="123" column="36" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="123" bodyend="126"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" line="13" column="15" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Components/ObserverEvent.cs" bodystart="14" bodyend="127"/>
+    <listofallmembers>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1affbce23bf4759630e020d7b21308eca6" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>clampedRange</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aeca94155d569db8deaa7b59d930bae20" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>clampedValue</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aa3f3983f522937ed634525992a500f83" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>comparison</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aaa9e08ebd80bd3f269868020d0659335" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>EvaluateComparison</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1ac612701e3beeae1bf06ee0a704c7fe91" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>IsTune</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a9bb5e28acbe1f8437393c86e73f8340f" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>NeedComparison</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1ac6cef953c886ee37e195fde5932a3110" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>NeedVector</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aeb0376c5a08f8adce8d61ad4ef0daaad" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>NotIsTune</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a212260a9bdcbea20caf04a84b7733ace" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>NotNeedComparison</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a4c521059cfef6cfde8bd05f76ec65a9f" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>NotNeedVector</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1ac13837061117ac1dfefe770da602239e" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>onEnd</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a9728b6d7ed2b226c043e7163dfe422cc" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>onStay</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a186a6a2a54305ebbce87cf0601c64ff6" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>onTrigger</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a12fd064c8875e47b2ac6b8fa95f8ca77" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>showEvents</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1abd8073223fc9376c41efdaa17fe9e5b3" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>staying</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1ab9b5a0e73d00052e5dc8e08244bdf4bf" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>ToString</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1ac147c66df74bec1095e1193e6c2c8ee6" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>tuneRange</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a6837b1a846554381d8768afc18a65b8a" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>tuneValue</name></member>
+      <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a50ff32a03be08deae07437639a8b1597" prot="public" virt="non-virtual"><scope>RyleRadio::Components::RadioObserver::ObserverEvent</scope><name>type</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

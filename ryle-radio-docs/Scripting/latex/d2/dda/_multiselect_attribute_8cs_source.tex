@@ -1,0 +1,208 @@
+\doxysection{Multiselect\+Attribute.\+cs}
+\hypertarget{_multiselect_attribute_8cs_source}{}\label{_multiselect_attribute_8cs_source}\index{D:/GitHub/ryle-\/radio/Assets/RyleRadio/Scripts/Runtime/MultiselectAttribute.cs@{D:/GitHub/ryle-\/radio/Assets/RyleRadio/Scripts/Runtime/MultiselectAttribute.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00003}00003\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00004}00004\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ryle_radio}{RyleRadio}}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00005}00005\ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00006}00006\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00007}00007\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00008}00008\ \ \ \ \ \textcolor{keyword}{using\ }NaughtyAttributes.Editor;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00009}00009\ \ \ \ \ \textcolor{keyword}{using\ }UnityEditor;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00010}00010\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00011}00011\ \ \ \ \ \textcolor{keyword}{using\ }System.Reflection;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00012}00012\ \ \ \ \ \textcolor{keyword}{using\ }System.Collections;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00013}00013\ \ \ \ \ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00014}00014\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00015}00015\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00016}00016\ \ \ \ \ \textcolor{comment}{//\ allows\ an\ int\ to\ display\ as\ a\ multiselect\ field\ for\ a\ given\ collection}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00017}00017\ \ \ \ \ \textcolor{comment}{//\ NOTE:\ due\ to\ int\ limitations\ there\ can\ only\ be\ a\ max\ of\ 32\ options}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00018}\mbox{\hyperlink{class_ryle_radio_1_1_multiselect_attribute}{00018}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MultiselectAttribute\ :\ PropertyAttribute}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00019}00019\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00020}00020\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ id\ of\ the\ options\ variable\ this\ is\ referencing}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ OptionsName\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{private}\ \textcolor{keyword}{set};\ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ MultiselectAttribute(\textcolor{keywordtype}{string}\ \_optionsName)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00025}00025\ \ \ \ \ \ \ \ \ \ \ \ \ OptionsName\ =\ \_optionsName;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00027}00027\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ self-\/explanatory}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ useful\ for\ list\ indexes}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00031}00031\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}[]\ ZeroTo31\ =>\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[32]\ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ 0,\ \ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ 1,\ \ 2,\ \ 3,\ \ 4,\ \ 5,\ \ 6,\ \ 7,\ \ 8,}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00034}00034\ \ \ \ \ \ \ \ \ 9,\ \ 10,\ 11,\ 12,\ 13,\ 14,\ 15,\ 16,}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ 17,\ 18,\ 19,\ 20,\ 21,\ 22,\ 23,\ 24,}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ 25,\ 26,\ 27,\ 28,\ 29,\ 30,\ 31}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00037}00037\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00038}00038\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ useful\ for\ reverse\ list\ indexes(??\ i\ haven't\ really\ used\ this\ one\ but\ thought\ i'd\ include\ it\ nonetheless)}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00040}00040\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}[]\ OneTo32\ =>\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[32]\ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ 1,\ \ 2,\ \ 3,\ \ 4,\ \ 5,\ \ 6,\ \ 7,\ \ 8,}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ 9,\ \ 10,\ 11,\ 12,\ 13,\ 14,\ 15,\ 16,}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00043}00043\ \ \ \ \ \ \ \ \ 17,\ 18,\ 19,\ 20,\ 21,\ 22,\ 23,\ 24,}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ 25,\ 26,\ 27,\ 28,\ 29,\ 30,\ 31,}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ 32}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00046}00046\ \ \ \ \ \};}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00047}00047\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ converts\ a\ multiselect\ int\ to\ a\ list\ of\ whatever\ type\ you\ like}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ T[]\ To<T>(\textcolor{keywordtype}{int}\ \_flags,\ T[]\ \_options)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00050}00050\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_flags\ <\ 0)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00053}00053\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogWarning(\textcolor{stringliteral}{"{}A\ value\ less\ than\ 0\ is\ being\ used\ as\ the\ flag\ variable\ in\ a\ MultiselectAttribute.To<T>()\ call!\ The\ value\ is\ "{}}\ +\ \_flags);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{new}\ T[0];}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}[]\ outIndexes\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{int}[32];}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00058}00058\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ each\ number\ 0\ -\/\ 32,}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ 32;\ i++)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ check\ if\ the\ int\ has\ the\ bit\ flag\ for\ this\ index}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ ((\_flags\ \&\ (1\ <<\ i))\ !=\ 0)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outIndexes[i]\ =\ i;\ \textcolor{comment}{//\ if\ it\ does,\ add\ the\ index\ to\ the\ output\ list}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ outIndexes[i]\ =\ -\/1;\ \textcolor{comment}{//\ otherwise\ make\ the\ index\ invalid}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ items\ out\ of\ the\ options\ list\ based\ on\ the\ valid\ indexes\ in\ the\ output\ list}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ T[]\ o\ =\ outIndexes}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Where(b\ =>\ b\ >=\ 0)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00072}00072\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(i\ =>\ \_options[i])}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToArray();}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00074}00074\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ give\ back\ the\ output\ list\ as\ T}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ o;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00078}00078\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ shorthand\ to\ convert\ it\ to\ ints\ or\ indexes}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{int}[]\ ToInt(\textcolor{keywordtype}{int}\ \_flags)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ To<int>(\_flags,\ ZeroTo31);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00084}00084\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00085}00085\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00086}00086\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00087}00087\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00088}00088\ \ \ \ \ \textcolor{comment}{//\ draws\ the\ attribute}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00089}00089\ \ \ \ \ [CustomPropertyDrawer(typeof(\mbox{\hyperlink{class_ryle_radio_1_1_multiselect_attribute}{MultiselectAttribute}}))]}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00090}00090\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MultiselectDrawer\ :\ PropertyDrawer}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00091}00091\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ inspector\ seems\ to\ think\ this\ is\ larger\ than\ it\ actually\ is,\ so\ we\ give\ it\ a\ small\ adjustment\ in\ height}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{float}\ GetPropertyHeight(SerializedProperty\ property,\ GUIContent\ label)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ -\/2;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00097}00097\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{void}\ OnGUI(Rect\ position,\ SerializedProperty\ property,\ GUIContent\ label)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ make\ the\ selection\ a\ bit\ mask}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mask\ =\ \textcolor{keyword}{property}.intValue;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ dataName\ =\ ((MultiselectAttribute)attribute).OptionsName;\ \textcolor{comment}{//\ save\ the\ id\ of\ the\ variable\ in\ the\ attribute}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{object}\ options\ =\ GetValues(property,\ dataName);\ \textcolor{comment}{//\ get\ the\ options\ from\ that\ variable}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]\ optionNames;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00106}00106\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00107}00107\ \ \ \ \ \ \ \ \ \ \ \ \ EditorGUILayout.BeginHorizontal();}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00108}00108\ \ \ \ \ \ \ \ \ \ \ \ \ EditorGUILayout.PrefixLabel(label);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00109}00109\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options\ !=\ \textcolor{keyword}{null})\ \textcolor{comment}{//\ if\ there\ are\ options,\ display\ them}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ have\ to\ use\ the\ individual\ collection\ types\ here\ as\ there's\ no\ way\ (that\ i\ know\ of)\ to\ access\ IEnumerable\ without}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00113}00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ specifying\ a\ generic\ type-\/\ and\ since\ we\ only\ have\ the\ variable\ id,\ we\ can't\ do\ that}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00114}00114\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ anyone\ knows\ of\ an\ alternate\ way\ to\ do\ this\ please\ do\ share\ :)}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00116}00116\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (options\ is\ IList\ list)\ \textcolor{comment}{//\ if\ the\ options\ are\ stored\ in\ a\ list,\ get\ them}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00118}00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00119}00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (list.Count\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ optionNames\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{string}[list.Count];}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00122}00122\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ convert\ the\ options\ to\ strings\ for\ displaying}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ list.Count;\ i++)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ optionNames[i]\ =\ list[i].ToString();}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00126}00126\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00127}00127\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ draw\ the\ field}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mask\ =\ EditorGUILayout.MaskField(mask,\ optionNames);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ options\ is\ empty-\/\ tell\ the\ user}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EditorGUILayout.LabelField(\$\textcolor{stringliteral}{"{}\{dataName\}\ has\ size\ 0!"{}});}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00136}00136\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (options\ is\ Array\ array)\ \textcolor{comment}{//\ if\ the\ options\ are\ stored\ in\ an\ array,\ get\ them}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (array.Length\ >\ 0)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ optionNames\ =\ \textcolor{keyword}{new}\ \textcolor{keywordtype}{string}[array.Length];}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ convert\ the\ options\ to\ strings\ for\ displaying}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{for}\ (\textcolor{keywordtype}{int}\ i\ =\ 0;\ i\ <\ array.Length;\ i++)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00144}00144\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ optionNames[i]\ =\ array.GetValue(i).ToString();}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00145}00145\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ draw\ the\ field}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00147}00147\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ mask\ =\ EditorGUILayout.MaskField(mask,\ optionNames);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ options\ is\ empty-\/\ tell\ the\ user}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EditorGUILayout.LabelField(\$\textcolor{stringliteral}{"{}\{dataName\}\ has\ size\ 0!"{}});}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00153}00153\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ options\ is\ an\ unsupported\ collection-\/\ tell\ the\ user}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EditorGUILayout.LabelField(\$\textcolor{stringliteral}{"{}\{dataName\}\ is\ not\ a\ List\ or\ an\ Array!"{}});}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{comment}{//\ the\ attribute\ has\ been\ given\ an\ invalid\ options\ variable\ id-\/\ tell\ the\ user}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ EditorGUILayout.LabelField(\$\textcolor{stringliteral}{"{}Invalid\ collection\ at\ \{dataName\}!\ Cannot\ display\ multiselect!"{}});}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00163}00163\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ EditorGUILayout.EndHorizontal();}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00165}00165\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ assign\ the\ mask\ clampedValue}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ property.intValue\ =\ mask;}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ taken\ from\ DropdownPropertyDrawer.cs\ in\ NaughtyAttributes.Editor}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ======}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{object}\ GetValues(SerializedProperty\ property,\ \textcolor{keywordtype}{string}\ valuesName)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{object}\ target\ =\ PropertyUtility.GetTargetObjectWithProperty(property);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00175}00175\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \ \ \ \ FieldInfo\ valuesFieldInfo\ =\ ReflectionUtility.GetField(target,\ valuesName);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (valuesFieldInfo\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00179}00179\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ valuesFieldInfo.GetValue(target);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00181}00181\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \ \ \ \ PropertyInfo\ valuesPropertyInfo\ =\ ReflectionUtility.GetProperty(target,\ valuesName);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (valuesPropertyInfo\ !=\ \textcolor{keyword}{null})}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ valuesPropertyInfo.GetValue(target);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00186}00186\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00187}00187\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \ \ \ \ MethodInfo\ methodValuesInfo\ =\ ReflectionUtility.GetMethod(target,\ valuesName);}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (methodValuesInfo\ !=\ \textcolor{keyword}{null}\ \&\&}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ methodValuesInfo.ReturnType\ !=\ typeof(\textcolor{keywordtype}{void})\ \&\&}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ methodValuesInfo.GetParameters().Length\ ==\ 0)}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ methodValuesInfo.Invoke(target,\ \textcolor{keyword}{null});}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00196}00196\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ ======}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00199}00199\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00200}00200\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00201}00201\ }
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00202}00202\ \}}
+
+\end{DoxyCode}

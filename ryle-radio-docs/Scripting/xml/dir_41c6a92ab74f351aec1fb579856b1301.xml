@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_41c6a92ab74f351aec1fb579856b1301" kind="dir">
+    <compoundname>D:/GitHub/ryle-radio/Assets</compoundname>
+    <innerdir refid="dir_f10da3808a9e4a556ae34c82dd74607a">D:/GitHub/ryle-radio/Assets/RyleRadio</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ryle-radio/Assets/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,538 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kind="class" language="C#" prot="public">
+    <compoundname>RyleRadio::Tracks::RadioTrackPlayer</compoundname>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a56e0d8d85c08d167cc6f6feed785c0c3" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>PlayerType</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.PlayerType</qualifiedname>
+        <enumvalue id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a56e0d8d85c08d167cc6f6feed785c0c3a89d7b10cb4238977d2b523dfd9ea7745" prot="public">
+          <name>Loop</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a56e0d8d85c08d167cc6f6feed785c0c3ac7fc2ee61fad0e2bba6754efdee31481" prot="public">
+          <name>OneShot</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="13" column="15" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="14" bodyend="17"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="property">
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1acfdd338125deed698d82e168e23f7dff" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type><ref refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper" kindref="compound">RadioTrackWrapper</ref></type>
+        <definition>RadioTrackWrapper RyleRadio.Tracks.RadioTrackPlayer.TrackW</definition>
+        <argsstring></argsstring>
+        <name>TrackW</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.TrackW</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="20" column="34" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="20" bodyend="20"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a2b0e7569f0ed06667c8ba97478b7ba41" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>double</type>
+        <definition>double RyleRadio.Tracks.RadioTrackPlayer.Progress</definition>
+        <argsstring></argsstring>
+        <name>Progress</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.Progress</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="24" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="24" bodyend="24"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a1399740d1521db736029501f7506306a" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="no" protectedsettable="no">
+        <type>float</type>
+        <definition>float RyleRadio.Tracks.RadioTrackPlayer.ProgressFraction</definition>
+        <argsstring></argsstring>
+        <name>ProgressFraction</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.ProgressFraction</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="25" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="26" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a8aa5c6b343b84685a405b34ce5c120a7" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="no" privatesettable="yes" protectedsettable="no">
+        <type>PlayerType</type>
+        <definition>PlayerType RyleRadio.Tracks.RadioTrackPlayer.PlayType</definition>
+        <argsstring></argsstring>
+        <name>PlayType</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.PlayType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="39" column="27" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1abcc18a8eb8d857fcf5ce5f41b033ee7d" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref> &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer&gt; RyleRadio.Tracks.RadioTrackPlayer.DoDestroy</definition>
+        <argsstring></argsstring>
+        <name>DoDestroy</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.DoDestroy</qualifiedname>
+        <initializer>= new(_ =&gt; { })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="42" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ae872a94044ea2367273c7372c8078e31" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref> &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer&gt; RyleRadio.Tracks.RadioTrackPlayer.OnPlay</definition>
+        <argsstring></argsstring>
+        <name>OnPlay</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.OnPlay</qualifiedname>
+        <initializer>= new(_ =&gt; { })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="44" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a71f6b9e374bf93b3e6c0e94c30a8ddbe" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref> &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer&gt; RyleRadio.Tracks.RadioTrackPlayer.OnStop</definition>
+        <argsstring></argsstring>
+        <name>OnStop</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.OnStop</qualifiedname>
+        <initializer>= new(_ =&gt; { })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="45" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ab2b9eaec85c837ee3732922e4ad965ae" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref>, bool &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer, bool&gt; RyleRadio.Tracks.RadioTrackPlayer.OnPause</definition>
+        <argsstring></argsstring>
+        <name>OnPause</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.OnPause</qualifiedname>
+        <initializer>= new((_, _) =&gt; { })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="46" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a1f37a07f06d059873046a09de36f79ab" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref> &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer&gt; RyleRadio.Tracks.RadioTrackPlayer.OnSample</definition>
+        <argsstring></argsstring>
+        <name>OnSample</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.OnSample</qualifiedname>
+        <initializer>= new(_ =&gt; { })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="47" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1af37da2f612fc29720b4fd36edd7c5789" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref> &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer&gt; RyleRadio.Tracks.RadioTrackPlayer.OnEnd</definition>
+        <argsstring></argsstring>
+        <name>OnEnd</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.OnEnd</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="50" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a86b1ff53a91276e8cae377dc49a65359" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref>, float &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer, float&gt; RyleRadio.Tracks.RadioTrackPlayer.OnVolume</definition>
+        <argsstring></argsstring>
+        <name>OnVolume</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.OnVolume</qualifiedname>
+        <initializer>= new((_, _) =&gt; { })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="56" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="56" bodyend="56"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a2ffac6a09ab23670acb6ce061a342b23" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref>, float &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer, float&gt; RyleRadio.Tracks.RadioTrackPlayer.OnGain</definition>
+        <argsstring></argsstring>
+        <name>OnGain</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.OnGain</qualifiedname>
+        <initializer>= new((_, _) =&gt; { })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="57" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1aafa18c9a5fe9b1ea70078c5ee1a81dc6" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref>, float &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer, float&gt; RyleRadio.Tracks.RadioTrackPlayer.OnTunePower</definition>
+        <argsstring></argsstring>
+        <name>OnTunePower</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.OnTunePower</qualifiedname>
+        <initializer>= new((_, _) =&gt; { })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="58" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="58" bodyend="58"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ab3a1b3fd46b3081aa1dab2f0a213fedb" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref>, float &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer, float&gt; RyleRadio.Tracks.RadioTrackPlayer.OnBroadcastPower</definition>
+        <argsstring></argsstring>
+        <name>OnBroadcastPower</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.OnBroadcastPower</qualifiedname>
+        <initializer>= new((_, _) =&gt; { })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="59" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a28a0c7a0016780429e3eef5dd7255d55" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref>, float &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer, float&gt; RyleRadio.Tracks.RadioTrackPlayer.OnInsulation</definition>
+        <argsstring></argsstring>
+        <name>OnInsulation</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.OnInsulation</qualifiedname>
+        <initializer>= new((_, _) =&gt; { })</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="60" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="60" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="property" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a735ce7ede282d98fd8ad863781dd8a69" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Tracks.RadioTrackPlayer.Paused</definition>
+        <argsstring></argsstring>
+        <name>Paused</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.Paused</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="63" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="64" bodyend="71"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1abcba3346ec5fdb3ec03b96ff1870e13e" prot="private" static="no" mutable="no">
+        <type>Action&lt; <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref> &gt;</type>
+        <definition>Action&lt;RadioTrackPlayer&gt; RyleRadio.Tracks.RadioTrackPlayer.onEnd</definition>
+        <argsstring></argsstring>
+        <name>onEnd</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.onEnd</qualifiedname>
+        <initializer>= _ =&gt; { }</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="49" column="24" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ac2fc2b2d0cbfe0ac9a94ff858724d270" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Tracks.RadioTrackPlayer.paused</definition>
+        <argsstring></argsstring>
+        <name>paused</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.paused</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="62" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ab7c938bd53ccb285095903249eec286b" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RyleRadio.Tracks.RadioTrackPlayer.sampleIncrement</definition>
+        <argsstring></argsstring>
+        <name>sampleIncrement</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.sampleIncrement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="73" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a780415cf951d50bbef7b00ca10b79012" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float RyleRadio.Tracks.RadioTrackPlayer.baseSampleRate</definition>
+        <argsstring></argsstring>
+        <name>baseSampleRate</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.baseSampleRate</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="74" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="74" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1aa1fc7801999a5e50f19d8b95dbf12c12" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool RyleRadio.Tracks.RadioTrackPlayer.isStopped</definition>
+        <argsstring></argsstring>
+        <name>isStopped</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.isStopped</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="76" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="76" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a2fa72d803a0062a79182c0b65aabab3f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>RyleRadio.Tracks.RadioTrackPlayer.RadioTrackPlayer</definition>
+        <argsstring>(RadioTrackWrapper _trackW, PlayerType _playerType, float _baseSampleRate)</argsstring>
+        <name>RadioTrackPlayer</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.RadioTrackPlayer</qualifiedname>
+        <param>
+          <type><ref refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper" kindref="compound">RadioTrackWrapper</ref></type>
+          <declname>_trackW</declname>
+        </param>
+        <param>
+          <type>PlayerType</type>
+          <declname>_playerType</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>_baseSampleRate</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="80" column="16" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="80" bodyend="93"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a63a0c04855f1c73af39082e391112530" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RyleRadio.Tracks.RadioTrackPlayer.UpdateSampleIncrement</definition>
+        <argsstring>()</argsstring>
+        <name>UpdateSampleIncrement</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.UpdateSampleIncrement</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="96" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="96" bodyend="118"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a31b8508a73bca294c23779854f621a22" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float RyleRadio.Tracks.RadioTrackPlayer.GetSample</definition>
+        <argsstring>(float _tune, Vector3 _receiverPosition, float _otherVolume, out float _outVolume, bool _applyVolume=true)</argsstring>
+        <name>GetSample</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.GetSample</qualifiedname>
+        <param>
+          <type>float</type>
+          <declname>_tune</declname>
+        </param>
+        <param>
+          <type>Vector3</type>
+          <declname>_receiverPosition</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>_otherVolume</declname>
+        </param>
+        <param>
+          <type>out float</type>
+          <declname>_outVolume</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>_applyVolume</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="121" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="121" bodyend="188"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a95260a8a00495a6d31912a1384a4bcd9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RyleRadio.Tracks.RadioTrackPlayer.IncrementSample</definition>
+        <argsstring>()</argsstring>
+        <name>IncrementSample</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.IncrementSample</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="191" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="191" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a2c872425fb5246ea5e3f17aa0e933626" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RyleRadio.Tracks.RadioTrackPlayer.Stop</definition>
+        <argsstring>()</argsstring>
+        <name>Stop</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.Stop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="243" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="243" bodyend="256"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1abb7a051d9be9b606c469e846dce2e208" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void RyleRadio.Tracks.RadioTrackPlayer.ResetProgress</definition>
+        <argsstring>()</argsstring>
+        <name>ResetProgress</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.ResetProgress</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="259" column="21" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="259" bodyend="262"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a8c23ec0f592f84bc29baf6b85d85b18f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float RyleRadio.Tracks.RadioTrackPlayer.GetBroadcastPower</definition>
+        <argsstring>(Vector3 _receiverPosition)</argsstring>
+        <name>GetBroadcastPower</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.GetBroadcastPower</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>_receiverPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="265" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="265" bodyend="294"/>
+      </memberdef>
+      <memberdef kind="function" id="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ae5a7fcbdb6d2499fc93c54c27ea3f875" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float RyleRadio.Tracks.RadioTrackPlayer.GetInsulation</definition>
+        <argsstring>(Vector3 _receiverPosition)</argsstring>
+        <name>GetInsulation</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackPlayer.GetInsulation</qualifiedname>
+        <param>
+          <type>Vector3</type>
+          <declname>_receiverPosition</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="297" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="297" bodyend="312"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" line="10" column="11" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackPlayer.cs" bodystart="11" bodyend="313"/>
+    <listofallmembers>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a780415cf951d50bbef7b00ca10b79012" prot="private" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>baseSampleRate</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1abcc18a8eb8d857fcf5ce5f41b033ee7d" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>DoDestroy</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a8c23ec0f592f84bc29baf6b85d85b18f" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>GetBroadcastPower</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ae5a7fcbdb6d2499fc93c54c27ea3f875" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>GetInsulation</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a31b8508a73bca294c23779854f621a22" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>GetSample</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a95260a8a00495a6d31912a1384a4bcd9" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>IncrementSample</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1aa1fc7801999a5e50f19d8b95dbf12c12" prot="private" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>isStopped</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ab3a1b3fd46b3081aa1dab2f0a213fedb" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>OnBroadcastPower</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1af37da2f612fc29720b4fd36edd7c5789" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>OnEnd</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1abcba3346ec5fdb3ec03b96ff1870e13e" prot="private" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>onEnd</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a2ffac6a09ab23670acb6ce061a342b23" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>OnGain</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a28a0c7a0016780429e3eef5dd7255d55" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>OnInsulation</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ab2b9eaec85c837ee3732922e4ad965ae" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>OnPause</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ae872a94044ea2367273c7372c8078e31" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>OnPlay</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a1f37a07f06d059873046a09de36f79ab" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>OnSample</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a71f6b9e374bf93b3e6c0e94c30a8ddbe" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>OnStop</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1aafa18c9a5fe9b1ea70078c5ee1a81dc6" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>OnTunePower</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a86b1ff53a91276e8cae377dc49a65359" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>OnVolume</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a735ce7ede282d98fd8ad863781dd8a69" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>Paused</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ac2fc2b2d0cbfe0ac9a94ff858724d270" prot="private" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>paused</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a56e0d8d85c08d167cc6f6feed785c0c3" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>PlayerType</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a8aa5c6b343b84685a405b34ce5c120a7" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>PlayType</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a2b0e7569f0ed06667c8ba97478b7ba41" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>Progress</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a1399740d1521db736029501f7506306a" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>ProgressFraction</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a2fa72d803a0062a79182c0b65aabab3f" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>RadioTrackPlayer</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1abb7a051d9be9b606c469e846dce2e208" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>ResetProgress</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ab7c938bd53ccb285095903249eec286b" prot="private" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>sampleIncrement</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a2c872425fb5246ea5e3f17aa0e933626" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>Stop</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1acfdd338125deed698d82e168e23f7dff" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>TrackW</name></member>
+      <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a63a0c04855f1c73af39082e391112530" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackPlayer</scope><name>UpdateSampleIncrement</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

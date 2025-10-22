@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="db/d8d/_i_radio_track_8cs" kind="file" language="C#">
+    <compoundname>IRadioTrack.cs</compoundname>
+    <innerclass refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track" prot="public">RyleRadio::Tracks::IRadioTrack</innerclass>
+    <innernamespace refid="da/d5f/namespace_ryle_radio">RyleRadio</innernamespace>
+    <innernamespace refid="d0/d28/namespace_ryle_radio_1_1_tracks">RyleRadio::Tracks</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System;</highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d0/d28/namespace_ryle_radio_1_1_tracks" kindref="compound">RyleRadio.Tracks</ref></highlight></codeline>
+<codeline lineno="4"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>internal<sp/>interface<sp/>for<sp/>radiotracks,<sp/>mainly<sp/>kept<sp/>for<sp/>the<sp/>purpose<sp/>of<sp/>logic<sp/>issues</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>tracks<sp/>for<sp/>stations<sp/>can<sp/>be<sp/>accessed<sp/>with<sp/>an<sp/>interface,<sp/>so<sp/>we<sp/>should<sp/>do<sp/>the<sp/>same<sp/>with<sp/>tracks<sp/>in<sp/>general</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>truth<sp/>be<sp/>told<sp/>i<sp/>can&apos;t<sp/>fully<sp/>remember<sp/>why<sp/>i<sp/>have<sp/>this<sp/>and<sp/>RadioTrack<sp/>as<sp/>separate<sp/>entities-<sp/>i<sp/>do<sp/>know<sp/>that<sp/>i<sp/>went<sp/>through<sp/>a<sp/>lot<sp/>of<sp/>effort<sp/>to<sp/>make</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>layout<sp/>work,<sp/>though,<sp/>and<sp/>so<sp/>for<sp/>the<sp/>moment<sp/>i&apos;m<sp/>keeping<sp/>it<sp/>in-<sp/>however<sp/>if<sp/>it<sp/>turns<sp/>out<sp/>to<sp/>be<sp/>ultimately<sp/>useless<sp/>and<sp/>can<sp/>be<sp/>deprecated<sp/>without</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>issue<sp/>i&apos;m<sp/>happy<sp/>to<sp/>say<sp/>goodbye<sp/>to<sp/>it</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>use<sp/>the<sp/>RadioTrack<sp/>class<sp/>if<sp/>you&apos;re<sp/>making<sp/>custom<sp/>tracks</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14" refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">interface<sp/></highlight><highlight class="normal"><ref refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track" kindref="compound">IRadioTrack</ref></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>samples<sp/>per<sp/>second<sp/>of<sp/>this<sp/>track<sp/>right<sp/>now<sp/>(can<sp/>change<sp/>on<sp/>some<sp/>tracks)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">abstract</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>SampleRate<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>total<sp/>amount<sp/>of<sp/>samples<sp/>in<sp/>this<sp/>track<sp/>right<sp/>now<sp/>(can<sp/>change<sp/>on<sp/>some<sp/>tracks)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">abstract</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>SampleCount<sp/>{<sp/></highlight><highlight class="keyword">get</highlight><highlight class="normal">;<sp/></highlight><highlight class="keyword">set</highlight><highlight class="normal">;<sp/>}</highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">abstract</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Init();</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>get<sp/>a<sp/>sample<sp/>at<sp/>the<sp/>provided<sp/>index</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>this<sp/>is<sp/>the<sp/>core<sp/>method<sp/>of<sp/>a<sp/>track-<sp/>whatever<sp/>you<sp/>return<sp/>here<sp/>defines<sp/>the<sp/>audio<sp/>that<sp/>the<sp/>track<sp/>will<sp/>play<sp/>when<sp/>selected</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>if<sp/>you<sp/>want<sp/>to<sp/>make<sp/>a<sp/>track<sp/>that<sp/>a<sp/>triangle<sp/>wave<sp/>that<sp/>oscillates<sp/>between<sp/>-1<sp/>and<sp/>1,<sp/>for<sp/>example</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">abstract</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>GetSample(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>_sampleIndex);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>update<sp/>a<sp/>RadioTrackPlayer<sp/>when<sp/>this<sp/>track<sp/>ends-<sp/>used<sp/>in<sp/>stations,<sp/>and<sp/>only<sp/>works<sp/>because<sp/>a<sp/>RadioData<sp/>can<sp/>only<sp/>ever<sp/>have<sp/>one<sp/>playing<sp/>instance</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>AddToPlayerEndCallback(ref<sp/>Action&lt;RadioTrackPlayer&gt;<sp/>_callback)<sp/>{<sp/>}</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/IRadioTrack.cs"/>
+  </compounddef>
+</doxygen>

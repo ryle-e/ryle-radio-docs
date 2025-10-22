@@ -1,0 +1,289 @@
+\doxysection{Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track Class Reference}
+\hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track}{}\label{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track}\index{RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}}
+Inheritance diagram for Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum {\bfseries Procedural\+Type} \{ \newline
+{\bfseries White\+Noise}
+, {\bfseries Pink\+Noise}
+, {\bfseries Brown\+Noise}
+, {\bfseries Sine\+Wave}
+, \newline
+{\bfseries Silence}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a49f57378ad34e028e3ae6f9bf652c154}{Init}} ()
+\item 
+override float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a383442f843004ce3898509ecc8e4bab5}{Get\+Sample}} (int \+\_\+sample\+Index)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Ryle\+Radio.\+Tracks.\+Radio\+Track}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a4f37e66ec62c41202c91b1fd6422a4bb}{Init}} ()
+\item 
+float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3d618faf79658a5e16fbf4ef3d9992dd}{Get\+Sample}} (int \+\_\+sample\+Index)
+\item 
+virtual void \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a702fda25cec925c0c3e7f8bf5eacfd47}{Add\+To\+Player\+End\+Callback}} (ref Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} $>$ \+\_\+callback)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Procedural\+Type \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a5481dc232eea6f3128b0665bc658ac7b}{procedural\+Type}} = Procedural\+Type.\+White\+Noise
+\item 
+float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a3fd80112352b4996a78634016a0b0c4a}{duration}} = 0
+\item 
+float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a947a0cd5b897659b62e96322153045a0}{wave\+Frequency}} = 100
+\item 
+float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a2f55f1e9b9cc531f14e2c06f7a5b7998}{brown\+Walk\+Power}} = 0.\+5f
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const string \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_aff4713f204f1d974cd7d5fb3ed763394}{DISPLAY\+\_\+\+NAME}} = "{}Procedural"{}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_ae8a1338da49edef807a0baf69aaa8f51}{Is\+In\+Station}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Ryle\+Radio.\+Tracks.\+Radio\+Track}}}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_a3bc4c9f7923a9314dffdd21f41723941}{Sample\+Rate}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+virtual int \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_ab9bc3ce18b760fcfd3ae4867ded40698}{Sample\+Count}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_procedural_radio_track_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_procedural_radio_track_8cs_source}{Procedural\+Radio\+Track.\+cs}}.
+
+
+
+\label{doc-enum-members}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_doc-enum-members}
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a875d0aa43f7a037896786dd2f223c6b3}\index{RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}!ProceduralType@{ProceduralType}}
+\index{ProceduralType@{ProceduralType}!RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}}
+\doxysubsubsection{\texorpdfstring{ProceduralType}{ProceduralType}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a875d0aa43f7a037896786dd2f223c6b3} 
+enum Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+Procedural\+Type}
+
+
+
+Definition at line \mbox{\hyperlink{_procedural_radio_track_8cs_source_l00013}{13}} of file \mbox{\hyperlink{_procedural_radio_track_8cs_source}{Procedural\+Radio\+Track.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00014\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \ \ \ \ WhiteNoise,}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \ \ \ \ PinkNoise,}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \ \ \ \ BrownNoise,}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \ \ \ \ SineWave,\ \textcolor{comment}{//\ i\ haven't\ added\ other\ waveforms\ at\ this\ time\ but\ if\ requested\ i\ can\ :)}}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \ \ \ \ Silence,}
+\DoxyCodeLine{00020\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-func-members}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a383442f843004ce3898509ecc8e4bab5}\index{RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}!GetSample@{GetSample}}
+\index{GetSample@{GetSample}!RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}}
+\doxysubsubsection{\texorpdfstring{GetSample()}{GetSample()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a383442f843004ce3898509ecc8e4bab5} 
+override float Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+Get\+Sample (\begin{DoxyParamCaption}\item[{int}]{\+\_\+sample\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
+
+
+
+Definition at line \mbox{\hyperlink{_procedural_radio_track_8cs_source_l00067}{67}} of file \mbox{\hyperlink{_procedural_radio_track_8cs_source}{Procedural\+Radio\+Track.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00068\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ all\ the\ noise\ algorithms\ use\ a\ white\ noise\ float}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ white\ =\ 0;}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{switch}\ (proceduralType)}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00074\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ generate\ a\ random\ value\ between\ -\/1\ and\ 1}}
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ProceduralType.WhiteNoise:}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ white\ =\ ((float)random.NextDouble()\ *\ 2)\ -\/\ 1;}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ white\ *\ NOISE\_MULTIPLIER;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ generate\ a\ random\ value\ with\ a\ pink\ noise\ filter\ applied}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ProceduralType.PinkNoise:}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ white\ =\ ((float)random.NextDouble()\ *\ 2)\ -\/\ 1;}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ generated\ using\ paul\ kellet's\ refined\ method\ (pk3)}}
+\DoxyCodeLine{00084\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ https://www.firstpr.com.au/dsp/pink-\/noise/\#Filtering:\string~:text=(This\%20is\%20pke,p2\%20\%2B\%20white\%20*\%200.1848\%3B}}
+\DoxyCodeLine{00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p0\ =\ 0.99886f\ *\ p0\ +\ white\ *\ 0.0555179f;}
+\DoxyCodeLine{00086\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p1\ =\ 0.99332f\ *\ p1\ +\ white\ *\ 0.0750759f;}
+\DoxyCodeLine{00087\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p2\ =\ 0.96900f\ *\ p2\ +\ white\ *\ 0.1538520f;}
+\DoxyCodeLine{00088\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p3\ =\ 0.86650f\ *\ p3\ +\ white\ *\ 0.3104856f;}
+\DoxyCodeLine{00089\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p4\ =\ 0.55000f\ *\ p4\ +\ white\ *\ 0.5329522f;}
+\DoxyCodeLine{00090\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p5\ =\ -\/0.7616f\ *\ p5\ -\/\ white\ *\ 0.0168980f;}
+\DoxyCodeLine{00091\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ pink\ =\ p0\ +\ p1\ +\ p2\ +\ p3\ +\ p4\ +\ p5\ +\ p6\ +\ white\ *\ 0.5362f;}
+\DoxyCodeLine{00092\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ p6\ =\ white\ *\ 0.115926f;}
+\DoxyCodeLine{00093\ }
+\DoxyCodeLine{00094\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ pink\ is\ louder\ than\ normal\ noise\ so\ we\ use\ a\ secondary\ multiplier\ on\ it}}
+\DoxyCodeLine{00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ pink\ *\ NOISE\_MULTIPLIER\ *\ PINK\_MULTIPLIER;}
+\DoxyCodeLine{00096\ }
+\DoxyCodeLine{00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ generate\ a\ random\ value,\ using\ previous\ values\ to\ soften\ the\ noise}}
+\DoxyCodeLine{00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ theory\ explained\ by\ gemini,\ adjusted\ from\ https://forum.juce.com/t/creating-\/colored-\/noise/30012/4}}
+\DoxyCodeLine{00099\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ProceduralType.BrownNoise:}
+\DoxyCodeLine{00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ white\ =\ ((float)random.NextDouble()\ *\ 2)\ -\/\ 1;}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastBrown\ +=\ white\ *\ brownWalkPower;}
+\DoxyCodeLine{00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastBrown\ =\ Mathf.Clamp(lastBrown,\ -\/1,\ 1)\ *\ 0.998f;\ \textcolor{comment}{//\ use\ a\ small\ <1\ constant\ to\ ensure\ the\ noise\ doesn't\ get\ constantly\ louder}}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ lastBrown\ *\ NOISE\_MULTIPLIER;}
+\DoxyCodeLine{00106\ }
+\DoxyCodeLine{00107\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ use\ a\ sine\ wave\ to\ create\ a\ basic\ single\ tone}}
+\DoxyCodeLine{00108\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ from\ https://discussions.unity.com/t/generating-\/a-\/simple-\/sinewave/665023/16}}
+\DoxyCodeLine{00109\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ProceduralType.SineWave:}
+\DoxyCodeLine{00110\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ lastPhase\ =\ phase\ +\ (2\ *\ Mathf.PI\ *\ (waveFrequency\ /\ SampleRate));}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00112\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ phase\ =\ lastPhase;}
+\DoxyCodeLine{00113\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (phase\ >\ 2\ *\ Mathf.PI)\ \textcolor{comment}{//\ ensure\ that\ phase\ doesn't\ get\ exponentially\ larger}}
+\DoxyCodeLine{00114\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ phase\ -\/=\ 2\ *\ Mathf.PI;}
+\DoxyCodeLine{00115\ }
+\DoxyCodeLine{00116\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Mathf.Sin(lastPhase)\ *\ NOISE\_MULTIPLIER;}
+\DoxyCodeLine{00117\ }
+\DoxyCodeLine{00118\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ just\ silence\ in\ case\ you\ need\ it}}
+\DoxyCodeLine{00119\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{case}\ ProceduralType.Silence:}
+\DoxyCodeLine{00120\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00121\ }
+\DoxyCodeLine{00122\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00123\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ Debug.LogError(\textcolor{stringliteral}{"{}Attempting\ to\ get\ a\ sample\ from\ a\ procedural\ RadioTrack\ with\ an\ invalid\ ProceduralType-\/\ this\ should\ not\ be\ possible."{}});}
+\DoxyCodeLine{00124\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00125\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{00126\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a49f57378ad34e028e3ae6f9bf652c154}\index{RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}!Init@{Init}}
+\index{Init@{Init}!RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}}
+\doxysubsubsection{\texorpdfstring{Init()}{Init()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a49f57378ad34e028e3ae6f9bf652c154} 
+override void Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+Init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{Ryle\+Radio.\+Tracks.\+IRadio\+Track}}.
+
+
+
+Definition at line \mbox{\hyperlink{_procedural_radio_track_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_procedural_radio_track_8cs_source}{Procedural\+Radio\+Track.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ random\ =\ \textcolor{keyword}{new}\ System.Random();}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ phase\ =\ 0;}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00061\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ this\ track\ has\ a\ duration,\ set\ the\ sample\ count\ to\ that\ duration,\ otherwise\ set\ it\ to\ ''''infinite''''}}
+\DoxyCodeLine{00062\ \ \ \ \ \ \ \ \ \ \ \ \ SampleCount\ =\ (duration\ >\ 0)\ ?\ (\textcolor{keywordtype}{int})(duration\ *\ BASE\_SAMPLE\_RATE)\ :\ int.MaxValue;}
+\DoxyCodeLine{00063\ \ \ \ \ \ \ \ \ \ \ \ \ SampleRate\ =\ BASE\_SAMPLE\_RATE;}
+\DoxyCodeLine{00064\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a2f55f1e9b9cc531f14e2c06f7a5b7998}\index{RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}!brownWalkPower@{brownWalkPower}}
+\index{brownWalkPower@{brownWalkPower}!RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}}
+\doxysubsubsection{\texorpdfstring{brownWalkPower}{brownWalkPower}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a2f55f1e9b9cc531f14e2c06f7a5b7998} 
+float Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+brown\+Walk\+Power = 0.\+5f}
+
+
+
+Definition at line \mbox{\hyperlink{_procedural_radio_track_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_procedural_radio_track_8cs_source}{Procedural\+Radio\+Track.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_aff4713f204f1d974cd7d5fb3ed763394}\index{RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}!DISPLAY\_NAME@{DISPLAY\_NAME}}
+\index{DISPLAY\_NAME@{DISPLAY\_NAME}!RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}}
+\doxysubsubsection{\texorpdfstring{DISPLAY\_NAME}{DISPLAY\_NAME}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_aff4713f204f1d974cd7d5fb3ed763394} 
+const string Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+DISPLAY\+\_\+\+NAME = "{}Procedural"{}\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Definition at line \mbox{\hyperlink{_procedural_radio_track_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_procedural_radio_track_8cs_source}{Procedural\+Radio\+Track.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a3fd80112352b4996a78634016a0b0c4a}\index{RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}!duration@{duration}}
+\index{duration@{duration}!RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}}
+\doxysubsubsection{\texorpdfstring{duration}{duration}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a3fd80112352b4996a78634016a0b0c4a} 
+float Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+duration = 0}
+
+
+
+Definition at line \mbox{\hyperlink{_procedural_radio_track_8cs_source_l00031}{31}} of file \mbox{\hyperlink{_procedural_radio_track_8cs_source}{Procedural\+Radio\+Track.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a5481dc232eea6f3128b0665bc658ac7b}\index{RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}!proceduralType@{proceduralType}}
+\index{proceduralType@{proceduralType}!RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}}
+\doxysubsubsection{\texorpdfstring{proceduralType}{proceduralType}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a5481dc232eea6f3128b0665bc658ac7b} 
+Procedural\+Type Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+procedural\+Type = Procedural\+Type.\+White\+Noise}
+
+
+
+Definition at line \mbox{\hyperlink{_procedural_radio_track_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_procedural_radio_track_8cs_source}{Procedural\+Radio\+Track.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a947a0cd5b897659b62e96322153045a0}\index{RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}!waveFrequency@{waveFrequency}}
+\index{waveFrequency@{waveFrequency}!RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}}
+\doxysubsubsection{\texorpdfstring{waveFrequency}{waveFrequency}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_a947a0cd5b897659b62e96322153045a0} 
+float Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+wave\+Frequency = 100}
+
+
+
+Definition at line \mbox{\hyperlink{_procedural_radio_track_8cs_source_l00035}{35}} of file \mbox{\hyperlink{_procedural_radio_track_8cs_source}{Procedural\+Radio\+Track.\+cs}}.
+
+
+
+\label{doc-property-members}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_doc-property-members}
+\doxysubsection{Property Documentation}
+\Hypertarget{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_ae8a1338da49edef807a0baf69aaa8f51}\index{RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}!IsInStation@{IsInStation}}
+\index{IsInStation@{IsInStation}!RyleRadio.Tracks.ProceduralRadioTrack@{RyleRadio.Tracks.ProceduralRadioTrack}}
+\doxysubsubsection{\texorpdfstring{IsInStation}{IsInStation}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_ae8a1338da49edef807a0baf69aaa8f51} 
+bool Ryle\+Radio.\+Tracks.\+Procedural\+Radio\+Track.\+Is\+In\+Station\hspace{0.3cm}{\ttfamily [get]}, {\ttfamily [set]}}
+
+
+
+Implements \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{Ryle\+Radio.\+Tracks.\+IStation\+Track}}.
+
+
+
+Definition at line \mbox{\hyperlink{_procedural_radio_track_8cs_source_l00053}{53}} of file \mbox{\hyperlink{_procedural_radio_track_8cs_source}{Procedural\+Radio\+Track.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00053\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Git\+Hub/ryle-\/radio/\+Assets/\+Ryle\+Radio/\+Scripts/\+Runtime/\+Tracks/\+Track Types/Procedural\+Radio\+Track.\+cs\end{DoxyCompactItemize}

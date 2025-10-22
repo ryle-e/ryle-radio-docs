@@ -1,0 +1,222 @@
+\doxysection{Radio\+Track\+Wrapper.\+cs}
+\hypertarget{_radio_track_wrapper_8cs_source}{}\label{_radio_track_wrapper_8cs_source}\index{D:/GitHub/ryle-\/radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs@{D:/GitHub/ryle-\/radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00001}00001\ \textcolor{keyword}{using\ }NaughtyAttributes;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00002}00002\ \textcolor{keyword}{using\ }\mbox{\hyperlink{namespace_ryle_radio_1_1_components}{RyleRadio.Components}};}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00003}00003\ \textcolor{keyword}{using\ }System;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00004}00004\ \textcolor{keyword}{using\ }System.Collections.Generic;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00005}00005\ \textcolor{keyword}{using\ }System.Linq;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00006}00006\ \textcolor{keyword}{using\ }UnityEditor;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00007}00007\ \textcolor{keyword}{using\ }UnityEngine;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00008}00008\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00009}00009\ \textcolor{keyword}{namespace\ }\mbox{\hyperlink{namespace_ryle_radio_1_1_tracks}{RyleRadio.Tracks}}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00010}00010\ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00011}00011\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00012}00012\ \ \ \ \ [System.Serializable]}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00013}\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{00013}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }RadioTrackWrapper}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00014}00014\ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00015}00015\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ AnimationCurve\ DefaultRangeCurve\ =>\ \textcolor{keyword}{new}(\textcolor{keyword}{new}\ Keyframe[3]\ \{\ \ \textcolor{comment}{//\ the\ default\ curve\ used\ for\ gain,\ a\ bell\ curve-\/like\ shape}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00016}00016\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(0,\ 0,\ 0,\ 0),}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00017}00017\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(0.5f,\ 1,\ 0,\ 0),}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(1,\ 0,\ 0,\ 0)}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \});}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00020}00020\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00021}00021\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ RANGE\_DECIMAL\_MULTIPLIER\ =\ 10f;\ \textcolor{comment}{//\ 2\ \string^\ the\ number\ of\ decimal\ places\ that\ the\ clampedRange\ has,\ i.e\ 10\ ==\ 1dp,\ 100\ ==\ 2dp}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00022}00022\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00023}00023\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ id;\ \textcolor{comment}{//\ the\ id\ used\ to\ find\ and\ use\ this\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00024}00024\ \ \ \ \ \ \ \ \ [HideInInspector]\ \textcolor{keyword}{public}\ \textcolor{keywordtype}{string}\ name;\ \textcolor{comment}{//\ the\ typeName\ of\ this\ track\ for\ inspector\ usage-\/\ this\ is\ assigned\ in\ RadioData\ when\ the\ wrapper\ is\ created}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00025}00025\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00026}00026\ \ \ \ \ \ \ \ \ [MinMaxSlider(\mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{RadioData}}.LOW\_TUNE,\ \mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{RadioData}}.HIGH\_TUNE),\ OnValueChanged(\textcolor{stringliteral}{"{}ScaleRange"{}})]}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00027}00027\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Vector2\ range;\ \textcolor{comment}{//\ the\ clampedRange\ of\ tune\ in\ which\ this\ track\ can\ be\ heard}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00028}00028\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00029}00029\ \ \ \ \ \ \ \ \ [CurveRange(0,\ 0,\ 1,\ 1)]}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00030}00030\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ AnimationCurve\ rangeCurve\ =\ \textcolor{keyword}{new}(DefaultRangeCurve.keys);\ \textcolor{comment}{//\ the\ volume\ of\ the\ track\ over\ its\ clampedRange}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00031}00031\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00032}00032\ \ \ \ \ \ \ \ \ [Range(0,\ 500)]}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00033}00033\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ gain\ =\ 100;\ \textcolor{comment}{//\ the\ volume\ of\ the\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00034}00034\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00035}00035\ \ \ \ \ \ \ \ \ [Range(0,\ 1)]}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00036}00036\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ attenuation\ =\ 0.1f;\ \textcolor{comment}{//\ the\ amount\ that\ the\ track\ dims\ when\ another\ track\ is\ playing\ above\ it,\ e.g\ static\ becoming\ quieter\ when\ clip\ is\ audible}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00037}00037\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00038}00038\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ forceGlobal\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ does\ this\ track\ ignore\ any\ RadioBroadcasters\ and\ play\ everywhere?}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00039}00039\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{bool}\ playOnInit\ =\ \textcolor{keyword}{true};\ \textcolor{comment}{//\ does\ this\ track\ play\ on\ start?}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00040}00040\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00041}00041\ \ \ \ \ \ \ \ \ [HideInInspector]\ \textcolor{keyword}{public}\ List<RadioBroadcaster>\ broadcasters;\ \textcolor{comment}{//\ the\ broadcasters\ in\ the\ scene,\ controlling\ the\ gain\ of\ the\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00042}00042\ \ \ \ \ \ \ \ \ [HideInInspector]\ \textcolor{keyword}{public}\ List<RadioInsulator>\ insulators;\ \textcolor{comment}{//\ the\ insulation\ zones\ in\ the\ scene,\ areas\ where\ the\ gain\ is\ weaker-\/\ inverse\ of\ broadcasters}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00043}00043\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00044}00044\ \ \ \ \ \ \ \ \ [SerializeField,\ Space(8),\ AllowNesting,\ OnValueChanged(\textcolor{stringliteral}{"{}CreateTrackLocal"{}}),\ Dropdown(\textcolor{stringliteral}{"{}TrackNames"{}})]}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00045}00045\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{string}\ trackType;\ \textcolor{comment}{//\ allows\ a\ track\ type\ to\ be\ selectable\ in\ the\ inspector}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00046}00046\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00047}00047\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ track\ itself}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00048}00048\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ keep\ this\ private\ so\ that\ no\ other\ classes\ can\ access\ the\ track\ directly-\/\ this\ isn't\ really\ necessary\ but\ is\ very\ safe\ when\ it\ comes\ to\ custom\ tracks}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00049}00049\ \ \ \ \ \ \ \ \ [SerializeReference]\ \textcolor{keyword}{protected}\ \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{IRadioTrack}}\ track;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00050}00050\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00051}00051\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Action<RadioTrackWrapper>\ OnInit\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}(\_\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ the\ wrapper\ is\ initialized}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00052}00052\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Action<RadioTrackWrapper>\ BeforeInit\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}(\_\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ the\ wraper\ is\ about\ to\ be\ initialized}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00053}00053\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00054}00054\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Action<RadioBroadcaster,\ RadioTrackWrapper>\ OnAddBroadcaster\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}((\_,\ \_)\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ a\ broadcaster\ is\ added\ to\ the\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00055}00055\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Action<RadioBroadcaster,\ RadioTrackWrapper>\ OnRemoveBroadcaster\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}((\_,\ \_)\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ a\ broadcaster\ is\ removed\ from\ the\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00056}00056\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Action<RadioInsulator,\ RadioTrackWrapper>\ OnAddInsulator\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}((\_,\ \_)\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ an\ insulator\ is\ added\ to\ the\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ Action<RadioInsulator,\ RadioTrackWrapper>\ OnRemoveInsulator\ \{\ \textcolor{keyword}{get};\ \textcolor{keyword}{set};\ \}\ =\ \textcolor{keyword}{new}((\_,\ \_)\ =>\ \{\ \});\ \textcolor{comment}{//\ called\ when\ an\ insulator\ is\ removed\ from\ the\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00059}00059\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ possible\ track\ types\ that\ can\ be\ assigned\ here}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ Type[]\ trackTypes;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ Type[]\ TrackTypes}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ dynamically\ gets\ all\ available\ track\ types-\/\ automatically\ detects\ any\ new\ ones}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00067}00067\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trackTypes\ ??=\ \mbox{\hyperlink{class_ryle_radio_1_1_radio_utils}{RadioUtils}}.FindDerivedTypes(typeof(\mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{IRadioTrack}}));}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00068}00068\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00069}00069\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ trackTypes;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00070}00070\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00071}00071\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00072}00072\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00073}00073\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ possibke\ track\ types\ that\ can\ be\ assigned\ here,\ with\ their\ typenames\ as\ strings-\/\ this\ is\ not\ the\ DISPLAY\_NAME\ in\ the\ RadioTrack\ script,\ this\ is}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00074}00074\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ id\ of\ the\ type\ itself.\ used\ to\ reassign\ trackType\ on\ editor\ reload,\ as\ it\ sets\ itself\ back\ to\ default\ otherwise}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00075}00075\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}[]\ trackTypesAsStrings;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00076}00076\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}[]\ TrackTypesAsStrings}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00077}00077\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00078}00078\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00079}00079\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00080}00080\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ all\ the\ track\ types,\ and\ convert\ them\ to\ their\ type\ names}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00081}00081\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trackTypesAsStrings\ ??=\ TrackTypes}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00082}00082\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(t\ =>\ t.Name.Split(\textcolor{stringliteral}{"{}."{}})[\string^1])}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00083}00083\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToArray();}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00084}00084\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00085}00085\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ trackTypesAsStrings;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00086}00086\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00087}00087\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00088}00088\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00089}00089\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ track\ types\ as\ string\ names}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00090}00090\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}[]\ trackNames;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00091}00091\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}[]\ TrackNames}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{get}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00094}00094\ \ \ \ \ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00095}00095\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ all\ the\ track\ types,\ and\ convert\ them\ to\ their\ dev-\/defined\ their\ display\ names}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00096}00096\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trackNames\ ??=\ TrackTypes}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00097}00097\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .Select(t\ =>\ (\textcolor{keywordtype}{string})t.GetField(\textcolor{stringliteral}{"{}DISPLAY\_NAME"{}}).GetValue(\textcolor{keyword}{null}))\ \textcolor{comment}{//\ the\ track\ type\ needs\ a\ const\ named\ DISPLAY\_NAME\ to\ be\ accessed\ here}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00098}00098\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ .ToArray();}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00099}00099\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ trackNames;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00103}00103\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ \ we\ provide\ aliases\ here\ so\ that\ no\ other\ class\ can\ directly\ access\ RadioTracks-\/\ this\ isn't\ necessarily\ vital,\ but\ it's\ much\ safer}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ SampleRate\ =>\ track.SampleRate;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{int}\ SampleCount\ =>\ track.SampleCount;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00107}00107\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00108}00108\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00109}00109\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ RadioTrackWrapper()}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00110}00110\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00111}00111\ \ \ \ \ \ \ \ \ \ \ \ \ track\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00112}00112\ \ \ \ \ \ \ \ \ \ \ \ \ trackType\ =\ \textcolor{stringliteral}{"{}"{}};}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00113}00113\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00114}00114\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ forces\ this\ wrapper\ to\ have\ a\ track\ on\ creation\ so\ that\ we\ don't\ get\ inspector\ errors}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00115}00115\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ gets\ called\ when\ the\ wrapper\ is\ created,\ not\ when\ it's\ initialized}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00116}00116\ \ \ \ \ \ \ \ \ \ \ \ \ CreateTrackLocal();}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00117}00117\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00118}00118\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00119}00119\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00120}00120\ \ \ \ \ \ \ \ \ [InitializeOnLoadMethod]}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00121}00121\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{void}\ OnReload()}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00122}00122\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00123}00123\ \ \ \ \ \ \ \ \ \ \ \ \ trackTypes\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00124}00124\ \ \ \ \ \ \ \ \ \ \ \ \ trackTypesAsStrings\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00125}00125\ \ \ \ \ \ \ \ \ \ \ \ \ trackNames\ =\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00126}00126\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00127}00127\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00128}00128\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00129}00129\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ initialize\ this\ wrapper\ when\ play\ mode\ is\ started}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ Init()}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00132}00132\ \ \ \ \ \ \ \ \ \ \ \ \ BeforeInit(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00133}00133\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ initialize\ the\ track\ itself}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ track.Init();}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00136}00136\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ reset\ stored\ components\ as\ they\ will\ otherwise\ be\ kept\ from\ the\ last\ play\ mode}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ doesn't\ really\ matter\ in\ a\ build\ but\ is\ needed\ for\ the\ editor}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00139}00139\ \ \ \ \ \ \ \ \ \ \ \ \ broadcasters.Clear();}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00140}00140\ \ \ \ \ \ \ \ \ \ \ \ \ insulators.Clear();}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00141}00141\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00142}00142\ \ \ \ \ \ \ \ \ \ \ \ \ OnInit(\textcolor{keyword}{this});}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00143}00143\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00144}00144\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00145}00145\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ make\ it\ obvious\ that\ this\ is\ a\ wrapper\ for\ a\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00146}00146\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{string}\ ToString()\ =>\ \textcolor{stringliteral}{"{}Wrapper\ for\ "{}}\ +\ name;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00147}00147\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00148}00148\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \textcolor{keywordtype}{string}\ GetTrackType(\textcolor{keywordtype}{string}\ \_typeName)}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00149}00149\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00150}00150\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ Array.IndexOf(TrackTypesAsStrings,\ \_typeName.Split(\textcolor{stringliteral}{"{}."{}})[\string^1]);}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00151}00151\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ TrackNames[index];}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00152}00152\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00153}00153\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00154}00154\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ gets\ a\ new\ track\ of\ type\ depending\ on\ the\ provided\ id}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00155}00155\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ note\ that\ this\ is\ static}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00156}00156\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{static}\ \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{IRadioTrack}}\ CreateTrackEditor(\textcolor{keywordtype}{string}\ \_name)}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00157}00157\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00158}00158\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ index\ of\ the\ chosen\ track\ type}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00159}00159\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ index\ =\ Array.IndexOf(TrackNames,\ \_name);}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00160}00160\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00161}00161\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ you\ somehow\ have\ an\ invalid\ track\ type,\ don't\ create\ anything}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (index\ <\ 0)}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ \textcolor{keyword}{null};}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00164}00164\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ create\ the\ track\ generically}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ (we\ have\ to\ use\ Activator.CreateInstance\ here\ as\ it\ uses\ the\ Type\ as\ an\ argument-\/\ we\ can't\ generically\ instantiate\ a\ variable}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ from\ a\ given\ Type\ any\ other\ viable\ way}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{IRadioTrack}}\ outTrack\ =\ (\mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{IRadioTrack}})Activator.CreateInstance(TrackTypes[index]);}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00169}00169\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ the\ new\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ outTrack;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00173}00173\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ called\ on\ an\ instantiated\ wrapper\ to\ update\ its\ selected\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ CreateTrackLocal()}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00176}00176\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00177}00177\ \ \ \ \ \ \ \ \ \ \ \ \ track\ =\ CreateTrackEditor(trackType);}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00178}00178\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00179}00179\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00180}00180\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ we\ use\ this\ if\ the\ track\ needs\ to\ access\ one\ of\ its\ RadioTrackPlayers\ when\ the\ player\ is\ destroyed}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00181}00181\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ this\ is\ really\ only\ needed\ for\ stations\ at\ the\ moment\ but\ we\ keep\ it\ generic\ in\ case\ something\ else\ needs\ it}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00182}00182\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{void}\ AddToPlayerEndCallback(ref\ Action<RadioTrackPlayer>\ \_callback)}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00183}00183\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00184}00184\ \ \ \ \ \ \ \ \ \ \ \ \ track.AddToPlayerEndCallback(ref\ \_callback);}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00185}00185\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00186}00186\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00187}00187\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ limits\ the\ decimal\ points\ on\ the\ tune\ range,\ like\ an\ actual\ radio}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00188}00188\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{void}\ ScaleRange()}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00189}00189\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00190}00190\ \ \ \ \ \ \ \ \ \ \ \ \ range\ =\ \textcolor{keyword}{new}(}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00191}00191\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((int)(range.x\ *\ RANGE\_DECIMAL\_MULTIPLIER))\ /\ RANGE\_DECIMAL\_MULTIPLIER,\ \textcolor{comment}{//\ increase\ the\ size\ of\ the\ clampedRange\ clampedValue,\ then\ cut\ its\ decimals\ and\ shrink\ it\ back\ down}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00192}00192\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((int)(range.y\ *\ RANGE\_DECIMAL\_MULTIPLIER))\ /\ RANGE\_DECIMAL\_MULTIPLIER}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00193}00193\ \ \ \ \ \ \ \ \ \ \ \ \ );}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00194}00194\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00195}00195\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00196}00196\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00197}00197\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ calculate\ the\ volume\ of\ the\ track\ at\ a\ specific\ tune}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00198}00198\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ GetTunePower(\textcolor{keywordtype}{float}\ \_tune,\ \textcolor{keywordtype}{float}\ \_otherVolume)}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00199}00199\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00200}00200\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (\_tune\ <\ range.x\ ||\ \_tune\ >\ range.y)\ \textcolor{comment}{//\ if\ the\ tune\ is\ out\ of\ this\ track's\ range,\ it\ cannot\ be\ heard}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00201}00201\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00202}00202\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00203}00203\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ tunePower\ =\ rangeCurve.Evaluate(\_tune.Remap(range.x,\ range.y,\ 0f,\ 1f));\ \textcolor{comment}{//\ get\ the\ volume\ based\ on\ the\ tune\ and\ where\ it\ sits\ on\ the\ gain\ curve}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00204}00204\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ attenPower\ =\ 1f\ -\/\ (Mathf.Clamp01(\_otherVolume)\ *\ attenuation);\ \textcolor{comment}{//\ get\ the\ volume\ based\ on\ attenuation\ and\ other\ playing\ trackWs}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00205}00205\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00206}00206\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ tunePower\ *\ attenPower;\ \textcolor{comment}{//\ combine\ the\ values\ into\ one\ singular\ volume}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00207}00207\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00208}00208\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00209}00209\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ a\ sample\ from\ the\ track}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00210}00210\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keywordtype}{float}\ GetSample(\textcolor{keywordtype}{int}\ \_sampleIndex)}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00211}00211\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00212}00212\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ track.GetSample(\_sampleIndex);}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00213}00213\ \ \ \ \ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00214}00214\ \ \ \ \ \}}
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00215}00215\ }
+\DoxyCodeLine{\Hypertarget{_radio_track_wrapper_8cs_source_l00216}00216\ \}}
+
+\end{DoxyCode}

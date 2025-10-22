@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="dir_b0569681b8f0bdce3e1e87bb707501b9" kind="dir">
+    <compoundname>D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces</compoundname>
+    <innerfile refid="db/d8d/_i_radio_track_8cs">IRadioTrack.cs</innerfile>
+    <innerfile refid="d8/d81/_i_station_track_8cs">IStationTrack.cs</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/Interfaces/"/>
+  </compounddef>
+</doxygen>

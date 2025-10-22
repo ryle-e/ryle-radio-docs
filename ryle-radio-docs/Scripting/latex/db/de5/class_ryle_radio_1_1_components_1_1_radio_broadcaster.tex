@@ -1,0 +1,198 @@
+\doxysection{Ryle\+Radio.\+Components.\+Radio\+Broadcaster Class Reference}
+\hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster}{}\label{class_ryle_radio_1_1_components_1_1_radio_broadcaster}\index{RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}}
+Inheritance diagram for Ryle\+Radio.\+Components.\+Radio\+Broadcaster\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=4.000000cm]{db/de5/class_ryle_radio_1_1_components_1_1_radio_broadcaster}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+float \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster_a521f92574cfd54f14c3ecfa87013683c}{Get\+Power}} (Vector3 \+\_\+receiver\+Pos)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component\+Data\+Accessor}}}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor_a97e324fd72344ee550241979fc85d5b5}{Init}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Init} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster_a5628c7e602d1c6662bdae7119b942f18}{broadcast\+Radius}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster_af53dd2da39f80c4329aa3492ed9b55d4}{Assign\+To\+Track}} (\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}} \+\_\+track)
+\item 
+override void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster_aa6ed4532561f98f364e0b5b7270a470c}{Remove\+From\+Track}} (\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}} \+\_\+track)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component\+Data\+Accessor}}}
+\begin{DoxyCompactItemize}
+\item 
+void {\bfseries Assign\+To\+Track} (\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}} \+\_\+track)
+\item 
+void {\bfseries Remove\+From\+Track} (\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}} \+\_\+track)
+\item 
+virtual void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor_a5968ea7d58f9d8e6172f8d08cde6ab6e}{Accessor\+Init}} ()
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+Vector2 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster_a9a19e8c86dc5284948b748bb6a973f60}{broadcast\+Powers}} = new(0, 1)
+\item 
+Animation\+Curve \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_broadcaster_af016c4c46d5e76046f83ae9a7162cf78}{distance\+Falloff}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{Radio\+Data}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_adf78617ec86177781cebe0f539354489}{data}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Additional Inherited Members}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component\+Data\+Accessor}}}
+\begin{DoxyCompactItemize}
+\item 
+List$<$ string $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor_a18d15e5703cd4ae9c95a1514cc71ab0a}{Track\+Names}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+Action$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Radio\+Component}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor_aff234a98e8505ef320008539fb96289f}{On\+Init}} = new(\+\_\+ =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Properties inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component}}}
+\begin{DoxyCompactItemize}
+\item 
+static Action \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a4793e3a84e577d89c5fb781f124ae86c}{Init\+All\+Components}} = new(() =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\item 
+\mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{Radio\+Data}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a335030dac70cfaabc169f1e5743bcacd}{Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_radio_broadcaster_8cs_source}{Radio\+Broadcaster.\+cs}}.
+
+
+
+\label{doc-func-members}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster_af53dd2da39f80c4329aa3492ed9b55d4}\index{RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}!AssignToTrack@{AssignToTrack}}
+\index{AssignToTrack@{AssignToTrack}!RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}}
+\doxysubsubsection{\texorpdfstring{AssignToTrack()}{AssignToTrack()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_broadcaster_af53dd2da39f80c4329aa3492ed9b55d4} 
+override void Ryle\+Radio.\+Components.\+Radio\+Broadcaster.\+Assign\+To\+Track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}}}]{\+\_\+track}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_radio_broadcaster_8cs_source}{Radio\+Broadcaster.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00051\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00052\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.broadcasters.Add(\textcolor{keyword}{this});}
+\DoxyCodeLine{00053\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.OnAddBroadcaster(\textcolor{keyword}{this},\ \_track);}
+\DoxyCodeLine{00054\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster_a521f92574cfd54f14c3ecfa87013683c}\index{RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}!GetPower@{GetPower}}
+\index{GetPower@{GetPower}!RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}}
+\doxysubsubsection{\texorpdfstring{GetPower()}{GetPower()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_broadcaster_a521f92574cfd54f14c3ecfa87013683c} 
+float Ryle\+Radio.\+Components.\+Radio\+Broadcaster.\+Get\+Power (\begin{DoxyParamCaption}\item[{Vector3}]{\+\_\+receiver\+Pos}{}\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_8cs_source_l00064}{64}} of file \mbox{\hyperlink{_radio_broadcaster_8cs_source}{Radio\+Broadcaster.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00066\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ distance\ between\ the\ output\ and\ this\ broadcaster}}
+\DoxyCodeLine{00067\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ distance\ =\ Vector3.Distance(cachedPos,\ \_receiverPos);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00069\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ how\ far\ between\ the\ inner\ and\ outer\ radii\ the\ distance\ is}}
+\DoxyCodeLine{00070\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ radiusProg\ =\ Mathf.Clamp01(Mathf.InverseLerp(broadcastRadius.x,\ broadcastRadius.y,\ distance));}
+\DoxyCodeLine{00071\ }
+\DoxyCodeLine{00072\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ get\ the\ adjusted\ power\ according\ to\ the\ distance\ falloff}}
+\DoxyCodeLine{00073\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{float}\ adjustedT\ =\ distanceFalloff.Evaluate(radiusProg);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ output\ is\ outside\ of\ the\ range\ of\ this\ broadcaster\ and\ it's\ not\ global\ when\ outside,\ return\ a\ power\ of\ 0}}
+\DoxyCodeLine{00076\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (adjustedT\ <=\ 0\ \&\&\ (ShowApplyToAllOutputs\ \&\&\ !applyToAllOutputsOutside))}
+\DoxyCodeLine{00077\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ 0;}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00079\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ return\ the\ actual\ broadcast\ power\ according\ to\ values\ supplied\ in\ the\ broadcastPowers\ variable}}
+\DoxyCodeLine{00080\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{return}\ Mathf.Lerp(broadcastPowers.x,\ broadcastPowers.y,\ adjustedT);}
+\DoxyCodeLine{00081\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster_aa6ed4532561f98f364e0b5b7270a470c}\index{RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}!RemoveFromTrack@{RemoveFromTrack}}
+\index{RemoveFromTrack@{RemoveFromTrack}!RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}}
+\doxysubsubsection{\texorpdfstring{RemoveFromTrack()}{RemoveFromTrack()}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_broadcaster_aa6ed4532561f98f364e0b5b7270a470c} 
+override void Ryle\+Radio.\+Components.\+Radio\+Broadcaster.\+Remove\+From\+Track (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}}}]{\+\_\+track}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_radio_broadcaster_8cs_source}{Radio\+Broadcaster.\+cs}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057\ \ \ \ \ \ \ \ \ \{}
+\DoxyCodeLine{00058\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.broadcasters.Remove(\textcolor{keyword}{this});}
+\DoxyCodeLine{00059\ \ \ \ \ \ \ \ \ \ \ \ \ \_track.OnRemoveBroadcaster(\textcolor{keyword}{this},\ \_track);}
+\DoxyCodeLine{00060\ \ \ \ \ \ \ \ \ \}}
+
+\end{DoxyCode}
+
+
+\label{doc-variable-members}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster_a9a19e8c86dc5284948b748bb6a973f60}\index{RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}!broadcastPowers@{broadcastPowers}}
+\index{broadcastPowers@{broadcastPowers}!RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}}
+\doxysubsubsection{\texorpdfstring{broadcastPowers}{broadcastPowers}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_broadcaster_a9a19e8c86dc5284948b748bb6a973f60} 
+Vector2 Ryle\+Radio.\+Components.\+Radio\+Broadcaster.\+broadcast\+Powers = new(0, 1)\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_radio_broadcaster_8cs_source}{Radio\+Broadcaster.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster_a5628c7e602d1c6662bdae7119b942f18}\index{RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}!broadcastRadius@{broadcastRadius}}
+\index{broadcastRadius@{broadcastRadius}!RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}}
+\doxysubsubsection{\texorpdfstring{broadcastRadius}{broadcastRadius}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_broadcaster_a5628c7e602d1c6662bdae7119b942f18} 
+Vector2 Ryle\+Radio.\+Components.\+Radio\+Broadcaster.\+broadcast\+Radius}
+
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_radio_broadcaster_8cs_source}{Radio\+Broadcaster.\+cs}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_broadcaster_af016c4c46d5e76046f83ae9a7162cf78}\index{RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}!distanceFalloff@{distanceFalloff}}
+\index{distanceFalloff@{distanceFalloff}!RyleRadio.Components.RadioBroadcaster@{RyleRadio.Components.RadioBroadcaster}}
+\doxysubsubsection{\texorpdfstring{distanceFalloff}{distanceFalloff}}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_broadcaster_af016c4c46d5e76046f83ae9a7162cf78} 
+Animation\+Curve Ryle\+Radio.\+Components.\+Radio\+Broadcaster.\+distance\+Falloff\hspace{0.3cm}{\ttfamily [protected]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\ \textcolor{keyword}{new}(\textcolor{keyword}{new}\ Keyframe[2]\ \{}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(0,\ 1,\ 0,\ 0),}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{new}(1,\ 0,\ 0,\ 0)}
+\DoxyCodeLine{\ \ \ \ \ \ \ \ \})}
+
+\end{DoxyCode}
+
+
+Definition at line \mbox{\hyperlink{_radio_broadcaster_8cs_source_l00026}{26}} of file \mbox{\hyperlink{_radio_broadcaster_8cs_source}{Radio\+Broadcaster.\+cs}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+D\+:/\+Git\+Hub/ryle-\/radio/\+Assets/\+Ryle\+Radio/\+Scripts/\+Runtime/\+Components/Radio\+Broadcaster.\+cs\end{DoxyCompactItemize}
