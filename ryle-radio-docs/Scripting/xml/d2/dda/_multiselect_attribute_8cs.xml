@@ -3,7 +3,11 @@
   <compounddef id="d2/dda/_multiselect_attribute_8cs" kind="file" language="C#">
     <compoundname>MultiselectAttribute.cs</compoundname>
     <innerclass refid="d4/dfd/class_ryle_radio_1_1_multiselect_attribute" prot="public">RyleRadio::MultiselectAttribute</innerclass>
+    <innerclass refid="d7/dcd/class_ryle_radio_1_1_multiselect_drawer" prot="public">RyleRadio::MultiselectDrawer</innerclass>
     <innernamespace refid="da/d5f/namespace_ryle_radio">RyleRadio</innernamespace>
+    <innernamespace refid="d2/da4/namespace_naughty_attributes_1_1_editor">NaughtyAttributes::Editor</innernamespace>
+    <innernamespace refid="d0/d9d/namespace_system_1_1_reflection">System::Reflection</innernamespace>
+    <innernamespace refid="d5/da7/namespace_system_1_1_collections">System::Collections</innernamespace>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
@@ -98,7 +102,7 @@
 <codeline lineno="87"><highlight class="normal"></highlight><highlight class="preprocessor">#if<sp/>UNITY_EDITOR</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>draws<sp/>the<sp/>attribute</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>[CustomPropertyDrawer(typeof(<ref refid="d4/dfd/class_ryle_radio_1_1_multiselect_attribute" kindref="compound">MultiselectAttribute</ref>))]</highlight></codeline>
-<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal">MultiselectDrawer<sp/>:<sp/>PropertyDrawer</highlight></codeline>
+<codeline lineno="90" refid="d7/dcd/class_ryle_radio_1_1_multiselect_drawer" refkind="compound"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="d7/dcd/class_ryle_radio_1_1_multiselect_drawer" kindref="compound">MultiselectDrawer</ref><sp/>:<sp/>PropertyDrawer</highlight></codeline>
 <codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>the<sp/>inspector<sp/>seems<sp/>to<sp/>think<sp/>this<sp/>is<sp/>larger<sp/>than<sp/>it<sp/>actually<sp/>is,<sp/>so<sp/>we<sp/>give<sp/>it<sp/>a<sp/>small<sp/>adjustment<sp/>in<sp/>height</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>GetPropertyHeight(SerializedProperty<sp/>property,<sp/>GUIContent<sp/>label)</highlight></codeline>
@@ -110,7 +114,7 @@
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>make<sp/>the<sp/>selection<sp/>a<sp/>bit<sp/>mask</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mask<sp/>=<sp/></highlight><highlight class="keyword">property</highlight><highlight class="normal">.intValue;</highlight></codeline>
-<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>dataName<sp/>=<sp/>((MultiselectAttribute)attribute).OptionsName;<sp/></highlight><highlight class="comment">//<sp/>save<sp/>the<sp/>id<sp/>of<sp/>the<sp/>variable<sp/>in<sp/>the<sp/>attribute</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>dataName<sp/>=<sp/>((<ref refid="d4/dfd/class_ryle_radio_1_1_multiselect_attribute" kindref="compound">MultiselectAttribute</ref>)attribute).OptionsName;<sp/></highlight><highlight class="comment">//<sp/>save<sp/>the<sp/>id<sp/>of<sp/>the<sp/>variable<sp/>in<sp/>the<sp/>attribute</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
 <codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">object</highlight><highlight class="normal"><sp/>options<sp/>=<sp/>GetValues(property,<sp/>dataName);<sp/></highlight><highlight class="comment">//<sp/>get<sp/>the<sp/>options<sp/>from<sp/>that<sp/>variable</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">[]<sp/>optionNames;</highlight></codeline>

@@ -91,7 +91,7 @@
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00087}00087\ \textcolor{preprocessor}{\#if\ UNITY\_EDITOR}}
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00088}00088\ \ \ \ \ \textcolor{comment}{//\ draws\ the\ attribute}}
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00089}00089\ \ \ \ \ [CustomPropertyDrawer(typeof(\mbox{\hyperlink{class_ryle_radio_1_1_multiselect_attribute}{MultiselectAttribute}}))]}
-\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00090}00090\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }MultiselectDrawer\ :\ PropertyDrawer}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00090}\mbox{\hyperlink{class_ryle_radio_1_1_multiselect_drawer}{00090}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ryle_radio_1_1_multiselect_drawer}{MultiselectDrawer}}\ :\ PropertyDrawer}
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00091}00091\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00092}00092\ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ the\ inspector\ seems\ to\ think\ this\ is\ larger\ than\ it\ actually\ is,\ so\ we\ give\ it\ a\ small\ adjustment\ in\ height}}
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00093}00093\ \ \ \ \ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{override}\ \textcolor{keywordtype}{float}\ GetPropertyHeight(SerializedProperty\ property,\ GUIContent\ label)}
@@ -103,7 +103,7 @@
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00099}00099\ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00100}00100\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ make\ the\ selection\ a\ bit\ mask}}
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00101}00101\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{int}\ mask\ =\ \textcolor{keyword}{property}.intValue;}
-\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ dataName\ =\ ((MultiselectAttribute)attribute).OptionsName;\ \textcolor{comment}{//\ save\ the\ id\ of\ the\ variable\ in\ the\ attribute}}
+\DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}\ dataName\ =\ ((\mbox{\hyperlink{class_ryle_radio_1_1_multiselect_attribute}{MultiselectAttribute}})attribute).OptionsName;\ \textcolor{comment}{//\ save\ the\ id\ of\ the\ variable\ in\ the\ attribute}}
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00103}00103\ }
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{object}\ options\ =\ GetValues(property,\ dataName);\ \textcolor{comment}{//\ get\ the\ options\ from\ that\ variable}}
 \DoxyCodeLine{\Hypertarget{_multiselect_attribute_8cs_source_l00105}00105\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordtype}{string}[]\ optionNames;}

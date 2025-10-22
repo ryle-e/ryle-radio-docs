@@ -357,6 +357,7 @@
   </option>
   <option  id='PREDEFINED' default='no' type='stringlist'>
     <value><![CDATA[SKIP_IN_DOXYGEN]]></value>
+    <value><![CDATA[UNITY_EDITOR]]></value>
   </option>
   <option  id='EXPAND_AS_DEFINED' default='yes' type='stringlist'>
   </option>

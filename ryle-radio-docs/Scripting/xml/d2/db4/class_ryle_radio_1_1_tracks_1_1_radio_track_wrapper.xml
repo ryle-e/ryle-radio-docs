@@ -533,6 +533,20 @@
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a632ad84a7c30eb757c83f9dfd559821a" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>static void RyleRadio.Tracks.RadioTrackWrapper.OnReload</definition>
+        <argsstring>()</argsstring>
+        <name>OnReload</name>
+        <qualifiedname>RyleRadio.Tracks.RadioTrackWrapper.OnReload</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" line="121" column="28" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrackWrapper.cs" bodystart="121" bodyend="126"/>
+      </memberdef>
       <memberdef kind="function" id="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a909e0f98dc729f0baf120e04a3635a19" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>string</type>
         <definition>static string RyleRadio.Tracks.RadioTrackWrapper.GetTrackType</definition>
@@ -624,6 +638,7 @@
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a20ef79299950a601ac26e06f320f1046" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>OnAddBroadcaster</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a371c6db231ca6c2ca44be011ae29fe03" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>OnAddInsulator</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a0e5992ef4634849c28ec66de1e3baef3" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>OnInit</name></member>
+      <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a632ad84a7c30eb757c83f9dfd559821a" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>OnReload</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a2e298eae6270b5e163f4aae805cc3dd4" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>OnRemoveBroadcaster</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a1c98ba01c1d2ec6303002217691c7d6e" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>OnRemoveInsulator</name></member>
       <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a2f7d1bb32fb5ca1503f746d6f0ff8cf0" prot="public" virt="non-virtual"><scope>RyleRadio::Tracks::RadioTrackWrapper</scope><name>playOnInit</name></member>

@@ -1,16 +1,19 @@
 var searchData=
 [
   ['radiobroadcaster_0',['RadioBroadcaster',['../db/de5/class_ryle_radio_1_1_components_1_1_radio_broadcaster.html',1,'RyleRadio::Components']]],
-  ['radiocomponent_1',['RadioComponent',['../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html',1,'RyleRadio::Components::Base']]],
-  ['radiocomponentdataaccessor_2',['RadioComponentDataAccessor',['../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html',1,'RyleRadio::Components::Base']]],
-  ['radiodata_3',['RadioData',['../da/dc0/class_ryle_radio_1_1_radio_data.html',1,'RyleRadio']]],
-  ['radioinsulator_4',['RadioInsulator',['../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html',1,'RyleRadio::Components']]],
-  ['radiointeractor_5',['RadioInteractor',['../d3/d85/class_ryle_radio_1_1_components_1_1_radio_interactor.html',1,'RyleRadio::Components']]],
-  ['radioobserver_6',['RadioObserver',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html',1,'RyleRadio::Components']]],
-  ['radiooutput_7',['RadioOutput',['../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html',1,'RyleRadio::Components']]],
-  ['radiooutputtrackaccessor_8',['RadioOutputTrackAccessor',['../d2/d11/class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor.html',1,'RyleRadio::Components::Base']]],
-  ['radiotrack_9',['RadioTrack',['../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html',1,'RyleRadio::Tracks']]],
-  ['radiotrackplayer_10',['RadioTrackPlayer',['../da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html',1,'RyleRadio::Tracks']]],
-  ['radiotrackwrapper_11',['RadioTrackWrapper',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html',1,'RyleRadio::Tracks']]],
-  ['radioutils_12',['RadioUtils',['../d4/d2c/class_ryle_radio_1_1_radio_utils.html',1,'RyleRadio']]]
+  ['radiobroadcastereditor_1',['RadioBroadcasterEditor',['../d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor.html',1,'RyleRadio::Editor']]],
+  ['radiocomponent_2',['RadioComponent',['../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html',1,'RyleRadio::Components::Base']]],
+  ['radiocomponentdataaccessor_3',['RadioComponentDataAccessor',['../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html',1,'RyleRadio::Components::Base']]],
+  ['radiodata_4',['RadioData',['../da/dc0/class_ryle_radio_1_1_radio_data.html',1,'RyleRadio']]],
+  ['radiodataeditor_5',['RadioDataEditor',['../d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_editor.html',1,'RyleRadio::Editor']]],
+  ['radioinsulator_6',['RadioInsulator',['../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html',1,'RyleRadio::Components']]],
+  ['radioinsulatoreditor_7',['RadioInsulatorEditor',['../d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor.html',1,'RyleRadio::Editor']]],
+  ['radiointeractor_8',['RadioInteractor',['../d3/d85/class_ryle_radio_1_1_components_1_1_radio_interactor.html',1,'RyleRadio::Components']]],
+  ['radioobserver_9',['RadioObserver',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html',1,'RyleRadio::Components']]],
+  ['radiooutput_10',['RadioOutput',['../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html',1,'RyleRadio::Components']]],
+  ['radiooutputtrackaccessor_11',['RadioOutputTrackAccessor',['../d2/d11/class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor.html',1,'RyleRadio::Components::Base']]],
+  ['radiotrack_12',['RadioTrack',['../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html',1,'RyleRadio::Tracks']]],
+  ['radiotrackplayer_13',['RadioTrackPlayer',['../da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html',1,'RyleRadio::Tracks']]],
+  ['radiotrackwrapper_14',['RadioTrackWrapper',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html',1,'RyleRadio::Tracks']]],
+  ['radioutils_15',['RadioUtils',['../d4/d2c/class_ryle_radio_1_1_radio_utils.html',1,'RyleRadio']]]
 ];

@@ -17,7 +17,7 @@
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00013}00013\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00014}00014\ \ \ \ \ \textcolor{comment}{//\ see\ RadioData.cs\ for\ more\ info\ about\ variables}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00015}00015\ \ \ \ \ [CustomEditor(typeof(RadioData))]}
-\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00016}00016\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }RadioDataEditor\ :\ Editor}
+\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00016}\mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_radio_data_editor}{00016}}\ \ \ \ \ \textcolor{keyword}{public}\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_radio_data_editor}{RadioDataEditor}}\ :\ \mbox{\hyperlink{namespace_ryle_radio_1_1_editor}{Editor}}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00017}00017\ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00018}00018\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ SerializedProperty\ trackWs;\ \textcolor{comment}{//\ the\ tracks\ in\ this\ radio}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00019}00019\ \ \ \ \ \ \ \ \ \textcolor{keyword}{private}\ \textcolor{keywordtype}{int}\ lastTrackWSize;\ \textcolor{comment}{//\ the\ last\ recorded\ number\ of\ tracks}}
@@ -60,12 +60,12 @@
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00056}00056\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (radioTrack.managedReferenceValue\ ==\ \textcolor{keyword}{null})}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00057}00057\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00058}00058\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ set\ a\ default\ track\ class\ based\ on\ the\ listed\ track\ type\ string}}
-\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ radioTrack.managedReferenceValue\ =\ RadioTrackWrapper.CreateTrackEditor(trackType.stringValue);}
+\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00059}00059\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ radioTrack.managedReferenceValue\ =\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{RadioTrackWrapper}}.CreateTrackEditor(trackType.stringValue);}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00060}00060\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00061}00061\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00062}00062\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00063}00063\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ set\ the\ track\ type\ string\ to\ whatever\ the\ internal\ track\ class\ is}}
-\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trackType.stringValue\ =\ RadioTrackWrapper.GetTrackType(radioTrack.managedReferenceValue.ToString());}
+\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00064}00064\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ trackType.stringValue\ =\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{RadioTrackWrapper}}.GetTrackType(radioTrack.managedReferenceValue.ToString());}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00065}00065\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00066}00066\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00067}00067\ }
@@ -105,7 +105,7 @@
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00101}00101\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00102}00102\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ button\ to\ manually\ clear\ the\ name\ and\ ID\ caches\ of\ the\ radio}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00103}00103\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (GUILayout.Button(\textcolor{keyword}{new}\ GUIContent(\textcolor{stringliteral}{"{}Clear\ Cache"{}})))}
-\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((RadioData)serializedObject.targetObject).ClearCache();}
+\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00104}00104\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ((\mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{RadioData}})serializedObject.targetObject).ClearCache();}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00105}00105\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00106}00106\ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00107}00107\ }
@@ -132,11 +132,11 @@
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00128}00128\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SerializedProperty\ rangeCurve\ =\ newElement.FindPropertyRelative(\textcolor{stringliteral}{"{}rangeCurve"{}});}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00129}00129\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00130}00130\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ reset\ the\ internal\ track\ class}}
-\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ radioTrack.managedReferenceValue\ =\ RadioTrackWrapper.CreateTrackEditor(trackType.stringValue);}
+\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00131}00131\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ radioTrack.managedReferenceValue\ =\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{RadioTrackWrapper}}.CreateTrackEditor(trackType.stringValue);}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00132}00132\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00133}00133\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ reset\ the\ gain\ and\ the\ gain\ curve}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00134}00134\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ gain.floatValue\ =\ 100;}
-\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rangeCurve.animationCurveValue\ =\ \textcolor{keyword}{new}(RadioTrackWrapper.DefaultRangeCurve.keys);}
+\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00135}00135\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ rangeCurve.animationCurveValue\ =\ \textcolor{keyword}{new}(\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{RadioTrackWrapper}}.DefaultRangeCurve.keys);}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00136}00136\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00137}00137\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ store\ the\ new\ track\ list\ size}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00138}00138\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ lastTrackWSize++;}
@@ -164,16 +164,16 @@
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00160}00160\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ SerializedProperty\ wrapper\ =\ trackWs.GetArrayElementAtIndex(i);}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00161}00161\ }
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00162}00162\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ wrapper\ is\ a\ clip,}}
-\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (wrapper.FindPropertyRelative(\textcolor{stringliteral}{"{}track"{}}).managedReferenceValue\ is\ ClipRadioTrack\ clipTrack)}
+\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00163}00163\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (wrapper.FindPropertyRelative(\textcolor{stringliteral}{"{}track"{}}).managedReferenceValue\ is\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track}{ClipRadioTrack}}\ clipTrack)}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00164}00164\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00165}00165\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ force\ the\ clip's\ sample\ rate}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00166}00166\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ ForceSingleClipToSampleRate(clipTrack.clip);}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00167}00167\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00168}00168\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ otherwise\ if\ the\ wrapper\ is\ a\ station\ (and\ therefore\ could\ contain\ a\ clip)}}
-\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (wrapper.FindPropertyRelative(\textcolor{stringliteral}{"{}track"{}}).managedReferenceValue\ is\ StationRadioTrack\ stationTrack)}
+\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00169}00169\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{else}\ \textcolor{keywordflow}{if}\ (wrapper.FindPropertyRelative(\textcolor{stringliteral}{"{}track"{}}).managedReferenceValue\ is\ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track}{StationRadioTrack}}\ stationTrack)}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00170}00170\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00171}00171\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ for\ every\ track\ in\ this\ station}}
-\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (StationRadioTrackWrapper\ sTrackW\ \textcolor{keywordflow}{in}\ stationTrack.stationTrackWs)}
+\DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00172}00172\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{foreach}\ (\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper}{StationRadioTrackWrapper}}\ sTrackW\ \textcolor{keywordflow}{in}\ stationTrack.stationTrackWs)}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00173}00173\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \{}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00174}00174\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ if\ the\ track\ has\ a\ referenced\ clip\ (is\ a\ ClipRadioTrack)}}
 \DoxyCodeLine{\Hypertarget{_radio_data_editor_8cs_source_l00175}00175\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keywordflow}{if}\ (sTrackW.EditorChildClip\ !=\ \textcolor{keyword}{null})}

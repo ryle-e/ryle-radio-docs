@@ -109,7 +109,8 @@ $(function(){initNavTree('d1/dc9/_radio_data_editor_8cs_source.html','../../',''
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="comment">// see RadioData.cs for more info about variables</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    [CustomEditor(typeof(RadioData))]</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keyword">public</span> <span class="keyword">class </span>RadioDataEditor : Editor</div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="};">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="../../d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_editor.html">   16</a></span>    <span class="keyword">public</span> <span class="keyword">class </span><a class="code hl_class" href="../../d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_editor.html">RadioDataEditor</a> : <a class="code hl_namespace" href="../../de/da0/namespace_ryle_radio_1_1_editor.html">Editor</a></div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    {</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>        <span class="keyword">private</span> SerializedProperty trackWs; <span class="comment">// the tracks in this radio</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keyword">private</span> <span class="keywordtype">int</span> lastTrackWSize; <span class="comment">// the last recorded number of tracks</span></div>
@@ -152,12 +153,12 @@ $(function(){initNavTree('d1/dc9/_radio_data_editor_8cs_source.html','../../',''
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                <span class="keywordflow">if</span> (radioTrack.managedReferenceValue == <span class="keyword">null</span>)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                {</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                    <span class="comment">// set a default track class based on the listed track type string</span></div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    radioTrack.managedReferenceValue = RadioTrackWrapper.CreateTrackEditor(trackType.stringValue);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    radioTrack.managedReferenceValue = <a class="code hl_class" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a>.CreateTrackEditor(trackType.stringValue);</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                }</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                <span class="keywordflow">else</span></div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                {</div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    <span class="comment">// set the track type string to whatever the internal track class is</span></div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    trackType.stringValue = RadioTrackWrapper.GetTrackType(radioTrack.managedReferenceValue.ToString());</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                    trackType.stringValue = <a class="code hl_class" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a>.GetTrackType(radioTrack.managedReferenceValue.ToString());</div>
 <div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>                }</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            }</div>
 <div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
@@ -197,7 +198,7 @@ $(function(){initNavTree('d1/dc9/_radio_data_editor_8cs_source.html','../../',''
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span> </div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>                <span class="comment">// button to manually clear the name and ID caches of the radio</span></div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>                <span class="keywordflow">if</span> (GUILayout.Button(<span class="keyword">new</span> GUIContent(<span class="stringliteral">&quot;Clear Cache&quot;</span>)))</div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    ((RadioData)serializedObject.targetObject).ClearCache();</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>                    ((<a class="code hl_class" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a>)serializedObject.targetObject).ClearCache();</div>
 <div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span> </div>
 <div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            }</div>
 <div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span> </div>
@@ -224,11 +225,11 @@ $(function(){initNavTree('d1/dc9/_radio_data_editor_8cs_source.html','../../',''
 <div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>                    SerializedProperty rangeCurve = newElement.FindPropertyRelative(<span class="stringliteral">&quot;rangeCurve&quot;</span>);</div>
 <div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span> </div>
 <div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>                    <span class="comment">// reset the internal track class</span></div>
-<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    radioTrack.managedReferenceValue = RadioTrackWrapper.CreateTrackEditor(trackType.stringValue);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>                    radioTrack.managedReferenceValue = <a class="code hl_class" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a>.CreateTrackEditor(trackType.stringValue);</div>
 <div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span> </div>
 <div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>                    <span class="comment">// reset the gain and the gain curve</span></div>
 <div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span>                    gain.floatValue = 100;</div>
-<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                    rangeCurve.animationCurveValue = <span class="keyword">new</span>(RadioTrackWrapper.DefaultRangeCurve.keys);</div>
+<div class="line"><a id="l00135" name="l00135"></a><span class="lineno">  135</span>                    rangeCurve.animationCurveValue = <span class="keyword">new</span>(<a class="code hl_class" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a>.DefaultRangeCurve.keys);</div>
 <div class="line"><a id="l00136" name="l00136"></a><span class="lineno">  136</span> </div>
 <div class="line"><a id="l00137" name="l00137"></a><span class="lineno">  137</span>                    <span class="comment">// store the new track list size</span></div>
 <div class="line"><a id="l00138" name="l00138"></a><span class="lineno">  138</span>                    lastTrackWSize++;</div>
@@ -256,16 +257,16 @@ $(function(){initNavTree('d1/dc9/_radio_data_editor_8cs_source.html','../../',''
 <div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>                SerializedProperty wrapper = trackWs.GetArrayElementAtIndex(i);</div>
 <div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span> </div>
 <div class="line"><a id="l00162" name="l00162"></a><span class="lineno">  162</span>                <span class="comment">// if the wrapper is a clip,</span></div>
-<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <span class="keywordflow">if</span> (wrapper.FindPropertyRelative(<span class="stringliteral">&quot;track&quot;</span>).managedReferenceValue is ClipRadioTrack clipTrack)</div>
+<div class="line"><a id="l00163" name="l00163"></a><span class="lineno">  163</span>                <span class="keywordflow">if</span> (wrapper.FindPropertyRelative(<span class="stringliteral">&quot;track&quot;</span>).managedReferenceValue is <a class="code hl_class" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html">ClipRadioTrack</a> clipTrack)</div>
 <div class="line"><a id="l00164" name="l00164"></a><span class="lineno">  164</span>                {</div>
 <div class="line"><a id="l00165" name="l00165"></a><span class="lineno">  165</span>                    <span class="comment">// force the clip&#39;s sample rate</span></div>
 <div class="line"><a id="l00166" name="l00166"></a><span class="lineno">  166</span>                    ForceSingleClipToSampleRate(clipTrack.clip);</div>
 <div class="line"><a id="l00167" name="l00167"></a><span class="lineno">  167</span>                }</div>
 <div class="line"><a id="l00168" name="l00168"></a><span class="lineno">  168</span>                <span class="comment">// otherwise if the wrapper is a station (and therefore could contain a clip)</span></div>
-<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wrapper.FindPropertyRelative(<span class="stringliteral">&quot;track&quot;</span>).managedReferenceValue is StationRadioTrack stationTrack)</div>
+<div class="line"><a id="l00169" name="l00169"></a><span class="lineno">  169</span>                <span class="keywordflow">else</span> <span class="keywordflow">if</span> (wrapper.FindPropertyRelative(<span class="stringliteral">&quot;track&quot;</span>).managedReferenceValue is <a class="code hl_class" href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html">StationRadioTrack</a> stationTrack)</div>
 <div class="line"><a id="l00170" name="l00170"></a><span class="lineno">  170</span>                {</div>
 <div class="line"><a id="l00171" name="l00171"></a><span class="lineno">  171</span>                    <span class="comment">// for every track in this station</span></div>
-<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                    <span class="keywordflow">foreach</span> (StationRadioTrackWrapper sTrackW <span class="keywordflow">in</span> stationTrack.stationTrackWs)</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>                    <span class="keywordflow">foreach</span> (<a class="code hl_class" href="../../de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html">StationRadioTrackWrapper</a> sTrackW <span class="keywordflow">in</span> stationTrack.stationTrackWs)</div>
 <div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>                    {</div>
 <div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span>                        <span class="comment">// if the track has a referenced clip (is a ClipRadioTrack)</span></div>
 <div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>                        <span class="keywordflow">if</span> (sTrackW.EditorChildClip != <span class="keyword">null</span>)</div>
@@ -307,10 +308,17 @@ $(function(){initNavTree('d1/dc9/_radio_data_editor_8cs_source.html','../../',''
 <div class="line"><a id="l00211" name="l00211"></a><span class="lineno">  211</span>            importer.SetOverrideSampleSettings(buildTarget, sampleSettings);</div>
 <div class="line"><a id="l00212" name="l00212"></a><span class="lineno">  212</span>        }</div>
 <div class="line"><a id="l00213" name="l00213"></a><span class="lineno">  213</span>    }</div>
+</div>
 <div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span><span class="preprocessor">#endif</span></div>
 <div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span> </div>
 <div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span>}</div>
-<div class="ttc" id="anamespace_ryle_radio_1_1_editor_html"><div class="ttname"><a href="../../de/da0/namespace_ryle_radio_1_1_editor.html">RyleRadio.Editor</a></div><div class="ttdef"><b>Definition</b> <a href="../../d6/d07/_radio_broadcaster_editor_8cs_source.html#l00003">RadioBroadcasterEditor.cs:4</a></div></div>
+<div class="ttc" id="aclass_ryle_radio_1_1_editor_1_1_radio_data_editor_html"><div class="ttname"><a href="../../d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_editor.html">RyleRadio.Editor.RadioDataEditor</a></div><div class="ttdef"><b>Definition</b> <a href="#l00016">RadioDataEditor.cs:17</a></div></div>
+<div class="ttc" id="aclass_ryle_radio_1_1_radio_data_html"><div class="ttname"><a href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RyleRadio.RadioData</a></div><div class="ttdef"><b>Definition</b> <a href="../../d9/d5d/_radio_data_8cs_source.html#l00017">RadioData.cs:18</a></div></div>
+<div class="ttc" id="aclass_ryle_radio_1_1_tracks_1_1_clip_radio_track_html"><div class="ttname"><a href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html">RyleRadio.Tracks.ClipRadioTrack</a></div><div class="ttdef"><b>Definition</b> <a href="../../df/d94/_clip_radio_track_8cs_source.html#l00008">ClipRadioTrack.cs:9</a></div></div>
+<div class="ttc" id="aclass_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_html"><div class="ttname"><a href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RyleRadio.Tracks.RadioTrackWrapper</a></div><div class="ttdef"><b>Definition</b> <a href="../../da/de3/_radio_track_wrapper_8cs_source.html#l00013">RadioTrackWrapper.cs:14</a></div></div>
+<div class="ttc" id="aclass_ryle_radio_1_1_tracks_1_1_station_radio_track_html"><div class="ttname"><a href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html">RyleRadio.Tracks.StationRadioTrack</a></div><div class="ttdef"><b>Definition</b> <a href="../../db/d75/_station_radio_track_8cs_source.html#l00015">StationRadioTrack.cs:16</a></div></div>
+<div class="ttc" id="aclass_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_html"><div class="ttname"><a href="../../de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html">RyleRadio.Tracks.StationRadioTrackWrapper</a></div><div class="ttdef"><b>Definition</b> <a href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00017">StationRadioTrackWrapper.cs:18</a></div></div>
+<div class="ttc" id="anamespace_ryle_radio_1_1_editor_html"><div class="ttname"><a href="../../de/da0/namespace_ryle_radio_1_1_editor.html">RyleRadio.Editor</a></div><div class="ttdoc">Editor scripts for classes and attributes, notably excluding MultiselectAttribute.</div><div class="ttdef"><b>Definition</b> <a href="../../d6/d07/_radio_broadcaster_editor_8cs_source.html#l00003">RadioBroadcasterEditor.cs:4</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

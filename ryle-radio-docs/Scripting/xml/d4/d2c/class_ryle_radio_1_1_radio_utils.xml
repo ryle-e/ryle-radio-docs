@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" line="14" column="29" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" bodystart="14" bodyend="17"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" line="23" column="29" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" bodystart="23" bodyend="26"/>
       </memberdef>
       <memberdef kind="function" id="d4/d2c/class_ryle_radio_1_1_radio_utils_1a403b2acaa67c6e8ce310d5809742d36f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Vector3</type>
@@ -53,7 +53,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" line="20" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" bodystart="20" bodyend="27"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" line="29" column="31" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" bodystart="29" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="d4/d2c/class_ryle_radio_1_1_radio_utils_1ab89c4040b90df3ca482a77958cd4fab6" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>Type[]</type>
@@ -71,14 +71,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" line="30" column="28" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" bodystart="30" bodyend="50"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" line="39" column="28" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" bodystart="39" bodyend="59"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" line="11" column="12" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" bodystart="12" bodyend="51"/>
+    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" line="20" column="12" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/RadioUtils.cs" bodystart="21" bodyend="60"/>
     <listofallmembers>
       <member refid="d4/d2c/class_ryle_radio_1_1_radio_utils_1a403b2acaa67c6e8ce310d5809742d36f" prot="public" virt="non-virtual"><scope>RyleRadio::RadioUtils</scope><name>Abs</name></member>
       <member refid="d4/d2c/class_ryle_radio_1_1_radio_utils_1ab89c4040b90df3ca482a77958cd4fab6" prot="public" virt="non-virtual"><scope>RyleRadio::RadioUtils</scope><name>FindDerivedTypes</name></member>

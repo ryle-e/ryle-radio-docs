@@ -13,6 +13,12 @@ var annotated_dup =
         [ "RadioObserver", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer" ],
         [ "RadioOutput", "d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html", null ]
       ] ],
+      [ "Editor", "de/da0/namespace_ryle_radio_1_1_editor.html", [
+        [ "RadioBroadcasterEditor", "d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor.html", null ],
+        [ "RadioDataEditor", "d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_editor.html", null ],
+        [ "RadioInsulatorEditor", "d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor.html", null ],
+        [ "StationRadioTrackEditor", "df/d29/class_ryle_radio_1_1_editor_1_1_station_radio_track_editor.html", null ]
+      ] ],
       [ "Tracks", "d0/d28/namespace_ryle_radio_1_1_tracks.html", [
         [ "ClipRadioTrack", "de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html", null ],
         [ "IRadioTrack", "d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html", null ],
@@ -25,6 +31,7 @@ var annotated_dup =
         [ "StationRadioTrackWrapper", "de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html", null ]
       ] ],
       [ "MultiselectAttribute", "d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html", null ],
+      [ "MultiselectDrawer", "d7/dcd/class_ryle_radio_1_1_multiselect_drawer.html", null ],
       [ "RadioData", "da/dc0/class_ryle_radio_1_1_radio_data.html", null ],
       [ "RadioUtils", "d4/d2c/class_ryle_radio_1_1_radio_utils.html", null ]
     ] ]

@@ -22,6 +22,8 @@ var class_ryle_radio_1_1_components_1_1_radio_observer =
       [ "None", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582a6adf97f83acf6453d4a6a4b1070f3754", null ]
     ] ],
     [ "AssignEvents", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a9be9fb66df9434dd8a2c0117255a1787", null ],
+    [ "Awake", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#ab6c602f2a4cbcf49a14ebdf644fac793", null ],
+    [ "OnDestroy", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a5cf3400db9f76f6dac74444a693bfa4e", null ],
     [ "TriggerEvent", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a1a767f69b2219c279f0f1431d558ebbd", null ],
     [ "Update", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#af96f1100853e1768cb363ec4aafe116d", null ],
     [ "ValueEvent", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#acd2af3c4da2389d18d35280c8e580d94", null ],

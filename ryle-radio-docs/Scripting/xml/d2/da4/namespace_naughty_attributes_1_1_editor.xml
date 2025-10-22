@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.14.0" xml:lang="en-US">
+  <compounddef id="d2/da4/namespace_naughty_attributes_1_1_editor" kind="namespace" language="C#">
+    <compoundname>NaughtyAttributes::Editor</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/MultiselectAttribute.cs" line="8" column="35"/>
+  </compounddef>
+</doxygen>

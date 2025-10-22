@@ -9,6 +9,7 @@
     <innerclass refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output" prot="public">RyleRadio::Components::RadioOutput</innerclass>
     <innernamespace refid="db/d1f/namespace_ryle_radio_1_1_components_1_1_base">RyleRadio::Components::Base</innernamespace>
     <briefdescription>
+<para><ref refid="da/d43/namespace_ryle_radio_1_1_components" kindref="compound">Components</ref> to be placed on scene objects, e.g: Outputs, Broadcasters, Observers. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
