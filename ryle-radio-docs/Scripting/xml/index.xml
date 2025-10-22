@@ -344,9 +344,7 @@
     <member refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a0c00f4dc7e31b6de324b8e406aac62f2" kind="variable"><name>thresholdBeforeRepeats</name></member>
     <member refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1ab9992c3d9eaa3024e96a0ecc53b5b5b2" kind="variable"><name>stationTrackWs</name></member>
     <member refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1ab28772fad82afd2449c73bcf1a1c643d" kind="variable"><name>currentTrackIndex</name></member>
-    <member refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a87bb20c4cea6ff3e843a1c155a513969" kind="variable"><name>random</name></member>
     <member refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a68f7d080e44965f4fa8b2fb489cf96d4" kind="variable"><name>remainingTracksBeforeRepeat</name></member>
-    <member refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a3dc169984c4566a72610bb9e52e1aebc" kind="variable"><name>hasPrintedError</name></member>
     <member refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a1e3ff626739a9a98cc08cbaed6d43c98" kind="property"><name>CurrentTrackW</name></member>
     <member refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a79ad6625c291fcf2857ee880f6d70610" kind="function"><name>Init</name></member>
     <member refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a827fb0f9f2d67ad7d48cb0a9dfbe5c18" kind="function"><name>AddToPlayerEndCallback</name></member>

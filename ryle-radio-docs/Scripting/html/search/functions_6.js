@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['triggerevent_0',['TriggerEvent',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a1a767f69b2219c279f0f1431d558ebbd',1,'RyleRadio::Components::RadioObserver']]]
+  ['remap_0',['Remap',['../d4/d2c/class_ryle_radio_1_1_radio_utils.html#a1a8c22e08dfc7d8d6353209d713e1453',1,'RyleRadio::RadioUtils']]]
 ];

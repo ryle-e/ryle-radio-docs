@@ -112,11 +112,11 @@ Inheritance diagram for RyleRadio.Tracks.StationRadioTrack:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a79ad6625c291fcf2857ee880f6d70610" id="r_a79ad6625c291fcf2857ee880f6d70610"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a79ad6625c291fcf2857ee880f6d70610">Init</a> ()</td></tr>
-<tr class="memdesc:a79ad6625c291fcf2857ee880f6d70610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this track.  <br /></td></tr>
+<tr class="memdesc:a79ad6625c291fcf2857ee880f6d70610"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this station and all contained tracks.  <br /></td></tr>
 <tr class="memitem:a827fb0f9f2d67ad7d48cb0a9dfbe5c18" id="r_a827fb0f9f2d67ad7d48cb0a9dfbe5c18"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a827fb0f9f2d67ad7d48cb0a9dfbe5c18">AddToPlayerEndCallback</a> (ref Action&lt; <a class="el" href="../../da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html">RadioTrackPlayer</a> &gt; _callback)</td></tr>
-<tr class="memdesc:a827fb0f9f2d67ad7d48cb0a9dfbe5c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">Activates an event to run whenever this track ends. This is mainly used for stations to switch track when the previous one ends.  <br /></td></tr>
+<tr class="memdesc:a827fb0f9f2d67ad7d48cb0a9dfbe5c18"><td class="mdescLeft">&#160;</td><td class="mdescRight">When a <a class="el" href="../../da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html">RadioTrackPlayer</a> for this station finishes the track we've given it, we update it to use whatever the next track chosen is. This method is called when the Player finishes, so we update it here. This works because the Player only gets destroyed if it's a one-shot- in which case only one track from the station will be playing anyway.  <br /></td></tr>
 <tr class="memitem:a2d64ffc17fd27c339dac115733da1ed1" id="r_a2d64ffc17fd27c339dac115733da1ed1"><td class="memItemLeft" align="right" valign="top">override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2d64ffc17fd27c339dac115733da1ed1">GetSample</a> (int _sampleIndex)</td></tr>
-<tr class="memdesc:a2d64ffc17fd27c339dac115733da1ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a sample at the provided index. This is the core method of a track- whatever you return here defines the audio that the track will play when selected.  <br /></td></tr>
+<tr class="memdesc:a2d64ffc17fd27c339dac115733da1ed1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a sample from the currently playing track.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RyleRadio.Tracks.RadioTrack</a></td></tr>
 <tr class="memitem:a4f37e66ec62c41202c91b1fd6422a4bb inherit pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track" id="r_a4f37e66ec62c41202c91b1fd6422a4bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html#a4f37e66ec62c41202c91b1fd6422a4bb">Init</a> ()</td></tr>
 <tr class="memdesc:a4f37e66ec62c41202c91b1fd6422a4bb inherit pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this track.  <br /></td></tr>
@@ -130,6 +130,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0c00f4dc7e31b6de324b8e406aac62f2" id="r_a0c00f4dc7e31b6de324b8e406aac62f2"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0c00f4dc7e31b6de324b8e406aac62f2">thresholdBeforeRepeats</a></td></tr>
 <tr class="memdesc:a0c00f4dc7e31b6de324b8e406aac62f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">When <a class="el" href="#a9c325018c6641f7f483127889959ccd4">randomSequence</a> is true, this is the number of other tracks that need to be played before the same one is chosen again. Stops the same track from playing back-to-back, and forces variety in the track order.  <br /></td></tr>
 <tr class="memitem:ab9992c3d9eaa3024e96a0ecc53b5b5b2" id="r_ab9992c3d9eaa3024e96a0ecc53b5b5b2"><td class="memItemLeft" align="right" valign="top">List&lt; <a class="el" href="../../de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html">StationRadioTrackWrapper</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9992c3d9eaa3024e96a0ecc53b5b5b2">stationTrackWs</a></td></tr>
+<tr class="memdesc:ab9992c3d9eaa3024e96a0ecc53b5b5b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tracks contained within this station.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-attribs" class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -139,6 +140,7 @@ Static Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a1e3ff626739a9a98cc08cbaed6d43c98" id="r_a1e3ff626739a9a98cc08cbaed6d43c98"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper.html">StationRadioTrackWrapper</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1e3ff626739a9a98cc08cbaed6d43c98">CurrentTrackW</a><code> [get]</code></td></tr>
+<tr class="memdesc:a1e3ff626739a9a98cc08cbaed6d43c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">A reference to the track that's currently playing.  <br /></td></tr>
 <tr class="inherit_header properties_class_ryle_radio_1_1_tracks_1_1_radio_track"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_ryle_radio_1_1_tracks_1_1_radio_track')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Properties inherited from <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RyleRadio.Tracks.RadioTrack</a></td></tr>
 <tr class="memitem:a3bc4c9f7923a9314dffdd21f41723941 inherit properties_class_ryle_radio_1_1_tracks_1_1_radio_track" id="r_a3bc4c9f7923a9314dffdd21f41723941"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html#a3bc4c9f7923a9314dffdd21f41723941">SampleRate</a><code> [get, set]</code></td></tr>
 <tr class="memdesc:a3bc4c9f7923a9314dffdd21f41723941 inherit properties_class_ryle_radio_1_1_tracks_1_1_radio_track"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sample rate of this track.  <br /></td></tr>
@@ -148,13 +150,14 @@ Properties</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:afedd66f27883a83686668ea3786504f5" id="r_afedd66f27883a83686668ea3786504f5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afedd66f27883a83686668ea3786504f5">NextTrack</a> ()</td></tr>
+<tr class="memdesc:afedd66f27883a83686668ea3786504f5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Selects the next track for this station to play.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab28772fad82afd2449c73bcf1a1c643d" id="r_ab28772fad82afd2449c73bcf1a1c643d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab28772fad82afd2449c73bcf1a1c643d">currentTrackIndex</a></td></tr>
-<tr class="memitem:a87bb20c4cea6ff3e843a1c155a513969" id="r_a87bb20c4cea6ff3e843a1c155a513969"><td class="memItemLeft" align="right" valign="top">System.Random&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87bb20c4cea6ff3e843a1c155a513969">random</a></td></tr>
+<tr class="memdesc:ab28772fad82afd2449c73bcf1a1c643d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The index of the contained track that's currently playing.  <br /></td></tr>
 <tr class="memitem:a68f7d080e44965f4fa8b2fb489cf96d4" id="r_a68f7d080e44965f4fa8b2fb489cf96d4"><td class="memItemLeft" align="right" valign="top">int[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a68f7d080e44965f4fa8b2fb489cf96d4">remainingTracksBeforeRepeat</a></td></tr>
-<tr class="memitem:a3dc169984c4566a72610bb9e52e1aebc" id="r_a3dc169984c4566a72610bb9e52e1aebc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3dc169984c4566a72610bb9e52e1aebc">hasPrintedError</a></td></tr>
+<tr class="memdesc:a68f7d080e44965f4fa8b2fb489cf96d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of plays that need to happen before each track can be played again. Follows the layout described in <a class="el" href="#a0c00f4dc7e31b6de324b8e406aac62f2">thresholdBeforeRepeats</a>.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A type of <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html" title="A track to play as part of a radio. These are the fundamental objects that define the content of the ...">RadioTrack</a> that contains other tracks. Has a custom editor in StationRadioTrackEditor<br  />
@@ -186,17 +189,17 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Activates an event to run whenever this track ends. This is mainly used for stations to switch track when the previous one ends. </p>
+<p>When a <a class="el" href="../../da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html">RadioTrackPlayer</a> for this station finishes the track we've given it, we update it to use whatever the next track chosen is. This method is called when the Player finishes, so we update it here. This works because the Player only gets destroyed if it's a one-shot- in which case only one track from the station will be playing anyway. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_callback</td><td>A function to run when this track ends</td></tr>
+    <tr><td class="paramname">_callback</td><td>The callback invoked when the <a class="el" href="../../da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player.html">RadioTrackPlayer</a> ends</td></tr>
   </table>
   </dd>
 </dl>
 
 <p>Reimplemented from <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html#a702fda25cec925c0c3e7f8bf5eacfd47">RyleRadio.Tracks.RadioTrack</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00084">84</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00103">103</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -215,18 +218,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get a sample at the provided index. This is the core method of a track- whatever you return here defines the audio that the track will play when selected. </p>
+<p>Gets a sample from the currently playing track. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_sampleIndex</td><td>The index of the sample to get</td></tr>
+    <tr><td class="paramname">_sampleIndex</td><td>The index of the sample</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>The sample- a value between -1 and 1 representing the y-value of the sound wave</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A sample from <a class="el" href="#a1e3ff626739a9a98cc08cbaed6d43c98">CurrentTrackW</a></dd></dl>
 
 <p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html#a53788b5811f9cb2463da7185ba9ccf33">RyleRadio.Tracks.IRadioTrack</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00090">90</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00114">114</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -245,11 +248,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initializes this track. </p>
+<p>Initializes this station and all contained tracks. </p>
 
 <p>Implements <a class="el" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html#a5be3ac4abb6bf515b54341c39d2aa417">RyleRadio.Tracks.IRadioTrack</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00064">64</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00080">80</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
 
 </div>
 </div>
@@ -276,7 +279,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00099">99</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+<p>Selects the next track for this station to play. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00124">124</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00103">AddToPlayerEndCallback()</a>, and <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00080">Init()</a>.</p>
 
 </div>
 </div>
@@ -301,7 +308,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00044">44</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+<p>The index of the contained track that's currently playing. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00048">48</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00080">Init()</a>, and <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00124">NextTrack()</a>.</p>
 
 </div>
 </div>
@@ -331,54 +342,6 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3dc169984c4566a72610bb9e52e1aebc" name="a3dc169984c4566a72610bb9e52e1aebc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3dc169984c4566a72610bb9e52e1aebc">&#9670;&#160;</a></span>hasPrintedError</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RyleRadio.Tracks.StationRadioTrack.hasPrintedError</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00058">58</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
-
-</div>
-</div>
-<a id="a87bb20c4cea6ff3e843a1c155a513969" name="a87bb20c4cea6ff3e843a1c155a513969"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87bb20c4cea6ff3e843a1c155a513969">&#9670;&#160;</a></span>random</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">System.Random RyleRadio.Tracks.StationRadioTrack.random</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00047">47</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
-
-</div>
-</div>
 <a id="a9c325018c6641f7f483127889959ccd4" name="a9c325018c6641f7f483127889959ccd4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c325018c6641f7f483127889959ccd4">&#9670;&#160;</a></span>randomSequence</h2>
 
@@ -394,6 +357,8 @@ Private Attributes</h2></td></tr>
 <p>Whether or not this station plays in a random or semi-random order. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00026">26</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00124">NextTrack()</a>.</p>
 
 </div>
 </div>
@@ -417,7 +382,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00055">55</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+<p>The number of plays that need to happen before each track can be played again. Follows the layout described in <a class="el" href="#a0c00f4dc7e31b6de324b8e406aac62f2">thresholdBeforeRepeats</a>. </p>
+<p>i.e if tracks A, B and C are being randomly chosen with a <a class="el" href="#a0c00f4dc7e31b6de324b8e406aac62f2">thresholdBeforeRepeats</a> of 0.5f, they each need to have 1 other track play before each can repeat (see comments above thresholdBeforeRepeats) <br  />
+So if track A was just played after B and C, this array would look like [1, 0, -1]. That is, track A needs another track to be played once before it can be repeated, B doesn't need any other tracks to play and thus can be repeated, and same for C <br  />
+<em>(a number below 0 is treated as 0 for this system)</em><br  />
+ <b>See:</b> <a class="el" href="#afedd66f27883a83686668ea3786504f5">NextTrack()</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00064">64</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00080">Init()</a>, and <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00124">NextTrack()</a>.</p>
 
 </div>
 </div>
@@ -433,7 +406,11 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00041">41</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+<p>The tracks contained within this station. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00043">43</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00080">Init()</a>, and <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00124">NextTrack()</a>.</p>
 
 </div>
 </div>
@@ -458,6 +435,8 @@ i.e with eleven tracks and a threshold of 0.8f, <span class="tt">round_down((11 
 
 <p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00038">38</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
 
+<p class="reference">Referenced by <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00124">NextTrack()</a>.</p>
+
 </div>
 </div>
 <a name="doc-property-members" id="doc-property-members"></a><h2 id="header-doc-property-members" class="groupheader">Property Documentation</h2>
@@ -481,7 +460,11 @@ i.e with eleven tracks and a threshold of 0.8f, <span class="tt">round_down((11 
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00061">61</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+<p>A reference to the track that's currently playing. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00074">74</a> of file <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html">StationRadioTrack.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00114">GetSample()</a>, and <a class="el" href="../../db/d75/_station_radio_track_8cs_source.html#l00124">NextTrack()</a>.</p>
 
 </div>
 </div>

@@ -26,6 +26,7 @@
         <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a383442f843004ce3898509ecc8e4bab5" compoundref="de/d9e/_procedural_radio_track_8cs" startline="103" endline="162">RyleRadio.Tracks.ProceduralRadioTrack.GetSample</referencedby>
         <referencedby refid="de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track_1a35adc9929e2b6bfad7c63a08c7a75851" compoundref="df/d94/_clip_radio_track_8cs" startline="24" endline="30">RyleRadio.Tracks.ClipRadioTrack.Init</referencedby>
         <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a49f57378ad34e028e3ae6f9bf652c154" compoundref="de/d9e/_procedural_radio_track_8cs" startline="88" endline="96">RyleRadio.Tracks.ProceduralRadioTrack.Init</referencedby>
+        <referencedby refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1afedd66f27883a83686668ea3786504f5" compoundref="db/d75/_station_radio_track_8cs" startline="124" endline="185">RyleRadio.Tracks.StationRadioTrack.NextTrack</referencedby>
       </memberdef>
       <memberdef kind="property" id="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track_1ab9bc3ce18b760fcfd3ae4867ded40698" prot="public" static="no" readable="no" writable="no" gettable="yes" privategettable="no" protectedgettable="no" settable="yes" privatesettable="no" protectedsettable="no">
         <type>int</type>
@@ -45,6 +46,7 @@
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrack.cs" line="33" column="28" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/RadioTrack.cs" bodystart="33" bodyend="33"/>
         <referencedby refid="de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track_1a35adc9929e2b6bfad7c63a08c7a75851" compoundref="df/d94/_clip_radio_track_8cs" startline="24" endline="30">RyleRadio.Tracks.ClipRadioTrack.Init</referencedby>
         <referencedby refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a49f57378ad34e028e3ae6f9bf652c154" compoundref="de/d9e/_procedural_radio_track_8cs" startline="88" endline="96">RyleRadio.Tracks.ProceduralRadioTrack.Init</referencedby>
+        <referencedby refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1afedd66f27883a83686668ea3786504f5" compoundref="db/d75/_station_radio_track_8cs" startline="124" endline="185">RyleRadio.Tracks.StationRadioTrack.NextTrack</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
