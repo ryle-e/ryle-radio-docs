@@ -11,12 +11,14 @@
             "id": "0423b4e26318df5a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "Images/Guides/Interaction Components Sample/Pasted image 20251021012926.png"
+                "file": "Guides/3. Interaction Components Sample.md",
+                "mode": "source",
+                "source": false
               },
-              "icon": "lucide-image",
-              "title": "Pasted image 20251021012926"
+              "icon": "lucide-file",
+              "title": "3. Interaction Components Sample"
             }
           }
         ]
@@ -92,7 +94,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Images/Guides/Interaction Components Sample/Pasted image 20251021012926.png",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +103,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Pasted image 20251021012926"
+              "title": "Backlinks"
             }
           },
           {
@@ -111,12 +112,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Images/Guides/Interaction Components Sample/Pasted image 20251021012926.png",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "Outgoing links from Pasted image 20251021012926"
+              "title": "Outgoing links"
             }
           },
           {
@@ -168,7 +168,8 @@
               "title": "Source Control"
             }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -186,11 +187,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "e97738c339c6e3e1",
+  "active": "9f1feac3f365ae91",
   "lastOpenFiles": [
+    "Guides/3. Interaction Components Sample.md",
+    "Guides/1. Basic Radio Sample.md",
+    "Images/Guides/Interaction Components Sample/Pasted image 20251021012926.png",
     "Images/Guides/Interaction Components Sample",
     "Untitled.md",
-    "Images/Guides/Interaction Components Sample/Pasted image 20251021012926.png",
     "Images/Guides/Interaction Components Sample/Pasted image 20251021012633.png",
     "Pasted image 20251021012611.png",
     "Images/Guides/Interaction Components Sample/Pasted image 20251021004415.png",
@@ -200,8 +203,6 @@
     "Images/Guides/Interaction Components Sample/Pasted image 20251021001937.png",
     "Images/Guides/Interaction Components Sample/Pasted image 20251021000742.png",
     "Pasted image 20251020232602.png",
-    "Guides/1. Basic Radio Sample.md",
-    "Guides/3. Interaction Components Sample.md",
     "Guides/2. Spatial Components Sample.md",
     "General/Info/(Predicted) Common Issues and Questions.md",
     "General/Info/Contact.md",
@@ -231,7 +232,6 @@
     "Scripting/RadioData.md",
     "index.md",
     "RadioL.md",
-    "what.md",
-    "Images/Scripting/Tracks"
+    "what.md"
   ]
 }
