@@ -12,7 +12,7 @@
     <programlisting>
 <codeline lineno="1"><highlight class="keyword">using<sp/></highlight><highlight class="normal">System;</highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3" refid="d0/d28/namespace_ryle_radio_1_1_tracks" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d0/d28/namespace_ryle_radio_1_1_tracks" kindref="compound">RyleRadio.Tracks</ref></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="d0/d28/namespace_ryle_radio_1_1_tracks" kindref="compound">RyleRadio.Tracks</ref></highlight></codeline>
 <codeline lineno="4"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"></highlight></codeline>
 <codeline lineno="6"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>a<sp/>track<sp/>in<sp/>a<sp/>RadioData,<sp/>playable<sp/>in<sp/>a<sp/>RadioOutput</highlight><highlight class="normal"></highlight></codeline>

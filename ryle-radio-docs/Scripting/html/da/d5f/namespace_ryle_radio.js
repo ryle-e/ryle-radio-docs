@@ -6,5 +6,5 @@ var namespace_ryle_radio =
     [ "MultiselectAttribute", "d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html", null ],
     [ "MultiselectDrawer", "d7/dcd/class_ryle_radio_1_1_multiselect_drawer.html", null ],
     [ "RadioData", "da/dc0/class_ryle_radio_1_1_radio_data.html", null ],
-    [ "RadioUtils", "d4/d2c/class_ryle_radio_1_1_radio_utils.html", null ]
+    [ "RadioUtils", "d4/d2c/class_ryle_radio_1_1_radio_utils.html", "d4/d2c/class_ryle_radio_1_1_radio_utils" ]
 ];

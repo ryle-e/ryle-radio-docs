@@ -342,9 +342,9 @@
     <member refid="d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper_1a1cf48d746261684d3d9f5c3f88fa635d" kind="function"><name>ScaleRange</name></member>
   </compound>
   <compound refid="d4/d2c/class_ryle_radio_1_1_radio_utils" kind="class"><name>RyleRadio::RadioUtils</name>
-    <member refid="d4/d2c/class_ryle_radio_1_1_radio_utils_1a036ebc66444a8aa0a208acecee60d761" kind="function"><name>Remap</name></member>
+    <member refid="d4/d2c/class_ryle_radio_1_1_radio_utils_1a1a8c22e08dfc7d8d6353209d713e1453" kind="function"><name>Remap</name></member>
     <member refid="d4/d2c/class_ryle_radio_1_1_radio_utils_1a403b2acaa67c6e8ce310d5809742d36f" kind="function"><name>Abs</name></member>
-    <member refid="d4/d2c/class_ryle_radio_1_1_radio_utils_1ab89c4040b90df3ca482a77958cd4fab6" kind="function"><name>FindDerivedTypes</name></member>
+    <member refid="d4/d2c/class_ryle_radio_1_1_radio_utils_1ade2ef6c22eb2dd42613bdcf74f1587de" kind="function"><name>FindDerivedTypes</name></member>
   </compound>
   <compound refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track" kind="class"><name>RyleRadio::Tracks::StationRadioTrack</name>
     <member refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1aec7a9e25b5afaaddef97b1517ba0d361" kind="variable"><name>DISPLAY_NAME</name></member>
