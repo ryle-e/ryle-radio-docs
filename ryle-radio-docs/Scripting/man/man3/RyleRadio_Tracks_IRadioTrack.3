@@ -1,0 +1,110 @@
+.TH "RyleRadio.Tracks.IRadioTrack" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Tracks.IRadioTrack \- Internal interface for a \fBRadioTrack\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherited by \fBRyleRadio\&.Tracks\&.IStationTrack\fP, and \fBRyleRadio\&.Tracks\&.RadioTrack\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "Initializes this track\&. "
+.ti -1c
+.RI "float \fBGetSample\fP (int _sampleIndex)"
+.br
+.RI "Get a sample at the provided index\&. This is the core method of a track- whatever you return here defines the audio that the track will play when selected\&. "
+.ti -1c
+.RI "virtual void \fBAddToPlayerEndCallback\fP (ref Action< \fBRadioTrackPlayer\fP > _callback)"
+.br
+.RI "Update a \fBRadioTrackPlayer\fP when this current track ends\&. Used in \fBStationRadioTrack\fP\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "float \fBSampleRate\fP\fR [get, set]\fP"
+.br
+.RI "The samples per second of this track right now\&. Can be changed at runtime, e\&.g: \fBStationRadioTrack\fP\&. "
+.ti -1c
+.RI "int \fBSampleCount\fP\fR [get, set]\fP"
+.br
+.RI "The total number of samples in this track right now\&. Can be changed at runtime, e\&.g: \fBStationRadioTrack\fP\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Internal interface for a \fBRadioTrack\fP\&. 
+
+\fItruth be told i can't fully remember why i have this and \fBRadioTrack\fP as separate entities- i do know that i went through a lot of effort to make this layout work, though, and so for the moment i'm keeping it in- however if it turns out to be ultimately useless and can be deprecated without issue i'm happy to say goodbye to it\fP /remarks> 
+.PP
+Definition at line \fB20\fP of file \fBIRadioTrack\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void RyleRadio\&.Tracks\&.IRadioTrack\&.AddToPlayerEndCallback (ref Action< \fBRadioTrackPlayer\fP > _callback)\fR [virtual]\fP"
+
+.PP
+Update a \fBRadioTrackPlayer\fP when this current track ends\&. Used in \fBStationRadioTrack\fP\&. \fBSee also:\fP \fBRadioTrackPlayer\&.OnEnd\fP, \fBStationRadioTrack\&.AddToPlayerEndCallback()\fP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI_callback\fP The function to run when the track ends
+.RE
+.PP
+
+.PP
+Implemented in \fBRyleRadio\&.Tracks\&.RadioTrack\fP, and \fBRyleRadio\&.Tracks\&.StationRadioTrack\fP\&.
+.PP
+Definition at line \fB50\fP of file \fBIRadioTrack\&.cs\fP\&.
+.SS "float RyleRadio\&.Tracks\&.IRadioTrack\&.GetSample (int _sampleIndex)\fR [abstract]\fP"
+
+.PP
+Get a sample at the provided index\&. This is the core method of a track- whatever you return here defines the audio that the track will play when selected\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_sampleIndex\fP The index of the sample to get
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The sample- a value between -1 and 1 representing the y-value of the sound wave
+.RE
+.PP
+
+.PP
+Implemented in \fBRyleRadio\&.Tracks\&.ClipRadioTrack\fP, \fBRyleRadio\&.Tracks\&.ProceduralRadioTrack\fP, \fBRyleRadio\&.Tracks\&.RadioTrack\fP, and \fBRyleRadio\&.Tracks\&.StationRadioTrack\fP\&.
+.SS "void RyleRadio\&.Tracks\&.IRadioTrack\&.Init ()\fR [abstract]\fP"
+
+.PP
+Initializes this track\&. 
+.PP
+Implemented in \fBRyleRadio\&.Tracks\&.ClipRadioTrack\fP, \fBRyleRadio\&.Tracks\&.ProceduralRadioTrack\fP, \fBRyleRadio\&.Tracks\&.RadioTrack\fP, and \fBRyleRadio\&.Tracks\&.StationRadioTrack\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "int RyleRadio\&.Tracks\&.IRadioTrack\&.SampleCount\fR [get]\fP, \fR [set]\fP, \fR [abstract]\fP"
+
+.PP
+The total number of samples in this track right now\&. Can be changed at runtime, e\&.g: \fBStationRadioTrack\fP\&. 
+.PP
+Implemented in \fBRyleRadio\&.Tracks\&.RadioTrack\fP\&.
+.PP
+Definition at line \fB30\fP of file \fBIRadioTrack\&.cs\fP\&.
+.SS "float RyleRadio\&.Tracks\&.IRadioTrack\&.SampleRate\fR [get]\fP, \fR [set]\fP, \fR [abstract]\fP"
+
+.PP
+The samples per second of this track right now\&. Can be changed at runtime, e\&.g: \fBStationRadioTrack\fP\&. 
+.PP
+Implemented in \fBRyleRadio\&.Tracks\&.RadioTrack\fP\&.
+.PP
+Definition at line \fB25\fP of file \fBIRadioTrack\&.cs\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

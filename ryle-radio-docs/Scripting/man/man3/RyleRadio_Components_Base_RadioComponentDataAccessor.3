@@ -1,0 +1,162 @@
+.TH "RyleRadio.Components.Base.RadioComponentDataAccessor" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Components.Base.RadioComponentDataAccessor \- An extension of \fBRadioComponent\fP that accesses specific tracks on the stored \fBRadioData\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBRyleRadio\&.Components\&.Base\&.RadioComponent\fP\&.
+.PP
+Inherited by \fBRyleRadio\&.Components\&.RadioBroadcaster\fP, and \fBRyleRadio\&.Components\&.RadioInsulator\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBInit\fP ()"
+.br
+.RI "Initialises this component and links its affected tracks\&. "
+.in -1c
+
+Public Member Functions inherited from \fBRyleRadio\&.Components\&.Base\&.RadioComponent\fP
+.in +1c
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "Initialises this component\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAssignToTrack\fP (\fBRadioTrackWrapper\fP _track)"
+.br
+.RI "Links this component to a track\&. "
+.ti -1c
+.RI "void \fBRemoveFromTrack\fP (\fBRadioTrackWrapper\fP _track)"
+.br
+.RI "Unlinks this component from a track\&. "
+.ti -1c
+.RI "virtual void \fBAccessorInit\fP ()"
+.br
+.RI "Allows extra code for initialization so that \fBInit()\fP can still be called\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "List< string > \fBTrackNames\fP\fR [get]\fP"
+.br
+.RI "The list of tracks on the \fBRadioData\fP that this component can choose from\&. "
+.ti -1c
+.RI "Action< \fBRadioComponent\fP > \fBOnInit\fP = new(_ => { })\fR [get, set]\fP"
+.br
+.RI "Event called when the component is initialized\&. "
+.in -1c
+
+Properties inherited from \fBRyleRadio\&.Components\&.Base\&.RadioComponent\fP
+.in +1c
+.ti -1c
+.RI "\fBRadioData\fP \fBData\fP\fR [get]\fP"
+.br
+.RI "Read-only accessor for \fBdata\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAssignToTracksGeneric\fP ()"
+.br
+.RI "Generally applicable method that converts \fBaffectedTracks\fP to a list of tracks, then calls \fBAssignToTrack()\fP to link this component to each of them\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBaffectedTracks\fP"
+.br
+.RI "The tracks that this component affects\&. This is displayed with a \fBMultiselectAttribute\fP\&. "
+.ti -1c
+.RI "int \fBlastAffectedTracks\fP"
+.br
+.RI "The tracks that were affected previously- only matters if affected tracks are changed at runtime (which currently is not possible) "
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Protected Attributes inherited from \fBRyleRadio\&.Components\&.Base\&.RadioComponent\fP
+.in +1c
+.ti -1c
+.RI "\fBRadioData\fP \fBdata\fP"
+.br
+.RI "The \fBRadioData\fP (aka just radio) that this component is linked to\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+An extension of \fBRadioComponent\fP that accesses specific tracks on the stored \fBRadioData\fP\&. 
+.PP
+Definition at line \fB12\fP of file \fBRadioComponentDataAccessor\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "virtual void RyleRadio\&.Components\&.Base\&.RadioComponentDataAccessor\&.AccessorInit ()\fR [protected]\fP, \fR [virtual]\fP"
+
+.PP
+Allows extra code for initialization so that \fBInit()\fP can still be called\&. 
+.PP
+Definition at line \fB98\fP of file \fBRadioComponentDataAccessor\&.cs\fP\&.
+.PP
+Referenced by \fBInit()\fP\&.
+.SS "void RyleRadio\&.Components\&.Base\&.RadioComponentDataAccessor\&.AssignToTracksGeneric ()\fR [private]\fP"
+
+.PP
+Generally applicable method that converts \fBaffectedTracks\fP to a list of tracks, then calls \fBAssignToTrack()\fP to link this component to each of them\&. 
+.PP
+Definition at line \fB54\fP of file \fBRadioComponentDataAccessor\&.cs\fP\&.
+.PP
+Referenced by \fBInit()\fP\&.
+.SS "override void RyleRadio\&.Components\&.Base\&.RadioComponentDataAccessor\&.Init ()"
+
+.PP
+Initialises this component and links its affected tracks\&. 
+.PP
+Definition at line \fB41\fP of file \fBRadioComponentDataAccessor\&.cs\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int RyleRadio\&.Components\&.Base\&.RadioComponentDataAccessor\&.affectedTracks\fR [private]\fP"
+
+.PP
+The tracks that this component affects\&. This is displayed with a \fBMultiselectAttribute\fP\&. 
+.PP
+Definition at line \fB18\fP of file \fBRadioComponentDataAccessor\&.cs\fP\&.
+.PP
+Referenced by \fBAssignToTracksGeneric()\fP\&.
+.SS "int RyleRadio\&.Components\&.Base\&.RadioComponentDataAccessor\&.lastAffectedTracks\fR [private]\fP"
+
+.PP
+The tracks that were affected previously- only matters if affected tracks are changed at runtime (which currently is not possible) 
+.PP
+Definition at line \fB23\fP of file \fBRadioComponentDataAccessor\&.cs\fP\&.
+.PP
+Referenced by \fBAssignToTracksGeneric()\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "Action<\fBRadioComponent\fP> RyleRadio\&.Components\&.Base\&.RadioComponentDataAccessor\&.OnInit = new(_ => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when the component is initialized\&. 
+.PP
+Definition at line \fB35\fP of file \fBRadioComponentDataAccessor\&.cs\fP\&.
+.PP
+Referenced by \fBInit()\fP\&.
+.SS "List<string> RyleRadio\&.Components\&.Base\&.RadioComponentDataAccessor\&.TrackNames\fR [get]\fP, \fR [protected]\fP"
+
+.PP
+The list of tracks on the \fBRadioData\fP that this component can choose from\&. 
+.PP
+Definition at line \fB28\fP of file \fBRadioComponentDataAccessor\&.cs\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

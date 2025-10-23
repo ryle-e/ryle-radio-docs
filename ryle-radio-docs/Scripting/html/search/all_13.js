@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['zeroto31_0',['ZeroTo31',['../d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html#a15a7d220b48d6d0e4589c392a9e7185a',1,'RyleRadio::MultiselectAttribute']]]
+  ['wavefrequency_0',['waveFrequency',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a947a0cd5b897659b62e96322153045a0',1,'RyleRadio::Tracks::ProceduralRadioTrack']]],
+  ['whitenoise_1',['WhiteNoise',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a875d0aa43f7a037896786dd2f223c6b3aad81a11fa6c9e7cb884c4c5e9d39f0da',1,'RyleRadio::Tracks::ProceduralRadioTrack']]]
 ];

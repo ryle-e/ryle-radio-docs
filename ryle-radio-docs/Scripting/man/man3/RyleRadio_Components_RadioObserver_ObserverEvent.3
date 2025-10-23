@@ -1,0 +1,298 @@
+.TH "RyleRadio.Components.RadioObserver.ObserverEvent" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Components.RadioObserver.ObserverEvent \- A singular event inside a \fBRadioObserver\fP, tracking a value or trigger and invoking methods accordingly\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBEvaluateComparison\fP (float _cValue)"
+.br
+.RI "If this event uses a comparison, check if its fulfilled\&. "
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.RI "Makes the event more readable when printed, in the form "{eventType}/{comparisonType}"\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBEventType\fP \fBeventType\fP"
+.br
+.RI "The type of event this is looking for\&. "
+.ti -1c
+.RI "\fBComparisonType\fP \fBcomparisonType\fP"
+.br
+.RI "The method of comparisonType used in this event- not shown if a Trigger event is chosen\&. "
+.ti -1c
+.RI "float \fBclampedValue\fP"
+.br
+.RI "A value clamped between 0 and 1 to use in the comparison\&. 
+.br
+
+.br
+Shows when a comparison is needed, it does not use a range, and the eventType is not set to Tune\&. "
+.ti -1c
+.RI "float \fBtuneValue\fP"
+.br
+.RI "A value clamped between 0 and 1000 to use in the comparison\&. 
+.br
+
+.br
+Shows when a comparison is needed, it does not use a range, and the eventType is set to Tune\&. "
+.ti -1c
+.RI "Vector2 \fBclampedRange\fP"
+.br
+.RI "A range between 0 and 1 to use in the comparisonType\&. 
+.br
+
+.br
+Shows when a comparison is needed, it needs a range, and the eventType is not set to Tune\&. "
+.ti -1c
+.RI "Vector2 \fBtuneRange\fP"
+.br
+.RI "A range between 0 and 1000 to use in the comparison\&. 
+.br
+
+.br
+Shows when a comparison is needed, it needs a range, and the eventType is set to Tune\&. "
+.ti -1c
+.RI "bool \fBshowEvents\fP"
+.br
+.RI "Show/hide events- useful when there's a lot of them\&. "
+.ti -1c
+.RI "UnityEvent< float > \fBonTrigger\fP"
+.br
+.RI "Called when \fBeventType\fP is fulfilled for the first time\&. Only called once until \fBonEnd\fP is called\&. "
+.ti -1c
+.RI "UnityEvent< float > \fBonStay\fP"
+.br
+.RI "Called every frame while \fBeventType\fP is fulfilled, including the first\&. Cannot be called if \fBeventType\fP is a Trigger event\&. "
+.ti -1c
+.RI "UnityEvent< float > \fBonEnd\fP"
+.br
+.RI "Called when \fBeventType\fP is no longer fulfilled\&. Only called once until the event is fulfilled again\&. Cannot be called if \fBeventType\fP is a Trigger event\&. "
+.ti -1c
+.RI "bool \fBstaying\fP = false"
+.br
+.RI "\fBTracks\fP if this event has been called in this or the previous frame\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "bool \fBNotNeedComparison\fP\fR [get]\fP"
+.br
+.RI "Does this event not need a value or range to compare to? "
+.ti -1c
+.RI "bool \fBNeedComparison\fP\fR [get]\fP"
+.br
+.RI "Does this event need a value or range to compare to? "
+.ti -1c
+.RI "bool \fBNotNeedVector\fP\fR [get]\fP"
+.br
+.RI "Does this event not need a range to compare to, and uses a single value instead? "
+.ti -1c
+.RI "bool \fBNeedVector\fP\fR [get]\fP"
+.br
+.RI "Does this event need a range to compare to, not a single value? "
+.ti -1c
+.RI "bool \fBNotIsTune\fP\fR [get]\fP"
+.br
+.RI "Does this event not use Tune? "
+.ti -1c
+.RI "bool \fBIsTune\fP\fR [get]\fP"
+.br
+.RI "Does this event use Tune? "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A singular event inside a \fBRadioObserver\fP, tracking a value or trigger and invoking methods accordingly\&. 
+.PP
+Definition at line \fB15\fP of file \fBObserverEvent\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "bool RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.EvaluateComparison (float _cValue)"
+
+.PP
+If this event uses a comparison, check if its fulfilled\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_cValue\fP The value to compare against
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if the comparison is fulfilled, false if not
+.RE
+.PP
+
+.PP
+Definition at line \fB114\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioObserver\&.ValueEvent()\fP\&.
+.SS "override string RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.ToString ()"
+
+.PP
+Makes the event more readable when printed, in the form "{eventType}/{comparisonType}"\&. 
+.PP
+Definition at line \fB154\fP of file \fBObserverEvent\&.cs\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "Vector2 RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.clampedRange"
+
+.PP
+A range between 0 and 1 to use in the comparisonType\&. 
+.br
+
+.br
+Shows when a comparison is needed, it needs a range, and the eventType is not set to Tune\&. 
+.PP
+Definition at line \fB47\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBEvaluateComparison()\fP\&.
+.SS "float RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.clampedValue"
+
+.PP
+A value clamped between 0 and 1 to use in the comparison\&. 
+.br
+
+.br
+Shows when a comparison is needed, it does not use a range, and the eventType is not set to Tune\&. 
+.PP
+Definition at line \fB33\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBEvaluateComparison()\fP\&.
+.SS "\fBComparisonType\fP RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.comparisonType"
+
+.PP
+The method of comparisonType used in this event- not shown if a Trigger event is chosen\&. 
+.PP
+Definition at line \fB26\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBEvaluateComparison()\fP, and \fBToString()\fP\&.
+.SS "\fBEventType\fP RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.eventType"
+
+.PP
+The type of event this is looking for\&. 
+.PP
+Definition at line \fB20\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioObserver\&.AssignEvents()\fP, and \fBToString()\fP\&.
+.SS "UnityEvent<float> RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.onEnd"
+
+.PP
+Called when \fBeventType\fP is no longer fulfilled\&. Only called once until the event is fulfilled again\&. Cannot be called if \fBeventType\fP is a Trigger event\&. 
+.PP
+Definition at line \fB77\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioObserver\&.ValueEvent()\fP\&.
+.SS "UnityEvent<float> RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.onStay"
+
+.PP
+Called every frame while \fBeventType\fP is fulfilled, including the first\&. Cannot be called if \fBeventType\fP is a Trigger event\&. 
+.PP
+Definition at line \fB71\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioObserver\&.ValueEvent()\fP\&.
+.SS "UnityEvent<float> RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.onTrigger"
+
+.PP
+Called when \fBeventType\fP is fulfilled for the first time\&. Only called once until \fBonEnd\fP is called\&. 
+.PP
+Definition at line \fB65\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioObserver\&.TriggerEvent()\fP, and \fBRyleRadio\&.Components\&.RadioObserver\&.ValueEvent()\fP\&.
+.SS "bool RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.showEvents"
+
+.PP
+Show/hide events- useful when there's a lot of them\&. 
+.PP
+Definition at line \fB59\fP of file \fBObserverEvent\&.cs\fP\&.
+.SS "bool RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.staying = false"
+
+.PP
+\fBTracks\fP if this event has been called in this or the previous frame\&. 
+.PP
+Definition at line \fB82\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioObserver\&.ValueEvent()\fP\&.
+.SS "Vector2 RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.tuneRange"
+
+.PP
+A range between 0 and 1000 to use in the comparison\&. 
+.br
+
+.br
+Shows when a comparison is needed, it needs a range, and the eventType is set to Tune\&. 
+.PP
+Definition at line \fB54\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBEvaluateComparison()\fP\&.
+.SS "float RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.tuneValue"
+
+.PP
+A value clamped between 0 and 1000 to use in the comparison\&. 
+.br
+
+.br
+Shows when a comparison is needed, it does not use a range, and the eventType is set to Tune\&. 
+.PP
+Definition at line \fB40\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBEvaluateComparison()\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "bool RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.IsTune\fR [get]\fP"
+
+.PP
+Does this event use Tune? 
+.PP
+Definition at line \fB105\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBEvaluateComparison()\fP\&.
+.SS "bool RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.NeedComparison\fR [get]\fP"
+
+.PP
+Does this event need a value or range to compare to? 
+.PP
+Definition at line \fB87\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioObserver\&.ValueEvent()\fP\&.
+.SS "bool RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.NeedVector\fR [get]\fP"
+
+.PP
+Does this event need a range to compare to, not a single value? 
+.PP
+Definition at line \fB98\fP of file \fBObserverEvent\&.cs\fP\&.
+.SS "bool RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.NotIsTune\fR [get]\fP"
+
+.PP
+Does this event not use Tune? 
+.PP
+Definition at line \fB103\fP of file \fBObserverEvent\&.cs\fP\&.
+.SS "bool RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.NotNeedComparison\fR [get]\fP"
+
+.PP
+Does this event not need a value or range to compare to? 
+.PP
+Definition at line \fB85\fP of file \fBObserverEvent\&.cs\fP\&.
+.PP
+Referenced by \fBEvaluateComparison()\fP\&.
+.SS "bool RyleRadio\&.Components\&.RadioObserver\&.ObserverEvent\&.NotNeedVector\fR [get]\fP"
+
+.PP
+Does this event not need a range to compare to, and uses a single value instead? 
+.PP
+Definition at line \fB96\fP of file \fBObserverEvent\&.cs\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

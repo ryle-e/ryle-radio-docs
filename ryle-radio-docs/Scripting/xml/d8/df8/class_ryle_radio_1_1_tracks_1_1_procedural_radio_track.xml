@@ -20,7 +20,7 @@
         <enumvalue id="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a875d0aa43f7a037896786dd2f223c6b3a38cdfe1ca463b28f853b4cb2140d0fb8" prot="public">
           <name>PinkNoise</name>
           <briefdescription>
-<para>Special type of noise defined by Paul Kellet&apos;s refined method (pk3): sounds &quot;fuller&quot; than white noise. </para>
+<para>Special eventType of noise defined by Paul Kellet&apos;s refined method (pk3): sounds &quot;fuller&quot; than white noise. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -28,7 +28,7 @@
         <enumvalue id="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a875d0aa43f7a037896786dd2f223c6b3a6842953f56972d1802aeb60dec83cd94" prot="public">
           <name>BrownNoise</name>
           <briefdescription>
-<para>Special type of noise using a value (<ref refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a2f55f1e9b9cc531f14e2c06f7a5b7998" kindref="member">brownWalkPower</ref>): sounds softer and deeper. </para>
+<para>Special eventType of noise using a value (<ref refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a2f55f1e9b9cc531f14e2c06f7a5b7998" kindref="member">brownWalkPower</ref>): sounds softer and deeper. </para>
           </briefdescription>
           <detaileddescription>
           </detaileddescription>
@@ -50,7 +50,7 @@
           </detaileddescription>
         </enumvalue>
         <briefdescription>
-<para>The type of procedural audio this track is generating. </para>
+<para>The eventType of procedural audio this track is generating. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -139,7 +139,7 @@
         <qualifiedname>RyleRadio.Tracks.ProceduralRadioTrack.proceduralType</qualifiedname>
         <initializer>= <ref refid="d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track_1a875d0aa43f7a037896786dd2f223c6b3aad81a11fa6c9e7cb884c4c5e9d39f0da" kindref="member">ProceduralType.WhiteNoise</ref></initializer>
         <briefdescription>
-<para>The selected type of noise for this track. </para>
+<para>The selected eventType of noise for this track. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -286,7 +286,7 @@
           <declname>_sampleIndex</declname>
         </param>
         <briefdescription>
-<para>Get the next sample of the selected procedural audio type. </para>
+<para>Get the next sample of the selected procedural audio eventType. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>

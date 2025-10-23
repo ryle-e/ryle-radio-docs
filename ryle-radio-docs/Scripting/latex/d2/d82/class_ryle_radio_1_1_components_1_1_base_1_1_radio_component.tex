@@ -1,5 +1,10 @@
 \doxysection{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component Class Reference}
 \hypertarget{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{}\label{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}\index{RyleRadio.Components.Base.RadioComponent@{RyleRadio.Components.Base.RadioComponent}}
+
+
+A scene component that holds a reference to a \doxylink{class_ryle_radio_1_1_radio_data}{Radio\+Data}.  
+
+
 Inheritance diagram for Ryle\+Radio.\+Components.\+Base.\+Radio\+Component\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -11,32 +16,30 @@ Inheritance diagram for Ryle\+Radio.\+Components.\+Base.\+Radio\+Component\+:\be
 \item 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a881543bb4f215ffc72647e2d64c5b285}\label{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a881543bb4f215ffc72647e2d64c5b285} 
 void {\bfseries Init} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initialises this component. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{Radio\+Data}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_adf78617ec86177781cebe0f539354489}{data}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_ryle_radio_1_1_radio_data}{Radio\+Data} (aka just radio) that this component is linked to. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
-static Action \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a4793e3a84e577d89c5fb781f124ae86c}{Init\+All\+Components}} = new(() =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
-\item 
 \mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{Radio\+Data}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a335030dac70cfaabc169f1e5743bcacd}{Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read-\/only accessor for \doxylink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_adf78617ec86177781cebe0f539354489}{data}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a41a231ef3f10d9c376bb16d782f33860}{Awake}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Link \doxylink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a881543bb4f215ffc72647e2d64c5b285}{Init()} to the radio\textquotesingle{}s init. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a3ae136d8cbdc9cd468197e4ae265f494}{On\+Destroy}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Unlink \doxylink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a881543bb4f215ffc72647e2d64c5b285}{Init()} from the radio\textquotesingle{}s init. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+A scene component that holds a reference to a \doxylink{class_ryle_radio_1_1_radio_data}{Radio\+Data}. 
 
-
-Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00008}{8}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
 
 
 
@@ -51,7 +54,11 @@ void Ryle\+Radio.\+Components.\+Base.\+Radio\+Component.\+Awake (\begin{DoxyPara
 
 
 
-Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00024}{24}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
+Link \doxylink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a881543bb4f215ffc72647e2d64c5b285}{Init()} to the radio\textquotesingle{}s init. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00032}{32}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a3ae136d8cbdc9cd468197e4ae265f494}\index{RyleRadio.Components.Base.RadioComponent@{RyleRadio.Components.Base.RadioComponent}!OnDestroy@{OnDestroy}}
 \index{OnDestroy@{OnDestroy}!RyleRadio.Components.Base.RadioComponent@{RyleRadio.Components.Base.RadioComponent}}
@@ -61,7 +68,11 @@ void Ryle\+Radio.\+Components.\+Base.\+Radio\+Component.\+On\+Destroy (\begin{Do
 
 
 
-Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00029}{29}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
+Unlink \doxylink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a881543bb4f215ffc72647e2d64c5b285}{Init()} from the radio\textquotesingle{}s init. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00040}{40}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
 
 
 
@@ -76,7 +87,15 @@ Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00029}{29}} of 
 
 
 
-Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00014}{14}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
+The \doxylink{class_ryle_radio_1_1_radio_data}{Radio\+Data} (aka just radio) that this component is linked to. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_component_data_accessor_8cs_source_l00054}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component\+Data\+Accessor.\+Assign\+To\+Tracks\+Generic()}}, and \mbox{\hyperlink{_radio_output_8cs_source_l00132}{Ryle\+Radio.\+Components.\+Radio\+Output.\+Local\+Init()}}.
 
 
 
@@ -91,17 +110,15 @@ Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00014}{14}} of 
 
 
 
-Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
-
-\Hypertarget{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a4793e3a84e577d89c5fb781f124ae86c}\index{RyleRadio.Components.Base.RadioComponent@{RyleRadio.Components.Base.RadioComponent}!InitAllComponents@{InitAllComponents}}
-\index{InitAllComponents@{InitAllComponents}!RyleRadio.Components.Base.RadioComponent@{RyleRadio.Components.Base.RadioComponent}}
-\doxysubsubsection{\texorpdfstring{InitAllComponents}{InitAllComponents}}
-{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a4793e3a84e577d89c5fb781f124ae86c} 
-Action Ryle\+Radio.\+Components.\+Base.\+Radio\+Component.\+Init\+All\+Components = new(() =$>$ \{ \})\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [get]}, {\ttfamily [private set]}}
+Read-\/only accessor for \doxylink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_adf78617ec86177781cebe0f539354489}{data}. 
 
 
 
-Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_component_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_radio_component_8cs_source}{Radio\+Component.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00158}{Ryle\+Radio.\+Components.\+Radio\+Output.\+Player\+Creation()}}, \mbox{\hyperlink{_radio_output_8cs_source_l00256}{Ryle\+Radio.\+Components.\+Radio\+Output.\+Play\+Loop()}}, \mbox{\hyperlink{_radio_output_8cs_source_l00221}{Ryle\+Radio.\+Components.\+Radio\+Output.\+Play\+One\+Shot()}}, and \mbox{\hyperlink{_radio_output_8cs_source_l00199}{Ryle\+Radio.\+Components.\+Radio\+Output.\+Start\+Players()}}.
 
 
 

@@ -1,0 +1,211 @@
+.TH "RyleRadio.Editor.RadioDataEditor" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Editor.RadioDataEditor \- A custom editor for \fBRadioData\fP 
+.br
+
+.br
+ This mainly exists so that we can reset tracks when they're newly added to the \fBRadioData\fP and prevent them from being linked- I don't think it actually does its job for that, though 
+.br
+
+.br
+\fBSee: \fP\fBRadioData\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits Editor\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBOnInspectorGUI\fP ()"
+.br
+.RI "Draws variables, buttons, etc\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBOnEnable\fP ()"
+.br
+.RI "Initializes this object on inspector init\&. "
+.ti -1c
+.RI "void \fBDrawAdvancedOptions\fP ()"
+.br
+.RI "Draws the advanced options (gizmo colours, sample rate forcing, cache clear) "
+.ti -1c
+.RI "void \fBInitNewTrack\fP ()"
+.br
+.RI "Initializes a newly created track\&. "
+.ti -1c
+.RI "void \fBForceClipsToSampleRate\fP ()"
+.br
+.RI "Get all AudioClips used in this radio, and override their sample rates all at once\&. This is done to reduce distortion when converting between sample rates at runtime- if you're okay with the distortion there's no issue\&. "
+.ti -1c
+.RI "void \fBForceSingleClipToSampleRate\fP (AudioClip _clip)"
+.br
+.RI "Override the sample rate of a specific AudioClip\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "SerializedProperty \fBtrackWs\fP"
+.br
+.RI "The tracks contained in this radio\&. "
+.ti -1c
+.RI "int \fBlastTrackWSize\fP"
+.br
+.RI "The last recorded number of tracks contained in this radio\&. "
+.ti -1c
+.RI "SerializedProperty \fBgizmoColor\fP"
+.br
+.RI "The primary colour of gizmos on components referencing this radio\&. "
+.ti -1c
+.RI "SerializedProperty \fBgizmoColorSecondary\fP"
+.br
+.RI "The secondary colour of gizmos on components referencing this radio\&. "
+.ti -1c
+.RI "SerializedProperty \fBforceClipSampleRate\fP"
+.br
+.RI "Toggles whether or not we should force the sample rate on AudioClips used in this radio\&. "
+.ti -1c
+.RI "SerializedProperty \fBforcedSampleRate\fP"
+.br
+.RI "The sample rate we're forcing on AudioClips used in this radio- if left at 0, picks the project's default sample rate\&. "
+.ti -1c
+.RI "bool \fBshowAdvanced\fP = false"
+.br
+.RI "Toggle drawing of advanced settings\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A custom editor for \fBRadioData\fP 
+.br
+
+.br
+ This mainly exists so that we can reset tracks when they're newly added to the \fBRadioData\fP and prevent them from being linked- I don't think it actually does its job for that, though 
+.br
+
+.br
+\fBSee: \fP\fBRadioData\fP\&. 
+.PP
+Definition at line \fB16\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void RyleRadio\&.Editor\&.RadioDataEditor\&.DrawAdvancedOptions ()\fR [private]\fP"
+
+.PP
+Draws the advanced options (gizmo colours, sample rate forcing, cache clear) 
+.PP
+Definition at line \fB123\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBOnInspectorGUI()\fP\&.
+.SS "void RyleRadio\&.Editor\&.RadioDataEditor\&.ForceClipsToSampleRate ()\fR [private]\fP"
+
+.PP
+Get all AudioClips used in this radio, and override their sample rates all at once\&. This is done to reduce distortion when converting between sample rates at runtime- if you're okay with the distortion there's no issue\&. 
+.PP
+Definition at line \fB179\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBDrawAdvancedOptions()\fP\&.
+.SS "void RyleRadio\&.Editor\&.RadioDataEditor\&.ForceSingleClipToSampleRate (AudioClip _clip)\fR [private]\fP"
+
+.PP
+Override the sample rate of a specific AudioClip\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_clip\fP The clip to override the sample rate on
+.RE
+.PP
+
+.PP
+Definition at line \fB211\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBForceClipsToSampleRate()\fP\&.
+.SS "void RyleRadio\&.Editor\&.RadioDataEditor\&.InitNewTrack ()\fR [private]\fP"
+
+.PP
+Initializes a newly created track\&. 
+.PP
+Definition at line \fB150\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBOnInspectorGUI()\fP\&.
+.SS "void RyleRadio\&.Editor\&.RadioDataEditor\&.OnEnable ()\fR [private]\fP"
+
+.PP
+Initializes this object on inspector init\&. 
+.PP
+Definition at line \fB40\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.SS "override void RyleRadio\&.Editor\&.RadioDataEditor\&.OnInspectorGUI ()"
+
+.PP
+Draws variables, buttons, etc\&. 
+.PP
+Definition at line \fB83\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "SerializedProperty RyleRadio\&.Editor\&.RadioDataEditor\&.forceClipSampleRate\fR [private]\fP"
+
+.PP
+Toggles whether or not we should force the sample rate on AudioClips used in this radio\&. 
+.PP
+Definition at line \fB29\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBDrawAdvancedOptions()\fP, \fBForceSingleClipToSampleRate()\fP, and \fBOnEnable()\fP\&.
+.SS "SerializedProperty RyleRadio\&.Editor\&.RadioDataEditor\&.forcedSampleRate\fR [private]\fP"
+
+.PP
+The sample rate we're forcing on AudioClips used in this radio- if left at 0, picks the project's default sample rate\&. 
+.PP
+Definition at line \fB31\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBDrawAdvancedOptions()\fP, \fBForceSingleClipToSampleRate()\fP, and \fBOnEnable()\fP\&.
+.SS "SerializedProperty RyleRadio\&.Editor\&.RadioDataEditor\&.gizmoColor\fR [private]\fP"
+
+.PP
+The primary colour of gizmos on components referencing this radio\&. 
+.PP
+Definition at line \fB24\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBDrawAdvancedOptions()\fP, and \fBOnEnable()\fP\&.
+.SS "SerializedProperty RyleRadio\&.Editor\&.RadioDataEditor\&.gizmoColorSecondary\fR [private]\fP"
+
+.PP
+The secondary colour of gizmos on components referencing this radio\&. 
+.PP
+Definition at line \fB26\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBDrawAdvancedOptions()\fP, and \fBOnEnable()\fP\&.
+.SS "int RyleRadio\&.Editor\&.RadioDataEditor\&.lastTrackWSize\fR [private]\fP"
+
+.PP
+The last recorded number of tracks contained in this radio\&. 
+.PP
+Definition at line \fB21\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBInitNewTrack()\fP, \fBOnEnable()\fP, and \fBOnInspectorGUI()\fP\&.
+.SS "bool RyleRadio\&.Editor\&.RadioDataEditor\&.showAdvanced = false\fR [private]\fP"
+
+.PP
+Toggle drawing of advanced settings\&. 
+.PP
+Definition at line \fB34\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBOnInspectorGUI()\fP\&.
+.SS "SerializedProperty RyleRadio\&.Editor\&.RadioDataEditor\&.trackWs\fR [private]\fP"
+
+.PP
+The tracks contained in this radio\&. 
+.PP
+Definition at line \fB19\fP of file \fBRadioDataEditor\&.cs\fP\&.
+.PP
+Referenced by \fBForceClipsToSampleRate()\fP, \fBInitNewTrack()\fP, \fBOnEnable()\fP, and \fBOnInspectorGUI()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -94,70 +95,95 @@ $(function(){initNavTree('db/de5/class_ryle_radio_1_1_components_1_1_radio_broad
   <div class="headertitle"><div class="title">RyleRadio.Components.RadioBroadcaster Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Inheritance diagram for RyleRadio.Components.RadioBroadcaster:</div>
-<div class="dyncontent">
+
+<p>A "broadcaster" for a RadioTrackWrapper - the closer the <a class="el" href="../../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html">RadioOutput</a> that's playing the track is to a broadcaster (taking into consideration broadcast radius, power, etc), the louder the track is in the Output.  
+ <a href="#details">More...</a></p>
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Inheritance diagram for RyleRadio.Components.RadioBroadcaster:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
  <div class="center">
   <img src="../../db/de5/class_ryle_radio_1_1_components_1_1_radio_broadcaster.png" usemap="#RyleRadio_2EComponents_2ERadioBroadcaster_map" alt=""/>
   <map id="RyleRadio_2EComponents_2ERadioBroadcaster_map" name="RyleRadio_2EComponents_2ERadioBroadcaster_map">
-<area href="../../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html" alt="RyleRadio.Components.Base.RadioComponentDataAccessor" shape="rect" coords="0,112,353,136"/>
-<area href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html" alt="RyleRadio.Components.Base.RadioComponent" shape="rect" coords="0,56,353,80"/>
+<area href="../../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html" title="An extension of RadioComponent that accesses specific tracks on the stored RadioData." alt="RyleRadio.Components.Base.RadioComponentDataAccessor" shape="rect" coords="0,112,353,136"/>
+<area href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html" title="A scene component that holds a reference to a RadioData." alt="RyleRadio.Components.Base.RadioComponent" shape="rect" coords="0,56,353,80"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a521f92574cfd54f14c3ecfa87013683c" id="r_a521f92574cfd54f14c3ecfa87013683c"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a521f92574cfd54f14c3ecfa87013683c">GetPower</a> (Vector3 _receiverPos)</td></tr>
+<tr class="memdesc:a521f92574cfd54f14c3ecfa87013683c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets the broadcast power of this particular broadcaster using the Output's position.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html">RyleRadio.Components.Base.RadioComponentDataAccessor</a></td></tr>
 <tr class="memitem:a97e324fd72344ee550241979fc85d5b5 inherit pub_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor" id="r_a97e324fd72344ee550241979fc85d5b5"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html#a97e324fd72344ee550241979fc85d5b5">Init</a> ()</td></tr>
+<tr class="memdesc:a97e324fd72344ee550241979fc85d5b5 inherit pub_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises this component and links its affected tracks.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html">RyleRadio.Components.Base.RadioComponent</a></td></tr>
 <tr class="memitem:a881543bb4f215ffc72647e2d64c5b285 inherit pub_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component" id="r_a881543bb4f215ffc72647e2d64c5b285"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> ()</td></tr>
+<tr class="memdesc:a881543bb4f215ffc72647e2d64c5b285 inherit pub_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialises this component. <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a5628c7e602d1c6662bdae7119b942f18" id="r_a5628c7e602d1c6662bdae7119b942f18"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5628c7e602d1c6662bdae7119b942f18">broadcastRadius</a></td></tr>
+<tr class="memdesc:a5628c7e602d1c6662bdae7119b942f18"><td class="mdescLeft">&#160;</td><td class="mdescRight">The inner and outer radii of this broadcaster.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-methods" class="groupheader"><a id="pro-methods" name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:af53dd2da39f80c4329aa3492ed9b55d4" id="r_af53dd2da39f80c4329aa3492ed9b55d4"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af53dd2da39f80c4329aa3492ed9b55d4">AssignToTrack</a> (<a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> _track)</td></tr>
+<tr class="memdesc:af53dd2da39f80c4329aa3492ed9b55d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Links this broadcaster to a track.  <br /></td></tr>
 <tr class="memitem:aa6ed4532561f98f364e0b5b7270a470c" id="r_aa6ed4532561f98f364e0b5b7270a470c"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa6ed4532561f98f364e0b5b7270a470c">RemoveFromTrack</a> (<a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> _track)</td></tr>
+<tr class="memdesc:aa6ed4532561f98f364e0b5b7270a470c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlinks this broadcaster from a track.  <br /></td></tr>
 <tr class="inherit_header pro_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Member Functions inherited from <a class="el" href="../../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html">RyleRadio.Components.Base.RadioComponentDataAccessor</a></td></tr>
 <tr class="memitem:a1aac75972c76a48b152cdd0334705dea inherit pro_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor" id="r_a1aac75972c76a48b152cdd0334705dea"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>AssignToTrack</b> (<a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> _track)</td></tr>
+<tr class="memdesc:a1aac75972c76a48b152cdd0334705dea inherit pro_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Links this component to a track. <br /></td></tr>
 <tr class="memitem:af314c38ae8ee98e58b550cb0f4c3e711 inherit pro_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor" id="r_af314c38ae8ee98e58b550cb0f4c3e711"><td class="memItemLeft" align="right" valign="top">
 void&#160;</td><td class="memItemRight" valign="bottom"><b>RemoveFromTrack</b> (<a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> _track)</td></tr>
+<tr class="memdesc:af314c38ae8ee98e58b550cb0f4c3e711 inherit pro_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unlinks this component from a track. <br /></td></tr>
 <tr class="memitem:a5968ea7d58f9d8e6172f8d08cde6ab6e inherit pro_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor" id="r_a5968ea7d58f9d8e6172f8d08cde6ab6e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html#a5968ea7d58f9d8e6172f8d08cde6ab6e">AccessorInit</a> ()</td></tr>
+<tr class="memdesc:a5968ea7d58f9d8e6172f8d08cde6ab6e inherit pro_methods_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Allows extra code for initialization so that <a class="el" href="../../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html#a97e324fd72344ee550241979fc85d5b5">Init()</a> can still be called.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a9a19e8c86dc5284948b748bb6a973f60" id="r_a9a19e8c86dc5284948b748bb6a973f60"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a19e8c86dc5284948b748bb6a973f60">broadcastPowers</a> = new(0, 1)</td></tr>
+<tr class="memdesc:a9a19e8c86dc5284948b748bb6a973f60"><td class="mdescLeft">&#160;</td><td class="mdescRight">The power of this broadcaster at the maximum and minimum radii.  <br /></td></tr>
 <tr class="memitem:af016c4c46d5e76046f83ae9a7162cf78" id="r_af016c4c46d5e76046f83ae9a7162cf78"><td class="memItemLeft" align="right" valign="top">AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af016c4c46d5e76046f83ae9a7162cf78">distanceFalloff</a></td></tr>
+<tr class="memdesc:af016c4c46d5e76046f83ae9a7162cf78"><td class="mdescLeft">&#160;</td><td class="mdescRight">The falloff curve between the inner and outer broadcast radii- the x-value is how far between the radii the Output is, and the y-value is how far between <a class="el" href="#a9a19e8c86dc5284948b748bb6a973f60">broadcastPowers</a> x and y the track's broadcast power is.  <br /></td></tr>
 <tr class="inherit_header pro_attribs_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html">RyleRadio.Components.Base.RadioComponent</a></td></tr>
 <tr class="memitem:adf78617ec86177781cebe0f539354489 inherit pro_attribs_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component" id="r_adf78617ec86177781cebe0f539354489"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html#adf78617ec86177781cebe0f539354489">data</a></td></tr>
+<tr class="memdesc:adf78617ec86177781cebe0f539354489 inherit pro_attribs_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">The <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a> (aka just radio) that this component is linked to.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a38c35521757833791031ce809c7f1027" id="r_a38c35521757833791031ce809c7f1027"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a38c35521757833791031ce809c7f1027">ShowApplyToAllOutputs</a><code> [get]</code></td></tr>
+<tr class="memdesc:a38c35521757833791031ce809c7f1027"><td class="mdescLeft">&#160;</td><td class="mdescRight">Shows <a class="el" href="#a958c908a813dd76352af07aa0f6a4085">applyToAllOutputsOutside</a> when the x-value of <a class="el" href="#a9a19e8c86dc5284948b748bb6a973f60">broadcastPowers</a> is greater than 0.  <br /></td></tr>
 <tr class="inherit_header properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Properties inherited from <a class="el" href="../../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html">RyleRadio.Components.Base.RadioComponentDataAccessor</a></td></tr>
 <tr class="memitem:a18d15e5703cd4ae9c95a1514cc71ab0a inherit properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor" id="r_a18d15e5703cd4ae9c95a1514cc71ab0a"><td class="memItemLeft" align="right" valign="top">List&lt; string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html#a18d15e5703cd4ae9c95a1514cc71ab0a">TrackNames</a><code> [get]</code></td></tr>
+<tr class="memdesc:a18d15e5703cd4ae9c95a1514cc71ab0a inherit properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor"><td class="mdescLeft">&#160;</td><td class="mdescRight">The list of tracks on the <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a> that this component can choose from.  <br /></td></tr>
 <tr class="memitem:aff234a98e8505ef320008539fb96289f inherit properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor" id="r_aff234a98e8505ef320008539fb96289f"><td class="memItemLeft" align="right" valign="top">Action&lt; <a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html">RadioComponent</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d1/d88/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor.html#aff234a98e8505ef320008539fb96289f">OnInit</a> = new(_ =&gt; { })<code> [get, set]</code></td></tr>
+<tr class="memdesc:aff234a98e8505ef320008539fb96289f inherit properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_data_accessor"><td class="mdescLeft">&#160;</td><td class="mdescRight">Event called when the component is initialized.  <br /></td></tr>
 <tr class="inherit_header properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component"><td colspan="2" onclick="javascript:dynsection.toggleInherit('properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Properties inherited from <a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html">RyleRadio.Components.Base.RadioComponent</a></td></tr>
-<tr class="memitem:a4793e3a84e577d89c5fb781f124ae86c inherit properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component" id="r_a4793e3a84e577d89c5fb781f124ae86c"><td class="memItemLeft" align="right" valign="top">static Action&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html#a4793e3a84e577d89c5fb781f124ae86c">InitAllComponents</a> = new(() =&gt; { })<code> [get, private set]</code></td></tr>
 <tr class="memitem:a335030dac70cfaabc169f1e5743bcacd inherit properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component" id="r_a335030dac70cfaabc169f1e5743bcacd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html#a335030dac70cfaabc169f1e5743bcacd">Data</a><code> [get]</code></td></tr>
+<tr class="memdesc:a335030dac70cfaabc169f1e5743bcacd inherit properties_class_ryle_radio_1_1_components_1_1_base_1_1_radio_component"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read-only accessor for <a class="el" href="../../d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.html#adf78617ec86177781cebe0f539354489">data</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a823b76cdbc49308679bdc1851471ecf8" id="r_a823b76cdbc49308679bdc1851471ecf8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a823b76cdbc49308679bdc1851471ecf8">Update</a> ()</td></tr>
+<tr class="memdesc:a823b76cdbc49308679bdc1851471ecf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates the position of this broadcaster.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a958c908a813dd76352af07aa0f6a4085" id="r_a958c908a813dd76352af07aa0f6a4085"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a958c908a813dd76352af07aa0f6a4085">applyToAllOutputsOutside</a> = false</td></tr>
+<tr class="memdesc:a958c908a813dd76352af07aa0f6a4085"><td class="mdescLeft">&#160;</td><td class="mdescRight">If the x-value of <a class="el" href="#a9a19e8c86dc5284948b748bb6a973f60">broadcastPowers</a> should be applied to all Outputs outside of this broadcaster's radii- effectively makes it global.  <br /></td></tr>
 <tr class="memitem:a1660bba3b0cc2ccbe7e1291efb1049ed" id="r_a1660bba3b0cc2ccbe7e1291efb1049ed"><td class="memItemLeft" align="right" valign="top">Vector3&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1660bba3b0cc2ccbe7e1291efb1049ed">cachedPos</a></td></tr>
+<tr class="memdesc:a1660bba3b0cc2ccbe7e1291efb1049ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">The position of the broadcaster in the previous frame- we can't access <span class="tt">transform.position</span> in the audio thread, so we need to cache it in update.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00012">12</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<div class="textblock"><p>A "broadcaster" for a RadioTrackWrapper - the closer the <a class="el" href="../../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html">RadioOutput</a> that's playing the track is to a broadcaster (taking into consideration broadcast radius, power, etc), the louder the track is in the Output. </p>
+<p>Somewhat similar to real world broadcasters- at least, that was the original intention :)</p>
+<p>This has a custom editor in RadioBroadcasterEditor </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="af53dd2da39f80c4329aa3492ed9b55d4" name="af53dd2da39f80c4329aa3492ed9b55d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af53dd2da39f80c4329aa3492ed9b55d4">&#9670;&#160;</a></span>AssignToTrack()</h2>
@@ -182,7 +208,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00050">50</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<p>Links this broadcaster to a track. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_track</td><td>The track to link to</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00080">80</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
 
 </div>
 </div>
@@ -201,7 +235,18 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00064">64</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<p>Gets the broadcast power of this particular broadcaster using the Output's position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_receiverPos</td><td>The position of the Output</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>A value between 0 and 1, used as a multiplier to the loudness of a track</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00102">102</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d3/d79/_radio_track_player_8cs_source.html#l00349">RyleRadio.Tracks.RadioTrackPlayer.GetBroadcastPower()</a>.</p>
 
 </div>
 </div>
@@ -228,7 +273,15 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00056">56</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<p>Unlinks this broadcaster from a track. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_track</td><td>The track to unlink from</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00090">90</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
 
 </div>
 </div>
@@ -255,7 +308,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00043">43</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<p>Updates the position of this broadcaster. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00070">70</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
 
 </div>
 </div>
@@ -280,7 +335,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00034">34</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<p>If the x-value of <a class="el" href="#a9a19e8c86dc5284948b748bb6a973f60">broadcastPowers</a> should be applied to all Outputs outside of this broadcaster's radii- effectively makes it global. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00054">54</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00102">GetPower()</a>.</p>
 
 </div>
 </div>
@@ -304,7 +363,13 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<p>The power of this broadcaster at the maximum and minimum radii. </p>
+<p>The x-value is the broadcast power right on the outer radius, and the y-value is the broadcast power within the inner radius. Broadcast power between the inner and outer radii will be somewhere in this range, defined by the <a class="el" href="#af016c4c46d5e76046f83ae9a7162cf78">distanceFalloff</a></p>
+<p>If the x-value is greater than 0, you might want to enable <a class="el" href="#a958c908a813dd76352af07aa0f6a4085">applyToAllOutputsOutside</a> so that all Outputs are affected by this broadcaster. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00039">39</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00102">GetPower()</a>.</p>
 
 </div>
 </div>
@@ -320,7 +385,12 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00017">17</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<p>The inner and outer radii of this broadcaster. </p>
+<p><em>radiusProg is the x-value in the <a class="el" href="#af016c4c46d5e76046f83ae9a7162cf78">distanceFalloff</a> that we use to evaluate broadcast power</em> If the Output is within the inner radius, the radiusProg is 1. If the Output is between the inner and outer radii, the radiusProg is between 0 and 1. If the Output is outside both radii, the radiusProg is 0. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00102">GetPower()</a>.</p>
 
 </div>
 </div>
@@ -344,7 +414,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00038">38</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<p>The position of the broadcaster in the previous frame- we can't access <span class="tt">transform.position</span> in the audio thread, so we need to cache it in update. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00059">59</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00102">GetPower()</a>, and <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00070">Update()</a>.</p>
 
 </div>
 </div>
@@ -372,7 +446,11 @@ Private Attributes</h2></td></tr>
 <div class="line">            <span class="keyword">new</span>(1, 0, 0, 0)</div>
 <div class="line">        })</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<p>The falloff curve between the inner and outer broadcast radii- the x-value is how far between the radii the Output is, and the y-value is how far between <a class="el" href="#a9a19e8c86dc5284948b748bb6a973f60">broadcastPowers</a> x and y the track's broadcast power is. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00045">45</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00102">GetPower()</a>.</p>
 
 </div>
 </div>
@@ -397,7 +475,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00040">40</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+<p>Shows <a class="el" href="#a958c908a813dd76352af07aa0f6a4085">applyToAllOutputsOutside</a> when the x-value of <a class="el" href="#a9a19e8c86dc5284948b748bb6a973f60">broadcastPowers</a> is greater than 0. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00064">64</a> of file <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html">RadioBroadcaster.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d2/da4/_radio_broadcaster_8cs_source.html#l00102">GetPower()</a>.</p>
 
 </div>
 </div>

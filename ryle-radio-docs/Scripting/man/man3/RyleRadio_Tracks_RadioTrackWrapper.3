@@ -1,0 +1,570 @@
+.TH "RyleRadio.Tracks.RadioTrackWrapper" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Tracks.RadioTrackWrapper \- A wrapper class for \fBRadioTrack\fP so that track types can be switched between in the inspector! Also contains various values that are track-agnostic\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRadioTrackWrapper\fP ()"
+.br
+.RI "Creates an empty wrapper\&. "
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "Initialize this wrapper and its track\&. "
+.ti -1c
+.RI "override string \fBToString\fP ()"
+.br
+.RI "Changes the name of this class from "RadioTrackWrapper" to "Wrapper for `track\&.Name`"\&. "
+.ti -1c
+.RI "void \fBCreateTrackLocal\fP ()"
+.br
+.RI "Set \fBtrack\fP to a new track with eventType defined by \fBtrackType\fP 
+.br
+\fBSee also: \fP\fBCreateTrackEditor()\fP "
+.ti -1c
+.RI "void \fBAddToPlayerEndCallback\fP (ref Action< \fBRadioTrackPlayer\fP > _callback)"
+.br
+.RI "Used if \fBtrack\fP needs to access a \fBRadioTrackPlayer\fP that it's linked to when that player ends, this method adds an event for it\&. Really only needed for a \fBStationRadioTrack\fP\&. "
+.ti -1c
+.RI "float \fBGetTunePower\fP (float _tune, float _otherVolume)"
+.br
+.RI "Calculates the power of this track when an Output is at a specific Tune value\&. It does this by finding where the Tune is over the track's \fBrange\fP, where that point lies on the \fBrangeCurve\fP, and applies \fBattenuation\fP\&. "
+.ti -1c
+.RI "float \fBGetSample\fP (int _sampleIndex)"
+.br
+.RI "Get a sample from the contained \fBtrack\fP\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBOnReload\fP ()"
+.br
+.RI "Static; resets available track types and names\&. "
+.ti -1c
+.RI "static string \fBGetTrackType\fP (string _typeName)"
+.br
+.RI "Converts the typename (NOT display name) of a track eventType to the actual eventType\&. "
+.ti -1c
+.RI "static \fBIRadioTrack\fP \fBCreateTrackEditor\fP (string _name)"
+.br
+.RI "Static; creates a new track for a wrapper using the given track eventType's display name\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBid\fP"
+.br
+.RI "The ID of this track- used to find and manipulate it in custom code\&. "
+.ti -1c
+.RI "string \fBname\fP"
+.br
+.RI "The name of this track for use (and easy identification) in the inspector\&. This is usually in the format of \fR{ID}, {range\&.x} - {range\&.y}\fP "
+.ti -1c
+.RI "Vector2 \fBrange\fP"
+.br
+.RI "The range of tunes in which this track can be heard\&. If a \fBRadioOutput\&.Tune\fP value is within this range, the tune power of this track will be > 0, and it will be audible (not counting spatial components+gain+etc) "
+.ti -1c
+.RI "AnimationCurve \fBrangeCurve\fP = new(DefaultRangeCurve\&.keys)"
+.br
+.RI "The curve defining the loudness of the track over its range\&. The progress between \fRrange\&.x\fP and \fRrange\&.y\fP the \fBRadioOutput\&.Tune\fP value is, is the progress along this curve the tune power is\&. "
+.ti -1c
+.RI "float \fBattenuation\fP = 0\&.1f"
+.br
+.RI "The amount that this track gets quieter when another track is playing on top of it (and that other track is above this one in \fBRadioData\&.trackWs\fP\&. "
+.ti -1c
+.RI "bool \fBforceGlobal\fP = true"
+.br
+.RI "If true, this track ignores any \fBRadioBroadcaster\fP influence and plays everywhere\&. "
+.ti -1c
+.RI "bool \fBplayOnInit\fP = true"
+.br
+.RI "If true, this track plays on \fBRadioData\&.Init()\fP - usually on game start\&. "
+.ti -1c
+.RI "List< \fBRadioBroadcaster\fP > \fBbroadcasters\fP"
+.br
+.RI "The broadcasters in the scene that have this track selected\&. "
+.ti -1c
+.RI "List< \fBRadioInsulator\fP > \fBinsulators\fP"
+.br
+.RI "The insulators in the scene that have this track selected\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIRadioTrack\fP \fBtrack\fP"
+.br
+.RI "The actual \fBRadioTrack\fP in this wrapper, its eventType chosen in \fBtrackType\fP\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "static AnimationCurve \fBDefaultRangeCurve\fP\fR [get]\fP"
+.br
+.RI "The default \fBrangeCurve\fP to use when an empty wrapper is created\&. It's a super basic and smooth closed curve from 0 to 0\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackWrapper\fP > \fBOnInit\fP = new(_ => { })\fR [get, set]\fP"
+.br
+.RI "An event called when the wrapper is initialised\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackWrapper\fP > \fBBeforeInit\fP = new(_ => { })\fR [get, set]\fP"
+.br
+.RI "An event called just before the wrapper is initialised\&. "
+.ti -1c
+.RI "Action< \fBRadioBroadcaster\fP, \fBRadioTrackWrapper\fP > \fBOnAddBroadcaster\fP = new((_, _) => { })\fR [get, set]\fP"
+.br
+.RI "An event called when a broadcaster is added to the track\&. "
+.ti -1c
+.RI "Action< \fBRadioBroadcaster\fP, \fBRadioTrackWrapper\fP > \fBOnRemoveBroadcaster\fP = new((_, _) => { })\fR [get, set]\fP"
+.br
+.RI "An event called when a broadcaster is removed from this track\&. "
+.ti -1c
+.RI "Action< \fBRadioInsulator\fP, \fBRadioTrackWrapper\fP > \fBOnAddInsulator\fP = new((_, _) => { })\fR [get, set]\fP"
+.br
+.RI "An event called when an insulator is added to the track\&. "
+.ti -1c
+.RI "Action< \fBRadioInsulator\fP, \fBRadioTrackWrapper\fP > \fBOnRemoveInsulator\fP = new((_, _) => { })\fR [get, set]\fP"
+.br
+.RI "An event called when an insulator is removed from this track\&. "
+.ti -1c
+.RI "float \fBGain\fP\fR [get]\fP"
+.br
+.RI "The gain value scaled down to ones- e\&.g \fBgain\fP at 200 is \fBGain\fP at 2\&. "
+.ti -1c
+.RI "static Type[] \fBTrackTypes\fP\fR [get]\fP"
+.br
+.RI "A list of each eventType of track that this wrapper can contain- this is anything that inherits from \fBIRadioTrack\fP, and updates dynamically when creating new track types\&. 
+.br
+
+.br
+\fBSee also: \fP \fBRadioUtils\&.FindDerivedTypes()\fP "
+.ti -1c
+.RI "static string[] \fBTrackTypesAsStrings\fP\fR [get]\fP"
+.br
+.RI "Static; the list of available track types stored as their typename, NOT as their display names\&. This is used when reassigning track types in \fBRadioDataEditor\fP when the editor reloads, as we only have the typename of the track\&. "
+.ti -1c
+.RI "static string[] \fBTrackNames\fP\fR [get]\fP"
+.br
+.RI "Static; the list of track types stored as their display names\&. This is shown as a dropdown for \fBtrackType\fP and is how types are usually displayed in the inspector\&. "
+.ti -1c
+.RI "float \fBSampleRate\fP\fR [get]\fP"
+.br
+.RI "An alias for the track's SampleRate as other classes cannot access \fBtrack\fP directly\&. "
+.ti -1c
+.RI "int \fBSampleCount\fP\fR [get]\fP"
+.br
+.RI "An alias for the track's SampleCount as other classes cannot access \fBtrack\fP directly\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBScaleRange\fP ()"
+.br
+.RI "Limits the number of decimal points on the \fBrange\fP 
+.br
+This is called whenever the range is changed\&. 
+.br
+\fBSee: \fP\fBRANGE_DECIMAL_MULTIPLIER\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBgain\fP = 100"
+.br
+.RI "An added value to the volume of the track\&. This is applied before any other volume is calculated\&. "
+.ti -1c
+.RI "string \fBtrackType\fP"
+.br
+.RI "The eventType of track for this wrapper to contain, selectable in the inspector\&. This variable is stored as the track name and displays with a dropdown according to \fBTrackNames\fP\&. "
+.in -1c
+.SS "Static Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "const float \fBRANGE_DECIMAL_MULTIPLIER\fP = 10f"
+.br
+.RI "The number of decimal places used in the range- the number of zeroes is the number of decimal points, e\&.g: 10 == 1dp, 100 == 2dp, 1 == 0dp (whole numbers) "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A wrapper class for \fBRadioTrack\fP so that track types can be switched between in the inspector! Also contains various values that are track-agnostic\&. 
+
+This is how a \fBRadioTrack\fP is stored and accessed in \fBRadioData\fP\&. 
+.br
+If we didn't use a wrapper like this, you wouldn't be able to choose \fBtrackType\fP in a dropdown and see it change in the inspector- it's not possible (to my knowledge) to do that without some kind of wrapper and \fR[SerializeReference]\fP\&. 
+.br
+Wrappers also contain variables that exist for every track eventType, such as \fBrange\fP and \fBgain\fP\&. 
+.PP
+Definition at line \fB19\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RyleRadio\&.Tracks\&.RadioTrackWrapper\&.RadioTrackWrapper ()"
+
+.PP
+Creates an empty wrapper\&. 
+.PP
+Definition at line \fB212\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void RyleRadio\&.Tracks\&.RadioTrackWrapper\&.AddToPlayerEndCallback (ref Action< \fBRadioTrackPlayer\fP > _callback)"
+
+.PP
+Used if \fBtrack\fP needs to access a \fBRadioTrackPlayer\fP that it's linked to when that player ends, this method adds an event for it\&. Really only needed for a \fBStationRadioTrack\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_callback\fP The event called on \fBRadioTrackPlayer\&.OnEnd\fP
+.RE
+.PP
+
+.PP
+Definition at line \fB305\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SS "\fBIRadioTrack\fP RyleRadio\&.Tracks\&.RadioTrackWrapper\&.CreateTrackEditor (string _name)\fR [static]\fP"
+
+.PP
+Static; creates a new track for a wrapper using the given track eventType's display name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_name\fP Display name of a track eventType
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The newly created \fBIRadioTrack\fP
+.RE
+.PP
+
+.PP
+Definition at line \fB274\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBCreateTrackLocal()\fP, \fBRyleRadio\&.Editor\&.RadioDataEditor\&.InitNewTrack()\fP, and \fBRyleRadio\&.Editor\&.RadioDataEditor\&.OnEnable()\fP\&.
+.SS "void RyleRadio\&.Tracks\&.RadioTrackWrapper\&.CreateTrackLocal ()"
+
+.PP
+Set \fBtrack\fP to a new track with eventType defined by \fBtrackType\fP 
+.br
+\fBSee also: \fP\fBCreateTrackEditor()\fP 
+.PP
+Definition at line \fB296\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRadioTrackWrapper()\fP\&.
+.SS "float RyleRadio\&.Tracks\&.RadioTrackWrapper\&.GetSample (int _sampleIndex)"
+
+.PP
+Get a sample from the contained \fBtrack\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_sampleIndex\fP The index of the sample to get
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The sample as given by \fBRadioTrack\&.GetSample()\fP
+.RE
+.PP
+
+.PP
+Definition at line \fB346\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SS "string RyleRadio\&.Tracks\&.RadioTrackWrapper\&.GetTrackType (string _typeName)\fR [static]\fP"
+
+.PP
+Converts the typename (NOT display name) of a track eventType to the actual eventType\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_typeName\fP The name of the eventType
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The eventType with that name
+.RE
+.PP
+
+.PP
+Definition at line \fB263\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Editor\&.RadioDataEditor\&.OnEnable()\fP\&.
+.SS "float RyleRadio\&.Tracks\&.RadioTrackWrapper\&.GetTunePower (float _tune, float _otherVolume)"
+
+.PP
+Calculates the power of this track when an Output is at a specific Tune value\&. It does this by finding where the Tune is over the track's \fBrange\fP, where that point lies on the \fBrangeCurve\fP, and applies \fBattenuation\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_tune\fP The tune value to evaluate
+.br
+\fI_otherVolume\fP The volume of any previous tracks, used for attenuation
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The tune power of this track with the provided values
+.RE
+.PP
+
+.PP
+Definition at line \fB330\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SS "void RyleRadio\&.Tracks\&.RadioTrackWrapper\&.Init ()"
+
+.PP
+Initialize this wrapper and its track\&. 
+.PP
+Definition at line \fB238\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.RadioData\&.Init()\fP\&.
+.SS "void RyleRadio\&.Tracks\&.RadioTrackWrapper\&.OnReload ()\fR [static]\fP"
+
+.PP
+Static; resets available track types and names\&. 
+.PP
+Definition at line \fB227\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SS "void RyleRadio\&.Tracks\&.RadioTrackWrapper\&.ScaleRange ()\fR [private]\fP"
+
+.PP
+Limits the number of decimal points on the \fBrange\fP 
+.br
+This is called whenever the range is changed\&. 
+.br
+\fBSee: \fP\fBRANGE_DECIMAL_MULTIPLIER\fP\&. 
+.PP
+Definition at line \fB315\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "float RyleRadio\&.Tracks\&.RadioTrackWrapper\&.attenuation = 0\&.1f"
+
+.PP
+The amount that this track gets quieter when another track is playing on top of it (and that other track is above this one in \fBRadioData\&.trackWs\fP\&. 
+.PP
+Definition at line \fB77\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBGetTunePower()\fP\&.
+.SS "List<\fBRadioBroadcaster\fP> RyleRadio\&.Tracks\&.RadioTrackWrapper\&.broadcasters"
+
+.PP
+The broadcasters in the scene that have this track selected\&. A \fBRadioBroadcaster\fP is a scene component that allows a track to be heard exclusively or louder in a certain area\&. 
+.br
+\fBSee also: \fP\fBinsulators\fP 
+.PP
+Definition at line \fB95\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioBroadcaster\&.AssignToTrack()\fP, \fBInit()\fP, and \fBRyleRadio\&.Components\&.RadioBroadcaster\&.RemoveFromTrack()\fP\&.
+.SS "bool RyleRadio\&.Tracks\&.RadioTrackWrapper\&.forceGlobal = true"
+
+.PP
+If true, this track ignores any \fBRadioBroadcaster\fP influence and plays everywhere\&. 
+.PP
+Definition at line \fB82\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SS "float RyleRadio\&.Tracks\&.RadioTrackWrapper\&.gain = 100\fR [private]\fP"
+
+.PP
+An added value to the volume of the track\&. This is applied before any other volume is calculated\&. 
+.PP
+Definition at line \fB71\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SS "string RyleRadio\&.Tracks\&.RadioTrackWrapper\&.id"
+
+.PP
+The ID of this track- used to find and manipulate it in custom code\&. 
+.PP
+Definition at line \fB38\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.RadioData\&.PopulateTrackIDs()\fP\&.
+.SS "List<\fBRadioInsulator\fP> RyleRadio\&.Tracks\&.RadioTrackWrapper\&.insulators"
+
+.PP
+The insulators in the scene that have this track selected\&. A \fBRadioInsulator\fP is a scene component that makes a track quieter in a certain area\&. 
+.br
+\fBSee also: \fP\fBbroadcasters\fP 
+.PP
+Definition at line \fB103\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioInsulator\&.AssignToTrack()\fP, \fBInit()\fP, and \fBRyleRadio\&.Components\&.RadioInsulator\&.RemoveFromTrack()\fP\&.
+.SS "string RyleRadio\&.Tracks\&.RadioTrackWrapper\&.name"
+
+.PP
+The name of this track for use (and easy identification) in the inspector\&. This is usually in the format of \fR{ID}, {range\&.x} - {range\&.y}\fP This is assigned in \fBRadioDataEditor\&.InitNewTrack()\fP 
+.PP
+Definition at line \fB45\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBToString()\fP\&.
+.SS "bool RyleRadio\&.Tracks\&.RadioTrackWrapper\&.playOnInit = true"
+
+.PP
+If true, this track plays on \fBRadioData\&.Init()\fP - usually on game start\&. 
+.PP
+Definition at line \fB87\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioOutput\&.StartPlayers()\fP\&.
+.SS "Vector2 RyleRadio\&.Tracks\&.RadioTrackWrapper\&.range"
+
+.PP
+The range of tunes in which this track can be heard\&. If a \fBRadioOutput\&.Tune\fP value is within this range, the tune power of this track will be > 0, and it will be audible (not counting spatial components+gain+etc) This range is clamped between \fBRadioData\&.LOW_TUNE\fP and \fBRadioData\&.HIGH_TUNE\fP 
+.PP
+Definition at line \fB53\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBGetTunePower()\fP, and \fBScaleRange()\fP\&.
+.SS "const float RyleRadio\&.Tracks\&.RadioTrackWrapper\&.RANGE_DECIMAL_MULTIPLIER = 10f\fR [static]\fP, \fR [private]\fP"
+
+.PP
+The number of decimal places used in the range- the number of zeroes is the number of decimal points, e\&.g: 10 == 1dp, 100 == 2dp, 1 == 0dp (whole numbers) 
+.PP
+Definition at line \fB33\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBScaleRange()\fP\&.
+.SS "AnimationCurve RyleRadio\&.Tracks\&.RadioTrackWrapper\&.rangeCurve = new(DefaultRangeCurve\&.keys)"
+
+.PP
+The curve defining the loudness of the track over its range\&. The progress between \fRrange\&.x\fP and \fRrange\&.y\fP the \fBRadioOutput\&.Tune\fP value is, is the progress along this curve the tune power is\&. 
+.PD 0
+.IP "\(bu" 2
+If the curve is the default curve (smooth from 0 to 1 to 0), it will smoothly get louder towards the center of the range, and quieter towards the edge\&. 
+.IP "\(bu" 2
+If the curve is a flat line at y=1, it will be the same volume across the entire range 
+.IP "\(bu" 2
+If the curve is a line from 0 - 1, it will be louder the further along the range the tune is, getting loudest at \fRrange\&.y\fP 
+.IP "\(bu" 2
+If the curve is goes up and down repeatedly, it will be at various different volumes depending on what you set, moving between them along the range 
+.PP
+
+.PP
+Definition at line \fB65\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBGetTunePower()\fP\&.
+.SS "\fBIRadioTrack\fP RyleRadio\&.Tracks\&.RadioTrackWrapper\&.track\fR [protected]\fP"
+
+.PP
+The actual \fBRadioTrack\fP in this wrapper, its eventType chosen in \fBtrackType\fP\&. We keep this private so that no other classes can access the track directly- this isn't really necessary but it \fIis\fP very safe for custom code
+.PP
+Definition at line \fB117\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBAddToPlayerEndCallback()\fP, \fBCreateTrackLocal()\fP, \fBGetSample()\fP, \fBInit()\fP, and \fBRadioTrackWrapper()\fP\&.
+.SS "string RyleRadio\&.Tracks\&.RadioTrackWrapper\&.trackType\fR [private]\fP"
+
+.PP
+The eventType of track for this wrapper to contain, selectable in the inspector\&. This variable is stored as the track name and displays with a dropdown according to \fBTrackNames\fP\&. 
+.PP
+Definition at line \fB109\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBCreateTrackLocal()\fP, and \fBRadioTrackWrapper()\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "Action<\fBRadioTrackWrapper\fP> RyleRadio\&.Tracks\&.RadioTrackWrapper\&.BeforeInit = new(_ => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+An event called just before the wrapper is initialised\&. 
+.PP
+Definition at line \fB123\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBInit()\fP\&.
+.SS "AnimationCurve RyleRadio\&.Tracks\&.RadioTrackWrapper\&.DefaultRangeCurve\fR [static]\fP, \fR [get]\fP"
+
+.PP
+The default \fBrangeCurve\fP to use when an empty wrapper is created\&. It's a super basic and smooth closed curve from 0 to 0\&. 
+.PP
+Definition at line \fB24\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Editor\&.RadioDataEditor\&.InitNewTrack()\fP\&.
+.SS "float RyleRadio\&.Tracks\&.RadioTrackWrapper\&.Gain\fR [get]\fP"
+
+.PP
+The gain value scaled down to ones- e\&.g \fBgain\fP at 200 is \fBGain\fP at 2\&. 
+.PP
+Definition at line \fB139\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SS "Action<\fBRadioBroadcaster\fP, \fBRadioTrackWrapper\fP> RyleRadio\&.Tracks\&.RadioTrackWrapper\&.OnAddBroadcaster = new((_, _) => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+An event called when a broadcaster is added to the track\&. 
+.PP
+Definition at line \fB126\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioBroadcaster\&.AssignToTrack()\fP\&.
+.SS "Action<\fBRadioInsulator\fP, \fBRadioTrackWrapper\fP> RyleRadio\&.Tracks\&.RadioTrackWrapper\&.OnAddInsulator = new((_, _) => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+An event called when an insulator is added to the track\&. 
+.PP
+Definition at line \fB131\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioInsulator\&.AssignToTrack()\fP\&.
+.SS "Action<\fBRadioTrackWrapper\fP> RyleRadio\&.Tracks\&.RadioTrackWrapper\&.OnInit = new(_ => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+An event called when the wrapper is initialised\&. 
+.PP
+Definition at line \fB121\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBInit()\fP\&.
+.SS "Action<\fBRadioBroadcaster\fP, \fBRadioTrackWrapper\fP> RyleRadio\&.Tracks\&.RadioTrackWrapper\&.OnRemoveBroadcaster = new((_, _) => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+An event called when a broadcaster is removed from this track\&. 
+.PP
+Definition at line \fB128\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioBroadcaster\&.RemoveFromTrack()\fP\&.
+.SS "Action<\fBRadioInsulator\fP, \fBRadioTrackWrapper\fP> RyleRadio\&.Tracks\&.RadioTrackWrapper\&.OnRemoveInsulator = new((_, _) => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+An event called when an insulator is removed from this track\&. 
+.PP
+Definition at line \fB133\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioInsulator\&.RemoveFromTrack()\fP\&.
+.SS "int RyleRadio\&.Tracks\&.RadioTrackWrapper\&.SampleCount\fR [get]\fP"
+
+.PP
+An alias for the track's SampleCount as other classes cannot access \fBtrack\fP directly\&. 
+.PP
+Definition at line \fB206\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SS "float RyleRadio\&.Tracks\&.RadioTrackWrapper\&.SampleRate\fR [get]\fP"
+
+.PP
+An alias for the track's SampleRate as other classes cannot access \fBtrack\fP directly\&. 
+.PP
+Definition at line \fB203\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.SS "string [] RyleRadio\&.Tracks\&.RadioTrackWrapper\&.TrackNames\fR [static]\fP, \fR [get]\fP, \fR [private]\fP"
+
+.PP
+Static; the list of track types stored as their display names\&. This is shown as a dropdown for \fBtrackType\fP and is how types are usually displayed in the inspector\&. 
+.PP
+Definition at line \fB188\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBCreateTrackEditor()\fP, and \fBGetTrackType()\fP\&.
+.SS "Type [] RyleRadio\&.Tracks\&.RadioTrackWrapper\&.TrackTypes\fR [static]\fP, \fR [get]\fP, \fR [private]\fP"
+
+.PP
+A list of each eventType of track that this wrapper can contain- this is anything that inherits from \fBIRadioTrack\fP, and updates dynamically when creating new track types\&. 
+.br
+
+.br
+\fBSee also: \fP \fBRadioUtils\&.FindDerivedTypes()\fP 
+.PP
+Definition at line \fB150\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBCreateTrackEditor()\fP\&.
+.SS "string [] RyleRadio\&.Tracks\&.RadioTrackWrapper\&.TrackTypesAsStrings\fR [static]\fP, \fR [get]\fP, \fR [private]\fP"
+
+.PP
+Static; the list of available track types stored as their typename, NOT as their display names\&. This is used when reassigning track types in \fBRadioDataEditor\fP when the editor reloads, as we only have the typename of the track\&. 
+.PP
+Definition at line \fB168\fP of file \fBRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBGetTrackType()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

@@ -28,13 +28,11 @@
     <member refid="d4/dfd/class_ryle_radio_1_1_multiselect_attribute_1a563578e97c9707a19a1a2a4b3bcb0ce2" kind="function"><name>ToInt</name></member>
   </compound>
   <compound refid="d7/dcd/class_ryle_radio_1_1_multiselect_drawer" kind="class"><name>RyleRadio::MultiselectDrawer</name>
-    <member refid="d7/dcd/class_ryle_radio_1_1_multiselect_drawer_1a1fdd1efcfd6ffdd694315cd4f097b11e" kind="function"><name>GetPropertyHeight</name></member>
     <member refid="d7/dcd/class_ryle_radio_1_1_multiselect_drawer_1afaa402445c2dd20da00a38a95e047b40" kind="function"><name>OnGUI</name></member>
-    <member refid="d7/dcd/class_ryle_radio_1_1_multiselect_drawer_1ae53e1e02c4975cfbe9df45b9da9541fc" kind="function"><name>GetValues</name></member>
   </compound>
   <compound refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event" kind="class"><name>RyleRadio::Components::RadioObserver::ObserverEvent</name>
-    <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a50ff32a03be08deae07437639a8b1597" kind="variable"><name>type</name></member>
-    <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aa3f3983f522937ed634525992a500f83" kind="variable"><name>comparison</name></member>
+    <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aa8dfed9dc1b6e86209dff6307fd5df7e" kind="variable"><name>eventType</name></member>
+    <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aeaa20b6a976f1616a42eaab72b5497fe" kind="variable"><name>comparisonType</name></member>
     <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1aeca94155d569db8deaa7b59d930bae20" kind="variable"><name>clampedValue</name></member>
     <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1a6837b1a846554381d8768afc18a65b8a" kind="variable"><name>tuneValue</name></member>
     <member refid="dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event_1affbce23bf4759630e020d7b21308eca6" kind="variable"><name>clampedRange</name></member>
@@ -95,9 +93,8 @@
     <member refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a209736f65769ba491bbaab0e7e169ea4" kind="function"><name>OnInspectorGUI</name></member>
   </compound>
   <compound refid="d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component" kind="class"><name>RyleRadio::Components::Base::RadioComponent</name>
-    <member refid="d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_1a4793e3a84e577d89c5fb781f124ae86c" kind="property"><name>InitAllComponents</name></member>
-    <member refid="d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_1a335030dac70cfaabc169f1e5743bcacd" kind="property"><name>Data</name></member>
     <member refid="d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_1adf78617ec86177781cebe0f539354489" kind="variable"><name>data</name></member>
+    <member refid="d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_1a335030dac70cfaabc169f1e5743bcacd" kind="property"><name>Data</name></member>
     <member refid="d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_1a881543bb4f215ffc72647e2d64c5b285" kind="function"><name>Init</name></member>
     <member refid="d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_1a41a231ef3f10d9c376bb16d782f33860" kind="function"><name>Awake</name></member>
     <member refid="d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_1a3ae136d8cbdc9cd468197e4ae265f494" kind="function"><name>OnDestroy</name></member>
@@ -121,7 +118,6 @@
     <member refid="da/dc0/class_ryle_radio_1_1_radio_data_1aeaf77cbe4f16f3f034d6aea1d5f11763" kind="variable"><name>forceClipSampleRate</name></member>
     <member refid="da/dc0/class_ryle_radio_1_1_radio_data_1a2d062f0c6983a8cc774c521cc7ff9738" kind="variable"><name>forcedSampleRate</name></member>
     <member refid="da/dc0/class_ryle_radio_1_1_radio_data_1adbb478e6938bfa62dc148c6f5a5cfe17" kind="variable"><name>trackWs</name></member>
-    <member refid="da/dc0/class_ryle_radio_1_1_radio_data_1a67bdd9e7290aa5cb3d9245eb964d4e34" kind="variable"><name>trackNames</name></member>
     <member refid="da/dc0/class_ryle_radio_1_1_radio_data_1a2bbbec28c4d6f5e9306835efa03ca03c" kind="variable"><name>trackIDs</name></member>
     <member refid="da/dc0/class_ryle_radio_1_1_radio_data_1a9764ddee8f9b2c8b0bcae807a8ab4f23" kind="property"><name>GizmoColor</name></member>
     <member refid="da/dc0/class_ryle_radio_1_1_radio_data_1afe82784ccb1155f1d08ca96ba5a9a764" kind="property"><name>GizmoColorSecondary</name></member>
@@ -168,9 +164,9 @@
     <member refid="de/def/class_ryle_radio_1_1_components_1_1_radio_insulator_1a4b7df054ad1dc61eb31421bcc78b7d5a" kind="function"><name>GetPower</name></member>
   </compound>
   <compound refid="d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor" kind="class"><name>RyleRadio::Editor::RadioInsulatorEditor</name>
+    <member refid="d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor_1a39c012ea64ff59badb4c5bc31d51d0e0" kind="variable"><name>insulator</name></member>
     <member refid="d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor_1a4deda2b9f86d4e178990fa4f13a27bc2" kind="variable"><name>outerBoundsHandle</name></member>
     <member refid="d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor_1a0f43eda0bcfb99104646f4d90e7a409c" kind="variable"><name>innerBoundsHandle</name></member>
-    <member refid="d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor_1a39c012ea64ff59badb4c5bc31d51d0e0" kind="variable"><name>insulator</name></member>
     <member refid="d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor_1adc561828455b554c165ed5d29ba7309b" kind="function"><name>OnEnable</name></member>
     <member refid="d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor_1a958ef1e75edb339f975d1f935a0b6f82" kind="function"><name>OnSceneGUI</name></member>
     <member refid="d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor_1a9ab655c595a042bb79566692703311f4" kind="function"><name>OnInspectorGUI</name></member>
@@ -236,7 +232,6 @@
     <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1a263ebb1a84ef2b7731c52f7b5fd9bba7" kind="property"><name>Tune01</name></member>
     <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1a8506b03968417d3adf3383680b50968d" kind="property"><name>DisplayTune</name></member>
     <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1ada8745b2d1d0bb312a4e3df310d7cc92" kind="function"><name>ExecOnTune</name></member>
-    <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1a8025d5d2093e568efc9ef70f7d7d748f" kind="function"><name>Start</name></member>
     <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1a64b45eb880590441ac5d24eef4303ba4" kind="function"><name>StartPlayers</name></member>
     <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1afb8d28cce63a6ed69654faddcb838aab" kind="function"><name>Update</name></member>
     <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1a275462937bf79b9a91d5f8942b97c450" kind="function"><name>LocalInit</name></member>
@@ -245,7 +240,7 @@
     <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1a93bf83f9468286d8b5ceec2e11fe400c" kind="function"><name>Init</name></member>
     <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1aff40c1b83a7f20c0e421a54d183c890f" kind="function"><name>PlayOneShot</name></member>
     <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1a031b4f204740357fe39f0b843f5d2165" kind="function"><name>PlayLoop</name></member>
-    <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1ab3bc47036b92f51fe9ff4deebf6a0edf" kind="function"><name>TryGetPlayer</name></member>
+    <member refid="d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output_1ae8c6b2564a76ec5555387c60111d2fa4" kind="function"><name>TryGetPlayer</name></member>
   </compound>
   <compound refid="d2/d11/class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor" kind="class"><name>RyleRadio::Components::Base::RadioOutputTrackAccessor</name>
     <member refid="d2/d11/class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor_1a7a8b02c2b7ae945381454c364c0ec155" kind="variable"><name>output</name></member>
@@ -279,8 +274,6 @@
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ab3a1b3fd46b3081aa1dab2f0a213fedb" kind="property"><name>OnBroadcastPower</name></member>
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a28a0c7a0016780429e3eef5dd7255d55" kind="property"><name>OnInsulation</name></member>
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a735ce7ede282d98fd8ad863781dd8a69" kind="property"><name>Paused</name></member>
-    <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1abcba3346ec5fdb3ec03b96ff1870e13e" kind="variable"><name>onEnd</name></member>
-    <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ac2fc2b2d0cbfe0ac9a94ff858724d270" kind="variable"><name>paused</name></member>
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ab7c938bd53ccb285095903249eec286b" kind="variable"><name>sampleIncrement</name></member>
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a780415cf951d50bbef7b00ca10b79012" kind="variable"><name>baseSampleRate</name></member>
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1aa1fc7801999a5e50f19d8b95dbf12c12" kind="variable"><name>isStopped</name></member>
@@ -290,6 +283,7 @@
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a95260a8a00495a6d31912a1384a4bcd9" kind="function"><name>IncrementSample</name></member>
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a2c872425fb5246ea5e3f17aa0e933626" kind="function"><name>Stop</name></member>
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1abb7a051d9be9b606c469e846dce2e208" kind="function"><name>ResetProgress</name></member>
+    <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a94b106baf196504b86643c272bea9a1c" kind="function"><name>Destroy</name></member>
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1a8c23ec0f592f84bc29baf6b85d85b18f" kind="function"><name>GetBroadcastPower</name></member>
     <member refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1ae5a7fcbdb6d2499fc93c54c27ea3f875" kind="function"><name>GetInsulation</name></member>
   </compound>
@@ -405,10 +399,6 @@
   <compound refid="d3/d82/namespace_unity_engine" kind="namespace"><name>UnityEngine</name>
   </compound>
   <compound refid="d6/dee/namespace_unity_engine_1_1_events" kind="namespace"><name>UnityEngine::Events</name>
-  </compound>
-  <compound refid="d4/d8e/namespace_unity_engine_1_1_rendering" kind="namespace"><name>UnityEngine::Rendering</name>
-  </compound>
-  <compound refid="d8/d00/namespace_unity_engine_1_1_u_i_elements" kind="namespace"><name>UnityEngine::UIElements</name>
   </compound>
   <compound refid="d6/d07/_radio_broadcaster_editor_8cs" kind="file"><name>RadioBroadcasterEditor.cs</name>
   </compound>

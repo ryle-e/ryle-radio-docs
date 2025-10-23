@@ -1,0 +1,53 @@
+.TH "RyleRadio.Components" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Components \- \fBComponents\fP to be placed on scene objects, e\&.g: Outputs, Broadcasters, Observers\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBBase\fP"
+.br
+.RI "\fBBase\fP interfaces and classes for components, e\&.g: track accessors, output accessors\&. "
+.in -1c
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBRadioBroadcaster\fP"
+.br
+.RI "A "broadcaster" for a \fBRadioTrackWrapper\fP - the closer the \fBRadioOutput\fP that's playing the track is to a broadcaster (taking into consideration broadcast radius, power, etc), the louder the track is in the Output\&. "
+.ti -1c
+.RI "class \fBRadioInsulator\fP"
+.br
+.RI "An "insulator" for a \fBRadioTrackWrapper\fP - if a \fBRadioOutput\fP is inside the bounds of this object, the affected tracks on it will become quieter\&. "
+.ti -1c
+.RI "class \fBRadioInteractor\fP"
+.br
+.RI "A component that performs actions on a radio, such as playing tracks, stopping them, etc 
+.br
+
+.br
+Very useful when writing custom code for a radio, or when using a \fBRadioObserver\fP\&. "
+.ti -1c
+.RI "class \fBRadioObserver\fP"
+.br
+.RI "A component used to watch for specific happenings on a \fBRadioOutput\fP, e\&.g: a clip being a certain volume, a track starting, the tune being in a certain range
+.br
+We don't inherit from RadioComponent here since we don't need to use a \fBRadioData\fP ref, but it's very similar\&. "
+.ti -1c
+.RI "class \fBRadioOutput\fP"
+.br
+.RI "The main scene component for a radio that plays it through an AudioSource\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+\fBComponents\fP to be placed on scene objects, e\&.g: Outputs, Broadcasters, Observers\&. 
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

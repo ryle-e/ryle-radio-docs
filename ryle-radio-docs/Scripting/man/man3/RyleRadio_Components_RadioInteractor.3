@@ -1,0 +1,172 @@
+.TH "RyleRadio.Components.RadioInteractor" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Components.RadioInteractor \- A component that performs actions on a radio, such as playing tracks, stopping them, etc 
+.br
+
+.br
+Very useful when writing custom code for a radio, or when using a \fBRadioObserver\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBRyleRadio\&.Components\&.Base\&.RadioOutputTrackAccessor\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBPlayLoop\fP ()"
+.br
+.RI "Plays \fBaffectedTracks\fP with looping players\&. "
+.ti -1c
+.RI "void \fBPlayOneShot\fP ()"
+.br
+.RI "Plays \fBaffectedTracks\fP with one-shot players\&. "
+.ti -1c
+.RI "void \fBStop\fP ()"
+.br
+.RI "Stops a player on each \fBaffectedTracks\fP\&. "
+.ti -1c
+.RI "void \fBFlipPause\fP ()"
+.br
+.RI "Pauses/unpauses a player on each \fBaffectedTracks\fP\&. "
+.ti -1c
+.RI "void \fBPause\fP ()"
+.br
+.RI "Pauses a player on each \fBaffectedTracks\fP\&. "
+.ti -1c
+.RI "void \fBUnpause\fP ()"
+.br
+.RI "Unpauses a player on each \fBaffectedTracks\fP\&. "
+.ti -1c
+.RI "void \fBResetProgress\fP ()"
+.br
+.RI "Resets the progress of a player on each \fBaffectedTracks\fP\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "int \fBaffectedTracks\fP"
+.br
+.RI "The tracks that this interactor applies to\&. "
+.ti -1c
+.RI "\fBRadioOutput\&.MultiplePlayersSelector\fP \fBplayerSelector\fP"
+.br
+.RI "The method by which this interactor selects a \fBRadioTrackPlayer\fP when one is needed\&. For example, if \fBStop()\fP is called and an affected track has multiple active players, the interactor needs to pick which player to stop- it chooses according to this variable\&. "
+.ti -1c
+.RI "bool \fBdebugAll\fP = false"
+.br
+.RI "Whether or not extra debug information should be printed from this component\&. "
+.in -1c
+.SS "Additional Inherited Members"
+
+
+Protected Member Functions inherited from \fBRyleRadio\&.Components\&.Base\&.RadioOutputTrackAccessor\fP
+.in +1c
+.ti -1c
+.RI "void \fBDoTrackAction\fP (int _trackMask, Action< string > _action)"
+.br
+.RI "Performs an action on any selected tracks using a \fBMultiselectAttribute\fP\&. "
+.in -1c
+
+Protected Attributes inherited from \fBRyleRadio\&.Components\&.Base\&.RadioOutputTrackAccessor\fP
+.in +1c
+.ti -1c
+.RI "\fBRadioOutput\fP \fBoutput\fP"
+.br
+.RI "The \fBRadioOutput\fP to get tracks from\&. "
+.in -1c
+
+Properties inherited from \fBRyleRadio\&.Components\&.Base\&.RadioOutputTrackAccessor\fP
+.in +1c
+.ti -1c
+.RI "List< string > \fBTrackNames\fP\fR [get]\fP"
+.br
+.RI "The names of tracks available in the Output\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A component that performs actions on a radio, such as playing tracks, stopping them, etc 
+.br
+
+.br
+Very useful when writing custom code for a radio, or when using a \fBRadioObserver\fP\&. 
+.PP
+Definition at line \fB13\fP of file \fBRadioInteractor\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void RyleRadio\&.Components\&.RadioInteractor\&.FlipPause ()"
+
+.PP
+Pauses/unpauses a player on each \fBaffectedTracks\fP\&. 
+.PP
+Definition at line \fB75\fP of file \fBRadioInteractor\&.cs\fP\&.
+.SS "void RyleRadio\&.Components\&.RadioInteractor\&.Pause ()"
+
+.PP
+Pauses a player on each \fBaffectedTracks\fP\&. 
+.PP
+Definition at line \fB94\fP of file \fBRadioInteractor\&.cs\fP\&.
+.SS "void RyleRadio\&.Components\&.RadioInteractor\&.PlayLoop ()"
+
+.PP
+Plays \fBaffectedTracks\fP with looping players\&. 
+.PP
+Definition at line \fB38\fP of file \fBRadioInteractor\&.cs\fP\&.
+.SS "void RyleRadio\&.Components\&.RadioInteractor\&.PlayOneShot ()"
+
+.PP
+Plays \fBaffectedTracks\fP with one-shot players\&. 
+.PP
+Definition at line \fB47\fP of file \fBRadioInteractor\&.cs\fP\&.
+.SS "void RyleRadio\&.Components\&.RadioInteractor\&.ResetProgress ()"
+
+.PP
+Resets the progress of a player on each \fBaffectedTracks\fP\&. 
+.PP
+Definition at line \fB132\fP of file \fBRadioInteractor\&.cs\fP\&.
+.SS "void RyleRadio\&.Components\&.RadioInteractor\&.Stop ()"
+
+.PP
+Stops a player on each \fBaffectedTracks\fP\&. 
+.PP
+Definition at line \fB56\fP of file \fBRadioInteractor\&.cs\fP\&.
+.SS "void RyleRadio\&.Components\&.RadioInteractor\&.Unpause ()"
+
+.PP
+Unpauses a player on each \fBaffectedTracks\fP\&. 
+.PP
+Definition at line \fB113\fP of file \fBRadioInteractor\&.cs\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "int RyleRadio\&.Components\&.RadioInteractor\&.affectedTracks\fR [private]\fP"
+
+.PP
+The tracks that this interactor applies to\&. Much like in \fBRadioObserver\fP , you need multiple RadioInteractors to perform actions on different track groups
+.PP
+Definition at line \fB20\fP of file \fBRadioInteractor\&.cs\fP\&.
+.PP
+Referenced by \fBFlipPause()\fP, \fBPause()\fP, \fBPlayLoop()\fP, \fBPlayOneShot()\fP, \fBResetProgress()\fP, \fBStop()\fP, and \fBUnpause()\fP\&.
+.SS "bool RyleRadio\&.Components\&.RadioInteractor\&.debugAll = false\fR [private]\fP"
+
+.PP
+Whether or not extra debug information should be printed from this component\&. 
+.PP
+Definition at line \fB32\fP of file \fBRadioInteractor\&.cs\fP\&.
+.PP
+Referenced by \fBFlipPause()\fP, \fBPause()\fP, \fBResetProgress()\fP, \fBStop()\fP, and \fBUnpause()\fP\&.
+.SS "\fBRadioOutput\&.MultiplePlayersSelector\fP RyleRadio\&.Components\&.RadioInteractor\&.playerSelector\fR [private]\fP"
+
+.PP
+The method by which this interactor selects a \fBRadioTrackPlayer\fP when one is needed\&. For example, if \fBStop()\fP is called and an affected track has multiple active players, the interactor needs to pick which player to stop- it chooses according to this variable\&. 
+.PP
+Definition at line \fB26\fP of file \fBRadioInteractor\&.cs\fP\&.
+.PP
+Referenced by \fBFlipPause()\fP, \fBPause()\fP, \fBResetProgress()\fP, \fBStop()\fP, and \fBUnpause()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

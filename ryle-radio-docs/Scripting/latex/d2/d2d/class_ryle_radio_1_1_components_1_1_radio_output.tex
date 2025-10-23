@@ -1,5 +1,10 @@
 \doxysection{Ryle\+Radio.\+Components.\+Radio\+Output Class Reference}
 \hypertarget{class_ryle_radio_1_1_components_1_1_radio_output}{}\label{class_ryle_radio_1_1_components_1_1_radio_output}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
+
+
+The main scene component for a radio that plays it through an Audio\+Source.  
+
+
 Inheritance diagram for Ryle\+Radio.\+Components.\+Radio\+Output\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -9,94 +14,92 @@ Inheritance diagram for Ryle\+Radio.\+Components.\+Radio\+Output\+:\begin{figure
 \doxysubsubsection*{Public Types}
 \begin{DoxyCompactItemize}
 \item 
-enum {\bfseries Multiple\+Players\+Selector} \{ {\bfseries Youngest}
-, {\bfseries Oldest}
-, {\bfseries Random}
+enum \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73b}{Multiple\+Players\+Selector}} \{ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73baf9a62f5ecd6487473681bb566aa9e5a5}{Youngest}}
+, \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73ba4df211924b23a31142bb7a6ac9a33832}{Oldest}}
+, \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73ba64663f4646781c9c0110838b905daa23}{Random}}
  \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The method by which a \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player} is chosen from this output. Really only matters when you\textquotesingle{}re playing the same track repeatedly causing overlaps. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 override void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a93bf83f9468286d8b5ceec2e11fe400c}{Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes the output itself, and creates all required every required Radio\+Track\+Player. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_aff40c1b83a7f20c0e421a54d183c890f}{Play\+One\+Shot}} (string \+\_\+id)
-\item 
+\begin{DoxyCompactList}\small\item\em Plays a track as a one-\/shot. A one-\/shot destroys itself when its track ends. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a031b4f204740357fe39f0b843f5d2165}{Play\+Loop}} (string \+\_\+id)
-\item 
-bool \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_ab3bc47036b92f51fe9ff4deebf6a0edf}{Try\+Get\+Player}} (string \+\_\+track\+ID, out \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} \+\_\+player, bool \+\_\+create\+New, Multiple\+Players\+Selector \+\_\+multiple\+Player\+Selector=Multiple\+Players\+Selector.\+Youngest)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Plays a track as a loop. A loop restarts when the track ends, then continues to play. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_ae8c6b2564a76ec5555387c60111d2fa4}{Try\+Get\+Player}} (string \+\_\+track\+ID, out \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} \+\_\+player, bool \+\_\+create\+New=false, \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73b}{Multiple\+Players\+Selector}} \+\_\+multiple\+Player\+Selector=\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73baf9a62f5ecd6487473681bb566aa9e5a5}{Multiple\+Players\+Selector.\+Youngest}})
+\begin{DoxyCompactList}\small\item\em Gets an active Radio\+Track\+Player from this output. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component}}}
 \begin{DoxyCompactItemize}
 \item 
 void {\bfseries Init} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Initialises this component. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 virtual void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_afb8d28cce63a6ed69654faddcb838aab}{Update}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Updates \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a78d108fcf5c713a73f416b05199d139d}{cached\+Pos}. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a275462937bf79b9a91d5f8942b97c450}{Local\+Init}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Initializes the Radio\+Data-\/ this needs to be separated from \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a93bf83f9468286d8b5ceec2e11fe400c}{Init()} as it would be recursive otherwise. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_ad2d125d8048b92240e3d066fc6f1fbcd}{Player\+Creation}} (\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} \+\_\+player)
-\item 
+\begin{DoxyCompactList}\small\item\em Sets up and stores a new Radio\+Track\+Player and alerts any \doxylink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radio\+Observer} of its creation. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a2f58b179da3607ed1176621fd6517cfb}{On\+Audio\+Filter\+Read}} (float\mbox{[}$\,$\mbox{]} \+\_\+data, int \+\_\+channels)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets a set of samples from the radio to play from the Audio\+Source-\/ this preserves the settings on the Source, e.\+g\+: volume, 3D. This is the main driving method for the radio\textquotesingle{}s playback. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_aa9d468c4d678c5e50ffd5536bc3a0a5f}{tune}}
-\item 
+\begin{DoxyCompactList}\small\item\em The current tune value of this output-\/ akin to the frequency of a real radio. Controls what tracks can be heard through tune power. Never modify this directly except for in the inspector, use \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}{Tune} instead. \end{DoxyCompactList}\item 
 List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_aba2ca012c0e2aa1302338815e064978b}{players}} = new()
-\item 
+\begin{DoxyCompactList}\small\item\em The players used by this output. \end{DoxyCompactList}\item 
 Vector3 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a78d108fcf5c713a73f416b05199d139d}{cached\+Pos}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The position of this object as of the last frame update. We can\textquotesingle{}t access {\ttfamily transform.\+position} from the audio thread, so we cache it here. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component}}}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{Radio\+Data}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_adf78617ec86177781cebe0f539354489}{data}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_ryle_radio_1_1_radio_data}{Radio\+Data} (aka just radio) that this component is linked to. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radio\+Observer}} $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a1d1c31221ea897d47f1bc6751c723edd}{Observers}} = new()\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Every \doxylink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radio\+Observer} associated with this output. \end{DoxyCompactList}\item 
 Action$<$ float $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a0b1152b45511492e7c2d154ab4232dcb}{On\+Tune}} = new(\+\_\+ =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em Event called whenever \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}{Tune} is changed. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}{Tune}}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_aa9d468c4d678c5e50ffd5536bc3a0a5f}{tune} clamped to the full range. \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a263ebb1a84ef2b7731c52f7b5fd9bba7}{Tune01}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\item 
+\begin{DoxyCompactList}\small\item\em \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}{Tune} scaled to \mbox{[}0 -\/ 1\mbox{]}, useful for UI \end{DoxyCompactList}\item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a8506b03968417d3adf3383680b50968d}{Display\+Tune}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}{Tune} with limited decimal points-\/ looks better when displayed, more like an actual radio \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Properties inherited from \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Ryle\+Radio.\+Components.\+Base.\+Radio\+Component}}}
 \begin{DoxyCompactItemize}
 \item 
-static Action \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a4793e3a84e577d89c5fb781f124ae86c}{Init\+All\+Components}} = new(() =$>$ \{ \})\hspace{0.3cm}{\ttfamily  \mbox{[}get, private set\mbox{]}}
-\item 
 \mbox{\hyperlink{class_ryle_radio_1_1_radio_data}{Radio\+Data}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_a335030dac70cfaabc169f1e5743bcacd}{Data}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Read-\/only accessor for \doxylink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component_adf78617ec86177781cebe0f539354489}{data}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_ada8745b2d1d0bb312a4e3df310d7cc92}{Exec\+On\+Tune}} ()
-\item 
-void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a8025d5d2093e568efc9ef70f7d7d748f}{Start}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Called when tune is modified in the inspector. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a64b45eb880590441ac5d24eef4303ba4}{Start\+Players}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Creates every Radio\+Track\+Player that this output needs for playback. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 float \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_ad8016bfd177ced7adb9d24031587c019}{base\+Sample\+Rate}}
-\item 
+\begin{DoxyCompactList}\small\item\em The normal sample rate of this output, applied to each Radio\+Track\+Player. \end{DoxyCompactList}\item 
 Action \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_a8d23a3577408968b72322be398f0ca97}{play\+Events}} = () =$>$ \{ \}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Called at the end of every audio cycle so that we don\textquotesingle{}t interrupt threads when manipulating Radio\+Track\+Players. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The main scene component for a radio that plays it through an Audio\+Source. 
 
+{\bfseries{See }}Radio\+Track\+Player as well for more info on how playback works 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 
 
@@ -107,11 +110,29 @@ Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00017}{17}} of fil
 \index{MultiplePlayersSelector@{MultiplePlayersSelector}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{MultiplePlayersSelector}{MultiplePlayersSelector}}
 {\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73b} 
-enum Ryle\+Radio.\+Components.\+Radio\+Output.\+Multiple\+Players\+Selector}
+enum \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73b}{Ryle\+Radio.\+Components.\+Radio\+Output.\+Multiple\+Players\+Selector}}}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+The method by which a \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player} is chosen from this output. Really only matters when you\textquotesingle{}re playing the same track repeatedly causing overlaps. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Youngest@{Youngest}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Youngest@{Youngest}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73baf9a62f5ecd6487473681bb566aa9e5a5}\label{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73baf9a62f5ecd6487473681bb566aa9e5a5} 
+Youngest&Selects the youngest player. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Oldest@{Oldest}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Oldest@{Oldest}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73ba4df211924b23a31142bb7a6ac9a33832}\label{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73ba4df211924b23a31142bb7a6ac9a33832} 
+Oldest&Selects the oldest player. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Random@{Random}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Random@{Random}}}\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73ba64663f4646781c9c0110838b905daa23}\label{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73ba64663f4646781c9c0110838b905daa23} 
+Random&Selects a random player (probably useless but funny to have) \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 
 
@@ -126,7 +147,11 @@ void Ryle\+Radio.\+Components.\+Radio\+Output.\+Exec\+On\+Tune (\begin{DoxyParam
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00077}{77}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Called when tune is modified in the inspector. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00103}{103}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a93bf83f9468286d8b5ceec2e11fe400c}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Init@{Init}}
 \index{Init@{Init}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -136,7 +161,11 @@ override void Ryle\+Radio.\+Components.\+Radio\+Output.\+Init (\begin{DoxyParamC
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00106}{106}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Initializes the output itself, and creates all required every required Radio\+Track\+Player. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00143}{143}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a275462937bf79b9a91d5f8942b97c450}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!LocalInit@{LocalInit}}
 \index{LocalInit@{LocalInit}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -146,7 +175,11 @@ void Ryle\+Radio.\+Components.\+Radio\+Output.\+Local\+Init (\begin{DoxyParamCap
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00098}{98}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Initializes the Radio\+Data-\/ this needs to be separated from \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a93bf83f9468286d8b5ceec2e11fe400c}{Init()} as it would be recursive otherwise. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00132}{132}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a2f58b179da3607ed1176621fd6517cfb}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!OnAudioFilterRead@{OnAudioFilterRead}}
 \index{OnAudioFilterRead@{OnAudioFilterRead}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -156,7 +189,20 @@ virtual void Ryle\+Radio.\+Components.\+Radio\+Output.\+On\+Audio\+Filter\+Read 
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00299}{299}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Gets a set of samples from the radio to play from the Audio\+Source-\/ this preserves the settings on the Source, e.\+g\+: volume, 3D. This is the main driving method for the radio\textquotesingle{}s playback. 
+
+The method itself appears to have been initially introduced so devs could create custom audio filters, but it just so happens we can use it for direct output of samples too!
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+data} & Whatever other audio is playing from the Audio\+Source-\/ preferably nothing\\
+\hline
+{\em \+\_\+channels} & The number of channels the Audio\+Source is using-\/ the radio itself is limited to one channel, but still outputs as two-\/ they\textquotesingle{}ll just be identical.\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00358}{358}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_ad2d125d8048b92240e3d066fc6f1fbcd}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!PlayerCreation@{PlayerCreation}}
 \index{PlayerCreation@{PlayerCreation}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -166,7 +212,20 @@ void Ryle\+Radio.\+Components.\+Radio\+Output.\+Player\+Creation (\begin{DoxyPar
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00118}{118}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Sets up and stores a new Radio\+Track\+Player and alerts any \doxylink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radio\+Observer} of its creation. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+player} & The new player to set up\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00158}{158}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00256}{Play\+Loop()}}, \mbox{\hyperlink{_radio_output_8cs_source_l00221}{Play\+One\+Shot()}}, and \mbox{\hyperlink{_radio_output_8cs_source_l00199}{Start\+Players()}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a031b4f204740357fe39f0b843f5d2165}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!PlayLoop@{PlayLoop}}
 \index{PlayLoop@{PlayLoop}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -176,7 +235,19 @@ Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00118}{118}} of fi
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00206}{206}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Plays a track as a loop. A loop restarts when the track ends, then continues to play. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00256}{256}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_aff40c1b83a7f20c0e421a54d183c890f}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!PlayOneShot@{PlayOneShot}}
 \index{PlayOneShot@{PlayOneShot}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -186,17 +257,23 @@ Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00206}{206}} of fi
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00175}{175}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
-
-\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a8025d5d2093e568efc9ef70f7d7d748f}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Start@{Start}}
-\index{Start@{Start}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
-\doxysubsubsection{\texorpdfstring{Start()}{Start()}}
-{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_output_a8025d5d2093e568efc9ef70f7d7d748f} 
-void Ryle\+Radio.\+Components.\+Radio\+Output.\+Start (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+Plays a track as a one-\/shot. A one-\/shot destroys itself when its track ends. 
 
 
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+id} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00091}{91}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00221}{221}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00289}{Try\+Get\+Player()}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a64b45eb880590441ac5d24eef4303ba4}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!StartPlayers@{StartPlayers}}
 \index{StartPlayers@{StartPlayers}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -206,17 +283,43 @@ void Ryle\+Radio.\+Components.\+Radio\+Output.\+Start\+Players (\begin{DoxyParam
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00157}{157}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Creates every Radio\+Track\+Player that this output needs for playback. 
 
-\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_ab3bc47036b92f51fe9ff4deebf6a0edf}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!TryGetPlayer@{TryGetPlayer}}
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00199}{199}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00143}{Init()}}.
+
+\Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_ae8c6b2564a76ec5555387c60111d2fa4}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!TryGetPlayer@{TryGetPlayer}}
 \index{TryGetPlayer@{TryGetPlayer}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
 \doxysubsubsection{\texorpdfstring{TryGetPlayer()}{TryGetPlayer()}}
-{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_output_ab3bc47036b92f51fe9ff4deebf6a0edf} 
-bool Ryle\+Radio.\+Components.\+Radio\+Output.\+Try\+Get\+Player (\begin{DoxyParamCaption}\item[{string}]{\+\_\+track\+ID}{, }\item[{out \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}}}]{\+\_\+player}{, }\item[{bool}]{\+\_\+create\+New}{, }\item[{Multiple\+Players\+Selector}]{\+\_\+multiple\+Player\+Selector}{ = {\ttfamily MultiplePlayersSelector\+:\+:Youngest}}\end{DoxyParamCaption})}
+{\footnotesize\ttfamily \label{class_ryle_radio_1_1_components_1_1_radio_output_ae8c6b2564a76ec5555387c60111d2fa4} 
+bool Ryle\+Radio.\+Components.\+Radio\+Output.\+Try\+Get\+Player (\begin{DoxyParamCaption}\item[{string}]{\+\_\+track\+ID}{, }\item[{out \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}}}]{\+\_\+player}{, }\item[{bool}]{\+\_\+create\+New}{ = {\ttfamily false}, }\item[{\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73b}{Multiple\+Players\+Selector}}}]{\+\_\+multiple\+Player\+Selector}{ = {\ttfamily \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output_acbbea1f65d423c9f0dd80b3d58b8b73baf9a62f5ecd6487473681bb566aa9e5a5}{Multiple\+Players\+Selector\+::\+Youngest}}}}\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00231}{231}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Gets an active Radio\+Track\+Player from this output. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+track\+ID} & The ID of the track used by the player\\
+\hline
+{\em \+\_\+player} & Output parameter containing the found player\\
+\hline
+{\em \+\_\+create\+New} & Whether or not a new player should be created if one can\textquotesingle{}t be found. Players created this way are always one-\/shots\\
+\hline
+{\em \+\_\+multiple\+Player\+Selector} & How a player is selected when multiple are present for the same track\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if a player was found or created, false if not
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00289}{289}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_afb8d28cce63a6ed69654faddcb838aab}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Update@{Update}}
 \index{Update@{Update}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -226,7 +329,11 @@ virtual void Ryle\+Radio.\+Components.\+Radio\+Output.\+Update (\begin{DoxyParam
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00084}{84}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Updates \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a78d108fcf5c713a73f416b05199d139d}{cached\+Pos}. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00113}{113}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 
 
@@ -241,7 +348,15 @@ float Ryle\+Radio.\+Components.\+Radio\+Output.\+base\+Sample\+Rate\hspace{0.3cm
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+The normal sample rate of this output, applied to each Radio\+Track\+Player. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00051}{51}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00143}{Init()}}, \mbox{\hyperlink{_radio_output_8cs_source_l00256}{Play\+Loop()}}, \mbox{\hyperlink{_radio_output_8cs_source_l00221}{Play\+One\+Shot()}}, and \mbox{\hyperlink{_radio_output_8cs_source_l00199}{Start\+Players()}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a78d108fcf5c713a73f416b05199d139d}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!cachedPos@{cachedPos}}
 \index{cachedPos@{cachedPos}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -251,7 +366,15 @@ Vector3 Ryle\+Radio.\+Components.\+Radio\+Output.\+cached\+Pos\hspace{0.3cm}{\tt
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00038}{38}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+The position of this object as of the last frame update. We can\textquotesingle{}t access {\ttfamily transform.\+position} from the audio thread, so we cache it here. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00046}{46}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00358}{On\+Audio\+Filter\+Read()}}, and \mbox{\hyperlink{_radio_output_8cs_source_l00113}{Update()}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_aba2ca012c0e2aa1302338815e064978b}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!players@{players}}
 \index{players@{players}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -261,7 +384,15 @@ List$<$\mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radi
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00033}{33}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+The players used by this output. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00041}{41}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00358}{On\+Audio\+Filter\+Read()}}, \mbox{\hyperlink{_radio_output_8cs_source_l00158}{Player\+Creation()}}, \mbox{\hyperlink{_radio_output_8cs_source_l00221}{Play\+One\+Shot()}}, and \mbox{\hyperlink{_radio_output_8cs_source_l00289}{Try\+Get\+Player()}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a8d23a3577408968b72322be398f0ca97}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!playEvents@{playEvents}}
 \index{playEvents@{playEvents}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -271,7 +402,15 @@ Action Ryle\+Radio.\+Components.\+Radio\+Output.\+play\+Events = () =$>$ \{ \}\h
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00044}{44}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Called at the end of every audio cycle so that we don\textquotesingle{}t interrupt threads when manipulating Radio\+Track\+Players. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00056}{56}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00358}{On\+Audio\+Filter\+Read()}}, \mbox{\hyperlink{_radio_output_8cs_source_l00256}{Play\+Loop()}}, and \mbox{\hyperlink{_radio_output_8cs_source_l00221}{Play\+One\+Shot()}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_aa9d468c4d678c5e50ffd5536bc3a0a5f}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!tune@{tune}}
 \index{tune@{tune}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -281,7 +420,15 @@ float Ryle\+Radio.\+Components.\+Radio\+Output.\+tune\hspace{0.3cm}{\ttfamily [p
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+The current tune value of this output-\/ akin to the frequency of a real radio. Controls what tracks can be heard through tune power. Never modify this directly except for in the inspector, use \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}{Tune} instead. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00036}{36}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00103}{Exec\+On\+Tune()}}, and \mbox{\hyperlink{_radio_output_8cs_source_l00143}{Init()}}.
 
 
 
@@ -296,7 +443,11 @@ float Ryle\+Radio.\+Components.\+Radio\+Output.\+Display\+Tune\hspace{0.3cm}{\tt
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00070}{70}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+\doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}{Tune} with limited decimal points-\/ looks better when displayed, more like an actual radio 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00095}{95}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a1d1c31221ea897d47f1bc6751c723edd}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Observers@{Observers}}
 \index{Observers@{Observers}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -306,7 +457,15 @@ List$<$\mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radi
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00047}{47}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Every \doxylink{class_ryle_radio_1_1_components_1_1_radio_observer}{Radio\+Observer} associated with this output. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00061}{61}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00158}{Player\+Creation()}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a0b1152b45511492e7c2d154ab4232dcb}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!OnTune@{OnTune}}
 \index{OnTune@{OnTune}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -316,7 +475,15 @@ Action$<$float$>$ Ryle\+Radio.\+Components.\+Radio\+Output.\+On\+Tune = new(\+\_
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00050}{50}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+Event called whenever \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}{Tune} is changed. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00066}{66}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00103}{Exec\+On\+Tune()}}, and \mbox{\hyperlink{_radio_output_8cs_source_l00143}{Init()}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Tune@{Tune}}
 \index{Tune@{Tune}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -326,7 +493,15 @@ float Ryle\+Radio.\+Components.\+Radio\+Output.\+Tune\hspace{0.3cm}{\ttfamily [g
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00052}{52}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+The \doxylink{class_ryle_radio_1_1_components_1_1_radio_output_aa9d468c4d678c5e50ffd5536bc3a0a5f}{tune} clamped to the full range. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00071}{71}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_8cs_source_l00358}{On\+Audio\+Filter\+Read()}}.
 
 \Hypertarget{class_ryle_radio_1_1_components_1_1_radio_output_a263ebb1a84ef2b7731c52f7b5fd9bba7}\index{RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}!Tune01@{Tune01}}
 \index{Tune01@{Tune01}!RyleRadio.Components.RadioOutput@{RyleRadio.Components.RadioOutput}}
@@ -336,7 +511,11 @@ float Ryle\+Radio.\+Components.\+Radio\+Output.\+Tune01\hspace{0.3cm}{\ttfamily 
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00065}{65}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
+\doxylink{class_ryle_radio_1_1_components_1_1_radio_output_a5c32b26c33a527186043184bb4c8ec20}{Tune} scaled to \mbox{[}0 -\/ 1\mbox{]}, useful for UI 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_8cs_source_l00087}{87}} of file \mbox{\hyperlink{_radio_output_8cs_source}{Radio\+Output.\+cs}}.
 
 
 

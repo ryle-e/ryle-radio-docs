@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -96,10 +97,19 @@ $(function(){initNavTree('d8/d81/_i_station_track_8cs_source.html','../../','');
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">namespace </span><a class="code hl_namespace" href="../../d0/d28/namespace_ryle_radio_1_1_tracks.html">RyleRadio.Tracks</a></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>{</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span>{<span class="comment"></span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="comment">    /// &lt;summary&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="comment">    /// A RadioTrack that can be played as part of a station.</span></div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="comment">    /// &lt;/summary&gt;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="comment">    /// &lt;remarks&gt;This may end up being useless in future if all tracks can be used as part of a station- currently only other \ref StationRadioTrack s don&#39;t have this (so you can&#39;t nest stations) but that could be changed in future.&lt;/remarks&gt;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="comment">    /// &lt;example&gt;&lt;code&gt;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="comment">    /// public class MyCustomTrack : RadioTrack, IStationTrack { ... }&lt;/code&gt;&lt;/example&gt;</span></div>
 <div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">   10</a></span>    <span class="keyword">public</span> <span class="keyword">interface </span><a class="code hl_interface" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a> : <a class="code hl_interface" href="../../d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.html">IRadioTrack</a></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {<span class="comment"></span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="comment">        /// &lt;summary&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="comment">        /// Whether or not this track is part of a station.</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="comment">        /// &lt;/summary&gt;</span></div>
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html#a494288d59288c18ba985d7b9a7e9fc50">   15</a></span>        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code hl_property" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html#a494288d59288c18ba985d7b9a7e9fc50">IsInStation</a> { <span class="keyword">get</span>; <span class="keyword">set</span>; }</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    }</div>
 </div>

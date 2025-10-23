@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -94,38 +95,69 @@ $(function(){initNavTree('dd/d3f/class_ryle_radio_1_1_components_1_1_radio_obser
   <div class="headertitle"><div class="title">RyleRadio.Components.RadioObserver.ObserverEvent Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>A singular event inside a <a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html">RadioObserver</a>, tracking a value or trigger and invoking methods accordingly.  
+ <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:aaa9e08ebd80bd3f269868020d0659335" id="r_aaa9e08ebd80bd3f269868020d0659335"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaa9e08ebd80bd3f269868020d0659335">EvaluateComparison</a> (float _cValue)</td></tr>
+<tr class="memdesc:aaa9e08ebd80bd3f269868020d0659335"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this event uses a comparison, check if its fulfilled.  <br /></td></tr>
 <tr class="memitem:ab9b5a0e73d00052e5dc8e08244bdf4bf" id="r_ab9b5a0e73d00052e5dc8e08244bdf4bf"><td class="memItemLeft" align="right" valign="top">override string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9b5a0e73d00052e5dc8e08244bdf4bf">ToString</a> ()</td></tr>
+<tr class="memdesc:ab9b5a0e73d00052e5dc8e08244bdf4bf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Makes the event more readable when printed, in the form "{eventType}/{comparisonType}".  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a50ff32a03be08deae07437639a8b1597" id="r_a50ff32a03be08deae07437639a8b1597"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a50ff32a03be08deae07437639a8b1597">type</a></td></tr>
-<tr class="memitem:aa3f3983f522937ed634525992a500f83" id="r_aa3f3983f522937ed634525992a500f83"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7">ComparisonType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3f3983f522937ed634525992a500f83">comparison</a></td></tr>
+<tr class="memitem:aa8dfed9dc1b6e86209dff6307fd5df7e" id="r_aa8dfed9dc1b6e86209dff6307fd5df7e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582">EventType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a></td></tr>
+<tr class="memdesc:aa8dfed9dc1b6e86209dff6307fd5df7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of event this is looking for.  <br /></td></tr>
+<tr class="memitem:aeaa20b6a976f1616a42eaab72b5497fe" id="r_aeaa20b6a976f1616a42eaab72b5497fe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7">ComparisonType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeaa20b6a976f1616a42eaab72b5497fe">comparisonType</a></td></tr>
+<tr class="memdesc:aeaa20b6a976f1616a42eaab72b5497fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">The method of comparisonType used in this event- not shown if a Trigger event is chosen.  <br /></td></tr>
 <tr class="memitem:aeca94155d569db8deaa7b59d930bae20" id="r_aeca94155d569db8deaa7b59d930bae20"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeca94155d569db8deaa7b59d930bae20">clampedValue</a></td></tr>
+<tr class="memdesc:aeca94155d569db8deaa7b59d930bae20"><td class="mdescLeft">&#160;</td><td class="mdescRight">A value clamped between 0 and 1 to use in the comparison. <br  />
+<br  />
+Shows when a comparison is needed, it does not use a range, and the eventType is not set to Tune.  <br /></td></tr>
 <tr class="memitem:a6837b1a846554381d8768afc18a65b8a" id="r_a6837b1a846554381d8768afc18a65b8a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6837b1a846554381d8768afc18a65b8a">tuneValue</a></td></tr>
+<tr class="memdesc:a6837b1a846554381d8768afc18a65b8a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A value clamped between 0 and 1000 to use in the comparison. <br  />
+<br  />
+Shows when a comparison is needed, it does not use a range, and the eventType is set to Tune.  <br /></td></tr>
 <tr class="memitem:affbce23bf4759630e020d7b21308eca6" id="r_affbce23bf4759630e020d7b21308eca6"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#affbce23bf4759630e020d7b21308eca6">clampedRange</a></td></tr>
+<tr class="memdesc:affbce23bf4759630e020d7b21308eca6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A range between 0 and 1 to use in the comparisonType. <br  />
+<br  />
+Shows when a comparison is needed, it needs a range, and the eventType is not set to Tune.  <br /></td></tr>
 <tr class="memitem:ac147c66df74bec1095e1193e6c2c8ee6" id="r_ac147c66df74bec1095e1193e6c2c8ee6"><td class="memItemLeft" align="right" valign="top">Vector2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac147c66df74bec1095e1193e6c2c8ee6">tuneRange</a></td></tr>
+<tr class="memdesc:ac147c66df74bec1095e1193e6c2c8ee6"><td class="mdescLeft">&#160;</td><td class="mdescRight">A range between 0 and 1000 to use in the comparison. <br  />
+<br  />
+Shows when a comparison is needed, it needs a range, and the eventType is set to Tune.  <br /></td></tr>
 <tr class="memitem:a12fd064c8875e47b2ac6b8fa95f8ca77" id="r_a12fd064c8875e47b2ac6b8fa95f8ca77"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12fd064c8875e47b2ac6b8fa95f8ca77">showEvents</a></td></tr>
+<tr class="memdesc:a12fd064c8875e47b2ac6b8fa95f8ca77"><td class="mdescLeft">&#160;</td><td class="mdescRight">Show/hide events- useful when there's a lot of them.  <br /></td></tr>
 <tr class="memitem:a186a6a2a54305ebbce87cf0601c64ff6" id="r_a186a6a2a54305ebbce87cf0601c64ff6"><td class="memItemLeft" align="right" valign="top">UnityEvent&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a186a6a2a54305ebbce87cf0601c64ff6">onTrigger</a></td></tr>
+<tr class="memdesc:a186a6a2a54305ebbce87cf0601c64ff6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when <a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a> is fulfilled for the first time. Only called once until <a class="el" href="#ac13837061117ac1dfefe770da602239e">onEnd</a> is called.  <br /></td></tr>
 <tr class="memitem:a9728b6d7ed2b226c043e7163dfe422cc" id="r_a9728b6d7ed2b226c043e7163dfe422cc"><td class="memItemLeft" align="right" valign="top">UnityEvent&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9728b6d7ed2b226c043e7163dfe422cc">onStay</a></td></tr>
+<tr class="memdesc:a9728b6d7ed2b226c043e7163dfe422cc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called every frame while <a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a> is fulfilled, including the first. Cannot be called if <a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a> is a Trigger event.  <br /></td></tr>
 <tr class="memitem:ac13837061117ac1dfefe770da602239e" id="r_ac13837061117ac1dfefe770da602239e"><td class="memItemLeft" align="right" valign="top">UnityEvent&lt; float &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac13837061117ac1dfefe770da602239e">onEnd</a></td></tr>
+<tr class="memdesc:ac13837061117ac1dfefe770da602239e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Called when <a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a> is no longer fulfilled. Only called once until the event is fulfilled again. Cannot be called if <a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a> is a Trigger event.  <br /></td></tr>
 <tr class="memitem:abd8073223fc9376c41efdaa17fe9e5b3" id="r_abd8073223fc9376c41efdaa17fe9e5b3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd8073223fc9376c41efdaa17fe9e5b3">staying</a> = false</td></tr>
+<tr class="memdesc:abd8073223fc9376c41efdaa17fe9e5b3"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="../../d0/d28/namespace_ryle_radio_1_1_tracks.html" title="Tracks to be used on a radio- includes base classes.">Tracks</a> if this event has been called in this or the previous frame.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-properties" class="groupheader"><a id="properties" name="properties"></a>
 Properties</h2></td></tr>
 <tr class="memitem:a212260a9bdcbea20caf04a84b7733ace" id="r_a212260a9bdcbea20caf04a84b7733ace"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a212260a9bdcbea20caf04a84b7733ace">NotNeedComparison</a><code> [get]</code></td></tr>
+<tr class="memdesc:a212260a9bdcbea20caf04a84b7733ace"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this event not need a value or range to compare to?  <br /></td></tr>
 <tr class="memitem:a9bb5e28acbe1f8437393c86e73f8340f" id="r_a9bb5e28acbe1f8437393c86e73f8340f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9bb5e28acbe1f8437393c86e73f8340f">NeedComparison</a><code> [get]</code></td></tr>
+<tr class="memdesc:a9bb5e28acbe1f8437393c86e73f8340f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this event need a value or range to compare to?  <br /></td></tr>
 <tr class="memitem:a4c521059cfef6cfde8bd05f76ec65a9f" id="r_a4c521059cfef6cfde8bd05f76ec65a9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c521059cfef6cfde8bd05f76ec65a9f">NotNeedVector</a><code> [get]</code></td></tr>
+<tr class="memdesc:a4c521059cfef6cfde8bd05f76ec65a9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this event not need a range to compare to, and uses a single value instead?  <br /></td></tr>
 <tr class="memitem:ac6cef953c886ee37e195fde5932a3110" id="r_ac6cef953c886ee37e195fde5932a3110"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6cef953c886ee37e195fde5932a3110">NeedVector</a><code> [get]</code></td></tr>
+<tr class="memdesc:ac6cef953c886ee37e195fde5932a3110"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this event need a range to compare to, not a single value?  <br /></td></tr>
 <tr class="memitem:aeb0376c5a08f8adce8d61ad4ef0daaad" id="r_aeb0376c5a08f8adce8d61ad4ef0daaad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeb0376c5a08f8adce8d61ad4ef0daaad">NotIsTune</a><code> [get]</code></td></tr>
+<tr class="memdesc:aeb0376c5a08f8adce8d61ad4ef0daaad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this event not use Tune?  <br /></td></tr>
 <tr class="memitem:ac612701e3beeae1bf06ee0a704c7fe91" id="r_ac612701e3beeae1bf06ee0a704c7fe91"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac612701e3beeae1bf06ee0a704c7fe91">IsTune</a><code> [get]</code></td></tr>
+<tr class="memdesc:ac612701e3beeae1bf06ee0a704c7fe91"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does this event use Tune?  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00013">13</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<div class="textblock"><p>A singular event inside a <a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html">RadioObserver</a>, tracking a value or trigger and invoking methods accordingly. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00015">15</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="aaa9e08ebd80bd3f269868020d0659335" name="aaa9e08ebd80bd3f269868020d0659335"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aaa9e08ebd80bd3f269868020d0659335">&#9670;&#160;</a></span>EvaluateComparison()</h2>
@@ -142,7 +174,18 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00086">86</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>If this event uses a comparison, check if its fulfilled. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_cValue</td><td>The value to compare against</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>True if the comparison is fulfilled, false if not</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00114">114</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00235">RyleRadio.Components.RadioObserver.ValueEvent()</a>.</p>
 
 </div>
 </div>
@@ -161,7 +204,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00123">123</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Makes the event more readable when printed, in the form "{eventType}/{comparisonType}". </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00154">154</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
 
 </div>
 </div>
@@ -178,7 +223,13 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00033">33</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>A range between 0 and 1 to use in the comparisonType. <br  />
+<br  />
+Shows when a comparison is needed, it needs a range, and the eventType is not set to Tune. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00047">47</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00114">EvaluateComparison()</a>.</p>
 
 </div>
 </div>
@@ -194,23 +245,53 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00023">23</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>A value clamped between 0 and 1 to use in the comparison. <br  />
+<br  />
+Shows when a comparison is needed, it does not use a range, and the eventType is not set to Tune. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00033">33</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00114">EvaluateComparison()</a>.</p>
 
 </div>
 </div>
-<a id="aa3f3983f522937ed634525992a500f83" name="aa3f3983f522937ed634525992a500f83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3f3983f522937ed634525992a500f83">&#9670;&#160;</a></span>comparison</h2>
+<a id="aeaa20b6a976f1616a42eaab72b5497fe" name="aeaa20b6a976f1616a42eaab72b5497fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aeaa20b6a976f1616a42eaab72b5497fe">&#9670;&#160;</a></span>comparisonType</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7">ComparisonType</a> RyleRadio.Components.RadioObserver.ObserverEvent.comparison</td>
+          <td class="memname"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7">ComparisonType</a> RyleRadio.Components.RadioObserver.ObserverEvent.comparisonType</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00018">18</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>The method of comparisonType used in this event- not shown if a Trigger event is chosen. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00026">26</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00114">EvaluateComparison()</a>, and <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00154">ToString()</a>.</p>
+
+</div>
+</div>
+<a id="aa8dfed9dc1b6e86209dff6307fd5df7e" name="aa8dfed9dc1b6e86209dff6307fd5df7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa8dfed9dc1b6e86209dff6307fd5df7e">&#9670;&#160;</a></span>eventType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582">EventType</a> RyleRadio.Components.RadioObserver.ObserverEvent.eventType</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The type of event this is looking for. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00020">20</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00166">RyleRadio.Components.RadioObserver.AssignEvents()</a>, and <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00154">ToString()</a>.</p>
 
 </div>
 </div>
@@ -226,7 +307,11 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00058">58</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Called when <a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a> is no longer fulfilled. Only called once until the event is fulfilled again. Cannot be called if <a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a> is a Trigger event. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00077">77</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00235">RyleRadio.Components.RadioObserver.ValueEvent()</a>.</p>
 
 </div>
 </div>
@@ -242,7 +327,11 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00053">53</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Called every frame while <a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a> is fulfilled, including the first. Cannot be called if <a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a> is a Trigger event. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00071">71</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00235">RyleRadio.Components.RadioObserver.ValueEvent()</a>.</p>
 
 </div>
 </div>
@@ -258,7 +347,11 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00047">47</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Called when <a class="el" href="#aa8dfed9dc1b6e86209dff6307fd5df7e">eventType</a> is fulfilled for the first time. Only called once until <a class="el" href="#ac13837061117ac1dfefe770da602239e">onEnd</a> is called. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00065">65</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00294">RyleRadio.Components.RadioObserver.TriggerEvent()</a>, and <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00235">RyleRadio.Components.RadioObserver.ValueEvent()</a>.</p>
 
 </div>
 </div>
@@ -274,7 +367,9 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00041">41</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Show/hide events- useful when there's a lot of them. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00059">59</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
 
 </div>
 </div>
@@ -290,7 +385,11 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00061">61</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p><a class="el" href="../../d0/d28/namespace_ryle_radio_1_1_tracks.html" title="Tracks to be used on a radio- includes base classes.">Tracks</a> if this event has been called in this or the previous frame. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00082">82</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00235">RyleRadio.Components.RadioObserver.ValueEvent()</a>.</p>
 
 </div>
 </div>
@@ -306,7 +405,13 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00038">38</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>A range between 0 and 1000 to use in the comparison. <br  />
+<br  />
+Shows when a comparison is needed, it needs a range, and the eventType is set to Tune. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00054">54</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00114">EvaluateComparison()</a>.</p>
 
 </div>
 </div>
@@ -322,23 +427,13 @@ Properties</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00028">28</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>A value clamped between 0 and 1000 to use in the comparison. <br  />
+<br  />
+Shows when a comparison is needed, it does not use a range, and the eventType is set to Tune. </p>
 
-</div>
-</div>
-<a id="a50ff32a03be08deae07437639a8b1597" name="a50ff32a03be08deae07437639a8b1597"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a50ff32a03be08deae07437639a8b1597">&#9670;&#160;</a></span>type</h2>
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00040">40</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="../../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a7c36b405481c6e9460645aa9b0418582">EventType</a> RyleRadio.Components.RadioObserver.ObserverEvent.type</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00015">15</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00114">EvaluateComparison()</a>.</p>
 
 </div>
 </div>
@@ -363,7 +458,11 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00081">81</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Does this event use Tune? </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00105">105</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00114">EvaluateComparison()</a>.</p>
 
 </div>
 </div>
@@ -387,7 +486,11 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00065">65</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Does this event need a value or range to compare to? </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00087">87</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../da/d11/_radio_observer_8cs_source.html#l00235">RyleRadio.Components.RadioObserver.ValueEvent()</a>.</p>
 
 </div>
 </div>
@@ -411,7 +514,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00075">75</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Does this event need a range to compare to, not a single value? </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00098">98</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
 
 </div>
 </div>
@@ -435,7 +540,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00080">80</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Does this event not use Tune? </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00103">103</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
 
 </div>
 </div>
@@ -459,7 +566,11 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00064">64</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Does this event not need a value or range to compare to? </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00085">85</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00114">EvaluateComparison()</a>.</p>
 
 </div>
 </div>
@@ -483,7 +594,9 @@ Properties</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00074">74</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
+<p>Does this event not need a range to compare to, and uses a single value instead? </p>
+
+<p class="definition">Definition at line <a class="el" href="../../de/d20/_observer_event_8cs_source.html#l00096">96</a> of file <a class="el" href="../../de/d20/_observer_event_8cs_source.html">ObserverEvent.cs</a>.</p>
 
 </div>
 </div>

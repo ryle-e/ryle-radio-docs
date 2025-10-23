@@ -104,7 +104,7 @@
 <para>Reads the clip into the <ref refid="de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track_1afb9a8b8a3532d55b7ba050ec54b9e40a" kindref="member">Samples</ref> array, and combines its channels into one. </para>
         </briefdescription>
         <detaileddescription>
-<para>We need to flatten the clip into one channel to play it from a RadioOutput as the Output is only using one channel. Theoretically, we could expand the Output to use multiple channels, but given this would be the only track type to do this it&apos;s probably not worth the significant effort. <linebreak/>
+<para>We need to flatten the clip into one channel to play it from a RadioOutput as the Output is only using one channel. Theoretically, we could expand the Output to use multiple channels, but given this would be the only track eventType to do this it&apos;s probably not worth the significant effort. <linebreak/>
 For the moment, we&apos;ll treat Outputs as AM radios (which are mono in real life) </para>
         </detaileddescription>
         <inbodydescription>
@@ -146,7 +146,7 @@ For the moment, we&apos;ll treat Outputs as AM radios (which are mono in real li
       </memberdef>
     </sectiondef>
     <briefdescription>
-<para>A type of <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref> that plays from a chosen AudioClip object. </para>
+<para>A eventType of <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref> that plays from a chosen AudioClip object. </para>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>

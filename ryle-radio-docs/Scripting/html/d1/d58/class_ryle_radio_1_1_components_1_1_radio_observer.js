@@ -1,6 +1,6 @@
 var class_ryle_radio_1_1_components_1_1_radio_observer =
 [
-    [ "ObserverEvent", "dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html", null ],
+    [ "ObserverEvent", "dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html", "dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event" ],
     [ "ComparisonType", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7", [
       [ "Equal", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7af5f286e73bda105e538310b3190f75c5", null ],
       [ "GreaterThan", "d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#adedd1d6ce5d8cf86977d7187ca74cfd7af6d044fe1f01fb0c956b80099e2a3072", null ],

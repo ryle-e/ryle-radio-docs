@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -94,9 +95,17 @@ $(function(){initNavTree('d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_edit
   <div class="headertitle"><div class="title">RyleRadio.Editor.RadioDataEditor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Inheritance diagram for RyleRadio.Editor.RadioDataEditor:</div>
-<div class="dyncontent">
+
+<p>A custom editor for <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a> <br  />
+<br  />
+ This mainly exists so that we can reset tracks when they're newly added to the <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html" title="The central data object defining the radio. Contains the tracks and information required to play the ...">RadioData</a> and prevent them from being linked- I don't think it actually does its job for that, though <br  />
+<br  />
+<b>See: </b><a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a>.  
+ <a href="#details">More...</a></p>
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Inheritance diagram for RyleRadio.Editor.RadioDataEditor:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
  <div class="center">
   <img src="../../d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_editor.png" alt=""/>
  </div></div>
@@ -104,27 +113,45 @@ Inheritance diagram for RyleRadio.Editor.RadioDataEditor:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9a872a9926fe2651b6799a192035fd1d" id="r_a9a872a9926fe2651b6799a192035fd1d"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9a872a9926fe2651b6799a192035fd1d">OnInspectorGUI</a> ()</td></tr>
+<tr class="memdesc:a9a872a9926fe2651b6799a192035fd1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws variables, buttons, etc.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a391bd5630fd3c7c7661ad581743d7e32" id="r_a391bd5630fd3c7c7661ad581743d7e32"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a391bd5630fd3c7c7661ad581743d7e32">OnEnable</a> ()</td></tr>
+<tr class="memdesc:a391bd5630fd3c7c7661ad581743d7e32"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this object on inspector init.  <br /></td></tr>
 <tr class="memitem:a8790a5428af5e125e0b0ea8016a5423e" id="r_a8790a5428af5e125e0b0ea8016a5423e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8790a5428af5e125e0b0ea8016a5423e">DrawAdvancedOptions</a> ()</td></tr>
+<tr class="memdesc:a8790a5428af5e125e0b0ea8016a5423e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draws the advanced options (gizmo colours, sample rate forcing, cache clear)  <br /></td></tr>
 <tr class="memitem:aaea032733669ccbe0f410f91047f8414" id="r_aaea032733669ccbe0f410f91047f8414"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaea032733669ccbe0f410f91047f8414">InitNewTrack</a> ()</td></tr>
+<tr class="memdesc:aaea032733669ccbe0f410f91047f8414"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes a newly created track.  <br /></td></tr>
 <tr class="memitem:a64c87ed3a04c0e8570ab85bbba8d8877" id="r_a64c87ed3a04c0e8570ab85bbba8d8877"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64c87ed3a04c0e8570ab85bbba8d8877">ForceClipsToSampleRate</a> ()</td></tr>
+<tr class="memdesc:a64c87ed3a04c0e8570ab85bbba8d8877"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get all AudioClips used in this radio, and override their sample rates all at once. This is done to reduce distortion when converting between sample rates at runtime- if you're okay with the distortion there's no issue.  <br /></td></tr>
 <tr class="memitem:ac1d1e1e55d4fb5e159be57169ddd6938" id="r_ac1d1e1e55d4fb5e159be57169ddd6938"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac1d1e1e55d4fb5e159be57169ddd6938">ForceSingleClipToSampleRate</a> (AudioClip _clip)</td></tr>
+<tr class="memdesc:ac1d1e1e55d4fb5e159be57169ddd6938"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override the sample rate of a specific AudioClip.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a59692862cfef7ac05de7e0694195478a" id="r_a59692862cfef7ac05de7e0694195478a"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59692862cfef7ac05de7e0694195478a">trackWs</a></td></tr>
+<tr class="memdesc:a59692862cfef7ac05de7e0694195478a"><td class="mdescLeft">&#160;</td><td class="mdescRight">The tracks contained in this radio.  <br /></td></tr>
 <tr class="memitem:a7eff40e1bae138705a27474c3d195c98" id="r_a7eff40e1bae138705a27474c3d195c98"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7eff40e1bae138705a27474c3d195c98">lastTrackWSize</a></td></tr>
+<tr class="memdesc:a7eff40e1bae138705a27474c3d195c98"><td class="mdescLeft">&#160;</td><td class="mdescRight">The last recorded number of tracks contained in this radio.  <br /></td></tr>
 <tr class="memitem:a0d0aff59cf80e6f5916df49bbe834d75" id="r_a0d0aff59cf80e6f5916df49bbe834d75"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0d0aff59cf80e6f5916df49bbe834d75">gizmoColor</a></td></tr>
+<tr class="memdesc:a0d0aff59cf80e6f5916df49bbe834d75"><td class="mdescLeft">&#160;</td><td class="mdescRight">The primary colour of gizmos on components referencing this radio.  <br /></td></tr>
 <tr class="memitem:a4aeda6991e3c7c6f82519a6b7f586d1d" id="r_a4aeda6991e3c7c6f82519a6b7f586d1d"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4aeda6991e3c7c6f82519a6b7f586d1d">gizmoColorSecondary</a></td></tr>
+<tr class="memdesc:a4aeda6991e3c7c6f82519a6b7f586d1d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The secondary colour of gizmos on components referencing this radio.  <br /></td></tr>
 <tr class="memitem:a3e4d62fd3cafeb53efb53e5d7a81698a" id="r_a3e4d62fd3cafeb53efb53e5d7a81698a"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3e4d62fd3cafeb53efb53e5d7a81698a">forceClipSampleRate</a></td></tr>
+<tr class="memdesc:a3e4d62fd3cafeb53efb53e5d7a81698a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggles whether or not we should force the sample rate on AudioClips used in this radio.  <br /></td></tr>
 <tr class="memitem:a5ce42188aaf14b4adff3a40329ca295b" id="r_a5ce42188aaf14b4adff3a40329ca295b"><td class="memItemLeft" align="right" valign="top">SerializedProperty&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5ce42188aaf14b4adff3a40329ca295b">forcedSampleRate</a></td></tr>
+<tr class="memdesc:a5ce42188aaf14b4adff3a40329ca295b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The sample rate we're forcing on AudioClips used in this radio- if left at 0, picks the project's default sample rate.  <br /></td></tr>
 <tr class="memitem:abf987da8a0cfe4d4a138636f3c2aa8ba" id="r_abf987da8a0cfe4d4a138636f3c2aa8ba"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abf987da8a0cfe4d4a138636f3c2aa8ba">showAdvanced</a> = false</td></tr>
+<tr class="memdesc:abf987da8a0cfe4d4a138636f3c2aa8ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Toggle drawing of advanced settings.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
+<div class="textblock"><p>A custom editor for <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a> <br  />
+<br  />
+ This mainly exists so that we can reset tracks when they're newly added to the <a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html" title="The central data object defining the radio. Contains the tracks and information required to play the ...">RadioData</a> and prevent them from being linked- I don't think it actually does its job for that, though <br  />
+<br  />
+<b>See: </b><a class="el" href="../../da/dc0/class_ryle_radio_1_1_radio_data.html">RadioData</a>. </p>
+
 <p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00016">16</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="a8790a5428af5e125e0b0ea8016a5423e" name="a8790a5428af5e125e0b0ea8016a5423e"></a>
@@ -150,7 +177,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00109">109</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>Draws the advanced options (gizmo colours, sample rate forcing, cache clear) </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00123">123</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00083">OnInspectorGUI()</a>.</p>
 
 </div>
 </div>
@@ -177,7 +208,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00161">161</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>Get all AudioClips used in this radio, and override their sample rates all at once. This is done to reduce distortion when converting between sample rates at runtime- if you're okay with the distortion there's no issue. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00179">179</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00123">DrawAdvancedOptions()</a>.</p>
 
 </div>
 </div>
@@ -204,7 +239,17 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00190">190</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>Override the sample rate of a specific AudioClip. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">_clip</td><td>The clip to override the sample rate on</td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00211">211</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00179">ForceClipsToSampleRate()</a>.</p>
 
 </div>
 </div>
@@ -231,7 +276,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00133">133</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>Initializes a newly created track. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00150">150</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00083">OnInspectorGUI()</a>.</p>
 
 </div>
 </div>
@@ -258,7 +307,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00032">32</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>Initializes this object on inspector init. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00040">40</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
 
 </div>
 </div>
@@ -277,7 +328,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00072">72</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>Draws variables, buttons, etc. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00083">83</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
 
 </div>
 </div>
@@ -302,7 +355,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>Toggles whether or not we should force the sample rate on AudioClips used in this radio. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00029">29</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00123">DrawAdvancedOptions()</a>, <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00211">ForceSingleClipToSampleRate()</a>, and <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00040">OnEnable()</a>.</p>
 
 </div>
 </div>
@@ -326,7 +383,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00025">25</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>The sample rate we're forcing on AudioClips used in this radio- if left at 0, picks the project's default sample rate. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00031">31</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00123">DrawAdvancedOptions()</a>, <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00211">ForceSingleClipToSampleRate()</a>, and <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00040">OnEnable()</a>.</p>
 
 </div>
 </div>
@@ -350,7 +411,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>The primary colour of gizmos on components referencing this radio. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00024">24</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00123">DrawAdvancedOptions()</a>, and <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00040">OnEnable()</a>.</p>
 
 </div>
 </div>
@@ -374,7 +439,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00022">22</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>The secondary colour of gizmos on components referencing this radio. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00026">26</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00123">DrawAdvancedOptions()</a>, and <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00040">OnEnable()</a>.</p>
 
 </div>
 </div>
@@ -398,7 +467,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>The last recorded number of tracks contained in this radio. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00021">21</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00150">InitNewTrack()</a>, <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00040">OnEnable()</a>, and <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00083">OnInspectorGUI()</a>.</p>
 
 </div>
 </div>
@@ -422,7 +495,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00028">28</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>Toggle drawing of advanced settings. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00034">34</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00083">OnInspectorGUI()</a>.</p>
 
 </div>
 </div>
@@ -446,7 +523,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00018">18</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+<p>The tracks contained in this radio. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00019">19</a> of file <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html">RadioDataEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00179">ForceClipsToSampleRate()</a>, <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00150">InitNewTrack()</a>, <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00040">OnEnable()</a>, and <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00083">OnInspectorGUI()</a>.</p>
 
 </div>
 </div>

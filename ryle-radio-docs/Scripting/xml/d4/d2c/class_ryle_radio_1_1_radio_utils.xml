@@ -119,7 +119,7 @@
 <parametername>_baseType</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The type to find derived types of</para>
+<para>The eventType to find derived types of</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>

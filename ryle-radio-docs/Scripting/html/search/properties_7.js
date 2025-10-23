@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['onaddbroadcaster_0',['OnAddBroadcaster',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a20ef79299950a601ac26e06f320f1046',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
-  ['onaddinsulator_1',['OnAddInsulator',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a371c6db231ca6c2ca44be011ae29fe03',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
-  ['oneto32_2',['OneTo32',['../d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html#ac39c193ea12fa1e621d6c98a5ce8a7c9',1,'RyleRadio::MultiselectAttribute']]],
-  ['oninit_3',['OnInit',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a0e5992ef4634849c28ec66de1e3baef3',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
-  ['onremovebroadcaster_4',['OnRemoveBroadcaster',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a2e298eae6270b5e163f4aae805cc3dd4',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
-  ['onremoveinsulator_5',['OnRemoveInsulator',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a1c98ba01c1d2ec6303002217691c7d6e',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
-  ['optionsname_6',['OptionsName',['../d4/dfd/class_ryle_radio_1_1_multiselect_attribute.html#a78e4acb7a1e6b89d62119307900a6363',1,'RyleRadio::MultiselectAttribute']]]
+  ['needcomparison_0',['NeedComparison',['../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html#a9bb5e28acbe1f8437393c86e73f8340f',1,'RyleRadio::Components::RadioObserver::ObserverEvent']]],
+  ['needvector_1',['NeedVector',['../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html#ac6cef953c886ee37e195fde5932a3110',1,'RyleRadio::Components::RadioObserver::ObserverEvent']]],
+  ['notistune_2',['NotIsTune',['../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html#aeb0376c5a08f8adce8d61ad4ef0daaad',1,'RyleRadio::Components::RadioObserver::ObserverEvent']]],
+  ['notneedcomparison_3',['NotNeedComparison',['../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html#a212260a9bdcbea20caf04a84b7733ace',1,'RyleRadio::Components::RadioObserver::ObserverEvent']]],
+  ['notneedvector_4',['NotNeedVector',['../dd/d3f/class_ryle_radio_1_1_components_1_1_radio_observer_1_1_observer_event.html#a4c521059cfef6cfde8bd05f76ec65a9f',1,'RyleRadio::Components::RadioObserver::ObserverEvent']]]
 ];

@@ -1,0 +1,92 @@
+.TH "RyleRadio.Components.Base.RadioComponent" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Components.Base.RadioComponent \- A scene component that holds a reference to a \fBRadioData\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits MonoBehaviour\&.
+.PP
+Inherited by \fBRyleRadio\&.Components\&.Base\&.RadioComponentDataAccessor\fP, and \fBRyleRadio\&.Components\&.RadioOutput\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "Initialises this component\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBRadioData\fP \fBdata\fP"
+.br
+.RI "The \fBRadioData\fP (aka just radio) that this component is linked to\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBRadioData\fP \fBData\fP\fR [get]\fP"
+.br
+.RI "Read-only accessor for \fBdata\fP\&. "
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBAwake\fP ()"
+.br
+.RI "Link \fBInit()\fP to the radio's init\&. "
+.ti -1c
+.RI "void \fBOnDestroy\fP ()"
+.br
+.RI "Unlink \fBInit()\fP from the radio's init\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A scene component that holds a reference to a \fBRadioData\fP\&. 
+.PP
+Definition at line \fB10\fP of file \fBRadioComponent\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void RyleRadio\&.Components\&.Base\&.RadioComponent\&.Awake ()\fR [private]\fP"
+
+.PP
+Link \fBInit()\fP to the radio's init\&. 
+.PP
+Definition at line \fB32\fP of file \fBRadioComponent\&.cs\fP\&.
+.SS "void RyleRadio\&.Components\&.Base\&.RadioComponent\&.OnDestroy ()\fR [private]\fP"
+
+.PP
+Unlink \fBInit()\fP from the radio's init\&. 
+.PP
+Definition at line \fB40\fP of file \fBRadioComponent\&.cs\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBRadioData\fP RyleRadio\&.Components\&.Base\&.RadioComponent\&.data\fR [protected]\fP"
+
+.PP
+The \fBRadioData\fP (aka just radio) that this component is linked to\&. 
+.PP
+Definition at line \fB15\fP of file \fBRadioComponent\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.Base\&.RadioComponentDataAccessor\&.AssignToTracksGeneric()\fP, and \fBRyleRadio\&.Components\&.RadioOutput\&.LocalInit()\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "\fBRadioData\fP RyleRadio\&.Components\&.Base\&.RadioComponent\&.Data\fR [get]\fP"
+
+.PP
+Read-only accessor for \fBdata\fP\&. 
+.PP
+Definition at line \fB20\fP of file \fBRadioComponent\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioOutput\&.PlayerCreation()\fP, \fBRyleRadio\&.Components\&.RadioOutput\&.PlayLoop()\fP, \fBRyleRadio\&.Components\&.RadioOutput\&.PlayOneShot()\fP, and \fBRyleRadio\&.Components\&.RadioOutput\&.StartPlayers()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

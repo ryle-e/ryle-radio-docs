@@ -1,0 +1,126 @@
+.TH "RyleRadio.RadioUtils" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.RadioUtils \- Various utilities used throughout the project\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static float \fBRemap\fP (this float _value, float _from1, float _to1, float _from2, float _to2)"
+.br
+.RI "Remaps a float between \fR[_from1 - _from2]\fP to \fR[_to1 - _to2]\fP Preserves the float's position in the range\&. "
+.ti -1c
+.RI "static Vector3 \fBAbs\fP (this Vector3 _value)"
+.br
+.RI "Gets the absolute value of all components of a vector at once\&. "
+.ti -1c
+.RI "static Type[] \fBFindDerivedTypes\fP (Type _baseType)"
+.br
+.RI "Gets all types derived from a given one\&. Does not include:
+.PD 0
+.IP "\(bu" 2
+Interfaces 
+.IP "\(bu" 2
+Generic classes 
+.IP "\(bu" 2
+Abstract classes
+.PP
+"
+.in -1c
+.SH "Detailed Description"
+.PP 
+Various utilities used throughout the project\&. 
+.PP
+Definition at line \fB27\fP of file \fBRadioUtils\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Vector3 RyleRadio\&.RadioUtils\&.Abs (this Vector3 _value)\fR [static]\fP"
+
+.PP
+Gets the absolute value of all components of a vector at once\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_value\fP The vector to convert to absolute values
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The same vector, but any negative numbers have been flipped to positive
+.RE
+.PP
+
+.PP
+.PP
+.nf
+Vector3 mixed = new Vector3(\-10, 3, 0);
+Vector3 abs = mixed\&.Abs();
+Debug\&.Log(abs); // logs Vector3(10, 3, 0)
+.fi
+.PP
+
+.PP
+Definition at line \fB55\fP of file \fBRadioUtils\&.cs\fP\&.
+.SS "Type[] RyleRadio\&.RadioUtils\&.FindDerivedTypes (Type _baseType)\fR [static]\fP"
+
+.PP
+Gets all types derived from a given one\&. Does not include:
+.PD 0
+.IP "\(bu" 2
+Interfaces 
+.IP "\(bu" 2
+Generic classes 
+.IP "\(bu" 2
+Abstract classes
+.PP
+
+.PP
+\fBParameters\fP
+.RS 4
+\fI_baseType\fP The eventType to find derived types of
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+An array of types that derive from \fB_baseType\fP
+.RE
+.PP
+
+.PP
+Definition at line \fB72\fP of file \fBRadioUtils\&.cs\fP\&.
+.SS "float RyleRadio\&.RadioUtils\&.Remap (this float _value, float _from1, float _to1, float _from2, float _to2)\fR [static]\fP"
+
+.PP
+Remaps a float between \fR[_from1 - _from2]\fP to \fR[_to1 - _to2]\fP Preserves the float's position in the range\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_value\fP A _value between \fR_from1\fP and \fR_from2\fP
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A _value between \fR_to1\fP and \fR_to2\fP
+.RE
+.PP
+
+.PP
+.PP
+.nf
+float _value = 1;
+float output = _value\&.Remap(0, 5, 2, 15); // remap 1 from [0 \- 2] to [5 \- 15]
+Debug\&.Log(output); // logs 10
+.fi
+.PP
+
+.PP
+Definition at line \fB40\fP of file \fBRadioUtils\&.cs\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

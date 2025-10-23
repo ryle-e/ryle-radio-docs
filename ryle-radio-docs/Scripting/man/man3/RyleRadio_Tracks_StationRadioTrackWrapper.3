@@ -1,0 +1,272 @@
+.TH "RyleRadio.Tracks.StationRadioTrackWrapper" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Tracks.StationRadioTrackWrapper \- A smaller, separate version of \fBRadioTrackWrapper\fP for use in a \fBStationRadioTrack\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBStationRadioTrackWrapper\fP (\fBIStationTrack\fP _track)"
+.br
+.RI "Creates an empty wrapper for a station\&. "
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "Initialize the track stored in this wrapper\&. "
+.ti -1c
+.RI "void \fBCreateTrackLocal\fP ()"
+.br
+.RI "Creates a new track in this wrapper\&. This is called when \fBtrackType\fP is updated\&. "
+.ti -1c
+.RI "float \fBGetSample\fP (int _sampleIndex)"
+.br
+.RI "Gets a sample from the contained track\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBOnReload\fP ()"
+.br
+.RI "Updates track types and names on script reload to detect any new types\&. "
+.ti -1c
+.RI "static \fBIStationTrack\fP \fBCreateTrackEditor\fP (string _name)"
+.br
+.RI "Gets a new track to be used in a wrapper- note that this is marked as \fRstatic\fP
+.br
+ This is mainly used in the editor to update the track eventType when it's selected on \fBtrackType\fP\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBgain\fP = 100"
+.br
+.RI "The additional volume of this track\&. See \fBRadioTrackWrapper\&.gain\fP\&. "
+.ti -1c
+.RI "Vector2 \fBstartAndEndRests\fP = Vector2\&.zero"
+.br
+.RI "The amount of time at the start and end of the track for which there's silence\&. This allows you to spread tracks apart a little bit\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBIStationTrack\fP \fBtrack\fP"
+.br
+.RI "The track contained in this wrapper\&.
+.br
+ Note that this is an \fBIStationTrack\fP and not an \fBIRadioTrack\fP like in the normal \fBRadioTrackWrapper\fP Some custom track types might not be usable in a station (e\&.g a station within a station)- hence we need to separate those that can be in one from those that can't\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "float \fBGain\fP\fR [get]\fP"
+.br
+.RI "The gain value scaled down to ones- e\&.g \fBgain\fP at 200 is \fBGain\fP at 2\&. "
+.ti -1c
+.RI "static Type[] \fBTrackTypes\fP\fR [get]\fP"
+.br
+.RI "A list of each eventType of track that this wrapper can contain- this is anything that inherits from \fBIStationTrack\fP 
+.br
+
+.br
+\fBSee also: \fP \fBRadioUtils\&.FindDerivedTypes()\fP "
+.ti -1c
+.RI "static string[] \fBTrackNames\fP\fR [get]\fP"
+.br
+.RI "A list of the names of each eventType in \fBTrackTypes\fP This is what's displayed in the inspector for the user to choose from\&. "
+.ti -1c
+.RI "AudioClip \fBEditorChildClip\fP\fR [get]\fP"
+.br
+.RI "If this wrapper contains a \fBClipRadioTrack\fP , this becomes a reference to the track's clip\&. Used when forcing sample rates in \fBRadioDataEditor\&.ForceSampleRate()\fP "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "string \fBid\fP"
+.br
+.RI "The ID of this track\&. "
+.ti -1c
+.RI "string \fBtrackType\fP = 'None'"
+.br
+.RI "The current eventType of this track as chosen in the editor\&. Displayed as a dropdown of \fBRadioTrack\fP \fRDISPLAY_NAME\fPs\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A smaller, separate version of \fBRadioTrackWrapper\fP for use in a \fBStationRadioTrack\fP\&. 
+
+This is how child tracks are contained inside stations- very similar to how normal tracks themselves are stored in \fBRadioData\fP
+
+.PP
+We could probably use an interface in future for both this and \fBRadioTrackWrapper\fP, but I fear we won't ever use that interface again and it would just obfuscate functionality If it'd be useful, though, I'm happy to implement 
+.PP
+Definition at line \fB21\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.StationRadioTrackWrapper (\fBIStationTrack\fP _track)"
+
+.PP
+Creates an empty wrapper for a station\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_track\fP The default track eventType to use
+.RE
+.PP
+
+.PP
+Definition at line \fB124\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "\fBIStationTrack\fP RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.CreateTrackEditor (string _name)\fR [static]\fP"
+
+.PP
+Gets a new track to be used in a wrapper- note that this is marked as \fRstatic\fP
+.br
+ This is mainly used in the editor to update the track eventType when it's selected on \fBtrackType\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_name\fP The name of the track eventType to create
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A new track with the given eventType
+.RE
+.PP
+
+.PP
+Definition at line \fB151\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBCreateTrackLocal()\fP, and \fBRyleRadio\&.Editor\&.StationRadioTrackEditor\&.OnGUI()\fP\&.
+.SS "void RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.CreateTrackLocal ()"
+
+.PP
+Creates a new track in this wrapper\&. This is called when \fBtrackType\fP is updated\&. 
+.PP
+Definition at line \fB180\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBStationRadioTrackWrapper()\fP\&.
+.SS "float RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.GetSample (int _sampleIndex)"
+
+.PP
+Gets a sample from the contained track\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_sampleIndex\fP Index of the sample to get
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A sample from the contained track
+.RE
+.PP
+
+.PP
+Definition at line \fB190\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.SS "void RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.Init ()"
+
+.PP
+Initialize the track stored in this wrapper\&. 
+.PP
+Definition at line \fB172\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Tracks\&.StationRadioTrack\&.Init()\fP\&.
+.SS "void RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.OnReload ()\fR [static]\fP"
+
+.PP
+Updates track types and names on script reload to detect any new types\&. 
+.PP
+Definition at line \fB138\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "float RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.gain = 100"
+
+.PP
+The additional volume of this track\&. See \fBRadioTrackWrapper\&.gain\fP\&. 
+.PP
+Definition at line \fB31\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBStationRadioTrackWrapper()\fP\&.
+.SS "string RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.id\fR [private]\fP"
+
+.PP
+The ID of this track\&. 
+.PP
+Definition at line \fB26\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.SS "Vector2 RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.startAndEndRests = Vector2\&.zero"
+
+.PP
+The amount of time at the start and end of the track for which there's silence\&. This allows you to spread tracks apart a little bit\&. 
+.PP
+Definition at line \fB36\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP\&.
+.SS "\fBIStationTrack\fP RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.track\fR [protected]\fP"
+
+.PP
+The track contained in this wrapper\&.
+.br
+ Note that this is an \fBIStationTrack\fP and not an \fBIRadioTrack\fP like in the normal \fBRadioTrackWrapper\fP Some custom track types might not be usable in a station (e\&.g a station within a station)- hence we need to separate those that can be in one from those that can't\&. 
+.PP
+Definition at line \fB50\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBCreateTrackLocal()\fP, \fBGetSample()\fP, \fBInit()\fP, and \fBStationRadioTrackWrapper()\fP\&.
+.SS "string RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.trackType = 'None'\fR [private]\fP"
+
+.PP
+The current eventType of this track as chosen in the editor\&. Displayed as a dropdown of \fBRadioTrack\fP \fRDISPLAY_NAME\fPs\&. 
+.PP
+Definition at line \fB42\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBCreateTrackLocal()\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "AudioClip RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.EditorChildClip\fR [get]\fP"
+
+.PP
+If this wrapper contains a \fBClipRadioTrack\fP , this becomes a reference to the track's clip\&. Used when forcing sample rates in \fBRadioDataEditor\&.ForceSampleRate()\fP 
+.PP
+Definition at line \fB117\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Editor\&.RadioDataEditor\&.ForceClipsToSampleRate()\fP\&.
+.SS "float RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.Gain\fR [get]\fP"
+
+.PP
+The gain value scaled down to ones- e\&.g \fBgain\fP at 200 is \fBGain\fP at 2\&. 
+.PP
+Definition at line \fB73\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.SS "string [] RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.TrackNames\fR [static]\fP, \fR [get]\fP, \fR [private]\fP"
+
+.PP
+A list of the names of each eventType in \fBTrackTypes\fP This is what's displayed in the inspector for the user to choose from\&. 
+.PP
+Definition at line \fB100\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBCreateTrackEditor()\fP\&.
+.SS "Type [] RyleRadio\&.Tracks\&.StationRadioTrackWrapper\&.TrackTypes\fR [static]\fP, \fR [get]\fP, \fR [private]\fP"
+
+.PP
+A list of each eventType of track that this wrapper can contain- this is anything that inherits from \fBIStationTrack\fP 
+.br
+
+.br
+\fBSee also: \fP \fBRadioUtils\&.FindDerivedTypes()\fP 
+.PP
+Definition at line \fB82\fP of file \fBStationRadioTrackWrapper\&.cs\fP\&.
+.PP
+Referenced by \fBCreateTrackEditor()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

@@ -1,0 +1,166 @@
+.TH "RyleRadio.Tracks.ClipRadioTrack" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Tracks.ClipRadioTrack \- A eventType of \fBRadioTrack\fP that plays from a chosen AudioClip object\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBRyleRadio\&.Tracks\&.RadioTrack\fP, and \fBRyleRadio\&.Tracks\&.IStationTrack\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "override void \fBInit\fP ()"
+.br
+.RI "Initializes this track\&. This needs to be called every time the clip is changed\&. "
+.ti -1c
+.RI "void \fBReadClipAndForceToMono\fP ()"
+.br
+.RI "Reads the clip into the \fBSamples\fP array, and combines its channels into one\&. "
+.ti -1c
+.RI "override float \fBGetSample\fP (int _sampleIndex)"
+.br
+.RI "Gets a sample from the clip\&. "
+.in -1c
+
+Public Member Functions inherited from \fBRyleRadio\&.Tracks\&.RadioTrack\fP
+.in +1c
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "Initializes this track\&. "
+.ti -1c
+.RI "float \fBGetSample\fP (int _sampleIndex)"
+.br
+.RI "Gets a sample from the track\&. "
+.ti -1c
+.RI "virtual void \fBAddToPlayerEndCallback\fP (ref Action< \fBRadioTrackPlayer\fP > _callback)"
+.br
+.RI "Activates an event to run whenever this track ends\&. This is mainly used for stations to switch track when the previous one ends\&. "
+.in -1c
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "AudioClip \fBclip\fP"
+.br
+.RI "The clip that this track plays\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const string \fBDISPLAY_NAME\fP = 'Audio Clip'"
+.br
+.RI "The display name of this track in the editor\&. Required in \fBRadioTrack\fP\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "float[] \fBSamples\fP\fR [get, set]\fP"
+.br
+.RI "The individual samples of this clip, as it needs to be played sample-by-sample (a limitation of Unity's AudioClip) "
+.ti -1c
+.RI "bool \fBIsInStation\fP\fR [get, set]\fP"
+.br
+.RI "Whether or not this is in a \fBStationRadioTrack\fP Required by \fBIStationTrack\fP\&. "
+.in -1c
+
+Properties inherited from \fBRyleRadio\&.Tracks\&.RadioTrack\fP
+.in +1c
+.ti -1c
+.RI "float \fBSampleRate\fP\fR [get, set]\fP"
+.br
+.RI "The sample rate of this track\&. "
+.ti -1c
+.RI "virtual int \fBSampleCount\fP\fR [get, set]\fP"
+.br
+.RI "The number of samples in this track\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A eventType of \fBRadioTrack\fP that plays from a chosen AudioClip object\&. 
+.PP
+Definition at line \fB10\fP of file \fBClipRadioTrack\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "override float RyleRadio\&.Tracks\&.ClipRadioTrack\&.GetSample (int _sampleIndex)"
+
+.PP
+Gets a sample from the clip\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_sampleIndex\fP The index of the sample
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+A sample from the clip at the given index
+.RE
+.PP
+
+.PP
+Implements \fBRyleRadio\&.Tracks\&.IRadioTrack\fP\&.
+.PP
+Definition at line \fB82\fP of file \fBClipRadioTrack\&.cs\fP\&.
+.SS "override void RyleRadio\&.Tracks\&.ClipRadioTrack\&.Init ()"
+
+.PP
+Initializes this track\&. This needs to be called every time the clip is changed\&. 
+.PP
+Implements \fBRyleRadio\&.Tracks\&.IRadioTrack\fP\&.
+.PP
+Definition at line \fB37\fP of file \fBClipRadioTrack\&.cs\fP\&.
+.SS "void RyleRadio\&.Tracks\&.ClipRadioTrack\&.ReadClipAndForceToMono ()"
+
+.PP
+Reads the clip into the \fBSamples\fP array, and combines its channels into one\&. We need to flatten the clip into one channel to play it from a \fBRadioOutput\fP as the Output is only using one channel\&. Theoretically, we could expand the Output to use multiple channels, but given this would be the only track eventType to do this it's probably not worth the significant effort\&. 
+.br
+For the moment, we'll treat Outputs as AM radios (which are mono in real life) 
+.PP
+Definition at line \fB51\fP of file \fBClipRadioTrack\&.cs\fP\&.
+.PP
+Referenced by \fBInit()\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "AudioClip RyleRadio\&.Tracks\&.ClipRadioTrack\&.clip"
+
+.PP
+The clip that this track plays\&. 
+.PP
+Definition at line \fB20\fP of file \fBClipRadioTrack\&.cs\fP\&.
+.PP
+Referenced by \fBInit()\fP, and \fBReadClipAndForceToMono()\fP\&.
+.SS "const string RyleRadio\&.Tracks\&.ClipRadioTrack\&.DISPLAY_NAME = 'Audio Clip'\fR [static]\fP"
+
+.PP
+The display name of this track in the editor\&. Required in \fBRadioTrack\fP\&. 
+.PP
+Definition at line \fB15\fP of file \fBClipRadioTrack\&.cs\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "bool RyleRadio\&.Tracks\&.ClipRadioTrack\&.IsInStation\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Whether or not this is in a \fBStationRadioTrack\fP Required by \fBIStationTrack\fP\&. 
+.PP
+Implements \fBRyleRadio\&.Tracks\&.IStationTrack\fP\&.
+.PP
+Definition at line \fB31\fP of file \fBClipRadioTrack\&.cs\fP\&.
+.SS "float [] RyleRadio\&.Tracks\&.ClipRadioTrack\&.Samples\fR [get]\fP, \fR [set]\fP, \fR [protected]\fP"
+
+.PP
+The individual samples of this clip, as it needs to be played sample-by-sample (a limitation of Unity's AudioClip) 
+.PP
+Definition at line \fB25\fP of file \fBClipRadioTrack\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP, \fBInit()\fP, and \fBReadClipAndForceToMono()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

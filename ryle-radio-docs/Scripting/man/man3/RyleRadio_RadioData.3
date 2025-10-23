@@ -1,0 +1,309 @@
+.TH "RyleRadio.RadioData" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.RadioData \- The central data object defining the radio\&. Contains the tracks and information required to play the radio at runtime\&. 
+.br
+
+.br
+Has a custom editor at \fBRadioDataEditor\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits ScriptableObject\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInit\fP ()"
+.br
+.RI "Initialise this radio, its tracks, and referenced components\&. "
+.ti -1c
+.RI "void \fBClearCache\fP ()"
+.br
+.RI "Clears track names and IDs\&. "
+.ti -1c
+.RI "bool \fBTryGetTrack\fP (string _idOrName, out \fBRadioTrackWrapper\fP _trackW, bool _useID=true)"
+.br
+.RI "Attempts to find a track in this radio using either an ID or a name\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static string \fBNameToID\fP (string _name)"
+.br
+.RI "Converts a track's name to ID format\&. "
+.in -1c
+.SS "Static Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const float \fBLOW_TUNE\fP = 0"
+.br
+.RI "The lower limit for tune on this radio\&. This may become non-const at some point\&. "
+.ti -1c
+.RI "const float \fBHIGH_TUNE\fP = 1000"
+.br
+.RI "The upper limit for tune on this radio\&. This may become non-const at some point\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "Color \fBGizmoColor\fP\fR [get]\fP"
+.br
+.RI "Alias for \fBgizmoColor\fP for safety\&. "
+.ti -1c
+.RI "Color \fBGizmoColorSecondary\fP\fR [get]\fP"
+.br
+.RI "Alias for \fBgizmoColorSecondary\fP for safety\&. "
+.ti -1c
+.RI "List< \fBRadioTrackWrapper\fP > \fBTrackWrappers\fP\fR [get]\fP"
+.br
+.RI "Alias for \fBtrackWs\fP for safety- in documentation we usually call them the tracks, but for code clarity we explicitly call them wrappers in this object\&. "
+.ti -1c
+.RI "Action< \fBRadioData\fP > \fBOnInit\fP = new(_ => { })\fR [get, set]\fP"
+.br
+.RI "Event invoked when \fBInit()\fP is called\&. "
+.ti -1c
+.RI "Action< \fBRadioData\fP > \fBBeforeInit\fP = new(_ => { })\fR [get, set]\fP"
+.br
+.RI "Event invoked when \fBInit()\fP is called, but at the beginning before anything happens\&. "
+.ti -1c
+.RI "List< string > \fBTrackNames\fP\fR [get]\fP"
+.br
+.RI "The names of all tracks stored in this radio, used when selecting them in the inspector\&. "
+.ti -1c
+.RI "List< string > \fBTrackIDs\fP\fR [get]\fP"
+.br
+.in -1c
+.SS "Private Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBPopulateTrackIDs\fP ()"
+.br
+.RI "Fills \fBTrackNames\fP and \fBTrackIDs\fP to match the current content of \fBtrackWs\fP\&. "
+.ti -1c
+.RI "void \fBOnValidate\fP ()"
+.br
+.RI "Updates the track names and IDs when this object is changed\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "Color \fBgizmoColor\fP = new Color32(200, 180, 255, 255)"
+.br
+.RI "The primary colour of gizmos relating to this radio\&. "
+.ti -1c
+.RI "Color \fBgizmoColorSecondary\fP = new Color32(175, 105, 205, 255)"
+.br
+.RI "The secondary colour of gizmos relating to this radio\&. "
+.ti -1c
+.RI "bool \fBforceClipSampleRate\fP = true"
+.br
+.RI "Whether or not this radio forces the sample rate on AudioClips it references\&. "
+.ti -1c
+.RI "int \fBforcedSampleRate\fP = 0"
+.br
+.RI "The sample rate this radio can force on AudioClips it references\&. If left at 0, it chooses the project's default sample rate\&. "
+.ti -1c
+.RI "List< \fBRadioTrackWrapper\fP > \fBtrackWs\fP = new() { new() }"
+.br
+.RI "The tracks contained in this radio, editable in the inspector\&. "
+.ti -1c
+.RI "List< string > \fBtrackIDs\fP"
+.br
+.RI "The IDs of all tracks stored in this radio\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+The central data object defining the radio\&. Contains the tracks and information required to play the radio at runtime\&. 
+.br
+
+.br
+Has a custom editor at \fBRadioDataEditor\fP\&. 
+.PP
+Definition at line \fB17\fP of file \fBRadioData\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void RyleRadio\&.RadioData\&.ClearCache ()"
+
+.PP
+Clears track names and IDs\&. 
+.PP
+Definition at line \fB166\fP of file \fBRadioData\&.cs\fP\&.
+.SS "void RyleRadio\&.RadioData\&.Init ()"
+
+.PP
+Initialise this radio, its tracks, and referenced components\&. 
+.PP
+Definition at line \fB152\fP of file \fBRadioData\&.cs\fP\&.
+.SS "string RyleRadio\&.RadioData\&.NameToID (string _name)\fR [static]\fP"
+
+.PP
+Converts a track's name to ID format\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_name\fP The name to convert
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The name transformed into ID format
+.RE
+.PP
+
+.PP
+Definition at line \fB97\fP of file \fBRadioData\&.cs\fP\&.
+.PP
+Referenced by \fBTryGetTrack()\fP\&.
+.SS "void RyleRadio\&.RadioData\&.OnValidate ()\fR [private]\fP"
+
+.PP
+Updates the track names and IDs when this object is changed\&. 
+.PP
+Definition at line \fB144\fP of file \fBRadioData\&.cs\fP\&.
+.SS "void RyleRadio\&.RadioData\&.PopulateTrackIDs ()\fR [private]\fP"
+
+.PP
+Fills \fBTrackNames\fP and \fBTrackIDs\fP to match the current content of \fBtrackWs\fP\&. 
+.PP
+Definition at line \fB105\fP of file \fBRadioData\&.cs\fP\&.
+.PP
+Referenced by \fBOnValidate()\fP\&.
+.SS "bool RyleRadio\&.RadioData\&.TryGetTrack (string _idOrName, out \fBRadioTrackWrapper\fP _trackW, bool _useID = \fRtrue\fP)"
+
+.PP
+Attempts to find a track in this radio using either an ID or a name\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_idOrName\fP The ID or name of the track to find
+.br
+\fI_trackW\fP The track that has been found, or null if none was found
+.br
+\fI_useID\fP If true, this method searches for a matching ID\&. If false, it searches for a matching name
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+True if a track was found, false if not
+.RE
+.PP
+
+.PP
+Definition at line \fB179\fP of file \fBRadioData\&.cs\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "bool RyleRadio\&.RadioData\&.forceClipSampleRate = true\fR [private]\fP"
+
+.PP
+Whether or not this radio forces the sample rate on AudioClips it references\&. 
+.PP
+Definition at line \fB31\fP of file \fBRadioData\&.cs\fP\&.
+.SS "int RyleRadio\&.RadioData\&.forcedSampleRate = 0\fR [private]\fP"
+
+.PP
+The sample rate this radio can force on AudioClips it references\&. If left at 0, it chooses the project's default sample rate\&. 
+.PP
+Definition at line \fB33\fP of file \fBRadioData\&.cs\fP\&.
+.SS "Color RyleRadio\&.RadioData\&.gizmoColor = new Color32(200, 180, 255, 255)\fR [private]\fP"
+
+.PP
+The primary colour of gizmos relating to this radio\&. 
+.PP
+Definition at line \fB26\fP of file \fBRadioData\&.cs\fP\&.
+.SS "Color RyleRadio\&.RadioData\&.gizmoColorSecondary = new Color32(175, 105, 205, 255)\fR [private]\fP"
+
+.PP
+The secondary colour of gizmos relating to this radio\&. 
+.PP
+Definition at line \fB28\fP of file \fBRadioData\&.cs\fP\&.
+.SS "const float RyleRadio\&.RadioData\&.HIGH_TUNE = 1000\fR [static]\fP"
+
+.PP
+The upper limit for tune on this radio\&. This may become non-const at some point\&. 
+.PP
+Definition at line \fB23\fP of file \fBRadioData\&.cs\fP\&.
+.SS "const float RyleRadio\&.RadioData\&.LOW_TUNE = 0\fR [static]\fP"
+
+.PP
+The lower limit for tune on this radio\&. This may become non-const at some point\&. 
+.PP
+Definition at line \fB21\fP of file \fBRadioData\&.cs\fP\&.
+.SS "List<string> RyleRadio\&.RadioData\&.trackIDs\fR [private]\fP"
+
+.PP
+The IDs of all tracks stored in this radio\&. 
+.PP
+Definition at line \fB78\fP of file \fBRadioData\&.cs\fP\&.
+.PP
+Referenced by \fBPopulateTrackIDs()\fP\&.
+.SS "List<\fBRadioTrackWrapper\fP> RyleRadio\&.RadioData\&.trackWs = new() { new() }\fR [private]\fP"
+
+.PP
+The tracks contained in this radio, editable in the inspector\&. 
+.PP
+Definition at line \fB38\fP of file \fBRadioData\&.cs\fP\&.
+.PP
+Referenced by \fBPopulateTrackIDs()\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "Action<\fBRadioData\fP> RyleRadio\&.RadioData\&.BeforeInit = new(_ => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event invoked when \fBInit()\fP is called, but at the beginning before anything happens\&. 
+.PP
+Definition at line \fB53\fP of file \fBRadioData\&.cs\fP\&.
+.PP
+Referenced by \fBInit()\fP\&.
+.SS "Color RyleRadio\&.RadioData\&.GizmoColor\fR [get]\fP"
+
+.PP
+Alias for \fBgizmoColor\fP for safety\&. 
+.PP
+Definition at line \fB42\fP of file \fBRadioData\&.cs\fP\&.
+.SS "Color RyleRadio\&.RadioData\&.GizmoColorSecondary\fR [get]\fP"
+
+.PP
+Alias for \fBgizmoColorSecondary\fP for safety\&. 
+.PP
+Definition at line \fB44\fP of file \fBRadioData\&.cs\fP\&.
+.SS "Action<\fBRadioData\fP> RyleRadio\&.RadioData\&.OnInit = new(_ => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event invoked when \fBInit()\fP is called\&. 
+.PP
+Definition at line \fB51\fP of file \fBRadioData\&.cs\fP\&.
+.PP
+Referenced by \fBInit()\fP\&.
+.SS "List<string> RyleRadio\&.RadioData\&.TrackIDs\fR [get]\fP"
+
+.PP
+Definition at line \fB79\fP of file \fBRadioData\&.cs\fP\&.
+.SS "List<string> RyleRadio\&.RadioData\&.TrackNames\fR [get]\fP"
+
+.PP
+The names of all tracks stored in this radio, used when selecting them in the inspector\&. 
+.PP
+Definition at line \fB63\fP of file \fBRadioData\&.cs\fP\&.
+.PP
+Referenced by \fBClearCache()\fP\&.
+.SS "List<\fBRadioTrackWrapper\fP> RyleRadio\&.RadioData\&.TrackWrappers\fR [get]\fP"
+
+.PP
+Alias for \fBtrackWs\fP for safety- in documentation we usually call them the tracks, but for code clarity we explicitly call them wrappers in this object\&. 
+.PP
+Definition at line \fB47\fP of file \fBRadioData\&.cs\fP\&.
+.PP
+Referenced by \fBInit()\fP, \fBPopulateTrackIDs()\fP, and \fBTryGetTrack()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.

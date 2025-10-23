@@ -18,8 +18,8 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="22" column="34" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="22" bodyend="-1"/>
-        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1aae0f16b02f6e44fe2f8a8b8d56f8bcd8" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="38" endline="56">RyleRadio.Editor.RadioBroadcasterEditor.OnEnable</referencedby>
-        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a3d84d9e0776ee8e58ebea202505b13c3" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="61" endline="76">RyleRadio.Editor.RadioBroadcasterEditor.OnSceneGUI</referencedby>
+        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1aae0f16b02f6e44fe2f8a8b8d56f8bcd8" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="33" endline="51">RyleRadio.Editor.RadioBroadcasterEditor.OnEnable</referencedby>
+        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a3d84d9e0776ee8e58ebea202505b13c3" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="56" endline="71">RyleRadio.Editor.RadioBroadcasterEditor.OnSceneGUI</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a77f1f25e34c7937b06e778e5f691d6fd" prot="private" static="no" mutable="no">
         <type>Color</type>
@@ -28,15 +28,15 @@
         <name>innerColor</name>
         <qualifiedname>RyleRadio.Editor.RadioBroadcasterEditor.innerColor</qualifiedname>
         <briefdescription>
-<para>The colour of the gizmo for the x/inner value of RadioBroadcaster.broadcastRadius. </para>
+<para>The colour of the gizmo for the x/inner value of <ref refid="db/de5/class_ryle_radio_1_1_components_1_1_radio_broadcaster_1a5628c7e602d1c6662bdae7119b942f18" kindref="member">RadioBroadcaster.broadcastRadius</ref>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="27" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="27" bodyend="-1"/>
-        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1aae0f16b02f6e44fe2f8a8b8d56f8bcd8" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="38" endline="56">RyleRadio.Editor.RadioBroadcasterEditor.OnEnable</referencedby>
-        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a3d84d9e0776ee8e58ebea202505b13c3" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="61" endline="76">RyleRadio.Editor.RadioBroadcasterEditor.OnSceneGUI</referencedby>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="25" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="25" bodyend="-1"/>
+        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1aae0f16b02f6e44fe2f8a8b8d56f8bcd8" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="33" endline="51">RyleRadio.Editor.RadioBroadcasterEditor.OnEnable</referencedby>
+        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a3d84d9e0776ee8e58ebea202505b13c3" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="56" endline="71">RyleRadio.Editor.RadioBroadcasterEditor.OnSceneGUI</referencedby>
       </memberdef>
       <memberdef kind="variable" id="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a717e3a50e8e7e1fa24973babdfe00cd6" prot="private" static="no" mutable="no">
         <type>Color</type>
@@ -45,15 +45,15 @@
         <name>outerColor</name>
         <qualifiedname>RyleRadio.Editor.RadioBroadcasterEditor.outerColor</qualifiedname>
         <briefdescription>
-<para>The colour of the gizmo for the y/outer value of RadioBroadcaster.broadcastRadius. </para>
+<para>The colour of the gizmo for the y/outer value of <ref refid="db/de5/class_ryle_radio_1_1_components_1_1_radio_broadcaster_1a5628c7e602d1c6662bdae7119b942f18" kindref="member">RadioBroadcaster.broadcastRadius</ref>. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="32" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="32" bodyend="-1"/>
-        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1aae0f16b02f6e44fe2f8a8b8d56f8bcd8" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="38" endline="56">RyleRadio.Editor.RadioBroadcasterEditor.OnEnable</referencedby>
-        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a3d84d9e0776ee8e58ebea202505b13c3" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="61" endline="76">RyleRadio.Editor.RadioBroadcasterEditor.OnSceneGUI</referencedby>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="27" column="23" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="27" bodyend="-1"/>
+        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1aae0f16b02f6e44fe2f8a8b8d56f8bcd8" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="33" endline="51">RyleRadio.Editor.RadioBroadcasterEditor.OnEnable</referencedby>
+        <referencedby refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a3d84d9e0776ee8e58ebea202505b13c3" compoundref="d6/d07/_radio_broadcaster_editor_8cs" startline="56" endline="71">RyleRadio.Editor.RadioBroadcasterEditor.OnSceneGUI</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="private-func">
@@ -64,13 +64,13 @@
         <name>OnEnable</name>
         <qualifiedname>RyleRadio.Editor.RadioBroadcasterEditor.OnEnable</qualifiedname>
         <briefdescription>
-<para>Initializes this inspector. </para>
+<para>Initializes the broadcaster&apos;s editor. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="38" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="38" bodyend="56"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="33" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="33" bodyend="51"/>
       </memberdef>
       <memberdef kind="function" id="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a3d84d9e0776ee8e58ebea202505b13c3" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
         <type>void</type>
@@ -79,13 +79,13 @@
         <name>OnSceneGUI</name>
         <qualifiedname>RyleRadio.Editor.RadioBroadcasterEditor.OnSceneGUI</qualifiedname>
         <briefdescription>
-<para>Displays the handles for RadioBroadcaster.broadcastRadius in the scene. </para>
+<para>Displays the handles for <ref refid="db/de5/class_ryle_radio_1_1_components_1_1_radio_broadcaster_1a5628c7e602d1c6662bdae7119b942f18" kindref="member">RadioBroadcaster.broadcastRadius</ref> in the scene. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="61" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="61" bodyend="76"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="56" column="22" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="56" bodyend="71"/>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -102,7 +102,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="81" column="30" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="81" bodyend="84"/>
+        <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="76" column="30" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="76" bodyend="79"/>
       </memberdef>
     </sectiondef>
     <briefdescription>
@@ -171,7 +171,7 @@ This is mainly so that we can use <computeroutput>Handles</computeroutput> (drag
         <label>ScriptableObject</label>
       </node>
     </collaborationgraph>
-    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="17" column="11" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="18" bodyend="85"/>
+    <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" line="17" column="11" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Editor/RadioBroadcasterEditor.cs" bodystart="18" bodyend="80"/>
     <listofallmembers>
       <member refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a3269facecc1498751eb743346b2a1907" prot="private" virt="non-virtual"><scope>RyleRadio::Editor::RadioBroadcasterEditor</scope><name>broadcaster</name></member>
       <member refid="d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor_1a77f1f25e34c7937b06e778e5f691d6fd" prot="private" virt="non-virtual"><scope>RyleRadio::Editor::RadioBroadcasterEditor</scope><name>innerColor</name></member>

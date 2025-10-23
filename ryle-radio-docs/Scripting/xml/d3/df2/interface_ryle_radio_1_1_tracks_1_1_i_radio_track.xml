@@ -109,7 +109,7 @@
 <para>Update a <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player" kindref="compound">RadioTrackPlayer</ref> when this current track ends. Used in <ref refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track" kindref="compound">StationRadioTrack</ref>. </para>
         </briefdescription>
         <detaileddescription>
-<para><bold>See also:</bold> RadioTrackPlayer.OnEnd, <ref refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a827fb0f9f2d67ad7d48cb0a9dfbe5c18" kindref="member">StationRadioTrack.AddToPlayerEndCallback()</ref></para>
+<para><bold>See also:</bold> <ref refid="da/da4/class_ryle_radio_1_1_tracks_1_1_radio_track_player_1af37da2f612fc29720b4fd36edd7c5789" kindref="member">RadioTrackPlayer.OnEnd</ref>, <ref refid="d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track_1a827fb0f9f2d67ad7d48cb0a9dfbe5c18" kindref="member">StationRadioTrack.AddToPlayerEndCallback()</ref></para>
 <para><parameterlist kind="param"><parameteritem>
 <parameternamelist>
 <parametername>_callback</parametername>

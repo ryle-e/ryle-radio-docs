@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['proceduraltype_0',['ProceduralType',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a875d0aa43f7a037896786dd2f223c6b3',1,'RyleRadio::Tracks::ProceduralRadioTrack']]]
+  ['multipleplayersselector_0',['MultiplePlayersSelector',['../d2/d2d/class_ryle_radio_1_1_components_1_1_radio_output.html#acbbea1f65d423c9f0dd80b3d58b8b73b',1,'RyleRadio::Components::RadioOutput']]]
 ];

@@ -26,7 +26,7 @@
         <qualifiedname>RyleRadio.Tracks.StationRadioTrackWrapper.trackType</qualifiedname>
         <initializer>= &quot;None&quot;</initializer>
         <briefdescription>
-<para>The current type of this track as chosen in the editor. Displayed as a dropdown of <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref> <computeroutput>DISPLAY_NAME</computeroutput>s. </para>
+<para>The current eventType of this track as chosen in the editor. Displayed as a dropdown of <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref> <computeroutput>DISPLAY_NAME</computeroutput>s. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -117,7 +117,7 @@
         <name>TrackTypes</name>
         <qualifiedname>RyleRadio.Tracks.StationRadioTrackWrapper.TrackTypes</qualifiedname>
         <briefdescription>
-<para>A list of each type of track that this wrapper can contain- this is anything that inherits from <ref refid="dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track" kindref="compound">IStationTrack</ref> <linebreak/>
+<para>A list of each eventType of track that this wrapper can contain- this is anything that inherits from <ref refid="dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track" kindref="compound">IStationTrack</ref> <linebreak/>
 <linebreak/>
 <bold>See also: </bold> <ref refid="d4/d2c/class_ryle_radio_1_1_radio_utils_1ade2ef6c22eb2dd42613bdcf74f1587de" kindref="member">RadioUtils.FindDerivedTypes()</ref> </para>
         </briefdescription>
@@ -135,7 +135,7 @@
         <name>TrackNames</name>
         <qualifiedname>RyleRadio.Tracks.StationRadioTrackWrapper.TrackNames</qualifiedname>
         <briefdescription>
-<para>A list of the names of each type in <ref refid="de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_1a01f0b55b5fd4bd1354aca7a637988223" kindref="member">TrackTypes</ref> This is what&apos;s displayed in the inspector for the user to choose from. </para>
+<para>A list of the names of each eventType in <ref refid="de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_1a01f0b55b5fd4bd1354aca7a637988223" kindref="member">TrackTypes</ref> This is what&apos;s displayed in the inspector for the user to choose from. </para>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
@@ -158,6 +158,7 @@
         <inbodydescription>
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/StationRadioTrackWrapper.cs" line="117" column="26" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/StationRadioTrackWrapper.cs" bodystart="117" bodyend="-1"/>
+        <referencedby refid="d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_editor_1a64c87ed3a04c0e8570ab85bbba8d8877" compoundref="d1/dc9/_radio_data_editor_8cs" startline="179" endline="205">RyleRadio.Editor.RadioDataEditor.ForceClipsToSampleRate</referencedby>
       </memberdef>
     </sectiondef>
     <sectiondef kind="public-func">
@@ -180,7 +181,7 @@
 <parametername>_track</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The default track type to use</para>
+<para>The default track eventType to use</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
@@ -282,7 +283,7 @@
         </param>
         <briefdescription>
 <para>Gets a new track to be used in a wrapper- note that this is marked as <computeroutput>static</computeroutput><linebreak/>
- This is mainly used in the editor to update the track type when it&apos;s selected on <ref refid="de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_1a2b82a60520332f26e6d537ddee315e2f" kindref="member">trackType</ref>. </para>
+ This is mainly used in the editor to update the track eventType when it&apos;s selected on <ref refid="de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_1a2b82a60520332f26e6d537ddee315e2f" kindref="member">trackType</ref>. </para>
         </briefdescription>
         <detaileddescription>
 <para><parameterlist kind="param"><parameteritem>
@@ -290,11 +291,11 @@
 <parametername>_name</parametername>
 </parameternamelist>
 <parameterdescription>
-<para>The name of the track type to create</para>
+<para>The name of the track eventType to create</para>
 </parameterdescription>
 </parameteritem>
 </parameterlist>
-<simplesect kind="return"><para>A new track with the given type</para>
+<simplesect kind="return"><para>A new track with the given eventType</para>
 </simplesect>
 </para>
         </detaileddescription>
@@ -302,6 +303,7 @@
         </inbodydescription>
         <location file="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/StationRadioTrackWrapper.cs" line="151" column="37" bodyfile="D:/GitHub/ryle-radio/Assets/RyleRadio/Scripts/Runtime/Tracks/Track Types/StationRadioTrackWrapper.cs" bodystart="151" bodyend="167"/>
         <referencedby refid="de/d38/class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper_1a2bb9727a6841b8f172bfb2fe0fc0b976" compoundref="d0/dde/_station_radio_track_wrapper_8cs" startline="180" endline="183">RyleRadio.Tracks.StationRadioTrackWrapper.CreateTrackLocal</referencedby>
+        <referencedby refid="df/d29/class_ryle_radio_1_1_editor_1_1_station_radio_track_editor_1a109e4d7780f36beaa08347ca583b6a1e" compoundref="d1/df4/_station_radio_track_editor_8cs" startline="30" endline="138">RyleRadio.Editor.StationRadioTrackEditor.OnGUI</referencedby>
       </memberdef>
     </sectiondef>
     <briefdescription>

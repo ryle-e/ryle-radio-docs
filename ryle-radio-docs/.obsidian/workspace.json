@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "3f8aa1cc5ecdfd8f",
+        "id": "0025cda8fb42815e",
         "type": "tabs",
         "children": [
           {
-            "id": "0423b4e26318df5a",
+            "id": "063e023e021e58d5",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Main.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Main"
+              "title": "New tab"
             }
           }
         ]
@@ -140,13 +136,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Main.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Main"
+              "title": "Outline"
             }
           },
           {
@@ -188,10 +183,17 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0423b4e26318df5a",
+  "active": "063e023e021e58d5",
   "lastOpenFiles": [
-    "Guides/1. Basic Radio Sample.md",
+    "d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.md",
+    "Scripting-Markdown/class_index.md",
+    "d2/d82",
+    "d2",
+    "Scripting-Markdown/index.md",
+    "Scripting-Markdown/file_index.md",
+    "Scripting-Markdown/dir_index.md",
     "Main.md",
+    "Guides/1. Basic Radio Sample.md",
     "General/Info/What is Ryle Radio.md",
     "General/Info/Sample Rates- an important note.md",
     "General/Plans, Todo.md",
@@ -205,8 +207,6 @@
     "Scripting/html/d3/db0",
     "Scripting/html/d3/daf",
     "Scripting/html/d3/dae",
-    "Scripting/html/d3/dad",
-    "Scripting/html/d3/dac",
     "General/About the Docs.md",
     "General/Info/(Predicted) Common Issues and Questions.md",
     "Scripting/html/df/d29/class_ryle_radio_1_1_editor_1_1_station_radio_track_editor.png",
@@ -230,9 +230,6 @@
     "Scripting/Tracks/RadioTrackWrapper.md",
     "Scripting/Components/RadioOutput.md",
     "www.reddit.com/u/ryle-e_dev.md",
-    "Scripting/RadioData.md",
-    "index.md",
-    "RadioL.md",
-    "what.md"
+    "Scripting/RadioData.md"
   ]
 }

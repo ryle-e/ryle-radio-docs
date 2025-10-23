@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['outercolor_0',['outerColor',['../d5/dd3/class_ryle_radio_1_1_editor_1_1_radio_broadcaster_editor.html#a717e3a50e8e7e1fa24973babdfe00cd6',1,'RyleRadio::Editor::RadioBroadcasterEditor']]],
-  ['output_1',['output',['../d1/d58/class_ryle_radio_1_1_components_1_1_radio_observer.html#a20e98887f8846c29e4f0155c36bf4c66',1,'RyleRadio::Components::RadioObserver']]]
+  ['name_0',['name',['../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html#a9f005bfe46c540e21264bad404da9927',1,'RyleRadio::Tracks::RadioTrackWrapper']]],
+  ['noise_5fmultiplier_1',['NOISE_MULTIPLIER',['../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.html#a434bffdbfd2ef9af32d3f72a0b568c72',1,'RyleRadio::Tracks::ProceduralRadioTrack']]]
 ];

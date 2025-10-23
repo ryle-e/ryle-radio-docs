@@ -1,5 +1,13 @@
 \doxysection{Ryle\+Radio.\+Editor.\+Station\+Radio\+Track\+Editor Class Reference}
 \hypertarget{class_ryle_radio_1_1_editor_1_1_station_radio_track_editor}{}\label{class_ryle_radio_1_1_editor_1_1_station_radio_track_editor}\index{RyleRadio.Editor.StationRadioTrackEditor@{RyleRadio.Editor.StationRadioTrackEditor}}
+
+
+The editor for a \doxylink{class_ryle_radio_1_1_tracks_1_1_station_radio_track}{Station\+Radio\+Track} ~\newline
+~\newline
+This mainly exists so that we can reset any newly added tracks in the station-\/ much the same as \doxylink{class_ryle_radio_1_1_editor_1_1_radio_data_editor}{Radio\+Data\+Editor} ~\newline
+{\bfseries{See\+: }}\doxylink{class_ryle_radio_1_1_tracks_1_1_station_radio_track}{Station\+Radio\+Track}.  
+
+
 Inheritance diagram for Ryle\+Radio.\+Editor.\+Station\+Radio\+Track\+Editor\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,24 +18,27 @@ Inheritance diagram for Ryle\+Radio.\+Editor.\+Station\+Radio\+Track\+Editor\+:\
 \begin{DoxyCompactItemize}
 \item 
 override void \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_station_radio_track_editor_a109e4d7780f36beaa08347ca583b6a1e}{On\+GUI}} (Rect \+\_\+position, Serialized\+Property \+\_\+property, GUIContent \+\_\+label)
-\item 
+\begin{DoxyCompactList}\small\item\em Draws the track, its child tracks, and other variables, e.\+g\+: randomisation settings. \end{DoxyCompactList}\item 
 override float \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_station_radio_track_editor_a2134be188b28a02a1967e636e00476ac}{Get\+Property\+Height}} (Serialized\+Property property, GUIContent label)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Gets the total height of this track in the inspector, including child tracks. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 int \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_station_radio_track_editor_ad0f775de4466cdbcd52867091ffc2711}{last\+Track\+WSize}} = -\/1
-\item 
+\begin{DoxyCompactList}\small\item\em The last recorded number of tracks in this station. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_station_radio_track_editor_a05fed789810d7b4d320e9d22c394371c}{is\+Showing\+Threshold}} = false
-\item 
+\begin{DoxyCompactList}\small\item\em Whether or not the random threshold is currently visible in the inspector. \end{DoxyCompactList}\item 
 bool \mbox{\hyperlink{class_ryle_radio_1_1_editor_1_1_station_radio_track_editor_ab180ad19211578667da0e0fc6f7eea73}{show\+Track\+In\+Parent}} = true
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Whether or not this track is showing its child tracks-\/ optional variable for cleanliness. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+The editor for a \doxylink{class_ryle_radio_1_1_tracks_1_1_station_radio_track}{Station\+Radio\+Track} ~\newline
+~\newline
+This mainly exists so that we can reset any newly added tracks in the station-\/ much the same as \doxylink{class_ryle_radio_1_1_editor_1_1_radio_data_editor}{Radio\+Data\+Editor} ~\newline
+{\bfseries{See\+: }}\doxylink{class_ryle_radio_1_1_tracks_1_1_station_radio_track}{Station\+Radio\+Track}. 
 
-
-Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
+Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
 
 
 
@@ -42,7 +53,11 @@ override float Ryle\+Radio.\+Editor.\+Station\+Radio\+Track\+Editor.\+Get\+Prope
 
 
 
-Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00134}{134}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
+Gets the total height of this track in the inspector, including child tracks. 
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00143}{143}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
 
 \Hypertarget{class_ryle_radio_1_1_editor_1_1_station_radio_track_editor_a109e4d7780f36beaa08347ca583b6a1e}\index{RyleRadio.Editor.StationRadioTrackEditor@{RyleRadio.Editor.StationRadioTrackEditor}!OnGUI@{OnGUI}}
 \index{OnGUI@{OnGUI}!RyleRadio.Editor.StationRadioTrackEditor@{RyleRadio.Editor.StationRadioTrackEditor}}
@@ -52,7 +67,11 @@ override void Ryle\+Radio.\+Editor.\+Station\+Radio\+Track\+Editor.\+On\+GUI (\b
 
 
 
-Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
+Draws the track, its child tracks, and other variables, e.\+g\+: randomisation settings. 
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
 
 
 
@@ -67,7 +86,15 @@ bool Ryle\+Radio.\+Editor.\+Station\+Radio\+Track\+Editor.\+is\+Showing\+Thresho
 
 
 
-Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00018}{18}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
+Whether or not the random threshold is currently visible in the inspector. 
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00022}{22}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00143}{Get\+Property\+Height()}}, and \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00030}{On\+GUI()}}.
 
 \Hypertarget{class_ryle_radio_1_1_editor_1_1_station_radio_track_editor_ad0f775de4466cdbcd52867091ffc2711}\index{RyleRadio.Editor.StationRadioTrackEditor@{RyleRadio.Editor.StationRadioTrackEditor}!lastTrackWSize@{lastTrackWSize}}
 \index{lastTrackWSize@{lastTrackWSize}!RyleRadio.Editor.StationRadioTrackEditor@{RyleRadio.Editor.StationRadioTrackEditor}}
@@ -77,7 +104,15 @@ int Ryle\+Radio.\+Editor.\+Station\+Radio\+Track\+Editor.\+last\+Track\+WSize = 
 
 
 
-Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00017}{17}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
+The last recorded number of tracks in this station. 
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00019}{19}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00030}{On\+GUI()}}.
 
 \Hypertarget{class_ryle_radio_1_1_editor_1_1_station_radio_track_editor_ab180ad19211578667da0e0fc6f7eea73}\index{RyleRadio.Editor.StationRadioTrackEditor@{RyleRadio.Editor.StationRadioTrackEditor}!showTrackInParent@{showTrackInParent}}
 \index{showTrackInParent@{showTrackInParent}!RyleRadio.Editor.StationRadioTrackEditor@{RyleRadio.Editor.StationRadioTrackEditor}}
@@ -87,7 +122,15 @@ bool Ryle\+Radio.\+Editor.\+Station\+Radio\+Track\+Editor.\+show\+Track\+In\+Par
 
 
 
-Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
+Whether or not this track is showing its child tracks-\/ optional variable for cleanliness. 
+
+
+
+Definition at line \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00025}{25}} of file \mbox{\hyperlink{_station_radio_track_editor_8cs_source}{Station\+Radio\+Track\+Editor.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00143}{Get\+Property\+Height()}}, and \mbox{\hyperlink{_station_radio_track_editor_8cs_source_l00030}{On\+GUI()}}.
 
 
 

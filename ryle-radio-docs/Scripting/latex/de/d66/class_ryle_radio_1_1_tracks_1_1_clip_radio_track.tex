@@ -2,7 +2,7 @@
 \hypertarget{class_ryle_radio_1_1_tracks_1_1_clip_radio_track}{}\label{class_ryle_radio_1_1_tracks_1_1_clip_radio_track}\index{RyleRadio.Tracks.ClipRadioTrack@{RyleRadio.Tracks.ClipRadioTrack}}
 
 
-A type of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} that plays from a chosen Audio\+Clip object.  
+A event\+Type of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} that plays from a chosen Audio\+Clip object.  
 
 
 Inheritance diagram for Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track\+:\begin{figure}[H]
@@ -56,7 +56,7 @@ virtual int \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_ab9bc3c
 
 
 \doxysubsection{Detailed Description}
-A type of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} that plays from a chosen Audio\+Clip object. 
+A event\+Type of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} that plays from a chosen Audio\+Clip object. 
 
 Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00010}{10}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.
 
@@ -119,7 +119,7 @@ void Ryle\+Radio.\+Tracks.\+Clip\+Radio\+Track.\+Read\+Clip\+And\+Force\+To\+Mon
 
 Reads the clip into the \doxylink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track_afb9a8b8a3532d55b7ba050ec54b9e40a}{Samples} array, and combines its channels into one. 
 
-We need to flatten the clip into one channel to play it from a Radio\+Output as the Output is only using one channel. Theoretically, we could expand the Output to use multiple channels, but given this would be the only track type to do this it\textquotesingle{}s probably not worth the significant effort. ~\newline
+We need to flatten the clip into one channel to play it from a Radio\+Output as the Output is only using one channel. Theoretically, we could expand the Output to use multiple channels, but given this would be the only track event\+Type to do this it\textquotesingle{}s probably not worth the significant effort. ~\newline
 For the moment, we\textquotesingle{}ll treat Outputs as AM radios (which are mono in real life) 
 
 Definition at line \mbox{\hyperlink{_clip_radio_track_8cs_source_l00051}{51}} of file \mbox{\hyperlink{_clip_radio_track_8cs_source}{Clip\+Radio\+Track.\+cs}}.

@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -115,7 +116,7 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memdesc:a016d170f7da06c65dbd1d77c36552d70"><td class="mdescLeft">&#160;</td><td class="mdescRight">Updates track types and names on script reload to detect any new types.  <br /></td></tr>
 <tr class="memitem:aa2248a77e7b27ce0b66cbdfa8cfa48d9" id="r_aa2248a77e7b27ce0b66cbdfa8cfa48d9"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa2248a77e7b27ce0b66cbdfa8cfa48d9">CreateTrackEditor</a> (string _name)</td></tr>
 <tr class="memdesc:aa2248a77e7b27ce0b66cbdfa8cfa48d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Gets a new track to be used in a wrapper- note that this is marked as <span class="tt">static</span><br  />
- This is mainly used in the editor to update the track type when it's selected on <a class="el" href="#a2b82a60520332f26e6d537ddee315e2f">trackType</a>.  <br /></td></tr>
+ This is mainly used in the editor to update the track eventType when it's selected on <a class="el" href="#a2b82a60520332f26e6d537ddee315e2f">trackType</a>.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -135,11 +136,11 @@ Properties</h2></td></tr>
 <tr class="memitem:a7be1f3ed2241473e4b7f74b34a18e25d" id="r_a7be1f3ed2241473e4b7f74b34a18e25d"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7be1f3ed2241473e4b7f74b34a18e25d">Gain</a><code> [get]</code></td></tr>
 <tr class="memdesc:a7be1f3ed2241473e4b7f74b34a18e25d"><td class="mdescLeft">&#160;</td><td class="mdescRight">The gain value scaled down to ones- e.g <a class="el" href="#aaeb0ded3e52e83983df5683292b76493">gain</a> at 200 is <a class="el" href="#a7be1f3ed2241473e4b7f74b34a18e25d">Gain</a> at 2.  <br /></td></tr>
 <tr class="memitem:a01f0b55b5fd4bd1354aca7a637988223" id="r_a01f0b55b5fd4bd1354aca7a637988223"><td class="memItemLeft" align="right" valign="top">static Type[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a01f0b55b5fd4bd1354aca7a637988223">TrackTypes</a><code> [get]</code></td></tr>
-<tr class="memdesc:a01f0b55b5fd4bd1354aca7a637988223"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of each type of track that this wrapper can contain- this is anything that inherits from <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a> <br  />
+<tr class="memdesc:a01f0b55b5fd4bd1354aca7a637988223"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of each eventType of track that this wrapper can contain- this is anything that inherits from <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a> <br  />
 <br  />
 <b>See also: </b> <a class="el" href="../../d4/d2c/class_ryle_radio_1_1_radio_utils.html#ade2ef6c22eb2dd42613bdcf74f1587de">RadioUtils.FindDerivedTypes()</a>  <br /></td></tr>
 <tr class="memitem:aeede89c9032a208020a2d2f20e57d55a" id="r_aeede89c9032a208020a2d2f20e57d55a"><td class="memItemLeft" align="right" valign="top">static string[]&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aeede89c9032a208020a2d2f20e57d55a">TrackNames</a><code> [get]</code></td></tr>
-<tr class="memdesc:aeede89c9032a208020a2d2f20e57d55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of the names of each type in <a class="el" href="#a01f0b55b5fd4bd1354aca7a637988223">TrackTypes</a> This is what's displayed in the inspector for the user to choose from.  <br /></td></tr>
+<tr class="memdesc:aeede89c9032a208020a2d2f20e57d55a"><td class="mdescLeft">&#160;</td><td class="mdescRight">A list of the names of each eventType in <a class="el" href="#a01f0b55b5fd4bd1354aca7a637988223">TrackTypes</a> This is what's displayed in the inspector for the user to choose from.  <br /></td></tr>
 <tr class="memitem:a4bd6de08c4d2f2f2758cee00cb3c5c0b" id="r_a4bd6de08c4d2f2f2758cee00cb3c5c0b"><td class="memItemLeft" align="right" valign="top">AudioClip&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bd6de08c4d2f2f2758cee00cb3c5c0b">EditorChildClip</a><code> [get]</code></td></tr>
 <tr class="memdesc:a4bd6de08c4d2f2f2758cee00cb3c5c0b"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this wrapper contains a <a class="el" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html">ClipRadioTrack</a> , this becomes a reference to the track's clip. Used when forcing sample rates in RadioDataEditor.ForceSampleRate()  <br /></td></tr>
 </table><table class="memberdecls">
@@ -148,7 +149,7 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a5e869b7aa74e7406c2329108d5434f86" id="r_a5e869b7aa74e7406c2329108d5434f86"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e869b7aa74e7406c2329108d5434f86">id</a></td></tr>
 <tr class="memdesc:a5e869b7aa74e7406c2329108d5434f86"><td class="mdescLeft">&#160;</td><td class="mdescRight">The ID of this track.  <br /></td></tr>
 <tr class="memitem:a2b82a60520332f26e6d537ddee315e2f" id="r_a2b82a60520332f26e6d537ddee315e2f"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b82a60520332f26e6d537ddee315e2f">trackType</a> = &quot;None&quot;</td></tr>
-<tr class="memdesc:a2b82a60520332f26e6d537ddee315e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current type of this track as chosen in the editor. Displayed as a dropdown of <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RadioTrack</a> <span class="tt">DISPLAY_NAME</span>s.  <br /></td></tr>
+<tr class="memdesc:a2b82a60520332f26e6d537ddee315e2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">The current eventType of this track as chosen in the editor. Displayed as a dropdown of <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RadioTrack</a> <span class="tt">DISPLAY_NAME</span>s.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A smaller, separate version of <a class="el" href="../../d2/db4/class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper.html">RadioTrackWrapper</a> for use in a <a class="el" href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html">StationRadioTrack</a>. </p>
@@ -175,7 +176,7 @@ Private Attributes</h2></td></tr>
 <p>Creates an empty wrapper for a station. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_track</td><td>The default track type to use</td></tr>
+    <tr><td class="paramname">_track</td><td>The default track eventType to use</td></tr>
   </table>
   </dd>
 </dl>
@@ -209,18 +210,18 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Gets a new track to be used in a wrapper- note that this is marked as <span class="tt">static</span><br  />
- This is mainly used in the editor to update the track type when it's selected on <a class="el" href="#a2b82a60520332f26e6d537ddee315e2f">trackType</a>. </p>
+ This is mainly used in the editor to update the track eventType when it's selected on <a class="el" href="#a2b82a60520332f26e6d537ddee315e2f">trackType</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">_name</td><td>The name of the track type to create</td></tr>
+    <tr><td class="paramname">_name</td><td>The name of the track eventType to create</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>A new track with the given type</dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>A new track with the given eventType</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00151">151</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00180">CreateTrackLocal()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00180">CreateTrackLocal()</a>, and <a class="el" href="../../d1/df4/_station_radio_track_editor_8cs_source.html#l00030">RyleRadio.Editor.StationRadioTrackEditor.OnGUI()</a>.</p>
 
 </div>
 </div>
@@ -443,7 +444,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>The current type of this track as chosen in the editor. Displayed as a dropdown of <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RadioTrack</a> <span class="tt">DISPLAY_NAME</span>s. </p>
+<p>The current eventType of this track as chosen in the editor. Displayed as a dropdown of <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RadioTrack</a> <span class="tt">DISPLAY_NAME</span>s. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00042">42</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
@@ -475,6 +476,8 @@ Private Attributes</h2></td></tr>
 <p>If this wrapper contains a <a class="el" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html">ClipRadioTrack</a> , this becomes a reference to the track's clip. Used when forcing sample rates in RadioDataEditor.ForceSampleRate() </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00117">117</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../d1/dc9/_radio_data_editor_8cs_source.html#l00179">RyleRadio.Editor.RadioDataEditor.ForceClipsToSampleRate()</a>.</p>
 
 </div>
 </div>
@@ -524,7 +527,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A list of the names of each type in <a class="el" href="#a01f0b55b5fd4bd1354aca7a637988223">TrackTypes</a> This is what's displayed in the inspector for the user to choose from. </p>
+<p>A list of the names of each eventType in <a class="el" href="#a01f0b55b5fd4bd1354aca7a637988223">TrackTypes</a> This is what's displayed in the inspector for the user to choose from. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html#l00100">100</a> of file <a class="el" href="../../d0/dde/_station_radio_track_wrapper_8cs_source.html">StationRadioTrackWrapper.cs</a>.</p>
 
@@ -552,7 +555,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A list of each type of track that this wrapper can contain- this is anything that inherits from <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a> <br  />
+<p>A list of each eventType of track that this wrapper can contain- this is anything that inherits from <a class="el" href="../../dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.html">IStationTrack</a> <br  />
 <br  />
 <b>See also: </b> <a class="el" href="../../d4/d2c/class_ryle_radio_1_1_radio_utils.html#ade2ef6c22eb2dd42613bdcf74f1587de">RadioUtils.FindDerivedTypes()</a> </p>
 

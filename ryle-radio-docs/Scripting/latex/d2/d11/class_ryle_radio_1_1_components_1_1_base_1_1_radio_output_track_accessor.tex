@@ -1,5 +1,11 @@
 \doxysection{Ryle\+Radio.\+Components.\+Base.\+Radio\+Output\+Track\+Accessor Class Reference}
 \hypertarget{class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor}{}\label{class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor}\index{RyleRadio.Components.Base.RadioOutputTrackAccessor@{RyleRadio.Components.Base.RadioOutputTrackAccessor}}
+
+
+A sister class to \doxylink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Radio\+Component} that allows a component to access specific tracks on a \doxylink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output} in the inspector using an int with a \doxylink{class_ryle_radio_1_1_multiselect_attribute}{Multiselect\+Attribute} ~\newline
+{\bfseries{See\+: }}\doxylink{class_ryle_radio_1_1_components_1_1_radio_insulator}{Radio\+Insulator}.  
+
+
 Inheritance diagram for Ryle\+Radio.\+Components.\+Base.\+Radio\+Output\+Track\+Accessor\+:\begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -10,23 +16,24 @@ Inheritance diagram for Ryle\+Radio.\+Components.\+Base.\+Radio\+Output\+Track\+
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor_a9498f37587f54e86b812d2ec5ba81d4a}{Do\+Track\+Action}} (int \+\_\+track\+Mask, Action$<$ string $>$ \+\_\+action)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Performs an action on any selected tracks using a \doxylink{class_ryle_radio_1_1_multiselect_attribute}{Multiselect\+Attribute}. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output}} \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor_a7a8b02c2b7ae945381454c364c0ec155}{output}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The \doxylink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output} to get tracks from. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Properties}
 \begin{DoxyCompactItemize}
 \item 
 List$<$ string $>$ \mbox{\hyperlink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_output_track_accessor_a667bbbe8c54334ac0dbc043bd5b61218}{Track\+Names}}\hspace{0.3cm}{\ttfamily  \mbox{[}get\mbox{]}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em The names of tracks available in the Output. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+A sister class to \doxylink{class_ryle_radio_1_1_components_1_1_base_1_1_radio_component}{Radio\+Component} that allows a component to access specific tracks on a \doxylink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output} in the inspector using an int with a \doxylink{class_ryle_radio_1_1_multiselect_attribute}{Multiselect\+Attribute} ~\newline
+{\bfseries{See\+: }}\doxylink{class_ryle_radio_1_1_components_1_1_radio_insulator}{Radio\+Insulator}. 
 
-
-Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00009}{9}} of file \mbox{\hyperlink{_radio_output_track_accessor_8cs_source}{Radio\+Output\+Track\+Accessor.\+cs}}.
+Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00011}{11}} of file \mbox{\hyperlink{_radio_output_track_accessor_8cs_source}{Radio\+Output\+Track\+Accessor.\+cs}}.
 
 
 
@@ -41,7 +48,22 @@ void Ryle\+Radio.\+Components.\+Base.\+Radio\+Output\+Track\+Accessor.\+Do\+Trac
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00020}{20}} of file \mbox{\hyperlink{_radio_output_track_accessor_8cs_source}{Radio\+Output\+Track\+Accessor.\+cs}}.
+Performs an action on any selected tracks using a \doxylink{class_ryle_radio_1_1_multiselect_attribute}{Multiselect\+Attribute}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em \+\_\+track\+Mask} & The int with the \doxylink{class_ryle_radio_1_1_multiselect_attribute}{Multiselect\+Attribute} that the player uses to select tracks from the Output\\
+\hline
+{\em \+\_\+action} & The action to perform on the tracks\\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00030}{30}} of file \mbox{\hyperlink{_radio_output_track_accessor_8cs_source}{Radio\+Output\+Track\+Accessor.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_interactor_8cs_source_l00075}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Flip\+Pause()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00094}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Pause()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00038}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Play\+Loop()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00047}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Play\+One\+Shot()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00132}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Reset\+Progress()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00056}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Stop()}}, and \mbox{\hyperlink{_radio_interactor_8cs_source_l00113}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Unpause()}}.
 
 
 
@@ -56,7 +78,15 @@ Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l000
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00012}{12}} of file \mbox{\hyperlink{_radio_output_track_accessor_8cs_source}{Radio\+Output\+Track\+Accessor.\+cs}}.
+The \doxylink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output} to get tracks from. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00016}{16}} of file \mbox{\hyperlink{_radio_output_track_accessor_8cs_source}{Radio\+Output\+Track\+Accessor.\+cs}}.
+
+
+
+Referenced by \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00030}{Do\+Track\+Action()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00075}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Flip\+Pause()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00094}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Pause()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00038}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Play\+Loop()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00047}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Play\+One\+Shot()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00132}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Reset\+Progress()}}, \mbox{\hyperlink{_radio_interactor_8cs_source_l00056}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Stop()}}, and \mbox{\hyperlink{_radio_interactor_8cs_source_l00113}{Ryle\+Radio.\+Components.\+Radio\+Interactor.\+Unpause()}}.
 
 
 
@@ -71,7 +101,11 @@ List$<$string$>$ Ryle\+Radio.\+Components.\+Base.\+Radio\+Output\+Track\+Accesso
 
 
 
-Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00015}{15}} of file \mbox{\hyperlink{_radio_output_track_accessor_8cs_source}{Radio\+Output\+Track\+Accessor.\+cs}}.
+The names of tracks available in the Output. 
+
+
+
+Definition at line \mbox{\hyperlink{_radio_output_track_accessor_8cs_source_l00021}{21}} of file \mbox{\hyperlink{_radio_output_track_accessor_8cs_source}{Radio\+Output\+Track\+Accessor.\+cs}}.
 
 
 

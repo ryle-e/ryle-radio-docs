@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -94,9 +95,15 @@ $(function(){initNavTree('d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator
   <div class="headertitle"><div class="title">RyleRadio.Editor.RadioInsulatorEditor Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="dynheader">
-Inheritance diagram for RyleRadio.Editor.RadioInsulatorEditor:</div>
-<div class="dyncontent">
+
+<p>Custom inspector for a <a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html">RadioInsulator</a> <br  />
+<br  />
+This is mainly so that we can use <span class="tt">Handles</span> (draggable gizmos).  
+ <a href="#details">More...</a></p>
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Inheritance diagram for RyleRadio.Editor.RadioInsulatorEditor:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
  <div class="center">
   <img src="../../d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor.png" alt=""/>
  </div></div>
@@ -104,21 +111,31 @@ Inheritance diagram for RyleRadio.Editor.RadioInsulatorEditor:</div>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9ab655c595a042bb79566692703311f4" id="r_a9ab655c595a042bb79566692703311f4"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9ab655c595a042bb79566692703311f4">OnInspectorGUI</a> ()</td></tr>
+<tr class="memdesc:a9ab655c595a042bb79566692703311f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the actual inspector as default.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-methods" class="groupheader"><a id="pri-methods" name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:adc561828455b554c165ed5d29ba7309b" id="r_adc561828455b554c165ed5d29ba7309b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc561828455b554c165ed5d29ba7309b">OnEnable</a> ()</td></tr>
+<tr class="memdesc:adc561828455b554c165ed5d29ba7309b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the insulator's editor.  <br /></td></tr>
 <tr class="memitem:a958ef1e75edb339f975d1f935a0b6f82" id="r_a958ef1e75edb339f975d1f935a0b6f82"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a958ef1e75edb339f975d1f935a0b6f82">OnSceneGUI</a> ()</td></tr>
+<tr class="memdesc:a958ef1e75edb339f975d1f935a0b6f82"><td class="mdescLeft">&#160;</td><td class="mdescRight">Displays the handles for <a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html#a8ab1aa848d9e6f4546d18a8964484494">RadioInsulator.innerBoxSize</a> and <a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html#a74ee8d59c8f87b39a40658639aa40277">RadioInsulator.outerBoxSize</a> in the scene.  <br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pri-attribs" class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a4deda2b9f86d4e178990fa4f13a27bc2" id="r_a4deda2b9f86d4e178990fa4f13a27bc2"><td class="memItemLeft" align="right" valign="top">readonly BoxBoundsHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4deda2b9f86d4e178990fa4f13a27bc2">outerBoundsHandle</a> = new()</td></tr>
-<tr class="memitem:a0f43eda0bcfb99104646f4d90e7a409c" id="r_a0f43eda0bcfb99104646f4d90e7a409c"><td class="memItemLeft" align="right" valign="top">readonly BoxBoundsHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f43eda0bcfb99104646f4d90e7a409c">innerBoundsHandle</a> = new()</td></tr>
 <tr class="memitem:a39c012ea64ff59badb4c5bc31d51d0e0" id="r_a39c012ea64ff59badb4c5bc31d51d0e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html">RadioInsulator</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a39c012ea64ff59badb4c5bc31d51d0e0">insulator</a> = null</td></tr>
+<tr class="memdesc:a39c012ea64ff59badb4c5bc31d51d0e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The insulator this is linked to.  <br /></td></tr>
+<tr class="memitem:a4deda2b9f86d4e178990fa4f13a27bc2" id="r_a4deda2b9f86d4e178990fa4f13a27bc2"><td class="memItemLeft" align="right" valign="top">readonly BoxBoundsHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4deda2b9f86d4e178990fa4f13a27bc2">outerBoundsHandle</a> = new()</td></tr>
+<tr class="memdesc:a4deda2b9f86d4e178990fa4f13a27bc2"><td class="mdescLeft">&#160;</td><td class="mdescRight">The draggable gizmo for the outer bounds of the insulator.  <br /></td></tr>
+<tr class="memitem:a0f43eda0bcfb99104646f4d90e7a409c" id="r_a0f43eda0bcfb99104646f4d90e7a409c"><td class="memItemLeft" align="right" valign="top">readonly BoxBoundsHandle&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f43eda0bcfb99104646f4d90e7a409c">innerBoundsHandle</a> = new()</td></tr>
+<tr class="memdesc:a0f43eda0bcfb99104646f4d90e7a409c"><td class="mdescLeft">&#160;</td><td class="mdescRight">The draggable gizmo for the inner bounds of the insulator.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00015">15</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
+<div class="textblock"><p>Custom inspector for a <a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html">RadioInsulator</a> <br  />
+<br  />
+This is mainly so that we can use <span class="tt">Handles</span> (draggable gizmos). </p>
+<p><b>See: </b> <a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html">RadioInsulator</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00018">18</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
 <a id="adc561828455b554c165ed5d29ba7309b" name="adc561828455b554c165ed5d29ba7309b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adc561828455b554c165ed5d29ba7309b">&#9670;&#160;</a></span>OnEnable()</h2>
@@ -143,7 +160,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00026">26</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
+<p>Initializes the insulator's editor. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00034">34</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
 
 </div>
 </div>
@@ -162,7 +181,9 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00080">80</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
+<p>Draw the actual inspector as default. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00093">93</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
 
 </div>
 </div>
@@ -189,7 +210,9 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00040">40</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
+<p>Displays the handles for <a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html#a8ab1aa848d9e6f4546d18a8964484494">RadioInsulator.innerBoxSize</a> and <a class="el" href="../../de/def/class_ryle_radio_1_1_components_1_1_radio_insulator.html#a74ee8d59c8f87b39a40658639aa40277">RadioInsulator.outerBoxSize</a> in the scene. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00051">51</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
 
 </div>
 </div>
@@ -214,7 +237,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00019">19</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
+<p>The draggable gizmo for the inner bounds of the insulator. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00028">28</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00034">OnEnable()</a>, and <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00051">OnSceneGUI()</a>.</p>
 
 </div>
 </div>
@@ -238,7 +265,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00022">22</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
+<p>The insulator this is linked to. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00023">23</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00034">OnEnable()</a>, and <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00051">OnSceneGUI()</a>.</p>
 
 </div>
 </div>
@@ -262,7 +293,11 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00018">18</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
+<p>The draggable gizmo for the outer bounds of the insulator. </p>
+
+<p class="definition">Definition at line <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00026">26</a> of file <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html">RadioInsulatorEditor.cs</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00034">OnEnable()</a>, and <a class="el" href="../../dc/ddb/_radio_insulator_editor_8cs_source.html#l00051">OnSceneGUI()</a>.</p>
 
 </div>
 </div>

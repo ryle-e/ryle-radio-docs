@@ -137,7 +137,7 @@
     <detaileddescription>
 <para><ref refid="d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track" kindref="compound">IRadioTrack</ref> </para>
 <para><bold>NOTE FOR CUSTOM TRACK CREATORS!!</bold></para>
-<para>!!! IMPORTANT NOTE - if you&apos;re creating a custom <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref>, you need to both inherit from this class AND have a const string named <computeroutput>DISPLAY_NAME</computeroutput>. Because the version of c# unity uses does not support static virtual data, we have no way of enforcing that you do this- but you will get errors otherwise It&apos;s necessary for wrappers when they&apos;re listing each available track type in a dropdown- NaughtyAttributes&apos; reflection system is used to pull the display id so that it&apos;s selectable in the inspector. the only downside is a lack of enforcement :((( </para>
+<para>!!! IMPORTANT NOTE - if you&apos;re creating a custom <ref refid="df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track" kindref="compound">RadioTrack</ref>, you need to both inherit from this class AND have a const string named <computeroutput>DISPLAY_NAME</computeroutput>. Because the version of c# unity uses does not support static virtual data, we have no way of enforcing that you do this- but you will get errors otherwise It&apos;s necessary for wrappers when they&apos;re listing each available track eventType in a dropdown- NaughtyAttributes&apos; reflection system is used to pull the display id so that it&apos;s selectable in the inspector. the only downside is a lack of enforcement :((( </para>
     </detaileddescription>
     <inheritancegraph>
       <node id="1">

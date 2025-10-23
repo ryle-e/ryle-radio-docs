@@ -9,7 +9,7 @@
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_clip_radio_track}{Clip\+Radio\+Track}}
-\begin{DoxyCompactList}\small\item\em A type of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} that plays from a chosen Audio\+Clip object. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em A event\+Type of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} that plays from a chosen Audio\+Clip object. \end{DoxyCompactList}\item 
 interface \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_radio_track}{IRadio\+Track}}
 \begin{DoxyCompactList}\small\item\em Internal interface for a \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track}. \end{DoxyCompactList}\item 
 interface \mbox{\hyperlink{interface_ryle_radio_1_1_tracks_1_1_i_station_track}{IStation\+Track}}
@@ -19,11 +19,11 @@ class \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_procedural_radio_track}{P
 class \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track}}
 \begin{DoxyCompactList}\small\item\em A track to play as part of a radio. These are the fundamental objects that define the content of the radio, such as clips, procedural audio, stations, and any custom content you create. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_player}{Radio\+Track\+Player}}
-\item 
+\begin{DoxyCompactList}\small\item\em A class that plays a certain \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} at runtime. It\textquotesingle{}s created newly for each track on each \doxylink{class_ryle_radio_1_1_components_1_1_radio_output}{Radio\+Output}, and manages the playback entirely. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper}}
 \begin{DoxyCompactList}\small\item\em A wrapper class for \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} so that track types can be switched between in the inspector! Also contains various values that are track-\/agnostic. \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track}{Station\+Radio\+Track}}
-\begin{DoxyCompactList}\small\item\em A type of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} that contains other tracks. Has a custom editor in Station\+Radio\+Track\+Editor~\newline
+\begin{DoxyCompactList}\small\item\em A event\+Type of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track}{Radio\+Track} that contains other tracks. Has a custom editor in Station\+Radio\+Track\+Editor~\newline
  This is meant to emulate an actual radio station by storing multiple different tracks and switching between them as it plays. It can be used for really any purpose that calls for switching tracks, though-\/ e.\+g\+: \textquotesingle{}\textquotesingle{}\textquotesingle{}\textquotesingle{}procedural\textquotesingle{}\textquotesingle{}\textquotesingle{}\textquotesingle{} music, complex ambience, easter eggs (kinda) \end{DoxyCompactList}\item 
 class \mbox{\hyperlink{class_ryle_radio_1_1_tracks_1_1_station_radio_track_wrapper}{Station\+Radio\+Track\+Wrapper}}
 \begin{DoxyCompactList}\small\item\em A smaller, separate version of \doxylink{class_ryle_radio_1_1_tracks_1_1_radio_track_wrapper}{Radio\+Track\+Wrapper} for use in a \doxylink{class_ryle_radio_1_1_tracks_1_1_station_radio_track}{Station\+Radio\+Track}. \end{DoxyCompactList}\end{DoxyCompactItemize}

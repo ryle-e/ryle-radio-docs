@@ -19,6 +19,7 @@
 <script type="text/javascript" src="../../search/searchdata.js"></script>
 <script type="text/javascript" src="../../search/search.js"></script>
 <link href="../../doxygen.css" rel="stylesheet" type="text/css" />
+<link href="../../doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -97,9 +98,10 @@ $(function(){initNavTree('d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radi
 
 <p>A <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html" title="A track to play as part of a radio. These are the fundamental objects that define the content of the ...">RadioTrack</a> that plays procedurally generated audio, such as noice, silence, and waveforms.  
  <a href="#details">More...</a></p>
-<div class="dynheader">
-Inheritance diagram for RyleRadio.Tracks.ProceduralRadioTrack:</div>
-<div class="dyncontent">
+<div id="dynsection-0" onclick="return dynsection.toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;"><span class="dynarrow"><span class="arrowhead closed"></span></span>Inheritance diagram for RyleRadio.Tracks.ProceduralRadioTrack:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
  <div class="center">
   <img src="../../d8/df8/class_ryle_radio_1_1_tracks_1_1_procedural_radio_track.png" usemap="#RyleRadio_2ETracks_2EProceduralRadioTrack_map" alt=""/>
   <map id="RyleRadio_2ETracks_2EProceduralRadioTrack_map" name="RyleRadio_2ETracks_2EProceduralRadioTrack_map">
@@ -121,14 +123,14 @@ Public Types</h2></td></tr>
 &#160;&#160;<a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3a880a7ef20988e107cb918e73bd969bd1">Silence</a>
 <br />
  }</td></tr>
-<tr class="memdesc:a875d0aa43f7a037896786dd2f223c6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The type of procedural audio this track is generating.  <a href="#a875d0aa43f7a037896786dd2f223c6b3">More...</a><br /></td></tr>
+<tr class="memdesc:a875d0aa43f7a037896786dd2f223c6b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">The eventType of procedural audio this track is generating.  <a href="#a875d0aa43f7a037896786dd2f223c6b3">More...</a><br /></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a49f57378ad34e028e3ae6f9bf652c154" id="r_a49f57378ad34e028e3ae6f9bf652c154"><td class="memItemLeft" align="right" valign="top">override void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a49f57378ad34e028e3ae6f9bf652c154">Init</a> ()</td></tr>
 <tr class="memdesc:a49f57378ad34e028e3ae6f9bf652c154"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this track.  <br /></td></tr>
 <tr class="memitem:a383442f843004ce3898509ecc8e4bab5" id="r_a383442f843004ce3898509ecc8e4bab5"><td class="memItemLeft" align="right" valign="top">override float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a383442f843004ce3898509ecc8e4bab5">GetSample</a> (int _sampleIndex)</td></tr>
-<tr class="memdesc:a383442f843004ce3898509ecc8e4bab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next sample of the selected procedural audio type.  <br /></td></tr>
+<tr class="memdesc:a383442f843004ce3898509ecc8e4bab5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the next sample of the selected procedural audio eventType.  <br /></td></tr>
 <tr class="inherit_header pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html">RyleRadio.Tracks.RadioTrack</a></td></tr>
 <tr class="memitem:a4f37e66ec62c41202c91b1fd6422a4bb inherit pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track" id="r_a4f37e66ec62c41202c91b1fd6422a4bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.html#a4f37e66ec62c41202c91b1fd6422a4bb">Init</a> ()</td></tr>
 <tr class="memdesc:a4f37e66ec62c41202c91b1fd6422a4bb inherit pub_methods_class_ryle_radio_1_1_tracks_1_1_radio_track"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes this track.  <br /></td></tr>
@@ -140,9 +142,9 @@ Public Member Functions</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pub-attribs" class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
 <tr class="memitem:a5481dc232eea6f3128b0665bc658ac7b" id="r_a5481dc232eea6f3128b0665bc658ac7b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3">ProceduralType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5481dc232eea6f3128b0665bc658ac7b">proceduralType</a> = <a class="el" href="#a875d0aa43f7a037896786dd2f223c6b3aad81a11fa6c9e7cb884c4c5e9d39f0da">ProceduralType.WhiteNoise</a></td></tr>
-<tr class="memdesc:a5481dc232eea6f3128b0665bc658ac7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The selected type of noise for this track.  <br /></td></tr>
+<tr class="memdesc:a5481dc232eea6f3128b0665bc658ac7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">The selected eventType of noise for this track.  <br /></td></tr>
 <tr class="memitem:a3fd80112352b4996a78634016a0b0c4a" id="r_a3fd80112352b4996a78634016a0b0c4a"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3fd80112352b4996a78634016a0b0c4a">duration</a> = 0</td></tr>
-<tr class="memdesc:a3fd80112352b4996a78634016a0b0c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this track is inside of a <a class="el" href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html" title="A type of RadioTrack that contains other tracks. Has a custom editor in StationRadioTrackEditor  This...">StationRadioTrack</a>, then it should only play for a certain duration- this is that duration.  <br /></td></tr>
+<tr class="memdesc:a3fd80112352b4996a78634016a0b0c4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">If this track is inside of a <a class="el" href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html" title="A eventType of RadioTrack that contains other tracks. Has a custom editor in StationRadioTrackEditor ...">StationRadioTrack</a>, then it should only play for a certain duration- this is that duration.  <br /></td></tr>
 <tr class="memitem:a947a0cd5b897659b62e96322153045a0" id="r_a947a0cd5b897659b62e96322153045a0"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a947a0cd5b897659b62e96322153045a0">waveFrequency</a> = 100</td></tr>
 <tr class="memdesc:a947a0cd5b897659b62e96322153045a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The frequency/pitch of the waveform.  <br /></td></tr>
 <tr class="memitem:a2f55f1e9b9cc531f14e2c06f7a5b7998" id="r_a2f55f1e9b9cc531f14e2c06f7a5b7998"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2f55f1e9b9cc531f14e2c06f7a5b7998">brownWalkPower</a> = 0.5f</td></tr>
@@ -175,7 +177,7 @@ Private Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 id="header-pri-static-attribs" class="groupheader"><a id="pri-static-attribs" name="pri-static-attribs"></a>
 Static Private Attributes</h2></td></tr>
 <tr class="memitem:a434bffdbfd2ef9af32d3f72a0b568c72" id="r_a434bffdbfd2ef9af32d3f72a0b568c72"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a434bffdbfd2ef9af32d3f72a0b568c72">NOISE_MULTIPLIER</a> = .2f</td></tr>
-<tr class="memdesc:a434bffdbfd2ef9af32d3f72a0b568c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base multiplier for noise- because the samples can go all the way up to 1, noise tends to be a lot louder than other tracks, e.g: AudioClips in <a class="el" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html" title="A type of RadioTrack that plays from a chosen AudioClip object.">ClipRadioTrack</a>.  <br /></td></tr>
+<tr class="memdesc:a434bffdbfd2ef9af32d3f72a0b568c72"><td class="mdescLeft">&#160;</td><td class="mdescRight">A base multiplier for noise- because the samples can go all the way up to 1, noise tends to be a lot louder than other tracks, e.g: AudioClips in <a class="el" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html" title="A eventType of RadioTrack that plays from a chosen AudioClip object.">ClipRadioTrack</a>.  <br /></td></tr>
 <tr class="memitem:af26081ed87f3ae3d96f8b179aee39b54" id="r_af26081ed87f3ae3d96f8b179aee39b54"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af26081ed87f3ae3d96f8b179aee39b54">PINK_MULTIPLIER</a> = .5f</td></tr>
 <tr class="memdesc:af26081ed87f3ae3d96f8b179aee39b54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pink noise is even louder than the other noise types, so we curb it a little.  <br /></td></tr>
 <tr class="memitem:a51558907afb31032aaeebf27b2360ecd" id="r_a51558907afb31032aaeebf27b2360ecd"><td class="memItemLeft" align="right" valign="top">const float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a51558907afb31032aaeebf27b2360ecd">BASE_SAMPLE_RATE</a> = 44100</td></tr>
@@ -198,13 +200,13 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The type of procedural audio this track is generating. </p>
+<p>The eventType of procedural audio this track is generating. </p>
 <table class="fieldtable">
 <tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3aad81a11fa6c9e7cb884c4c5e9d39f0da" name="a875d0aa43f7a037896786dd2f223c6b3aad81a11fa6c9e7cb884c4c5e9d39f0da"></a>WhiteNoise&#160;</td><td class="fielddoc"><p>White noise: random samples between 0 and 1. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3a38cdfe1ca463b28f853b4cb2140d0fb8" name="a875d0aa43f7a037896786dd2f223c6b3a38cdfe1ca463b28f853b4cb2140d0fb8"></a>PinkNoise&#160;</td><td class="fielddoc"><p>Special type of noise defined by Paul Kellet's refined method (pk3): sounds "fuller" than white noise. </p>
+<tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3a38cdfe1ca463b28f853b4cb2140d0fb8" name="a875d0aa43f7a037896786dd2f223c6b3a38cdfe1ca463b28f853b4cb2140d0fb8"></a>PinkNoise&#160;</td><td class="fielddoc"><p>Special eventType of noise defined by Paul Kellet's refined method (pk3): sounds "fuller" than white noise. </p>
 </td></tr>
-<tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3a6842953f56972d1802aeb60dec83cd94" name="a875d0aa43f7a037896786dd2f223c6b3a6842953f56972d1802aeb60dec83cd94"></a>BrownNoise&#160;</td><td class="fielddoc"><p>Special type of noise using a value (<a class="el" href="#a2f55f1e9b9cc531f14e2c06f7a5b7998">brownWalkPower</a>): sounds softer and deeper. </p>
+<tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3a6842953f56972d1802aeb60dec83cd94" name="a875d0aa43f7a037896786dd2f223c6b3a6842953f56972d1802aeb60dec83cd94"></a>BrownNoise&#160;</td><td class="fielddoc"><p>Special eventType of noise using a value (<a class="el" href="#a2f55f1e9b9cc531f14e2c06f7a5b7998">brownWalkPower</a>): sounds softer and deeper. </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a875d0aa43f7a037896786dd2f223c6b3a8bf2116522afa754f97dea7634116564" name="a875d0aa43f7a037896786dd2f223c6b3a8bf2116522afa754f97dea7634116564"></a>SineWave&#160;</td><td class="fielddoc"><p>A waveform: shaped as a sine wave at a given frequency. </p>
 </td></tr>
@@ -232,7 +234,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the next sample of the selected procedural audio type. </p>
+<p>Get the next sample of the selected procedural audio eventType. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">_sampleIndex</td><td>The index of the sample- useless for noise, useful for waveforms</td></tr>
@@ -359,7 +361,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>If this track is inside of a <a class="el" href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html" title="A type of RadioTrack that contains other tracks. Has a custom editor in StationRadioTrackEditor  This...">StationRadioTrack</a>, then it should only play for a certain duration- this is that duration. </p>
+<p>If this track is inside of a <a class="el" href="../../d9/da4/class_ryle_radio_1_1_tracks_1_1_station_radio_track.html" title="A eventType of RadioTrack that contains other tracks. Has a custom editor in StationRadioTrackEditor ...">StationRadioTrack</a>, then it should only play for a certain duration- this is that duration. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00043">43</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
@@ -415,7 +417,7 @@ Static Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>A base multiplier for noise- because the samples can go all the way up to 1, noise tends to be a lot louder than other tracks, e.g: AudioClips in <a class="el" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html" title="A type of RadioTrack that plays from a chosen AudioClip object.">ClipRadioTrack</a>. </p>
+<p>A base multiplier for noise- because the samples can go all the way up to 1, noise tends to be a lot louder than other tracks, e.g: AudioClips in <a class="el" href="../../de/d66/class_ryle_radio_1_1_tracks_1_1_clip_radio_track.html" title="A eventType of RadioTrack that plays from a chosen AudioClip object.">ClipRadioTrack</a>. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00030">30</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 
@@ -491,7 +493,7 @@ Static Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>The selected type of noise for this track. </p>
+<p>The selected eventType of noise for this track. </p>
 
 <p class="definition">Definition at line <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html#l00037">37</a> of file <a class="el" href="../../de/d9e/_procedural_radio_track_8cs_source.html">ProceduralRadioTrack.cs</a>.</p>
 

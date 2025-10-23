@@ -1,0 +1,454 @@
+.TH "RyleRadio.Tracks.RadioTrackPlayer" 3 "Fri Oct 24 2025" "Version 1.0.0" "Ryle Radio" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+RyleRadio.Tracks.RadioTrackPlayer \- A class that plays a certain \fBRadioTrack\fP at runtime\&. It's created newly for each track on each \fBRadioOutput\fP, and manages the playback entirely\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBPlayerType\fP { \fBLoop\fP, \fBOneShot\fP }"
+.br
+.RI "The different types of Player- mainly changes what it does when the end of the track is reached\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRadioTrackPlayer\fP (\fBRadioTrackWrapper\fP _trackW, \fBPlayerType\fP _playerType, float _baseSampleRate)"
+.br
+.RI "Creates a new player for the provided track\&. "
+.ti -1c
+.RI "void \fBUpdateSampleIncrement\fP ()"
+.br
+.RI "Updates the \fBsampleIncrement\fP variable to match the current track\&. "
+.ti -1c
+.RI "float \fBGetSample\fP (float _tune, Vector3 _receiverPosition, float _otherVolume, out float _outVolume, bool _applyVolume=true)"
+.br
+.RI "Gets the current sample from the track according to playback\&. \fII would recommend reading the code comments for this method as they explain how the entire sample playback and evaluation process works\fP "
+.ti -1c
+.RI "void \fBIncrementSample\fP ()"
+.br
+.RI "Move this player to the next sample\&. "
+.ti -1c
+.RI "void \fBStop\fP ()"
+.br
+.RI "Stop playback and destroy this player\&. Make sure any references to it are removed as well\&. "
+.ti -1c
+.RI "void \fBResetProgress\fP ()"
+.br
+.RI "Resets the \fBProgress\fP of this player to 0\&. "
+.ti -1c
+.RI "void \fBDestroy\fP ()"
+.br
+.RI "Invokes \fBDoDestroy\fP, destroying the player\&. "
+.ti -1c
+.RI "float \fBGetBroadcastPower\fP (Vector3 _receiverPosition)"
+.br
+.RI "Gets the broadcast power of this player using the position of the Output and any any \fBRadioBroadcaster\fP\&. "
+.ti -1c
+.RI "float \fBGetInsulation\fP (Vector3 _receiverPosition)"
+.br
+.RI "Gets the insulation multiplier of this player using the position of the output and the bounds of any \fBRadioInsulator\fP\&. "
+.in -1c
+.SS "Properties"
+
+.in +1c
+.ti -1c
+.RI "\fBRadioTrackWrapper\fP \fBTrackW\fP\fR [get, private set]\fP"
+.br
+.RI "The track that this player is associated with and plays during runtime\&. "
+.ti -1c
+.RI "double \fBProgress\fP = 0\fR [get, private set]\fP"
+.br
+.RI "How many samples through the track this player is- not a whole number as we increment it with different values depending on the track's sample rate\&. "
+.ti -1c
+.RI "float \fBProgressFraction\fP\fR [get]\fP"
+.br
+.RI "How far through the track this player is, from [0 - 1]\&. "
+.ti -1c
+.RI "\fBPlayerType\fP \fBPlayType\fP\fR [get, private set]\fP"
+.br
+.RI "The type of player this is- what happens when the track ends\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP > \fBDoDestroy\fP = new(_ => { })\fR [get, set]\fP"
+.br
+.RI "Event called in order to destroy this player- this can either be invoked directly or as part of the \fBDestroy()\fP method\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP > \fBOnPlay\fP = new(_ => { })\fR [get, set]\fP"
+.br
+.RI "Event called when the player starts playing\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP > \fBOnStop\fP = new(_ => { })\fR [get, set]\fP"
+.br
+.RI "Event called when the player is stopped through \fBStop()\fP "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP, bool > \fBOnPause\fP = new((_, _) => { })\fR [get, set]\fP"
+.br
+.RI "Event called when the player's pause state is changed- the bool is true if the player is being paused, false if unpaused\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP > \fBOnSample\fP = new(_ => { })\fR [get, set]\fP"
+.br
+.RI "Event called when this player retreieves a sample from its track\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP > \fBOnEnd\fP\fR [get, set]\fP"
+.br
+.RI "Event called when the player reaches the end of its track naturally, before it takes an action depending on the \fBPlayType\fP (e\&.g: looping)\&. This is not invoked when the player is stopped or reset\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP, float > \fBOnVolume\fP = new((_, _) => { })\fR [get, set]\fP"
+.br
+.RI "Event called when the volume of this player is captured for a sample\&. Volume is the product of Tune power, Broadcast power, and Insulation\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP, float > \fBOnGain\fP = new((_, _) => { })\fR [get, set]\fP"
+.br
+.RI "Event called when the gain for this player is captured for a sample\&. Gain is a direct change to the loudness of a track\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP, float > \fBOnTunePower\fP = new((_, _) => { })\fR [get, set]\fP"
+.br
+.RI "Event called when the tune power for this player is captured for a sample\&. Tune power is the loudness of a track based on the Tune value of the \fBRadioOutput\fP\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP, float > \fBOnBroadcastPower\fP = new((_, _) => { })\fR [get, set]\fP"
+.br
+.RI "Event called when the broadcast power for this player is captured for a sample\&. Broadcast power is the loudness of a track based on the position of the \fBRadioOutput\fP relative to any \fBRadioBroadcaster\fP\&. "
+.ti -1c
+.RI "Action< \fBRadioTrackPlayer\fP, float > \fBOnInsulation\fP = new((_, _) => { })\fR [get, set]\fP"
+.br
+.RI "Event called when the insulation for this player is captured for a sample\&. Insulation is the quietness of a track based on the position of the \fBRadioOutput\fP relative to any \fBRadioInsulator\fP\&. "
+.ti -1c
+.RI "bool \fBPaused\fP\fR [get, set]\fP"
+.br
+.RI "Whether or not this player has been paused, temporarily halting playback of the track\&. Changing this value pauses/unpauses the player\&. "
+.in -1c
+.SS "Private Attributes"
+
+.in +1c
+.ti -1c
+.RI "float \fBsampleIncrement\fP"
+.br
+.RI "The amount that \fBProgress\fP is increased by every sample- the ratio of the track's sample speed to the \fBbaseSampleRate\fP\&. "
+.ti -1c
+.RI "float \fBbaseSampleRate\fP"
+.br
+.RI "The sample rate of the \fBRadioOutput\fP that this player is used by- that is, the sample rate of the radio\&. "
+.ti -1c
+.RI "bool \fBisStopped\fP = false"
+.br
+.RI "Whether or not this player has been stopped- prevents it from being stopped multiple times\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+A class that plays a certain \fBRadioTrack\fP at runtime\&. It's created newly for each track on each \fBRadioOutput\fP, and manages the playback entirely\&. 
+
+As such, this script is a central point for information about the playback process\&. 
+.PP
+Definition at line \fB13\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBRyleRadio\&.Tracks\&.RadioTrackPlayer\&.PlayerType\fP"
+
+.PP
+The different types of Player- mainly changes what it does when the end of the track is reached\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\f(BILoop \fP
+When it ends, the player goes back to the start and plays the track again\&. 
+.TP
+\f(BIOneShot \fP
+When it ends, the player destroys itself and stops playing\&. 
+.PP
+Definition at line \fB18\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "RyleRadio\&.Tracks\&.RadioTrackPlayer\&.RadioTrackPlayer (\fBRadioTrackWrapper\fP _trackW, \fBPlayerType\fP _playerType, float _baseSampleRate)"
+
+.PP
+Creates a new player for the provided track\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_trackW\fP The track for this player to play
+.br
+\fI_playerType\fP The type of player this is (what happens when the track ends)
+.br
+\fI_baseSampleRate\fP The sample rate of the \fBRadioOutput\fP using this Player
+.RE
+.PP
+
+.PP
+Definition at line \fB136\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void RyleRadio\&.Tracks\&.RadioTrackPlayer\&.Destroy ()"
+
+.PP
+Invokes \fBDoDestroy\fP, destroying the player\&. 
+.PP
+Definition at line \fB339\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBStop()\fP\&.
+.SS "float RyleRadio\&.Tracks\&.RadioTrackPlayer\&.GetBroadcastPower (Vector3 _receiverPosition)"
+
+.PP
+Gets the broadcast power of this player using the position of the Output and any any \fBRadioBroadcaster\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_receiverPosition\fP The position of the Output
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The broadcast power- higher the closer the Output is to broadcasters
+.RE
+.PP
+
+.PP
+Definition at line \fB349\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP\&.
+.SS "float RyleRadio\&.Tracks\&.RadioTrackPlayer\&.GetInsulation (Vector3 _receiverPosition)"
+
+.PP
+Gets the insulation multiplier of this player using the position of the output and the bounds of any \fBRadioInsulator\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_receiverPosition\fP The position of the Output
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The insulation multiplier- the more insulated the Output is, the lower the multiplier
+.RE
+.PP
+
+.PP
+Definition at line \fB385\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP\&.
+.SS "float RyleRadio\&.Tracks\&.RadioTrackPlayer\&.GetSample (float _tune, Vector3 _receiverPosition, float _otherVolume, out float _outVolume, bool _applyVolume = \fRtrue\fP)"
+
+.PP
+Gets the current sample from the track according to playback\&. \fII would recommend reading the code comments for this method as they explain how the entire sample playback and evaluation process works\fP 
+.PP
+\fBParameters\fP
+.RS 4
+\fI_tune\fP The tune value of the Output
+.br
+\fI_receiverPosition\fP The position of the Output
+.br
+\fI_otherVolume\fP The sum of the samples of previous tracks, according to the order in \fBRadioData\fP\&.
+.br
+\fBSee: \fP\fBRadioTrack\&.attenuation\fP
+.br
+\fI_outVolume\fP The volume of this sample to be added to \fR_otherVolume\fP
+.br
+\fI_applyVolume\fP Whether or not Volume (\fRtune power * broadcast power * insulation\fP) should be applied
+.RE
+.PP
+\fBReturns\fP
+.RS 4
+The current sample
+.RE
+.PP
+
+.PP
+Definition at line \fB187\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioOutput\&.OnAudioFilterRead()\fP\&.
+.SS "void RyleRadio\&.Tracks\&.RadioTrackPlayer\&.IncrementSample ()"
+
+.PP
+Move this player to the next sample\&. 
+.PP
+Definition at line \fB259\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBRyleRadio\&.Components\&.RadioOutput\&.OnAudioFilterRead()\fP\&.
+.SS "void RyleRadio\&.Tracks\&.RadioTrackPlayer\&.ResetProgress ()"
+
+.PP
+Resets the \fBProgress\fP of this player to 0\&. 
+.PP
+Definition at line \fB331\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.SS "void RyleRadio\&.Tracks\&.RadioTrackPlayer\&.Stop ()"
+
+.PP
+Stop playback and destroy this player\&. Make sure any references to it are removed as well\&. 
+.PP
+Definition at line \fB313\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBIncrementSample()\fP\&.
+.SS "void RyleRadio\&.Tracks\&.RadioTrackPlayer\&.UpdateSampleIncrement ()"
+
+.PP
+Updates the \fBsampleIncrement\fP variable to match the current track\&. 
+.PP
+Definition at line \fB154\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBIncrementSample()\fP, and \fBRadioTrackPlayer()\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "float RyleRadio\&.Tracks\&.RadioTrackPlayer\&.baseSampleRate\fR [private]\fP"
+
+.PP
+The sample rate of the \fBRadioOutput\fP that this player is used by- that is, the sample rate of the radio\&. 
+.PP
+Definition at line \fB122\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBRadioTrackPlayer()\fP, and \fBUpdateSampleIncrement()\fP\&.
+.SS "bool RyleRadio\&.Tracks\&.RadioTrackPlayer\&.isStopped = false\fR [private]\fP"
+
+.PP
+Whether or not this player has been stopped- prevents it from being stopped multiple times\&. 
+.PP
+Definition at line \fB127\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP, \fBIncrementSample()\fP, and \fBStop()\fP\&.
+.SS "float RyleRadio\&.Tracks\&.RadioTrackPlayer\&.sampleIncrement\fR [private]\fP"
+
+.PP
+The amount that \fBProgress\fP is increased by every sample- the ratio of the track's sample speed to the \fBbaseSampleRate\fP\&. 
+.PP
+Definition at line \fB117\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBIncrementSample()\fP, and \fBUpdateSampleIncrement()\fP\&.
+.SH "Property Documentation"
+.PP 
+.SS "Action<\fBRadioTrackPlayer\fP> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.DoDestroy = new(_ => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called in order to destroy this player- this can either be invoked directly or as part of the \fBDestroy()\fP method\&. We're using an event here so that other scripts can add their own functions to be called when this player is destroyed- e\&.g: removing one-shot players from a \fBRadioOutput\fP 
+.PP
+Definition at line \fB64\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBDestroy()\fP\&.
+.SS "Action<\fBRadioTrackPlayer\fP, float> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.OnBroadcastPower = new((_, _) => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when the broadcast power for this player is captured for a sample\&. Broadcast power is the loudness of a track based on the position of the \fBRadioOutput\fP relative to any \fBRadioBroadcaster\fP\&. 
+.PP
+Definition at line \fB93\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP\&.
+.SS "Action<\fBRadioTrackPlayer\fP> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.OnEnd\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when the player reaches the end of its track naturally, before it takes an action depending on the \fBPlayType\fP (e\&.g: looping)\&. This is not invoked when the player is stopped or reset\&. 
+.PP
+Definition at line \fB80\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBIncrementSample()\fP\&.
+.SS "Action<\fBRadioTrackPlayer\fP, float> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.OnGain = new((_, _) => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when the gain for this player is captured for a sample\&. Gain is a direct change to the loudness of a track\&. 
+.PP
+Definition at line \fB89\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP\&.
+.SS "Action<\fBRadioTrackPlayer\fP, float> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.OnInsulation = new((_, _) => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when the insulation for this player is captured for a sample\&. Insulation is the quietness of a track based on the position of the \fBRadioOutput\fP relative to any \fBRadioInsulator\fP\&. 
+.PP
+Definition at line \fB95\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP\&.
+.SS "Action<\fBRadioTrackPlayer\fP, bool> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.OnPause = new((_, _) => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when the player's pause state is changed- the bool is true if the player is being paused, false if unpaused\&. 
+.PP
+Definition at line \fB71\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.SS "Action<\fBRadioTrackPlayer\fP> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.OnPlay = new(_ => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when the player starts playing\&. 
+.PP
+Definition at line \fB67\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBIncrementSample()\fP\&.
+.SS "Action<\fBRadioTrackPlayer\fP> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.OnSample = new(_ => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when this player retreieves a sample from its track\&. 
+.PP
+Definition at line \fB73\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBIncrementSample()\fP\&.
+.SS "Action<\fBRadioTrackPlayer\fP> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.OnStop = new(_ => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when the player is stopped through \fBStop()\fP 
+.PP
+Definition at line \fB69\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBStop()\fP\&.
+.SS "Action<\fBRadioTrackPlayer\fP, float> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.OnTunePower = new((_, _) => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when the tune power for this player is captured for a sample\&. Tune power is the loudness of a track based on the Tune value of the \fBRadioOutput\fP\&. 
+.PP
+Definition at line \fB91\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP\&.
+.SS "Action<\fBRadioTrackPlayer\fP, float> RyleRadio\&.Tracks\&.RadioTrackPlayer\&.OnVolume = new((_, _) => { })\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Event called when the volume of this player is captured for a sample\&. Volume is the product of Tune power, Broadcast power, and Insulation\&. 
+.PP
+Definition at line \fB87\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP\&.
+.SS "bool RyleRadio\&.Tracks\&.RadioTrackPlayer\&.Paused\fR [get]\fP, \fR [set]\fP"
+
+.PP
+Whether or not this player has been paused, temporarily halting playback of the track\&. Changing this value pauses/unpauses the player\&. 
+.PP
+Definition at line \fB104\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP, and \fBIncrementSample()\fP\&.
+.SS "\fBPlayerType\fP RyleRadio\&.Tracks\&.RadioTrackPlayer\&.PlayType\fR [get]\fP, \fR [private set]\fP"
+
+.PP
+The type of player this is- what happens when the track ends\&. 
+.PP
+Definition at line \fB57\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBIncrementSample()\fP, and \fBRadioTrackPlayer()\fP\&.
+.SS "double RyleRadio\&.Tracks\&.RadioTrackPlayer\&.Progress = 0\fR [get]\fP, \fR [private set]\fP"
+
+.PP
+How many samples through the track this player is- not a whole number as we increment it with different values depending on the track's sample rate\&. This is stored as a double for greater precision with sample rates- using a float here causes clipping or distortion\&. 
+.br
+We could use a \fRdecimal\fP here, but we're opting to change sample rates of the tracks rather than messing with them here 
+.PP
+Definition at line \fB36\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetSample()\fP, \fBIncrementSample()\fP, \fBRadioTrackPlayer()\fP, and \fBResetProgress()\fP\&.
+.SS "float RyleRadio\&.Tracks\&.RadioTrackPlayer\&.ProgressFraction\fR [get]\fP"
+
+.PP
+How far through the track this player is, from [0 - 1]\&. 
+.PP
+Definition at line \fB41\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBIncrementSample()\fP\&.
+.SS "\fBRadioTrackWrapper\fP RyleRadio\&.Tracks\&.RadioTrackPlayer\&.TrackW\fR [get]\fP, \fR [private set]\fP"
+
+.PP
+The track that this player is associated with and plays during runtime\&. 
+.PP
+Definition at line \fB27\fP of file \fBRadioTrackPlayer\&.cs\fP\&.
+.PP
+Referenced by \fBGetBroadcastPower()\fP, \fBGetInsulation()\fP, \fBGetSample()\fP, \fBIncrementSample()\fP, and \fBRadioTrackPlayer()\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for Ryle Radio from the source code\&.
