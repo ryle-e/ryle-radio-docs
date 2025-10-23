@@ -1,4 +1,0 @@
-# Interfaces
-
-* [RyleRadio::Tracks::IRadioTrack](d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track.md#d3/df2/interface_ryle_radio_1_1_tracks_1_1_i_radio_track): Internal interface for a [RadioTrack](df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.md#df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track).
-* [RyleRadio::Tracks::IStationTrack](dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track.md#dc/d36/interface_ryle_radio_1_1_tracks_1_1_i_station_track): A [RadioTrack](df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track.md#df/dbc/class_ryle_radio_1_1_tracks_1_1_radio_track) that can be played as part of a station.
