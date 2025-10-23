@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Main.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Main"
+              "title": "index"
             }
           }
         ]
@@ -140,13 +140,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Main.md",
+                "file": "index.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "Outline of Main"
+              "title": "Outline of index"
             }
           },
           {
@@ -165,12 +165,12 @@
             "state": {
               "type": "git-view",
               "state": {},
-              "icon": "lucide-ghost",
-              "title": "git-view"
+              "icon": "git-pull-request",
+              "title": "Source Control"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -188,7 +188,7 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "8b1b8d129b1e7e8a",
+  "active": "9f1feac3f365ae91",
   "lastOpenFiles": [
     "Scripting/html/d5/da6",
     "Scripting/html/d5/da5",
@@ -209,7 +209,7 @@
     "Scripting-Markdown/index.md",
     "Scripting-Markdown/file_index.md",
     "Scripting-Markdown/dir_index.md",
-    "Main.md",
+    "index.md",
     "Guides/1. Basic Radio Sample.md",
     "General/Info/What is Ryle Radio.md",
     "General/Info/Sample Rates- an important note.md",
