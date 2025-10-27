@@ -30,20 +30,15 @@ We need to do this at the moment so that we know what sample rate to assign to t
 
 **Please keep in mind that this change will apply to your entire project. Unity seems to resample audio files used in AudioSources on its own, so you may not notice any effects- but it's worth keeping in mind that this process is happening.**
 
-To change the global sample rate, go to `Edit >> Project Settings >> Audio` then change the `System Sample Rate` option to 
+To change the global sample rate, go to `Edit >> Project Settings >> Audio` then change the `System Sample Rate` option. Generally you want to use 48000 for Windows devices, and 44100 for Mac. You may need to look up the base audio sample rate for other platforms.
+
+Next, we need to apply this sample rate to our clips.
 ### Forcing sample rates on clips
-This is a tiny bit complex, but is the least drastic solution to the problem. You can either go about this the integrated way, or the manual way.
-
-I'll also put a note here to say: different build platforms use different base sample rates. This is just a consequence of how the platforms work- make sure you check each individual version and potentially repeat a below method with other build targets selected in case you're having any issues.
-
-Alternatively, run the Integrated way first, then move through clips afterwards with the Manual way.
+There're two ways of doing this. I recommend the Integrated way first for easier implementation, then doing the Manual way afterwards if you want to be absolutely sure that it worked.
 #### Integrated way
-Before proceeding, open `Edit >> Project Settings >> Audio` and ensure that a number is assigned to `System Sample Rate`. If you're on Mac, you'll usually use 41400. On Windows (and, for now, other platforms) use 48000.
-
 The Integrated way is built-in to RadioData objects. Opening the Advanced Settings tab will show the following:
 ![Pasted image 20251007184437](../../Images/Info/20251007184437.png)
-Make sure **Force sample rate on Clips** is ticked. If you want to provide your own sample rate, enter it in the box, otherwise leave it at 0. 
-When **Forced sample rate** is set to 0, it will automatically use the default sample rate for the current build type. 
+Make sure **Force sample rate on Clips** is ticked. It's generally a good idea to provide the specific sample rate you've just assigned in Project Settings, though when the forced sample rate is set to 0, it will attempt to match the sample rate of the project- for some reason, this is normally stuck at 0.
 Press the button to assign the sample rate on all AudioClips referenced in the RadioData!
 
 Please note two things about this method:
@@ -56,10 +51,3 @@ The manual way requires you to trawl individually through applicable audio clips
 To do this, select an AudioClip in the inspector. Select the target platform, select the Override toggle. Select `Override Sample Rate` on Sample Rate Setting, then select a sample rate below. 
 ![Pasted image 20251007190243](../../Images/Info/20251007190243.png)
 Do note that this has to be done for each applicable clip for each applicable platform.
-
-### Changing base sample rate
-Rather than forcing sample rates on clips, our other available method is to change the project's native sample rate. This is less recommended due to this affecting the ENTIRE project, and possibly screwing up audio elsewhere as a result. You have been warned,,,,
-
-To do this, go to `Project Settings > Audio > System Sample Rate`, and change the value to match the base sample rate of the distorted AudioClip. This may take a moment to load- once completed, the audio should no longer be distorted.
-
-To reinforce the point, some other, previously fine audio could possibly be distorted now due to the system changing its universal sample rate. Check profusely when doing this method!
