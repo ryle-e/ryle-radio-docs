@@ -1,21 +1,21 @@
 ---
-title: CHANGE THIS
-parent:
-nav_order:
+title: FAQ / Common Issues and Questions
+parent: General/Info
+nav_order: "1"
 tags:
 ---
 
 These are some questions I feel could end up being common, and would prefer to have easily answerable than requiring you to trawl through documentation :)
-1. [Questions](#Questions)
-	1. [How do I use Ryle Radio?](#How do I use Ryle Radio?)
-	2. [How do I work with it in code?](#How do I work with it in code?)
-	3. [How do I work with it without coding?](#How do I work with it without coding?)
-	4. [What does the Gain Curve do?](#What does the Gain curve do?)
-2. [[#Issues]]
-	1. [[#My Audio Clip sounds distorted when played through a radio?]]
-	2. [[#My project takes ages to start up after adding the radio!]]
-	3. [[#I can't hear my track/my track is quiet!]]
-	4. [[#My track has distortion in a build for a specific platform!]]
+1. [Questions](#questions)
+	1. [How do I use Ryle Radio?](#how%20do%20I%20use%20ryle%20radio)
+	2. [How do I work with it in code?](#how%20do%20I%20work%20with%20it%20in%20code)
+	3. [How do I work with it without coding?](#how%20do%20I%20work%20with%20it%20coding)
+	4. [What does the Gain Curve do?](#what%20does%20the%20gain%20curve%20do)
+2. [Issues](#issues)
+	1. [My AudioClip sounds distorted when played through a radio!](#my%20Audio%20Clip%20sounds%20distorted%20when%20played%20through%20a%20radio)
+	2. [My project takes ages to start up after adding the radio!](#My%20project%20takes%20ages%20to%20start%20up%20after%20adding%20the%20radio)
+	3. [I can't hear my track/my track is quiet!](#I%20can't%20hear%20my%20track/my%20track%20is%20quiet!)
+	4. [My track has distortion in a build for a specific platform!](#My%20track%20has%20distortion%20in%20a%20build%20for%20a%20specific%20platform)
 
 ---
 ## Questions

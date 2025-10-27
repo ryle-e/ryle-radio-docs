@@ -1,6 +1,6 @@
 ---
 title: Contact
-parent: General/Info
+parent: Info
 nav_order: "0"
 tags:
   - contact
