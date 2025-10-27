@@ -25,3 +25,20 @@ It gets a fair bit of usage in Ryle Radio for components like Broadcasters, whic
 1. Create an int variable in your code.
 2. Add `[Multiselect("_")]` to the line above this int variable, and replace the _ with the name of the list you want the dropdown to show.
 3. When you need to access the options chosen in the dropdown, run `MultiselectAttribute.To<_>(name_of_int_variable, name_of_list_used_by_dropdown)`- the output of this method is your subset list.
+
+
+```cs
+string[] options = new string[4] { "awesome", "attribute", "thanks", "ryle-e" };
+
+[Multiselect("options")]
+private int flags1; // in the inspector, we set it to ["awesome", "thanks"]- the first and third options in the inspector. this int then becomes 0x0101
+
+public void Convert()
+{
+	int flags2 = 0x1010; // equivalent to selecting the second and fourth options in the inspector
+
+	List<string> converted1 = Multiselect.To<string>(flags1, options); // sets to ["awesome", "thanks"]
+
+	List<string> converted2 = Multiselect.To<string>(flags2, options); // sets to ["attribute", "ryle-e"]
+}
+```
