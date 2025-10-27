@@ -28,12 +28,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Guides/1. Basic Radio Sample.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "1. Basic Radio Sample"
             }
           }
         ],
@@ -69,7 +69,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:sample",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -202,12 +202,15 @@
   },
   "active": "7c79e8cbc00a91a6",
   "lastOpenFiles": [
+    "Images/Guides/Basic Radio Sample/Pasted image 20251002182945.png",
+    "Guides/1. Basic Radio Sample.md",
+    "index.md",
+    "Guides/Guides.md",
+    "General/Info/FMOD and Ryle Radio.md",
+    "General/Info/Sample Rates- an important note.md",
     "Guides/3. Interaction Components Sample.md",
     "Guides/2. Spatial Components Sample.md",
-    "Guides/1. Basic Radio Sample.md",
-    "General/Info/Sample Rates- an important note.md",
     "General/Info/the Multiselect Attribute.md",
-    "Guides/Guides.md",
     "General/Contact.md",
     "1 Basic Radio Sample.md",
     "General/Plans, Todo.md",
@@ -216,9 +219,7 @@
     "General/Changelog.md",
     "General/Info/Info.md",
     "General/Info/What is Ryle Radio.md",
-    "General/Info/FMOD and Ryle Radio.md",
     "General/Info/(Predicted) Common Issues and Questions.md",
-    "index.md",
     "Questions.md",
     "doxygen-awesome-css/include/MyLibrary/subclass-example.hpp",
     "doxygen-awesome-css/docs/img/testimage.png",
@@ -246,7 +247,6 @@
     "doxygen-awesome-css/README.md",
     "General/About the Docs.md",
     "1.-Basic-Radio-Sample.md",
-    "1..md",
-    "ready/Guides/o2-temp.2025-10-27-1.-Basic-Radio-Sample.md"
+    "1..md"
   ]
 }

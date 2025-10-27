@@ -5,6 +5,7 @@ nav_order: "2"
 tags:
   - issues
   - faq
+  - guide
 ---
 
 In the process of developing this package, I have come across a fairly substantial issue that I feel I should address in its own note- sample rate conversion issues/distortion.
