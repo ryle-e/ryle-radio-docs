@@ -2,7 +2,6 @@
 title: Ryle Radio docs
 description: Basic documentation for Ryle Radio
 url: "https://ryle-e.github.io/ryle-radio-docs" # the base hostname & protocol for your site
-theme: just-the-docs # Replace with your chosen theme, e.g., jekyll-theme-cayman
 
 logo: "/Images/ryleradiologo_color_small.png"
 favicon: "/Images/ryleradiologo_color_small.ico"
@@ -22,6 +21,7 @@ aux_links_new_tab: true
 
 # Build settings
 markdown: gfm
+theme: just-the-docs # Replace with your chosen theme, e.g., jekyll-theme-cayman
 color_scheme: dark
 plugins:
   - jekyll-feed
