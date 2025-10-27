@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Guides/1. Basic Radio Sample.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "1. Basic Radio Sample"
+              "title": "index"
             }
           }
         ]
@@ -190,10 +190,10 @@
   },
   "active": "8b1b8d129b1e7e8a",
   "lastOpenFiles": [
+    "Guides/1. Basic Radio Sample.md",
     "index.md",
     "1.-Basic-Radio-Sample.md",
     "1..md",
-    "Guides/1. Basic Radio Sample.md",
     "General/Plans, Todo.md",
     "General/Patch Notes.md",
     "General/About the Docs.md",
