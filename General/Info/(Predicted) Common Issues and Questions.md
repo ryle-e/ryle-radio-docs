@@ -39,14 +39,14 @@ Check out [3. Interaction Components Sample](../../Guides/3.%20Interaction%20Com
 ### What does the **Gain curve** do?
 The gain curve can be a little confusing if you haven't worked with non-linear blending or curves like this before. It effectively tells outputs that are tuning through this radio how loud to make a particular track within the tune range.
 
-![Pasted image 20251007150555](../../Images/Info/Pasted%20image%2020251007150555.png)
+![Pasted image 20251007150555](../../Images/Info/20251007150555.png)
 For example, this is a track in [1. Basic Radio Sample](../../Guides/1.%20Basic%20Radio%20Sample.md). The gain curve is how loud this track will be when tuned to the \[33.2 - 246.0] range.
 Let's say we have a RadioOutput using this radio with its tune set to about 140. That value places us right in the center of the track's range, which places us right in the center of the gain curve. Because the curve is high at that point, the track will be loud. If we use a tune value of about 60, though, we're lower down on the gain curve- the track will be quieter.
 
-This curve can be useful for tracks that are limited to a very small range, by making them easier to hear at the edges of the range:![Pasted image 20251007151057](../../Images/Info/Pasted%20image%2020251007151057.png)
-Or perhaps we want it to be fully audible as soon as the range is reached:![Pasted image 20251007151140](../../Images/Info/Pasted%20image%2020251007151140.png)
+This curve can be useful for tracks that are limited to a very small range, by making them easier to hear at the edges of the range:![Pasted image 20251007151057](../../Images/Info/20251007151057.png)
+Or perhaps we want it to be fully audible as soon as the range is reached:![Pasted image 20251007151140](../../Images/Info/20251007151140.png)
 Or maybe the tune range reaches all the way to the end of the range, and we want it to be loudest at the end:
-![Pasted image 20251007151227](../../Images/Info/Pasted%20image%2020251007151227.png)
+![Pasted image 20251007151227](../../Images/Info/20251007151227.png)
 The possibilities are endless :)
 
 ---

@@ -12,6 +12,27 @@ The Multiselelect attribute is a feature that comes alongside Ryle Radio. It all
 Basically, it lets you select multiple things from a list in the inspector rather than just one :)
 
 ---
+
+```cs
+string[] options = new string[4] { "awesome", "attribute", "thanks", "ryle-e" };
+
+[Multiselect("options")]
+public int flags1; // in the inspector, we set it to ["awesome", "thanks"]- the first and third options in the inspector. this int then becomes 0x0101
+
+public void Convert()
+{
+	int flags2 = (1 << 1) | (1 << 3); // equivalent to selecting the second and fourth options in the inspector
+
+	string[] converted1 = MultiselectAttribute.To<string>(flags1, options); // sets to ["awesome", "thanks"]
+
+	string[] converted2 = MultiselectAttribute.To<string>(flags2, options); // sets to ["attribute", "ryle-e"]
+}
+```
+
+![](../../Images/Info/20251027171758.png)
+![](../../Pasted%20image%2020251027172711.png)
+
+
 ## What does it do?
 The Multiselect attribute is a variable attribute introduced in Ryle Radio that acts as an extension to NaughtyAttributes, providing a LayerMask-style multi-select dropdown in the inspector. The options you choose on the dropdown are saved as a flag int, and can be converted at runtime to a subset of a collection you provide. 
 In short- you can choose a number of options from a list (or array), then convert that number to a subset of the list.
@@ -25,20 +46,3 @@ It gets a fair bit of usage in Ryle Radio for components like Broadcasters, whic
 1. Create an int variable in your code.
 2. Add `[Multiselect("_")]` to the line above this int variable, and replace the _ with the name of the list you want the dropdown to show.
 3. When you need to access the options chosen in the dropdown, run `MultiselectAttribute.To<_>(name_of_int_variable, name_of_list_used_by_dropdown)`- the output of this method is your subset list.
-
-
-```cs
-string[] options = new string[4] { "awesome", "attribute", "thanks", "ryle-e" };
-
-[Multiselect("options")]
-private int flags1; // in the inspector, we set it to ["awesome", "thanks"]- the first and third options in the inspector. this int then becomes 0x0101
-
-public void Convert()
-{
-	int flags2 = 0x1010; // equivalent to selecting the second and fourth options in the inspector
-
-	List<string> converted1 = Multiselect.To<string>(flags1, options); // sets to ["awesome", "thanks"]
-
-	List<string> converted2 = Multiselect.To<string>(flags2, options); // sets to ["attribute", "ryle-e"]
-}
-```

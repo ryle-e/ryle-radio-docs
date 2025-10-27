@@ -32,7 +32,7 @@ I'll also put a note here to say: different build platforms use different base s
 Alternatively, run the Integrated way first, then move through clips afterwards with the Manual way.
 #### Integrated way
 The Integrated way is built-in to RadioData objects. Opening the Advanced Settings tab will show the following:
-![Pasted image 20251007184437](../../Images/Info/Pasted%20image%2020251007184437.png)
+![Pasted image 20251007184437](../../Images/Info/20251007184437.png)
 Make sure **Force sample rate on Clips** is ticked. If you want to provide your own sample rate, enter it in the box, otherwise leave it at 0. 
 When **Forced sample rate** is set to 0, it will automatically use the default sample rate for the current build type. 
 Press the button to assign the sample rate on all AudioClips referenced in the RadioData!
@@ -45,7 +45,7 @@ Please note two things about this method:
 The manual way requires you to trawl individually through applicable audio clips and override the sample rate yourself. This is substantially slower, but a lot safer than universally overriding sample rates.
 
 To do this, select an AudioClip in the inspector. Select the target platform, select the Override toggle. Select `Override Sample Rate` on Sample Rate Setting, then select a sample rate below. 
-![Pasted image 20251007190243](../../Images/Info/Pasted%20image%2020251007190243.png)
+![Pasted image 20251007190243](../../Images/Info/20251007190243.png)
 Do note that this has to be done for each applicable clip for each applicable platform.
 
 ### Changing base sample rate

@@ -11,7 +11,7 @@ Ryle Radio is a radio-like audio tool for Unity projects. It is intended to emul
 
 It allows you to set up several [Tracks](1.%20Basic%20Radio%20Sample#An%20average%20track) at specific frequencies, tune between them on a `RadioListener` attached to an `AudioSource`. These tracks could contain an `AudioClip`, or procedural audio, or even other `RadioTracks` to select from. Combining many tracks allows you to develop a complex (or simple) system of audio that can be moved through at runtime.
 
-![Pasted image 20250922183059](Images/Scripting/Tracks/Pasted%20image%2020250922183059.png)
+![Pasted image 20250922183059](Images/Info/20250922183059.png)
 ## Features
 - Tracks linked to specific frequencies (known internally as `tune`)
 - Gain interacts with played frequencies (user-defined falloff)
