@@ -74,3 +74,6 @@ If none of these help/fix, [contact me](../Contact.md) and I'll happily try to w
 This is usually another [sample rate issue](Sample%20Rates-%20an%20important%20note.md). Specifically, this could be because different platforms may use different sample rates in their audio. The workaround for this issue is a little exhaustive, but necessary: force the AudioClips to a specific sample rate depending on the platform.
 
 To do this, assign the new build target in Build Settings, then [](Sample%20Rates-%20an%20important%20note.md#Forcing%20sample%20rates%20on%20clips|force%20the%20sample%20rates%20as%20usual). This should, ideally, work for the selected platform- if it does not, please [contact me](../Contact.md) and I'll see if I can help out :)
+
+### A sample scene is pink!
+This is to do with Unity's render pipeline in the sample projects. To fix this, you need to switch the shader used on the materials in these scenes to Standard, or Legacy Standard. It's set by default to URP's Lit shader, which renders as pink in non-URP projects.
