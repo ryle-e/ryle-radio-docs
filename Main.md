@@ -1,5 +1,7 @@
 ---
-title: Main page
+tags:
+  - main
+title: index
 nav_order: "0"
 ---
 

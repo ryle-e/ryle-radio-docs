@@ -13,12 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "General/Info/(Predicted) Common Issues and Questions.md",
                 "mode": "source",
-                "source": false
+                "source": false,
+                "backlinks": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "(Predicted) Common Issues and Questions"
             }
           }
         ]
@@ -89,24 +90,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "15fdad7bce29448d",
-            "type": "leaf",
-            "state": {
-              "type": "backlink",
-              "state": {
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical",
-                "showSearch": false,
-                "searchQuery": "",
-                "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
-              },
-              "icon": "links-coming-in",
-              "title": "Backlinks"
-            }
-          },
-          {
             "id": "5e8ca3c302f3e34c",
             "type": "leaf",
             "state": {
@@ -167,9 +150,23 @@
               "icon": "git-pull-request",
               "title": "Source Control"
             }
+          },
+          {
+            "id": "91a08da61e1ac845",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -190,16 +187,19 @@
   },
   "active": "8b1b8d129b1e7e8a",
   "lastOpenFiles": [
+    "General/Info/FMOD and Ryle Radio.md",
+    "General/Info/Info.md",
+    "General/Info/(Predicted) Common Issues and Questions.md",
+    "General/General.md",
+    "General/Patch Notes.md",
+    "General/Plans, Todo.md",
+    "Main.md",
     "Guides/1. Basic Radio Sample.md",
-    "index.md",
+    "General/Info/What is Ryle Radio.md",
+    "General/About the Docs.md",
     "1.-Basic-Radio-Sample.md",
     "1..md",
-    "General/Plans, Todo.md",
-    "General/Patch Notes.md",
-    "General/About the Docs.md",
-    "General/Info/What is Ryle Radio.md",
     "General/Info/the Multiselect Attribute.md",
-    "General/Info/(Predicted) Common Issues and Questions.md",
     "General/Info/Contact.md",
     "General/Info/Contribute.md",
     "ready/Guides/o2-temp.2025-10-27-1.-Basic-Radio-Sample.md",
@@ -213,9 +213,6 @@
     "ready/General/Info/o2-temp.2025-10-27-FMOD-and-Ryle-Radio.md",
     "ready/General/Info/o2-temp.2025-10-27-Sample-Rates--an-important-note.md",
     "ready/General/Info/o2-temp.2025-10-27-What-is-Ryle-Radio.md",
-    "ready/General/o2-temp.2025-10-27-Patch-Notes.md",
-    "ready/General/o2-temp.2025-10-27-Plans-Todo.md",
-    "ready/o2-temp.2025-10-27-index.md",
     "attachments",
     "archive",
     "ready",

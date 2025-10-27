@@ -1,3 +1,12 @@
+---
+title: Plans, Todo
+parent: General
+nav_order: "1"
+tags:
+  - todo
+  - plans
+---
+
 ## Known issues
 - Start and end rests on station tracks don't work - *High prio*
 - New RadioTrackWrappers get linked when added in a RadioData and mirror values in their child RadioTrack - *Mid prio, attempted to fix by creating RadioDataEditor but that doesn't appear to have done it*
