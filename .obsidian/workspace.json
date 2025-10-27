@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "Guides/1. Basic Radio Sample.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "1. Basic Radio Sample"
             }
           }
         ]
@@ -190,8 +190,10 @@
   },
   "active": "8b1b8d129b1e7e8a",
   "lastOpenFiles": [
-    "Guides/1. Basic Radio Sample.md",
     "index.md",
+    "1.-Basic-Radio-Sample.md",
+    "1..md",
+    "Guides/1. Basic Radio Sample.md",
     "General/Plans, Todo.md",
     "General/Patch Notes.md",
     "General/About the Docs.md",
@@ -224,10 +226,8 @@
     "Scripting/html/d4/ded",
     "Scripting/html/d4/dec",
     "Scripting/html/d4/deb",
-    "Scripting/html/index.md",
     "Scripting/html/ryleradiologo_color.svg",
     "Scripting/html/doxygen.svg",
-    "d2/d82/class_ryle_radio_1_1_components_1_1_base_1_1_radio_component.md",
     "Scripting/html/df/d29/class_ryle_radio_1_1_editor_1_1_station_radio_track_editor.png",
     "Scripting/html/d7/d6f/class_ryle_radio_1_1_editor_1_1_radio_insulator_editor.png",
     "Scripting/html/d8/d52/class_ryle_radio_1_1_editor_1_1_radio_data_editor.png",
