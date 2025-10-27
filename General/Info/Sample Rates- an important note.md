@@ -23,7 +23,10 @@ The correct way for me to fix this is to use a ratio between the Clip's sample r
 For example, let's take the "I'll Never Smile Again" audio in the [1. Basic Radio Sample](../../Guides/1.%20Basic%20Radio%20Sample.md) project. The sample rate of this audio as it's provided is 44100kHz- this is fine for most usages, but Unity runs at 48000kHz by default. Usually we would have no issues with this, but because we're using the individual audio samples ourselves rather than feeding them through an AudioSource, we will get some light distortion or even pitch shifts if we handle this improperly. This can be heard if you manually change the clip's sample rate override and listen closely- check out [this video I posted while trying to find fixes for this exact problem](https://youtu.be/UC8RpxZMkz4) to see what could happen.
 
 ## How do we fix it?
-If it's not something you can or are willing to ignore, we're given a couple options for fixing this problem. My recommendation is to use the first method: **Forcing sample rates on clips**.
+If it's not something you can or are willing to ignore, the main option for fixing this problem is setting a global sample rate, and forcing your clips to it.
+
+### Setting a global sample rate
+We need to do this at the moment so that we know what sample rate to assign to the clips. Unity, by default, uses the sample rate of the system running the game build, but because we'd be having
 ### Forcing sample rates on clips
 This is a tiny bit complex, but is the least drastic solution to the problem. You can either go about this the integrated way, or the manual way.
 
@@ -31,7 +34,7 @@ I'll also put a note here to say: different build platforms use different base s
 
 Alternatively, run the Integrated way first, then move through clips afterwards with the Manual way.
 #### Integrated way
-Before proceeding, open `File >> Project Settings >> Audio` and ensure that a number is assigned to `System Sample Rate`. If you're on Mac, you'll usually use 41400. On Windows (and, for now, other platforms) use 48000.
+Before proceeding, open `Edit >> Project Settings >> Audio` and ensure that a number is assigned to `System Sample Rate`. If you're on Mac, you'll usually use 41400. On Windows (and, for now, other platforms) use 48000.
 
 The Integrated way is built-in to RadioData objects. Opening the Advanced Settings tab will show the following:
 ![Pasted image 20251007184437](../../Images/Info/20251007184437.png)
@@ -41,7 +44,7 @@ Press the button to assign the sample rate on all AudioClips referenced in the R
 
 Please note two things about this method:
 1. This affects ALL the AudioClips referenced, even those in Stations- there is no way to exclude clips from this except for removing them from the radio temporarily. Please make sure that you're okay with this change being applied to every applicable clip.
-2. The default sample rate matches the current build target. If you're []((Predicted)%20Common%20Issues%20and%20Questions.md#My%20track%20has%20distortion%20in%20a%20build%20for%20a%20specific%20platform!|having%20distortion%20on%20specific%20platforms), my recommendation is to hit the Force button again after the platform has been targeted in Build Settings. If this does not help, [contact me](../Contact.md) :)
+2. The default sample rate matches the current build target. If you're [having distortion on certain platforms](\(Predicted)%20Common%20Issues%20and%20Questions.md#My%20track%20has%20distortion%20in%20a%20build%20for%20a%20specific%20platform!|having%20distortion%20on%20specific%20platforms), my recommendation is to hit the Force button again after the platform has been targeted in Build Settings. If this does not help, [contact me](../Contact.md) :)
 
 #### Manual way
 The manual way requires you to trawl individually through applicable audio clips and override the sample rate yourself. This is substantially slower, but a lot safer than universally overriding sample rates.
