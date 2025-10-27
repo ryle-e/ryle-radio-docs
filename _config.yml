@@ -15,9 +15,9 @@ search_enabled: true
 # aux links settings
 aux_links:
   "Source documentation":
-  - "https://ryle-e.github.io/ryle-radio-docs-scripting"
+    - "https://ryle-e.github.io/ryle-radio-docs-scripting"
 
-aux_links_new_tab:true
+aux_links_new_tab: true
 
 # Build settings
 markdown: gfm
