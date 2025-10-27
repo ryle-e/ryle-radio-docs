@@ -26,7 +26,11 @@ For example, let's take the "I'll Never Smile Again" audio in the [1. Basic Radi
 If it's not something you can or are willing to ignore, the main option for fixing this problem is setting a global sample rate, and forcing your clips to it.
 
 ### Setting a global sample rate
-We need to do this at the moment so that we know what sample rate to assign to the clips. Unity, by default, uses the sample rate of the system running the game build, but because we'd be having
+We need to do this at the moment so that we know what sample rate to assign to the clips. Unity, by default, uses the sample rate of the system running the game build, but because we'd be needing to re-export our audio files every time the project is built in order to fix this, it's much easier to assign a single sample rate to use globally.
+
+**Please keep in mind that this change will apply to your entire project. Unity seems to resample audio files used in AudioSources on its own, so you may not notice any effects- but it's worth keeping in mind that this process is happening.**
+
+To change the global sample rate, go to `Edit >> Project Settings >> Audio` then change the `System Sample Rate` option to 
 ### Forcing sample rates on clips
 This is a tiny bit complex, but is the least drastic solution to the problem. You can either go about this the integrated way, or the manual way.
 
