@@ -20,6 +20,7 @@ If you've got a question not answered here, check relevant Samples
 	2. [My project takes ages to start up after adding the radio!](#My%20project%20takes%20ages%20to%20start%20up%20after%20adding%20the%20radio)
 	3. [I can't hear my track/my track is quiet!](#I%20can't%20hear%20my%20track/my%20track%20is%20quiet!)
 	4. [My track has distortion in a build for a specific platform!](#My%20track%20has%20distortion%20in%20a%20build%20for%20a%20specific%20platform)
+	5. [A sample scene is pink!](#A%20sample%20scene%20is%20pink)
 
 ---
 ## Questions
@@ -52,7 +53,7 @@ The possibilities are endless :)
 ---
 ## Issues
 ### My Audio Clip sounds distorted when played through a radio?
-This is a known problem related to conversion between sample rates.  [](Sample%20Rates-%20an%20important%20note.md#How%20do%20we%20fix%20it?|Here's%20some%20solutions%20I've%20put%20together%20for%20this%20specific%20issue), and [](../Plans,%20Todo.md#Known%20issues|the%20issue%20itself%20is%20logged%20here).
+This is a known problem related to conversion between sample rates. See [the page outlining this](Sample%20Rates-%20an%20important%20note.md#How%20do%20we%20fix%20it?|Here's%20some%20solutions%20I've%20put%20together%20for%20this%20specific%20issue), and [bump the plan to fix](../Plans,%20Todo.md#Known%20issues|the%20issue%20itself%20is%20logged%20here).
 
 ### My project takes ages to start up after adding the radio!
 This is most likely due to the audio being decompressed on game startup. When a Radio is initialized, it needs to load all of the AudioClips it contains into memory (a limitation of [AudioClip.GetData(..)]([Unity - Scripting API: AudioClip.GetData](https://docs.unity3d.com/6000.2/Documentation/ScriptReference/AudioClip.GetData.html)))- this can end up creating a significant amount of load time for the project as it's decompressing many clips at once!

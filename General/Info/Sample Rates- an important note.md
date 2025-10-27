@@ -10,7 +10,7 @@ tags:
 
 In the process of developing this package, I have come across a fairly substantial issue that I feel I should address in its own note- sample rate conversion issues/distortion.
 
-If you don't mind a little bit of distortion on your AudioClip tracks, you can safely ignore this note. If you just want the fix, go straight to [#How do we fix it?](#How%20do%20we%20fix%20it?)
+If you don't mind a little bit of distortion on your AudioClip tracks, you can safely ignore this note. If you just want the fix, go straight to [How do we fix it?](#How%20do%20we%20fix%20it?)
 
 ---
 ## What is the problem?
@@ -31,6 +31,8 @@ I'll also put a note here to say: different build platforms use different base s
 
 Alternatively, run the Integrated way first, then move through clips afterwards with the Manual way.
 #### Integrated way
+Before proceeding, open `File >> Project Settings >> Audio` and ensure that a number is assigned to `System Sample Rate`. If you're on Mac, you'll usually use 41400. On Windows (and, for now, other platforms) use 48000.
+
 The Integrated way is built-in to RadioData objects. Opening the Advanced Settings tab will show the following:
 ![Pasted image 20251007184437](../../Images/Info/20251007184437.png)
 Make sure **Force sample rate on Clips** is ticked. If you want to provide your own sample rate, enter it in the box, otherwise leave it at 0. 
