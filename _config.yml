@@ -5,7 +5,7 @@ url: "https://ryle-e.github.io/ryle-radio-docs" # the base hostname & protocol f
 
 # Build settings
 markdown: kramdown
-theme: jekyll-theme-slate # Replace with your chosen theme, e.g., jekyll-theme-cayman
+theme: just-the-docs # Replace with your chosen theme, e.g., jekyll-theme-cayman
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
