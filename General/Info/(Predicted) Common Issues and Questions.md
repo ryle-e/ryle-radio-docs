@@ -1,11 +1,15 @@
 ---
 title: FAQ / Common Issues and Questions
-parent: General/Info
+parent: Info
 nav_order: "1"
 tags:
+  - faq
+  - issues
 ---
 
 These are some questions I feel could end up being common, and would prefer to have easily answerable than requiring you to trawl through documentation :)
+If you've got a question not answered here, check relevant Samples
+
 1. [Questions](#questions)
 	1. [How do I use Ryle Radio?](#how%20do%20I%20use%20ryle%20radio)
 	2. [How do I work with it in code?](#how%20do%20I%20work%20with%20it%20in%20code)

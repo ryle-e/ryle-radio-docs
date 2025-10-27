@@ -1,3 +1,13 @@
+---
+title: FMOD and Ryle Radio
+parent: Info
+nav_order: "4"
+tags:
+nav_exclude: "true"
+---
+
+## This is a feature not yet fully implemented due to further FMOD integration being preferable. The documentation should remain the same, but for now, this feature is not accessible.
+
 TL;DR, FMOD is optionally used with Ryle Radio to stream audio files at runtime. It does not have any further integration yet.
 
 ---
@@ -10,7 +20,7 @@ The solution that Unity gives us to this problem is the [Streaming load type](ht
 This leaves as with an issue, then- how do we stream audio for big files? The answer I've gone with is FMOD.
 
 ## What does it do?
- [FMOD for Unity](https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-2-02-161631) is an incredibly popular third-party audio system that allows for complex audio in a Unity project, though the base FMOD works with countless engines and systems. It also provides low-level audio loading and streaming that we can utilise in Ryle Radio.
+[FMOD for Unity](https://assetstore.unity.com/packages/tools/audio/fmod-for-unity-2-02-161631) is an incredibly popular third-party audio system that allows for complex audio in a Unity project, though the base FMOD works with countless engines and systems. It also provides low-level audio loading and streaming that we can utilise in Ryle Radio.
 
 We load the selected AudioClip into FMOD's programmer audio, then over time stream chunks into a buffer that we play through Unity. The only difference you'll notice is that your game starts up faster :)
 

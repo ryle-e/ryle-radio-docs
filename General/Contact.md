@@ -1,7 +1,7 @@
 ---
 title: Contact
-parent: Info
-nav_order: "0"
+parent: General
+nav_order: "3"
 tags:
   - contact
 ---

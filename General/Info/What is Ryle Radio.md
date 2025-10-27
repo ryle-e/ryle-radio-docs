@@ -1,3 +1,12 @@
+---
+title: What is Ryle Radio
+parent: Info
+nav_order: "0"
+tags:
+  - about
+  - main
+---
+
 In short terms, Ryle Radio is a package to emulate the functionality of real world radio that playing to receiver devices.
 
 In practice, this means that you can have an end user move a value across a range and hear different things depending on where that value is, much like tuning frequencies on a receiver. Developers using Ryle Radio can define what is heard and where in the range it is audible.

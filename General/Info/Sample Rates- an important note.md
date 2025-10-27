@@ -1,3 +1,12 @@
+---
+title: Sample Rates- an important note
+parent: Info
+nav_order: "2"
+tags:
+  - issues
+  - faq
+---
+
 In the process of developing this package, I have come across a fairly substantial issue that I feel I should address in its own note- sample rate conversion issues/distortion.
 
 If you don't mind a little bit of distortion on your AudioClip tracks, you can safely ignore this note. If you just want the fix, go straight to [[#How do we fix it?]]

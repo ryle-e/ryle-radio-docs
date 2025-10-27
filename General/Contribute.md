@@ -1,3 +1,13 @@
+---
+title: Contribute
+parent: General
+nav_order: "2"
+tags:
+  - contribute
+  - repository
+  - updates
+---
+
 Ryle Radio is an open-source project- my first open-source project! You can access the repository here.
 
 The code in Ryle Radio has been fully commented and documented- if this is going to be my first open source repo, it'll certainly be a well-documented one >:)
