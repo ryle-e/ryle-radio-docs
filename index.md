@@ -1,7 +1,7 @@
 ---
 tags:
   - main
-title: index
+title: Main Page
 nav_order: "0"
 ---
 

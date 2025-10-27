@@ -11,7 +11,8 @@ The main person you'll need to contact at this stage would be me, the writer of 
 
 Primary contact would be my email address: rjdwalrus@gmail.com
 
-You can add an issue on the GitHub repository here:
+You can access the GitHub repository here for this package [here](https://github.com/ryle-e/ryle-radio), the repository for this documentation [here](https://github.com/ryle-e/ryle-radio-docs/), and the repository for the source documentation [here](https://github.com/ryle-e/ryle-radio-scripting-docs)!
+
 I'm available on Reddit as [u/ryle-e_dev](https://www.reddit.com/u/ryle-e_dev), and on [itch.io](https://ryle-e.itch.io/).
 If this somehow gets seen enough to warrant me putting things on Discord, I'll add that too lol
 

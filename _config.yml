@@ -4,7 +4,7 @@ description: Basic documentation for Ryle Radio
 url: "https://ryle-e.github.io/ryle-radio-docs" # the base hostname & protocol for your site
 
 logo: "/Images/ryleradiologo_color_small.png"
-favicon: "/Images/ryleradiologo_color_small.ico"
+favicon_ico: "/Images/ryleradiologo_color_small.ico"
 
 nav_enabled: true
 heading_anchors: true
