@@ -26,14 +26,12 @@
             "id": "7c79e8cbc00a91a6",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "Guides/1. Basic Radio Sample.md",
-                "mode": "source",
-                "source": false
+                "file": "Images/Guides/Basic-Radio-Sample/20251002182945.png"
               },
-              "icon": "lucide-file",
-              "title": "1. Basic Radio Sample"
+              "icon": "lucide-image",
+              "title": "20251002182945"
             }
           }
         ],
@@ -181,7 +179,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -200,10 +198,15 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "7c79e8cbc00a91a6",
+  "active": "26484e8837ed284f",
   "lastOpenFiles": [
-    "Images/Guides/Basic Radio Sample/Pasted image 20251002182945.png",
+    "Images/Guides/Basic-Radio-Sample/20251002182945.png",
+    "Images/Guides/Basic-Radio-Sample/20251016190730.png",
+    "Images/Guides/Basic-Radio-Sample/20251007223213.png",
+    "Images/Guides/Basic-Radio-Sample/20251007215617.png",
+    "Images/Guides/Basic-Radio-Sample/20251007134919.png",
     "Guides/1. Basic Radio Sample.md",
+    "Images/Guides/Basic.md",
     "index.md",
     "Guides/Guides.md",
     "General/Info/FMOD and Ryle Radio.md",
@@ -229,10 +232,6 @@
     "doxygen-awesome-css/docs/img/fragment_copy_button.png",
     "doxygen-awesome-css/docs/img/fancy_scrollbars_webkit.gif",
     "doxygen-awesome-css/docs/img/fancy_scrollbars_firefox.png",
-    "doxygen-awesome-css/docs/img/darkmode_toggle.png",
-    "doxygen-awesome-css/img/theme-variants-sidebar-only.drawio.svg",
-    "doxygen-awesome-css/img/testimage.png",
-    "doxygen-awesome-css/img/theme-variants-base.drawio.svg",
     "doxygen-awesome-css/doxygen-custom/toggle-alternative-theme.js",
     "doxygen-awesome-css/doxygen-custom/theme-round.css",
     "doxygen-awesome-css/doxygen-custom/theme-robot.css",
@@ -246,7 +245,6 @@
     "doxygen-awesome-css/LICENSE",
     "doxygen-awesome-css/README.md",
     "General/About the Docs.md",
-    "1.-Basic-Radio-Sample.md",
-    "1..md"
+    "1.-Basic-Radio-Sample.md"
   ]
 }
