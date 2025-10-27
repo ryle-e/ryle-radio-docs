@@ -29,10 +29,10 @@ public void Convert()
 }
 ```
 
-![](../../Images/Info/20251027171758.png)
-![](../../Pasted%20image%2020251027172711.png)
+![Multiselect dropdown as described in the code](../../Images/Info/20251027171758.png)
+![Output of above code](../../Images/Info/20251027172711.png)
 
-
+---
 ## What does it do?
 The Multiselect attribute is a variable attribute introduced in Ryle Radio that acts as an extension to NaughtyAttributes, providing a LayerMask-style multi-select dropdown in the inspector. The options you choose on the dropdown are saved as a flag int, and can be converted at runtime to a subset of a collection you provide. 
 In short- you can choose a number of options from a list (or array), then convert that number to a subset of the list.
