@@ -7,16 +7,16 @@ tags:
 
 These are some questions I feel could end up being common, and would prefer to have easily answerable than requiring you to trawl through documentation :)
 1. [Questions](#Questions)
-	1. [[#How do I use Ryle Radio?]]
-	2. [[#How do I work with it in code?]]
-	3. [[#How do I work with it without coding?]]
-	4. [[#What does the **Gain curve** do?|What does the Gain curve do?]]
+	1. [How do I use Ryle Radio?](#How do I use Ryle Radio?)
+	2. [How do I work with it in code?](#How do I work with it in code?)
+	3. [How do I work with it without coding?](#How do I work with it without coding?)
+	4. [What does the Gain Curve do?](#What does the Gain curve do?)
 2. [[#Issues]]
 	1. [[#My Audio Clip sounds distorted when played through a radio?]]
 	2. [[#My project takes ages to start up after adding the radio!]]
 	3. [[#I can't hear my track/my track is quiet!]]
 	4. [[#My track has distortion in a build for a specific platform!]]
-	5. 
+
 ---
 ## Questions
 ### How do I use Ryle Radio?
