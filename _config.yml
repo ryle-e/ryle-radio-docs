@@ -15,13 +15,13 @@ search_enabled: true
 # aux links settings
 aux_links:
   "Source documentation":
-    - "https://ryle-e.github.io/ryle-radio-docs-scripting"
+    - "https://ryle-e.github.io/ryle-radio-scripting-docs"
 
 aux_links_new_tab: true
 
 # Build settings
-markdown: gfm
-theme: just-the-docs # Replace with your chosen theme, e.g., jekyll-theme-cayman
+markdown: GFM
+remote_theme: just-the-docs/just-the-docs # Replace with your chosen theme, e.g., jekyll-theme-cayman
 color_scheme: dark
 plugins:
   - jekyll-feed
