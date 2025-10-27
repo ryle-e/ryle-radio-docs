@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Info/Sample Rates- an important note.md",
+                "file": "General/Info/(Predicted) Common Issues and Questions.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Sample Rates- an important note"
+              "title": "(Predicted) Common Issues and Questions"
             }
           }
         ],
@@ -187,7 +187,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "General/Info/Sample Rates- an important note.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -197,11 +196,11 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "Backlinks for Sample Rates- an important note"
+              "title": "Backlinks"
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -220,7 +219,7 @@
       "publish:Publish changes...": false
     }
   },
-  "active": "9b632576f700e515",
+  "active": "9f1feac3f365ae91",
   "lastOpenFiles": [
     "General/Info/(Predicted) Common Issues and Questions.md",
     "General/Info/Sample Rates- an important note.md",
