@@ -1,0 +1,17 @@
+{
+  "obsidianPathSettings": {
+    "readyFolder": "ready",
+    "archiveFolder": "archive",
+    "attachmentsFolder": "attachments",
+    "isAutoArchive": true,
+    "isAutoCreateFolder": true
+  },
+  "jekyll": {
+    "_jekyllPath": "/",
+    "_jekyllRelativeResourcePath": "/Images",
+    "_isEnableRelativeUrl": false
+  },
+  "docusaurus": {
+    "dateExtractionPattern": "FOLDER_NAMED_BY_DATE"
+  }
+}

@@ -1,3 +1,7 @@
+---
+title: Main page
+---
+
 This is the documentation for Ryle Radio!
 ## Intro
 Ryle Radio is a radio-like audio tool for Unity projects. It is intended to emulate the function of a real-world radio, with tuning, spatial broadcasters, and more!
