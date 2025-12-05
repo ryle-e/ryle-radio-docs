@@ -18,5 +18,7 @@ If this somehow gets seen enough to warrant me putting things on Discord, I'll a
 
 If you're feeling curious (..or some other feeling that warrants this) check out my [Unity Publisher profile](https://assetstore.unity.com/publishers/101853), and my other package, [MSwarms](https://assetstore.unity.com/packages/tools/behavior-ai/mswarms-286769)! Though be warned, the documentation is far inferior to this. A work in progress, if you will :D
 
+I've made a game using this package for Game Off 2025- find that [here](https://ryle-e.itch.io/pale-broadcast)!
+
 
 Thank you again for trying out my package :) This is my first open-source asset, so please flick through as much feedback as you feel inclined to !!
