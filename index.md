@@ -36,7 +36,7 @@ I am a little worried that the way I wrote this feature list doesn't make total 
 - **Some parts can't be modified at runtime**- specifically Observers and adding new tracks to stations (the latter of which you technically can do but may require some tinkering, and can easily be worked-around)
 
 ## Links
-- GitHub repo
+- [GitHub repo](https://github.com/ryle-e/ryle-radio)
 - Asset Store page
 
 ## Navigating the docs
