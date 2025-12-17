@@ -37,7 +37,7 @@ I am a little worried that the way I wrote this feature list doesn't make total 
 
 ## Links
 - [GitHub repo](https://github.com/ryle-e/ryle-radio)
-- Asset Store page
+- [Asset Store page](https://u3d.as/3BXN)
 
 ## Navigating the docs
 Start by checking out the [1. Basic Radio Sample](Guides/1.%20Basic%20Radio%20Sample.md) and other samples, followed by [(Predicted) Common Issues and Questions](General/Info/(Predicted)%20Common%20Issues%20and%20Questions.md). Any other questions or issues, [contact me](General/Contact.md)!
