@@ -18,6 +18,7 @@ tags:
 - A type of RadioTrack that adds simple effects and filters- e.g: distortion, lowpass, something that resembles interference
 - More procedural audio types
 - Weighted track selection in stations
+- Converting the entire package to pure C#, and make Unity integration an extension, not core. Aww yeah, this is the fun one :)
 
 ---
 ## Added features
@@ -25,3 +26,4 @@ tags:
 - Stations- tracks of tracks?
 - Spatial broadcasters
 - Dead zones (insulators)
+- WebGL support (kinda)
