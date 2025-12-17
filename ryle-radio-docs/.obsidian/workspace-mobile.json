@@ -1,24 +1,14 @@
 {
   "main": {
-    "id": "e360c582dd8fbe5e",
+    "id": "fb0b4b72e4b43a0f",
     "type": "split",
     "children": [
       {
-        "id": "140be0f6afb139df",
+        "id": "ad2851201d00b4a5",
         "type": "tabs",
         "children": [
           {
-            "id": "c1cb0d3a41cf8bf3",
-            "type": "leaf",
-            "state": {
-              "type": "empty",
-              "state": {},
-              "icon": "lucide-file",
-              "title": "New tab"
-            }
-          },
-          {
-            "id": "64a26eb0daaf4f93",
+            "id": "66025d93f9d7f89d",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -27,18 +17,17 @@
               "title": "New tab"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
   },
   "left": {
-    "id": "e7111130cfc69687",
+    "id": "35be5787b3cbb346",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "dd6fc869c102def4",
+        "id": "7df5936d509c06e6",
         "type": "leaf",
         "state": {
           "type": "file-explorer",
@@ -51,7 +40,7 @@
         }
       },
       {
-        "id": "6b599e2f370632a9",
+        "id": "9311982c31e8787d",
         "type": "leaf",
         "state": {
           "type": "search",
@@ -68,7 +57,7 @@
         }
       },
       {
-        "id": "c75a61afec306c83",
+        "id": "1a7cf79ea1cdb3f4",
         "type": "leaf",
         "state": {
           "type": "tag",
@@ -83,17 +72,7 @@
         }
       },
       {
-        "id": "5a0cf2355859b645",
-        "type": "leaf",
-        "state": {
-          "type": "bookmarks",
-          "state": {},
-          "icon": "lucide-bookmark",
-          "title": "Bookmarks"
-        }
-      },
-      {
-        "id": "abacaccfef29a848",
+        "id": "abe1561739ec6c50",
         "type": "leaf",
         "state": {
           "type": "all-properties",
@@ -105,21 +84,30 @@
           "icon": "lucide-archive",
           "title": "All properties"
         }
+      },
+      {
+        "id": "02851831d0e55e85",
+        "type": "leaf",
+        "state": {
+          "type": "bookmarks",
+          "state": {},
+          "icon": "lucide-bookmark",
+          "title": "Bookmarks"
+        }
       }
     ],
-    "currentTab": 0
+    "currentTab": 3
   },
   "right": {
-    "id": "5e95c3ead932e2a5",
+    "id": "16ccbabd347de4f2",
     "type": "mobile-drawer",
     "children": [
       {
-        "id": "b560bd814a185e60",
+        "id": "5f72ff3534e06f70",
         "type": "leaf",
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Scripting/RadioData.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -133,7 +121,7 @@
         }
       },
       {
-        "id": "26e442a7f0eab2be",
+        "id": "0a360892e462595f",
         "type": "leaf",
         "state": {
           "type": "outgoing-link",
@@ -146,7 +134,7 @@
         }
       },
       {
-        "id": "6266033e015d3002",
+        "id": "d44ffadb25f5aebf",
         "type": "leaf",
         "state": {
           "type": "outline",
@@ -164,8 +152,6 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "publish:Publish changes...": false,
-      "obsidian-git:Open Git source control": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -175,50 +161,6 @@
       "bases:Create new base": false
     }
   },
-  "active": "dd6fc869c102def4",
-  "lastOpenFiles": [
-    "/General/Plans, Todo.md",
-    "/General/Info/About WebGL.md",
-    "General/Info/About WebGL.md",
-    "/General/Info",
-    "/General/Contact.md",
-    "/General/Changelog.md",
-    "/General",
-    "Guides/1. Basic Radio Sample.md",
-    "General/Patch Notes.md",
-    "General/About the Docs.md",
-    "General/Info/Contribute.md",
-    "General/Info/the Multiselect Attribute.md",
-    "General/Plans, Todo.md",
-    "Images/Index.base",
-    "Usage/Samples/Basic Radio Sample.md",
-    "Main.md",
-    "!Sample -.md",
-    "Usage/Samples",
-    "Usage",
-    "General/FMOD and Ryle Radio.md",
-    "Scripting/Components/Base/RadioComponent.md",
-    "FMOD.md",
-    "Scripting/Components/RadioOutput.md",
-    "Scripting/RadioData.md",
-    "Scripting/Tracks/RadioTrackWrapper.md",
-    "Images/Scripting/Tracks/Pasted image 20250925200935.png",
-    "Images/Scripting/Tracks/Pasted image 20250925200829.png",
-    "Images/Scripting/Tracks/Pasted image 20250925195909.png",
-    "Images/Scripting/Tracks/Pasted image 20250925195246.png",
-    "Images/Scripting/Tracks/Pasted image 20250925195105.png",
-    "Images/Scripting/Tracks/Pasted image 20250925195022.png",
-    "Images/Scripting/Tracks/Pasted image 20250925190155.png",
-    "Images/Scripting/Tracks/Pasted image 20250922183059.png",
-    "Images/Scripting/Tracks",
-    "Images/Scripting/Pasted image 20250922182711.png",
-    "Images/Scripting",
-    "Images",
-    "RadioL.md",
-    "Pasted image 20250925190155.png",
-    "Scripting/Other/MultiselectAttribute.md",
-    "what.md",
-    "Scripting/Other",
-    "Scripting/Tracks/Track Types"
-  ]
+  "active": "7df5936d509c06e6",
+  "lastOpenFiles": []
 }
