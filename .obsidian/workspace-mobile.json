@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Info/About WebGL.md",
+                "file": "General/Info/Installation.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "About WebGL"
+              "title": "Installation"
             }
           }
         ],
@@ -60,7 +60,7 @@
         "state": {
           "type": "search",
           "state": {
-            "query": "",
+            "query": "tag:#Installation",
             "matchingCase": false,
             "explainSearch": false,
             "collapseAll": false,
@@ -111,7 +111,7 @@
         }
       }
     ],
-    "currentTab": 0
+    "currentTab": 1
   },
   "right": {
     "id": "5e95c3ead932e2a5",
@@ -123,7 +123,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "General/Info/About WebGL.md",
+            "file": "General/Info/Installation.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -181,13 +181,13 @@
   },
   "active": "64a26eb0daaf4f93",
   "lastOpenFiles": [
+    "General/Info/About WebGL.md",
     "General/Plans, Todo.md",
     "General/Info/Installation.md",
     "Guides/1. Basic Radio Sample.md",
     "index.md",
     "General/Changelog.md",
     "().md",
-    "General/Info/About WebGL.md",
     "General/Info/(Predicted) Common Issues and Questions.md",
     "General/Info/FMOD and Ryle Radio.md",
     "General/General.md",
