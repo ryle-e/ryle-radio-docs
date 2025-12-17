@@ -1,3 +1,3 @@
 As of [1.1.0](Changelog.md#1.1.0), WebGL is officially supported in Ryle Radio- but it has a major flaw.
 
-TL;DR, WebGL doesn't support audio streaming, which is fundamental to the whole package. I've managed to emulate it by generating and switching tracks, but it means that there's 
+TL;DR, WebGL doesn't support audio streaming, which is fundamental to the whole package. I've managed to emulate it by generating and switching tracks, but it means that there's clicking noises every couple seconds. They can generally be ignored if the radio is meant to sound old, but if it's too extreme, please contact me to give me a push to get this fixed.
