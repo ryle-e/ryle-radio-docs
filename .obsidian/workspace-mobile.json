@@ -23,12 +23,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "General/Info/About WebGL.md",
+                "file": "index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "About WebGL"
+              "title": "index"
             }
           }
         ],
@@ -123,7 +123,7 @@
         "state": {
           "type": "backlink",
           "state": {
-            "file": "Scripting/RadioData.md",
+            "file": "index.md",
             "collapseAll": false,
             "extraContext": false,
             "sortOrder": "alphabetical",
@@ -182,8 +182,11 @@
   "active": "64a26eb0daaf4f93",
   "lastOpenFiles": [
     "General/Changelog.md",
-    "General/Info/FMOD and Ryle Radio.md",
+    "().md",
     "General/Info/About WebGL.md",
+    "General/Info/(Predicted) Common Issues and Questions.md",
+    "Guides/1. Basic Radio Sample.md",
+    "General/Info/FMOD and Ryle Radio.md",
     "General/General.md",
     "General/Info/What is Ryle Radio.md",
     "General/Info/Info.md",
@@ -193,7 +196,6 @@
     "/General/Contact.md",
     "/General/Changelog.md",
     "/General",
-    "Guides/1. Basic Radio Sample.md",
     "General/Patch Notes.md",
     "General/About the Docs.md",
     "General/Info/Contribute.md",
@@ -210,7 +212,6 @@
     "FMOD.md",
     "Scripting/Components/RadioOutput.md",
     "Scripting/RadioData.md",
-    "Scripting/Tracks/RadioTrackWrapper.md",
     "Images/Scripting/Tracks/Pasted image 20250925200935.png",
     "Images/Scripting/Tracks/Pasted image 20250925200829.png",
     "Images/Scripting/Tracks/Pasted image 20250925195909.png",
@@ -223,7 +224,6 @@
     "Images/Scripting/Pasted image 20250922182711.png",
     "Images/Scripting",
     "Images",
-    "RadioL.md",
     "Pasted image 20250925190155.png",
     "Scripting/Other",
     "Scripting/Tracks/Track Types"

@@ -1,1 +1,1 @@
-As of []()
+As of [1.1.0](Changelog.md#1.1.0)
