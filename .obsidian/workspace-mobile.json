@@ -21,10 +21,14 @@
             "id": "64a26eb0daaf4f93",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "General/Changelog.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "Changelog"
             }
           }
         ],
@@ -175,11 +179,15 @@
       "bases:Create new base": false
     }
   },
-  "active": "dd6fc869c102def4",
+  "active": "64a26eb0daaf4f93",
   "lastOpenFiles": [
+    "General/Info/FMOD and Ryle Radio.md",
+    "General/Info/About WebGL.md",
+    "General/General.md",
+    "General/Info/What is Ryle Radio.md",
+    "General/Info/Info.md",
     "/General/Plans, Todo.md",
     "/General/Info/About WebGL.md",
-    "General/Info/About WebGL.md",
     "/General/Info",
     "/General/Contact.md",
     "/General/Changelog.md",
@@ -217,7 +225,6 @@
     "RadioL.md",
     "Pasted image 20250925190155.png",
     "Scripting/Other/MultiselectAttribute.md",
-    "what.md",
     "Scripting/Other",
     "Scripting/Tracks/Track Types"
   ]
